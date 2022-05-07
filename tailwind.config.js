@@ -1,9 +1,22 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    fontFamily: {
+      sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      serif: ['ui-serif', ...defaultTheme.fontFamily.serif],
+      mono: ['ui-monospace', ...defaultTheme.fontFamily.mono]
+    },
+    fontWeight: {
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700
+    },
     extend: {
       colors: {
         'accent-1': '#FAFAFA',

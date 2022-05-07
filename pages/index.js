@@ -4,6 +4,7 @@ import HeroPost from '../components/hero-post';
 import Intro from '../components/intro';
 import Layout from '../components/layout';
 import { getAllPostsForHome } from '../lib/api';
+import { createExcerpt } from '../lib/transform-utils';
 import Head from 'next/head';
 
 export default function Index({ preview, allPosts }) {
@@ -22,12 +23,12 @@ export default function Index({ preview, allPosts }) {
               title={heroPost.title}
               coverImage={heroPost.coverImage}
               date={heroPost.sys.publishedAt}
-              author={heroPost.authorCollection.items[0]}
+              authors={heroPost.authorCollection.items}
               slug={heroPost.slug}
-              excerpt={heroPost.excerpt ?? 'lorem ipsum'}
+              excerpt={createExcerpt(heroPost.content, 256, '...')}
             />
           )}
-          {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>
     </>
