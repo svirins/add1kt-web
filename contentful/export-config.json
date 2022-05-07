@@ -1,0 +1,11 @@
+{
+  "spaceId": "s0zztu9gjury",
+  "management-token": "CFPAT-pdVv9-ZlSEHRvlrloUUr0tNZTqa0GMSJkVpWWiAfk6s",
+  "environmentId": "main",
+  "exportDir": "./contentful",
+  "saveFile": true,
+  "contentFile": "export-grean.json",
+  "downloadAssets": false,
+  "errorLogFile": "./contentful/error.log",
+  "useVerboseRenderer": true
+}
