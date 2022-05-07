@@ -1,6 +1,8 @@
 // TODO: copy algolia example from panterblog
 // TODO: change og image in public
 
+// TODO: remove excerpt from query, calculate at build-time
+
 ## Configuration
 
 ### Step 1. Create an account and a space on Contentful

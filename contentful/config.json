@@ -6,6 +6,9 @@
   "saveFile": true,
   "contentFile": "export-grean.json",
   "downloadAssets": false,
+  "skipContent": true,
+  "skipRoles": true,
+  "skipWebhooks": true,
   "errorLogFile": "./contentful/error.log",
   "useVerboseRenderer": true
 }
