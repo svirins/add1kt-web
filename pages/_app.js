@@ -1,6 +1,8 @@
-import '../styles/index.css';
 import { DefaultSeo } from 'next-seo';
+import { appWithTranslation } from 'next-i18next';
 import { usePanelbear } from '@panelbear/panelbear-nextjs';
+
+import '@/styles/index.css';
 
 import SEO from '../next-seo.config';
 
@@ -17,4 +19,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
