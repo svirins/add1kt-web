@@ -1,13 +1,14 @@
 import Container from '@/components/container';
-import MoreStories from '@/components/more-stories';
+import HomepagePosts from '@/components/homepage-posts';
 import HeroPost from '@/components/hero-post';
 import Intro from '@/components/intro';
 import Layout from '@/components/layout';
 import { getAllPostsForHome } from '@/lib/api';
-import { createExcerpt } from '@/lib/transform-utils';
+import { getExcerpt, getReadingTime } from '@/lib/content-utils';
 import Head from 'next/head';
 
 export default function Index({ preview, allPosts }) {
+  // TODO: get locale and pass it to components
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
@@ -27,10 +28,11 @@ export default function Index({ preview, allPosts }) {
               tags={heroPost.tagsCollection.items}
               slug={heroPost.slug}
               featured={heroPost.featured}
-              excerpt={createExcerpt(heroPost.content, 200, '...')}
+              excerpt={getExcerpt(heroPost.content)}
+              readingTime={getReadingTime(heroPost.content)}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts.length > 0 && <HomepagePosts posts={morePosts} />}
         </Container>
       </Layout>
     </>

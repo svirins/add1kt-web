@@ -1,7 +1,7 @@
 import PostPreview from '@/components/post-preview';
-import { createExcerpt } from '@/lib/transform-utils';
+import { getExcerpt, getReadingTime } from '@/lib/content-utils';
 
-export default function MoreStories({ posts }) {
+export default function HomepagePosts({ posts }) {
   return (
     <section>
       <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
@@ -17,8 +17,8 @@ export default function MoreStories({ posts }) {
             authors={post.authorCollection.items}
             tags={post.tagsCollection.items}
             slug={post.slug}
-            featured={post.featured}
-            excerpt={createExcerpt(post.content, 200, '...')}
+            excerpt={getExcerpt(post.content)}
+            readingTime={getReadingTime(post.content)}
           />
         ))}
       </div>

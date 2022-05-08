@@ -12,8 +12,7 @@ function transformPostsToSearchObjects(posts) {
       slug: post.slug,
       authorCollection: { items: post.authorCollection.items },
       tagsCollection: { items: post.authorCollection.items },
-      date: post.sys.publishedAt,
-      readingTime: post.sys.publishedAt
+      date: post.sys.publishedAt
     };
   });
 

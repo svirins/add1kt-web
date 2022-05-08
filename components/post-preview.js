@@ -13,7 +13,8 @@ export default function PostPreview({
   authors,
   tags,
   slug,
-  featured
+  featured,
+  readingTime
 }) {
   return (
     <div>
@@ -29,6 +30,7 @@ export default function PostPreview({
         <DateComponent dateString={date} />
       </div>
       <div className="flex flex-row">
+        {featured && <Featured />}
         {tags &&
           tags.map((tag) => (
             <Tag key={tag.slug} name={tag.title} slug={tag.slug} />
@@ -36,7 +38,6 @@ export default function PostPreview({
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <div className="flex flex-row">
-        {featured && <Featured />}
         {authors &&
           authors.map((author) => (
             <Avatar
