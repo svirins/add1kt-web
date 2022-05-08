@@ -1,7 +1,9 @@
 import Link from 'next/link';
-import Avatar from '../components/avatar';
-import DateComponent from '../components/date';
-import CoverImage from './cover-image';
+import Avatar from '@/components/avatar';
+import Tag from '@/components/tag';
+import DateComponent from '@/components/date';
+import CoverImage from '@/components/cover-image';
+import Featured from '@/components/featured';
 
 export default function PostPreview({
   title,
@@ -9,7 +11,9 @@ export default function PostPreview({
   date,
   excerpt,
   authors,
-  slug
+  tags,
+  slug,
+  featured
 }) {
   return (
     <div>
@@ -24,8 +28,15 @@ export default function PostPreview({
       <div className="text-lg mb-4">
         <DateComponent dateString={date} />
       </div>
+      <div className="flex flex-row">
+        {tags &&
+          tags.map((tag) => (
+            <Tag key={tag.slug} name={tag.title} slug={tag.slug} />
+          ))}
+      </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <div className="flex flex-row">
+        {featured && <Featured />}
         {authors &&
           authors.map((author) => (
             <Avatar

@@ -1,7 +1,8 @@
 // TODO: copy algolia example from panterblog
 // TODO: change og image in public
-
-// TODO: remove excerpt from query, calculate at build-time
+// TODO: add reading time
+// TODO: add 'featured' badge
+// TODO: excerpt - purge characters
 
 ## Configuration
 

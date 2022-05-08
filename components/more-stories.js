@@ -1,5 +1,5 @@
-import PostPreview from '../components/post-preview';
-import { createExcerpt } from '../lib/transform-utils';
+import PostPreview from '@/components/post-preview';
+import { createExcerpt } from '@/lib/transform-utils';
 
 export default function MoreStories({ posts }) {
   return (
@@ -14,9 +14,11 @@ export default function MoreStories({ posts }) {
             title={post.title}
             coverImage={post.coverImage}
             date={post.sys.publishedAt}
-            authors={post.authorCollection}
+            authors={post.authorCollection.items}
+            tags={post.tagsCollection.items}
             slug={post.slug}
-            excerpt={createExcerpt(post.content, 256, '...')}
+            featured={post.featured}
+            excerpt={createExcerpt(post.content, 200, '...')}
           />
         ))}
       </div>

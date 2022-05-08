@@ -1,0 +1,25 @@
+{
+  "nav_blog": "Блог",
+  "nav_about": "О проекте",
+  "nav_contact": "Контакты",
+
+  "strings_algolia": "Поиск",
+  "strings_madeby": "Made by",
+  "strings_featured": "Избранное",
+  "strings_more": "Еще в",
+  "strings_articles": "Статьи",
+
+  "newsletter_subscribe": "Подписаться!",
+  "newsletter_placeholder": "your@email.com",
+  "newsletter_privacy": "Подпишитесь на рассылку Addicts.ws",
+  "newsletter_description": "И получайте сообщения о новых опубликованных материалах.",
+
+  "metadata_title": "Addicts.ws. Блог об аддикции.",
+  "metadata_description": "Врачи и психотерапевты об аддикции и методах ее лечения.",
+  "metadata_description_short": "авторский блог об аддикции",
+  "metadata_keywords": ["Addiction", "Therapy", "Recovery", "Blog"],
+
+  "404title": "Whooops",
+  "404text": "4it never exist",
+  "404btn": "404!!!"
+}

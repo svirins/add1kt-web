@@ -1,10 +1,10 @@
-import Container from '../components/container';
-import MoreStories from '../components/more-stories';
-import HeroPost from '../components/hero-post';
-import Intro from '../components/intro';
-import Layout from '../components/layout';
-import { getAllPostsForHome } from '../lib/api';
-import { createExcerpt } from '../lib/transform-utils';
+import Container from '@/components/container';
+import MoreStories from '@/components/more-stories';
+import HeroPost from '@/components/hero-post';
+import Intro from '@/components/intro';
+import Layout from '@/components/layout';
+import { getAllPostsForHome } from '@/lib/api';
+import { createExcerpt } from '@/lib/transform-utils';
 import Head from 'next/head';
 
 export default function Index({ preview, allPosts }) {
@@ -24,8 +24,10 @@ export default function Index({ preview, allPosts }) {
               coverImage={heroPost.coverImage}
               date={heroPost.sys.publishedAt}
               authors={heroPost.authorCollection.items}
+              tags={heroPost.tagsCollection.items}
               slug={heroPost.slug}
-              excerpt={createExcerpt(heroPost.content, 256, '...')}
+              featured={heroPost.featured}
+              excerpt={createExcerpt(heroPost.content, 200, '...')}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}

@@ -2,7 +2,7 @@ import Container from './container';
 import cn from 'classnames';
 import Link from 'next/link';
 
-import { EXAMPLE_PATH } from '../lib/constants';
+import { EXAMPLE_PATH } from '@/lib/constants';
 
 export default function Alert({ preview }) {
   return (

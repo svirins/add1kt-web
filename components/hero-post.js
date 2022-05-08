@@ -1,7 +1,9 @@
 import Link from 'next/link';
-import Avatar from '../components/avatar';
-import DateComponent from '../components/date';
-import CoverImage from '../components/cover-image';
+import Avatar from '@/components/avatar';
+import Tag from '@/components/tag';
+import DateComponent from '@/components/date';
+import CoverImage from '@/components/cover-image';
+import Featured from '@/components/featured';
 
 export default function HeroPost({
   title,
@@ -9,7 +11,9 @@ export default function HeroPost({
   date,
   excerpt,
   authors,
-  slug
+  tags,
+  slug,
+  featured
 }) {
   return (
     <section>
@@ -26,10 +30,18 @@ export default function HeroPost({
           <div className="mb-4 md:mb-0 text-lg">
             <DateComponent dateString={date} />
           </div>
+          <div className="flex flex-row">
+            {tags &&
+              tags.map((tag) => (
+                <Tag key={tag.slug} name={tag.name} slug={tag.slug} />
+              ))}
+          </div>
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
           <div className="flex flex-row">
+            {featured && <Featured />}
+
             {authors &&
               authors.map((author) => (
                 <Avatar
