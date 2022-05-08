@@ -26,10 +26,11 @@ export default function PostPreview({
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-4">
+      <div className="text-lg mb-2 flex flex-row">
         <DateComponent dateString={date} />
+        <div className="italic  inline-flex items-center">{`${readingTime} мин. чтения`}</div>
       </div>
-      <div className="flex flex-row">
+      <div className="flex flex-row mb-2">
         {featured && <Featured />}
         {tags &&
           tags.map((tag) => (

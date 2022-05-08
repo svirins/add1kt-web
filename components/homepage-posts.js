@@ -17,6 +17,7 @@ export default function HomepagePosts({ posts }) {
             authors={post.authorCollection.items}
             tags={post.tagsCollection.items}
             slug={post.slug}
+            featured={post.featured}
             excerpt={getExcerpt(post.content)}
             readingTime={getReadingTime(post.content)}
           />

@@ -16,6 +16,7 @@ export default function HeroPost({
   featured,
   readingTime
 }) {
+  console.log('tags', tags);
   return (
     <section>
       <div className="mb-8 md:mb-16">
@@ -28,14 +29,15 @@ export default function HeroPost({
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
+          <div className="mb-2 text-lg flex flex-row">
             <DateComponent dateString={date} />
+            <div className="italic  inline-flex items-center">{`${readingTime} мин. чтения`}</div>
           </div>
-          <div className="flex flex-row">
+          <div className="flex flex-row mb-2">
             {featured && <Featured />}
             {tags &&
               tags.map((tag) => (
-                <Tag key={tag.slug} name={tag.name} slug={tag.slug} />
+                <Tag key={tag.slug} name={tag.title} slug={tag.slug} />
               ))}
           </div>
         </div>
