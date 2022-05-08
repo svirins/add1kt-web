@@ -2,7 +2,7 @@ import Avatar from '@/components/avatar';
 
 export default function Authors({ authors }) {
   return (
-    <div className="flex flex-row">
+    <>
       {authors &&
         authors.map((author) => (
           <Avatar
@@ -12,6 +12,6 @@ export default function Authors({ authors }) {
             slug={author.slug}
           />
         ))}
-    </div>
+    </>
   );
 }

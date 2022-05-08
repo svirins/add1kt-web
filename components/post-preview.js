@@ -25,10 +25,16 @@ export default function PostPreview({
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <DateReadingTime date={date} readingTime={readingTime} />
-      <Tags tags={tags} featured={featured} />
+      <div className="mb-2 text-lg flex flex-row">
+        <DateReadingTime date={date} readingTime={readingTime} />
+      </div>
+      <div className="flex flex-row mb-2  flex-wrap">
+        <Tags tags={tags} featured={featured} />
+      </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Authors authors={authors} />
+      <div className="flex flex-row">
+        <Authors authors={authors} />
+      </div>
     </div>
   );
 }

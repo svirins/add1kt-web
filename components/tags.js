@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Tags({ tags, featured }) {
   return (
-    <div className="flex flex-row mb-2  flex-wrap">
+    <>
       {featured && (
         <span className="mr-2 text-xs  items-center font-bold leading-sm  px-3 py-1 bg-red-200 text-red-700 rounded-full">
           <svg
@@ -29,6 +29,6 @@ export default function Tags({ tags, featured }) {
             </a>
           </Link>
         ))}
-    </div>
+    </>
   );
 }

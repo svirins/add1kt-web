@@ -6,13 +6,14 @@ export default function Avatar({ name, picture, slug }) {
       <div className="relative w-12 h-12 mr-2">
         <ContentfulImage
           src={picture.url}
-          layout="fill"
+          width="100%"
+          height="100%"
           className="rounded-full"
           alt={name}
         />
       </div>
       <Link href={`/author/${slug}`}>
-        <a className="hover:underline text-lg  font-medium ">{name}</a>
+        <a className="hover:underline text-base font-medium ">{name}</a>
       </Link>
     </div>
   );

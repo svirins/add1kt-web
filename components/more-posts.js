@@ -1,7 +1,7 @@
 import PostPreview from '@/components/post-preview';
 import { getExcerpt, getReadingTime } from '@/lib/content-utils';
 
-export default function HomepagePosts({ posts }) {
+export default function MorePosts({ posts }) {
   return (
     <section>
       <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">

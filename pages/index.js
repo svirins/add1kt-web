@@ -1,5 +1,5 @@
 import Container from '@/components/container';
-import HomepagePosts from '@/components/homepage-posts';
+import MorePosts from '@/components/more-posts';
 import HeroPost from '@/components/hero-post';
 import Intro from '@/components/intro';
 import Layout from '@/components/layout';
@@ -32,7 +32,7 @@ export default function Index({ preview, allPosts }) {
               readingTime={getReadingTime(heroPost.content)}
             />
           )}
-          {morePosts.length > 0 && <HomepagePosts posts={morePosts} />}
+          {morePosts.length > 0 && <MorePosts posts={morePosts} />}
         </Container>
       </Layout>
     </>
