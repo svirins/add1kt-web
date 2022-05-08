@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import Avatar from '@/components/avatar';
-import Tag from '@/components/tag';
-import DateComponent from '@/components/date';
+import Authors from '@/components/authors';
+import Tags from '@/components/tags';
+import DateReadingTime from '@/components/date-reading-time';
 import CoverImage from '@/components/cover-image';
-import Featured from '@/components/featured';
 
 export default function PostPreview({
   title,
@@ -26,29 +25,10 @@ export default function PostPreview({
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-2 flex flex-row">
-        <DateComponent dateString={date} />
-        <div className="italic  inline-flex items-center">{`${readingTime} мин. чтения`}</div>
-      </div>
-      <div className="flex flex-row mb-2">
-        {featured && <Featured />}
-        {tags &&
-          tags.map((tag) => (
-            <Tag key={tag.slug} name={tag.title} slug={tag.slug} />
-          ))}
-      </div>
+      <DateReadingTime date={date} readingTime={readingTime} />
+      <Tags tags={tags} featured={featured} />
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <div className="flex flex-row">
-        {authors &&
-          authors.map((author) => (
-            <Avatar
-              key={author.slug}
-              name={author.name}
-              picture={author.picture}
-              slug={author.slug}
-            />
-          ))}
-      </div>
+      <Authors authors={authors} />
     </div>
   );
 }

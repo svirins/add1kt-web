@@ -3,6 +3,7 @@
 // TODO: add reading time
 // TODO: add 'featured' badge
 // TODO: excerpt - purge characters
+// TODO: fix image scaling (width)
 
 ## Configuration
 
