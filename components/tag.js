@@ -1,9 +1,9 @@
 import Link from 'next/link';
-export default function Tag({ name, slug, isFeatured }) {
+export default function Tag({ name, slug }) {
   return (
-    <div className="flex items-center">
+    <div className="flex">
       <Link href={`/tag/${slug}`}>
-        <a className="bg-blue-100  text-xs hover:bg-blue-200 text-blue-800  font-medium mr-1 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">
+        <a className="mr-2 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-orange-200 hover:bg-orange-300 text-orange-700 rounded-full">
           {name}
         </a>
       </Link>
