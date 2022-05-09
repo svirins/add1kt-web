@@ -18,7 +18,7 @@ export default function Post({ post, morePosts, preview }) {
   if (!router.isFallback && !post) {
     return <ErrorPage statusCode={404} />;
   }
-  const { excerpt, readingTime } = getExcerptAndReadingTime(post.body);
+  const { readingTime } = getExcerptAndReadingTime(post.body);
   // TODO: implement tailwind-typography article-wide
   return (
     <Layout preview={preview}>
@@ -41,7 +41,6 @@ export default function Post({ post, morePosts, preview }) {
                 tags={post.tagsCollection.items}
                 slug={post.slug}
                 featured={post.featured}
-                excerpt={excerpt}
                 readingTime={readingTime}
               />
               <PostBody content={post.content} />

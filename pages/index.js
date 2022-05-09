@@ -11,7 +11,7 @@ export default function Index({ preview, allPosts }) {
   // TODO: get locale and pass it to components
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
-  const { excerpt, readingTime } = getExcerptAndReadingTime(heroPost.body);
+  const { excerpt, readingTime } = getExcerptAndReadingTime(heroPost.body, 350);
   return (
     <>
       <Layout preview={preview}>
