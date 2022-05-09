@@ -28,7 +28,7 @@ export default function Post({ post, morePosts, preview }) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article claasName="prose lg:prose-xl prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600">
+            <article className="prose lg:prose-xl prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600">
               <Head>
                 <title>{post.title} | Next.js Blog Example</title>
                 <meta property="og:image" content={post.coverImage.url} />
@@ -65,7 +65,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const data = await getPostAndMorePosts(params.slug);
-  console.log('data', data);
   return {
     props: {
       preview: false,
