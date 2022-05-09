@@ -1,9 +1,13 @@
 // TODO: copy algolia example from panterblog
 // TODO: change og image in public
-// TODO: add reading time
-// TODO: add 'featured' badge
-// TODO: excerpt - purge characters
-// TODO: fix image scaling (width)
+// TODO: add popup for 'featured' badge
+0// TODO: fix image scaling (width)
+// TODO: add custom 404 page
+// TODO: add menu - top / bottom. blog page style links -Home -Blog -Authors(=contacts) -About / add -privacy page link at the bottom
+// TODO: add darkmode support and switch
+// TODO: add i18n support and switch
+// TODO: implement search component
+// TODO: implement pagination
 
 ## Configuration
 

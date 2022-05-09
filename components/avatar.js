@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ContentfulImage from './contentful-image';
+import { ContentfulImage } from './contentful-image';
 export default function Avatar({ name, picture, slug }) {
   return (
     <div className="flex items-center mr-4">

@@ -1,10 +1,17 @@
-import Image from 'next/image';
+import { EmbeddedContentfulImage } from '@/components/contentful-image';
 
 export default function RichTextAsset({ id, assets }) {
   const asset = assets?.find((asset) => asset.sys.id === id);
 
   if (asset?.url) {
-    return <Image src={asset.url} layout="fill" alt={asset.description} />;
+    return (
+      <EmbeddedContentfulImage
+        src={asset.url}
+        width={asset.width}
+        height={asset.height}
+        alt={asset.description}
+      />
+    );
   }
 
   return null;

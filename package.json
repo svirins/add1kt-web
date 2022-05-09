@@ -22,6 +22,7 @@
     "next": "latest",
     "next-i18next": "^11.0.0",
     "next-seo": "^5.4.0",
+    "next-share": "^0.13.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "reading-time": "^1.5.0"

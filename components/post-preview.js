@@ -31,7 +31,7 @@ export default function PostPreview({
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <div className="mb-2 text-lg flex flex-row justify-between items-center">
+      <div className="mb-2 text-lg flex flex-row justify-between items-end">
         <DateReadingTime date={date} readingTime={readingTime} />
       </div>
       <div className="flex flex-row mb-2">

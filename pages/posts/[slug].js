@@ -19,18 +19,18 @@ export default function Post({ post, morePosts, preview }) {
     return <ErrorPage statusCode={404} />;
   }
   const { readingTime } = getExcerptAndReadingTime(post.body);
-  // TODO: implement tailwind-typography article-wide
+
   return (
     <Layout preview={preview}>
       <Container>
         <Header />
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <PostTitle>Translated text</PostTitle>
         ) : (
           <>
-            <article className="prose lg:prose-xl prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600">
+            <article>
               <Head>
-                <title>{post.title} | Next.js Blog Example</title>
+                <title>{post.title} | Translated text</title>
                 <meta property="og:image" content={post.coverImage.url} />
               </Head>
               <PostHeader
@@ -43,7 +43,7 @@ export default function Post({ post, morePosts, preview }) {
                 featured={post.featured}
                 readingTime={readingTime}
               />
-              <PostBody content={post.content} />
+              <PostBody content={post.body} />
             </article>
             <SectionSeparator />
             {morePosts.length > 0 && <MorePosts posts={morePosts} />}
