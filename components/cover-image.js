@@ -1,10 +1,12 @@
+import Image from 'next/image';
+
 import Link from 'next/link';
 import cn from 'classnames';
-import { ContentfulImage } from './contentful-image';
+
 // TODO: fix animation
 export default function CoverImage({ title, url, slug, width, height }) {
   const image = (
-    <ContentfulImage
+    <Image
       width={width}
       height={height}
       layout="responsive"
