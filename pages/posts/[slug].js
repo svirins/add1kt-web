@@ -19,7 +19,7 @@ export default function Post({ post, morePosts, preview }) {
     return <ErrorPage statusCode={404} />;
   }
   const { excerpt, readingTime } = getExcerptAndReadingTime(post.body);
-
+  // TODO: implement tailwind-typography article-wide
   return (
     <Layout preview={preview}>
       <Container>
@@ -28,7 +28,7 @@ export default function Post({ post, morePosts, preview }) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article>
+            <article claasName="prose lg:prose-xl prose-slate prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600">
               <Head>
                 <title>{post.title} | Next.js Blog Example</title>
                 <meta property="og:image" content={post.coverImage.url} />
