@@ -7,7 +7,6 @@
 // TODO: add darkmode support and switch
 // TODO: add i18n support and switch
 // TODO: implement search component
-// TODO: implement pagination
 
 ## Configuration
 
