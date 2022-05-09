@@ -12,7 +12,7 @@ import PostTitle from '@/components/post-title';
 import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import { getAllSlugs, getPostAndMorePosts } from '@/lib/api';
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, morePosts }) {
   const router = useRouter();
 
   if (!router.isFallback && !post) {
@@ -21,7 +21,7 @@ export default function Post({ post, morePosts, preview }) {
   const { readingTime } = getExcerptAndReadingTime(post.body);
 
   return (
-    <Layout preview={preview}>
+    <Layout preview={false}>
       <Container>
         <Header />
         {router.isFallback ? (
@@ -66,7 +66,6 @@ export async function getStaticProps({ params }) {
   const data = await getPostAndMorePosts(params.slug);
   return {
     props: {
-      preview: false,
       post: data?.post ?? null,
       morePosts: data?.morePosts ?? null
     }
