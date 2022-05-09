@@ -1,5 +1,5 @@
 import PostPreview from '@/components/post-preview';
-import { getExcerpt, getReadingTime } from '@/lib/content-utils';
+import { getExcerptAndReadingTime } from '@/lib/content-utils';
 
 export default function MorePosts({ posts }) {
   return (
@@ -8,20 +8,23 @@ export default function MorePosts({ posts }) {
         More Stories
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
-        {posts.map((post) => (
-          <PostPreview
-            key={post.slug}
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.sys.publishedAt}
-            authors={post.authorCollection.items}
-            tags={post.tagsCollection.items}
-            slug={post.slug}
-            featured={post.featured}
-            excerpt={getExcerpt(post.content)}
-            readingTime={getReadingTime(post.content)}
-          />
-        ))}
+        {posts.map((post) => {
+          const { excerpt, readingTime } = getExcerptAndReadingTime(post.body);
+          return (
+            <PostPreview
+              key={post.slug}
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.sys.firstPublishedAt}
+              authors={post.authorCollection.items}
+              tags={post.tagsCollection.items}
+              slug={post.slug}
+              featured={post.featured}
+              excerpt={excerpt}
+              readingTime={readingTime}
+            />
+          );
+        })}
       </div>
     </section>
   );

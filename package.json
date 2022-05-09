@@ -11,7 +11,9 @@
     "export": "contentful space export --config ./contentful/config.json"
   },
   "dependencies": {
+    "@contentful/rich-text-plain-text-renderer": "^15.12.1",
     "@contentful/rich-text-react-renderer": "^15.4.0",
+    "@contentful/rich-text-types": "^15.12.1",
     "@panelbear/panelbear-nextjs": "^1.0.3",
     "algoliasearch": "^4.13.0",
     "classnames": "2.3.1",
@@ -27,11 +29,11 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
+    "@tailwindcss/typography": "^0.5.2",
     "@types/node": "^17.0.31",
     "@types/react": "^18.0.9",
     "autoprefixer": "10.4.2",
     "contentful-cli": "^1.12.29",
-    "contentful-import": "^7.8.7",
     "eslint": "^8.15.0",
     "eslint-config-next": "^12.1.6",
     "husky": "^7.0.4",

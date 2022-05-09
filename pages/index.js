@@ -4,13 +4,14 @@ import HeroPost from '@/components/hero-post';
 import Intro from '@/components/intro';
 import Layout from '@/components/layout';
 import { getAllPostsForHome } from '@/lib/api';
-import { getExcerpt, getReadingTime } from '@/lib/content-utils';
+import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import Head from 'next/head';
 
 export default function Index({ preview, allPosts }) {
   // TODO: get locale and pass it to components
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
+  const { excerpt, readingTime } = getExcerptAndReadingTime(heroPost.body);
   return (
     <>
       <Layout preview={preview}>
@@ -23,13 +24,13 @@ export default function Index({ preview, allPosts }) {
             <HeroPost
               title={heroPost.title}
               coverImage={heroPost.coverImage}
-              date={heroPost.sys.publishedAt}
+              date={heroPost.sys.firstPublishedAt}
               authors={heroPost.authorCollection.items}
               tags={heroPost.tagsCollection.items}
               slug={heroPost.slug}
               featured={heroPost.featured}
-              excerpt={getExcerpt(heroPost.content)}
-              readingTime={getReadingTime(heroPost.content)}
+              excerpt={excerpt}
+              readingTime={readingTime}
             />
           )}
           {morePosts.length > 0 && <MorePosts posts={morePosts} />}
