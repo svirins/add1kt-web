@@ -1,4 +1,6 @@
-module.exports = {
+const { withPlaiceholder } = require('@plaiceholder/next');
+
+module.exports = withPlaiceholder({
   i18n: {
     defaultLocale: 'ru',
     locales: ['ru', 'pl']
@@ -6,4 +8,4 @@ module.exports = {
   images: {
     domains: ['images.ctfassets.net']
   }
-};
+});

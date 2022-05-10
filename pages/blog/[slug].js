@@ -14,7 +14,6 @@ import { getAllSlugs, getPostAndMorePosts } from '@/lib/api';
 
 export default function Post({ post, morePosts }) {
   const router = useRouter();
-  console.log(post, morePosts);
   if (!router.isFallback && !post) {
     return <ErrorPage statusCode={404} />;
   }
@@ -72,8 +71,6 @@ export async function getStaticPaths({ locales }) {
 
 export async function getStaticProps({ params, locale }) {
   const data = await getPostAndMorePosts(params.slug, locale);
-  console.log('data', data);
-
   return {
     props: {
       post: data?.post ?? null,

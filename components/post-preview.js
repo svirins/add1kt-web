@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Authors from '@/components/authors';
 import Tags from '@/components/tags';
 import DateReadingTime from '@/components/date-reading-time';
-import CoverImage from '@/components/cover-image';
+import ShimmerImage from '@/components/cover-image';
 
 export default function PostPreview({
   title,
@@ -19,7 +19,7 @@ export default function PostPreview({
   return (
     <div>
       <div className="mb-5">
-        <CoverImage
+        <ShimmerImage
           title={title}
           slug={slug}
           url={coverImage.url}

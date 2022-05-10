@@ -1,91 +1,62 @@
-import ContentfulApi from '@utils/ContentfulApi';
-import { Config } from '@utils/Config';
-import PageMeta from '@components/PageMeta';
-import PostList from '@components/PostList';
-import RichTextPageContent from '@components/RichTextPageContent';
-import MainLayout from '@layouts/main';
-import ContentWrapper from '@components/ContentWrapper';
-import PageContentWrapper from '@components/PageContentWrapper';
-import HeroBanner from '@components/HeroBanner';
+/* eslint-disable no-unused-vars */
+import Head from 'next/head';
+import { getTotalPostsNumber, getPaginatedPosts } from '@/lib/api';
+import Config from '@/lib/config';
 
-export default function BlogIndexPage(props) {
-  const { postSummaries, totalPages, currentPage, pageContent, preview } =
-    props;
+import Container from '@/components/container';
+import MorePosts from '@/components/more-posts';
+import Intro from '@/components/intro';
+import Layout from '@/components/layout';
 
-  /**
-   * This provides some fallback values to PageMeta so that a pageContent
-   * entry is not required for /blog
-   */
-  const pageTitle = pageContent ? pageContent.title : 'Blog';
-  const pageDescription = pageContent
-    ? pageContent.description
-    : 'Articles | Next.js Contentful blog starter';
-
+export default function BlogIndexPage({ pagePosts, page, totalPages }) {
+  console.log('page', page, 'totalPages', totalPages, 'pagePosts', pagePosts);
   return (
-    <MainLayout preview={preview}>
-      <PageMeta
-        title={`${pageTitle} Page ${currentPage}`}
-        description={pageDescription}
-        url={`${Config.pageMeta.blogIndex.url}/page/${currentPage}`}
-      />
-
-      {pageContent.heroBanner !== null && (
-        <HeroBanner data={pageContent.heroBanner} />
-      )}
-
-      <ContentWrapper>
-        {pageContent.body && (
-          <PageContentWrapper>
-            <RichTextPageContent richTextBodyField={pageContent.body} />
-          </PageContentWrapper>
-        )}
-        <PostList
-          posts={postSummaries}
-          totalPages={totalPages}
-          currentPage={currentPage}
-        />
-      </ContentWrapper>
-    </MainLayout>
+    <>
+      <Layout preview={false}>
+        <Head>
+          <title>Next.js Blog Example</title>
+        </Head>
+        <Container>
+          <Intro />
+          {/* {pagePosts.length > 0 && <MorePosts posts={pagePosts} />} */}
+        </Container>
+      </Layout>
+    </>
   );
 }
 
-export async function getStaticPaths() {
-  const totalPosts = await ContentfulApi.getTotalPostsNumber();
+export async function getStaticPaths({ locales }) {
+  const totalPosts = await getTotalPostsNumber();
   const totalPages = Math.ceil(totalPosts / Config.pagination.pageSize);
 
-  const paths = [];
-
-  /**
-   * Start from page 2, so we don't replicate /blog
-   * which is page 1
-   */
-  for (let page = 2; page <= totalPages; page++) {
-    paths.push({ params: { page: page.toString() } });
-  }
+  const allPathsWithLocales = Array.from(
+    { length: totalPages },
+    (_, i) => i + 1
+  )
+    .map((page) =>
+      locales.map((locale) => ({
+        params: { page: `/page/${page}` },
+        locale: locale
+      }))
+    )
+    .flat();
 
   return {
-    paths,
-    fallback: false
+    paths: allPathsWithLocales,
+    fallback: true
   };
 }
 
-export async function getStaticProps({ params }) {
-  const postSummaries = await ContentfulApi.getPaginatedPostSummaries(
-    params.page
-  );
-  const totalPages = Math.ceil(
-    postSummaries.total / Config.pagination.pageSize
-  );
-  const pageContent = await ContentfulApi.getPageContentBySlug(
-    Config.pageMeta.blogIndex.slug
-  );
+export async function getStaticProps({ params, locale }) {
+  const pagePosts = await getPaginatedPosts(Number(params.page), locale);
+  const totalPosts = await getTotalPostsNumber();
+  const totalPages = Math.ceil(totalPosts / Config.pagination.pageSize);
 
   return {
     props: {
-      postSummaries: postSummaries.items,
-      totalPages,
-      currentPage: params.page,
-      pageContent: pageContent || null
+      pagePosts: pagePosts,
+      page: params.page,
+      totalPages: totalPages
     }
   };
 }

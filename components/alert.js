@@ -2,8 +2,6 @@ import Container from './container';
 import cn from 'classnames';
 import Link from 'next/link';
 
-import { EXAMPLE_PATH } from '@/lib/constants';
-
 import LocaleSwitcher from '@/components/locale-switcher';
 
 export default function Alert({ preview }) {

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Authors from '@/components/authors';
 import Tags from '@/components/tags';
 import DateReadingTime from '@/components/date-reading-time';
-import CoverImage from '@/components/cover-image';
+import ShimmerImage from '@/components/cover-image';
 
 export default function HeroPost({
   title,
@@ -18,7 +18,7 @@ export default function HeroPost({
   return (
     <section>
       <div className="mb-8 md:mb-16">
-        <CoverImage
+        <ShimmerImage
           title={title}
           slug={slug}
           url={coverImage.url}
