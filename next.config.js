@@ -1,8 +1,9 @@
-const { i18n } = require('./next-i18next.config');
-
 module.exports = {
+  i18n: {
+    defaultLocale: 'ru',
+    locales: ['ru', 'pl']
+  },
   images: {
     domains: ['images.ctfassets.net']
-  },
-  i18n
+  }
 };

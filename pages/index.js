@@ -40,8 +40,8 @@ export default function Index({ allPosts }) {
   );
 }
 
-export async function getStaticProps({ locale, locales }) {
-  const allPosts = (await getAllPostsForHome()) ?? [];
+export async function getStaticProps({ locale }) {
+  const allPosts = (await getAllPostsForHome(locale)) ?? [];
   return {
     props: { allPosts }
   };

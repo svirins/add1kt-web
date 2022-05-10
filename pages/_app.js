@@ -1,5 +1,5 @@
 import { DefaultSeo } from 'next-seo';
-import { appWithTranslation } from 'next-i18next';
+import { NextIntlProvider } from 'next-intl';
 import { usePanelbear } from '@panelbear/panelbear-nextjs';
 
 import '@/styles/index.css';
@@ -12,11 +12,12 @@ function MyApp({ Component, pageProps }) {
   });
   return (
     <>
-      {' '}
-      <DefaultSeo {...SEO} />
-      <Component {...pageProps} />{' '}
+      <NextIntlProvider messages={pageProps.messages}>
+        <DefaultSeo {...SEO} />
+        <Component {...pageProps} />
+      </NextIntlProvider>
     </>
   );
 }
 
-export default appWithTranslation(MyApp);
+export default MyApp;
