@@ -12,7 +12,18 @@ function MyApp({ Component, pageProps }) {
   });
   return (
     <>
-      <NextIntlProvider messages={pageProps.messages}>
+      <NextIntlProvider
+        messages={pageProps.messages}
+        formats={{
+          dateTime: {
+            short: {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric'
+            }
+          }
+        }}
+      >
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </NextIntlProvider>

@@ -56,6 +56,7 @@ export default function Post({ post, morePosts }) {
 
 export async function getStaticPaths({ locales }) {
   const allPosts = await getAllSlugs();
+  // const allPathsWithLocales =
   return {
     paths: allPosts?.map(({ slug }) => `/blog/${slug}`) ?? [],
     fallback: true
@@ -63,7 +64,7 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await getPostAndMorePosts(params.slug);
+  const data = await getPostAndMorePosts(params.slug, params.locale);
   return {
     props: {
       post: data?.post ?? null,
@@ -71,3 +72,5 @@ export async function getStaticProps({ params }) {
     }
   };
 }
+
+// { params: { slug: `/blog/${slug}`) ?? [] }, locale: locale },

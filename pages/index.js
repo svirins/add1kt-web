@@ -43,6 +43,9 @@ export default function Index({ allPosts }) {
 export async function getStaticProps({ locale }) {
   const allPosts = (await getAllPostsForHome(locale)) ?? [];
   return {
-    props: { allPosts }
+    props: {
+      allPosts,
+      messages: (await import(`../messages/${locale}.json`)).default
+    }
   };
 }

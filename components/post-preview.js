@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import Authors from '@/components/authors';
 import Tags from '@/components/tags';
 import DateReadingTime from '@/components/date-reading-time';
