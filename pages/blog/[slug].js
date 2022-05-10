@@ -14,7 +14,7 @@ import { getAllSlugs, getPostAndMorePosts } from '@/lib/api';
 
 export default function Post({ post, morePosts }) {
   const router = useRouter();
-
+  console.log(post, morePosts);
   if (!router.isFallback && !post) {
     return <ErrorPage statusCode={404} />;
   }
@@ -56,21 +56,29 @@ export default function Post({ post, morePosts }) {
 
 export async function getStaticPaths({ locales }) {
   const allPosts = await getAllSlugs();
-  // const allPathsWithLocales =
+  const allPathsWithLocales = allPosts
+    .map(({ slug }) =>
+      locales.map((locale) => ({
+        params: { slug: `/blog/${slug}` },
+        locale: locale
+      }))
+    )
+    .flat();
   return {
-    paths: allPosts?.map(({ slug }) => `/blog/${slug}`) ?? [],
+    paths: allPathsWithLocales,
     fallback: true
   };
 }
 
-export async function getStaticProps({ params }) {
-  const data = await getPostAndMorePosts(params.slug, params.locale);
+export async function getStaticProps({ params, locale }) {
+  const data = await getPostAndMorePosts(params.slug, locale);
+  console.log('data', data);
+
   return {
     props: {
       post: data?.post ?? null,
-      morePosts: data?.morePosts ?? null
+      morePosts: data?.morePosts ?? null,
+      messages: (await import(`../../messages/${locale}.json`)).default
     }
   };
 }
-
-// { params: { slug: `/blog/${slug}`) ?? [] }, locale: locale },

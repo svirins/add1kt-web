@@ -8,7 +8,6 @@ import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import Head from 'next/head';
 
 export default function Index({ allPosts }) {
-  // TODO: get locale and pass it to components
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   const { excerpt, readingTime } = getExcerptAndReadingTime(heroPost.body, 350);
