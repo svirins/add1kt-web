@@ -10,14 +10,14 @@ import SectionSeparator from '@/components/section-separator';
 import Layout from '@/components/layout';
 import PostTitle from '@/components/post-title';
 import { getExcerptAndReadingTime } from '@/lib/content-utils';
-import { getAllSlugs, getPostAndMorePosts } from '@/lib/api';
+import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
 
-export default function Post({ post, morePosts }) {
+export default function Post({ post, relatedPosts }) {
   const router = useRouter();
   if (!router.isFallback && !post) {
     return <ErrorPage statusCode={404} />;
   }
-  const { readingTime } = getExcerptAndReadingTime(post.body);
+  const { readingTime } = getExcerptAndReadingTime(post?.body);
 
   return (
     <Layout preview={false}>
@@ -45,7 +45,7 @@ export default function Post({ post, morePosts }) {
               <PostBody content={post.body} />
             </article>
             <SectionSeparator />
-            {morePosts.length > 0 && <MorePosts posts={morePosts} />}
+            {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
           </>
         )}
       </Container>
@@ -70,11 +70,11 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const data = await getPostAndMorePosts(params.slug, locale);
+  const data = await getPostAndRelatedPosts(params.slug, locale);
   return {
     props: {
       post: data?.post ?? null,
-      morePosts: data?.morePosts ?? null,
+      relatedPosts: data?.relatedPosts ?? null,
       messages: (await import(`../../messages/${locale}.json`)).default
     }
   };
