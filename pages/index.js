@@ -1,16 +1,20 @@
+import Head from 'next/head';
+import {
+  getTotalPostsNumber,
+  getPaginatedPosts,
+  getHomepageContent
+} from '@/lib/api';
+import Config from '@/lib/config';
+
+import AlgoliaSearch from '../components/algolia-search';
 import Container from '@/components/container';
 import MorePosts from '@/components/more-posts';
-import HeroPost from '@/components/hero-post';
+import HomePage from '@/components/homepage';
+
 import Intro from '@/components/intro';
 import Layout from '@/components/layout';
-import { getAllPostsForHome } from '@/lib/api';
-import { getExcerptAndReadingTime } from '@/lib/content-utils';
-import Head from 'next/head';
 
-export default function Index({ allPosts }) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
-  const { excerpt, readingTime } = getExcerptAndReadingTime(heroPost.body, 350);
+export default function Index({ homePage, pagePosts, page, totalPages }) {
   return (
     <>
       <Layout preview={false}>
@@ -19,20 +23,16 @@ export default function Index({ allPosts }) {
         </Head>
         <Container>
           <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.sys.firstPublishedAt}
-              authors={heroPost.authorCollection.items}
-              tags={heroPost.tagsCollection.items}
-              slug={heroPost.slug}
-              featured={heroPost.featured}
-              excerpt={excerpt}
-              readingTime={readingTime}
+          <AlgoliaSearch />
+          {homePage && (
+            <HomePage
+              title={homePage.title}
+              coverImage={homePage.coverImage}
+              body={homePage.body}
             />
           )}
-          {morePosts.length > 0 && <MorePosts posts={morePosts} />}
+
+          {pagePosts.length > 0 && <MorePosts posts={pagePosts} />}
         </Container>
       </Layout>
     </>
@@ -40,10 +40,18 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const allPosts = (await getAllPostsForHome(locale)) ?? [];
+  const page = 1;
+  const homePage = await getHomepageContent(locale);
+  const pagePosts = await getPaginatedPosts(page, locale);
+  const totalPosts = await getTotalPostsNumber();
+  const totalPages = Math.ceil(totalPosts / Config.pagination.pageSize);
+
   return {
     props: {
-      allPosts,
+      homePage,
+      pagePosts,
+      totalPages,
+      page,
       messages: (await import(`../messages/${locale}.json`)).default
     }
   };
