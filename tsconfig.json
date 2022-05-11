@@ -21,7 +21,8 @@
       "@/lib/*": ["lib/*"],
       "@/locales/*": ["locales/*"],
       "@/styles/*": ["styles/*"],
-      "@/messages/*": ["messages/*"]
+      "@/messages/*": ["messages/*"],
+      "@/config/*": ["config/*"]
     }
   },
   "include": [

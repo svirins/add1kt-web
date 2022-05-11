@@ -1,12 +1,14 @@
 /* eslint-disable no-unused-vars */
 import Head from 'next/head';
-import { getTotalPostsNumber, getPaginatedPosts } from '@/lib/api';
-import Config from '@/lib/config';
 
+import { getTotalPostsNumber, getPaginatedPosts } from '@/lib/api';
+import Config from '@/config/global-config';
+import AlgoliaSearch from '@/components/algolia-search';
 import Container from '@/components/container';
 import MorePosts from '@/components/more-posts';
 import Intro from '@/components/intro';
 import Layout from '@/components/layout';
+import PaginationControls from '@/components/pagination-controls';
 
 export default function BlogIndexPage({ pagePosts, page, totalPages }) {
   return (
@@ -17,7 +19,12 @@ export default function BlogIndexPage({ pagePosts, page, totalPages }) {
         </Head>
         <Container>
           <Intro />
+          <AlgoliaSearch />
           {pagePosts?.length > 0 && <MorePosts posts={pagePosts} />}
+          <PaginationControls
+            currentPage={Number(page)}
+            totalPages={Number(totalPages)}
+          />
         </Container>
       </Layout>
     </>
@@ -29,7 +36,7 @@ export async function getStaticPaths({ locales }) {
   const totalPages = Math.ceil(totalPosts / Config.pagination.pageSize);
 
   const allPathsWithLocales = Array.from(
-    { length: totalPages },
+    { length: totalPages - 1 },
     (_, i) => i + 1
   )
     .map((page) =>
@@ -56,7 +63,7 @@ export async function getStaticProps({ params, locale }) {
       pagePosts: pagePosts,
       page: params.page,
       totalPages: totalPages,
-      messages: (await import(`../../messages/${locale}.json`)).default
+      messages: (await import(`../../../messages/${locale}.json`)).default
     }
   };
 }

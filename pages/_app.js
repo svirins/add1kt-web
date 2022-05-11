@@ -4,7 +4,7 @@ import { usePanelbear } from '@panelbear/panelbear-nextjs';
 
 import '@/styles/index.css';
 
-import SEO from '../next-seo.config';
+import SEO from '@/config/next-seo.config';
 
 function MyApp({ Component, pageProps }) {
   usePanelbear(process.env.NEXT_PUBLIC_PANELBEAR_SITE_ID, {

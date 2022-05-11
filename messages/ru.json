@@ -1,6 +1,10 @@
 {
   "Post": {
     "reading_time": "мин. чтения",
-    "more_stories": "больше постов"
+    "paginated_posts": "посты",
+    "featured_posts": "featured",
+    "more_posts": "больше постов",
+    "previous_page": "предыдущие посты",
+    "next_page": "следующие посты"
   }
 }

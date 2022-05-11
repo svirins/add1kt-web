@@ -1,10 +1,5 @@
 import Head from 'next/head';
-import {
-  getTotalPostsNumber,
-  getPaginatedPosts,
-  getHomepageContent
-} from '@/lib/api';
-import Config from '@/lib/config';
+import { getFeaturedPosts, getHomepageContent } from '@/lib/api';
 
 import AlgoliaSearch from '../components/algolia-search';
 import Container from '@/components/container';
@@ -13,8 +8,9 @@ import HomePage from '@/components/homepage';
 
 import Intro from '@/components/intro';
 import Layout from '@/components/layout';
+import MorepostsControls from '@/components/moreposts-controls';
 
-export default function Index({ homePage, pagePosts, page, totalPages }) {
+export default function Index({ homePage, pagePosts }) {
   return (
     <>
       <Layout preview={false}>
@@ -32,7 +28,10 @@ export default function Index({ homePage, pagePosts, page, totalPages }) {
             />
           )}
 
-          {pagePosts.length > 0 && <MorePosts posts={pagePosts} />}
+          {pagePosts.length > 0 && (
+            <MorePosts isHomePage={true} posts={pagePosts} />
+          )}
+          <MorepostsControls />
         </Container>
       </Layout>
     </>
@@ -40,18 +39,13 @@ export default function Index({ homePage, pagePosts, page, totalPages }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const page = 1;
   const homePage = await getHomepageContent(locale);
-  const pagePosts = await getPaginatedPosts(page, locale);
-  const totalPosts = await getTotalPostsNumber();
-  const totalPages = Math.ceil(totalPosts / Config.pagination.pageSize);
+  const pagePosts = await getFeaturedPosts(locale);
 
   return {
     props: {
       homePage,
       pagePosts,
-      totalPages,
-      page,
       messages: (await import(`../messages/${locale}.json`)).default
     }
   };

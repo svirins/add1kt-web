@@ -44,8 +44,7 @@ const Config = {
   pagination: {
     pageSize: 6,
     morePostsSize: 2,
-    homePostsSize: 4,
-    queryLimit: 30
+    featuredPostsSize: 4
   },
   menuLinks: [
     {

@@ -1,6 +1,10 @@
 {
   "Post": {
     "reading_time": "min. czytanie",
-    "more_stories": "więcej stanowisk"
+    "paginated_posts": "posty",
+    "featured_posts": "faworyci",
+    "more_posts": "więcej stanowisk",
+    "previous_page": "poprzednie posty",
+    "next_page": "następujące posty"
   }
 }
