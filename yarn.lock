@@ -598,10 +598,15 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.2.tgz#ee771e2ba4b3dc5b372935d549fd9617bf345b8c"
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
-"@types/node@>=12", "@types/node@^17.0.31":
+"@types/node@>=12":
   version "17.0.31"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.31.tgz#a5bb84ecfa27eec5e1c802c6bbf8139bdb163a5d"
   integrity sha512-AR0x5HbXGqkEx9CadRH3EBYx/VkiUgZIhP4wvPn/+5KIsgpNoyFaRlVe0Zlx9gRtg8fA06a9tskE2MSN7TcG4Q==
+
+"@types/node@^17.0.31":
+  version "17.0.32"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.32.tgz#51d59d7a90ef2d0ae961791e0900cad2393a0149"
+  integrity sha512-eAIcfAvhf/BkHcf4pkLJ7ECpBAhh9kcxRBpip9cTiO+hf+aJrsxYxBeS6OXvOd9WqNAJmavXVpZvY1rBjNsXmw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -1445,9 +1450,9 @@ contentful-batch-libs@^9.2.1, contentful-batch-libs@^9.2.2:
     uuid "^8.3.2"
 
 contentful-cli@^1.12.29:
-  version "1.12.29"
-  resolved "https://registry.yarnpkg.com/contentful-cli/-/contentful-cli-1.12.29.tgz#fa4986dfab1c6e2e8735086cb6ac04da1efde916"
-  integrity sha512-ajhUA52Gb0OBSC78lYWCtqLdGiRi8N+FHf2f2XHmdS9uiM/3v1hf4RcPtMabJLVBgl09VH7BudOq2oRlJttXSg==
+  version "1.12.32"
+  resolved "https://registry.yarnpkg.com/contentful-cli/-/contentful-cli-1.12.32.tgz#3c9f3020f8386d4127be7d5e548e78d5b42a3bd4"
+  integrity sha512-zlSTCpN3Gbw5HEGS4G2HuW1UFnhyBSrmdP+NirsqUNJh+yZvT/HQP9b3Z28vMKxlXPbmHuXG8gdDZMTfFUwNJQ==
   dependencies:
     ast-types "^0.14.2"
     bfj "^7.0.2"
@@ -1486,9 +1491,9 @@ contentful-cli@^1.12.29:
     yargs "~13.3.2"
 
 contentful-export@^7.14.0:
-  version "7.16.0"
-  resolved "https://registry.yarnpkg.com/contentful-export/-/contentful-export-7.16.0.tgz#b91f73635e4d3deaaeb05becfa035ba879ed9b42"
-  integrity sha512-sbB/Cmdy674MvLWV72qAoZlhLWH5OrXhbyBJyJzK4by7ws+wyWIXJzYPhQXjBS3Wm5bpMdmlZ44J6bxWxwAleQ==
+  version "7.17.1"
+  resolved "https://registry.yarnpkg.com/contentful-export/-/contentful-export-7.17.1.tgz#787f4c519694f1673ba663eac231165edee554fd"
+  integrity sha512-y7ZtXsTKiKR2jgkm4E2XVQqZgWqciCm6FxDxXm1Q9g1weYny55sbHoDCCdY4Js7bVZUFkD2WkHI17AToN1n5OQ==
   dependencies:
     bfj "^7.0.2"
     bluebird "^3.3.3"
@@ -1496,14 +1501,14 @@ contentful-export@^7.14.0:
     contentful "^9.0.0"
     contentful-batch-libs "^9.2.1"
     contentful-management "^10.0.0"
+    date-fns "^2.28.0"
     figures "^3.2.0"
     jsonwebtoken "^8.5.1"
     listr "^0.14.1"
     listr-update-renderer "^0.5.0"
     listr-verbose-renderer "^0.6.0"
-    lodash "^4.17.10"
+    lodash.startcase "^4.4.0"
     mkdirp "^1.0.3"
-    moment "^2.22.2"
     node-fetch "^2.6.7"
     yargs "^17.1.1"
 
@@ -1702,7 +1707,7 @@ dargs@^7.0.0:
   resolved "https://registry.yarnpkg.com/dargs/-/dargs-7.0.0.tgz#04015c41de0bcb69ec84050f3d9be0caf8d6d5cc"
   integrity sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==
 
-date-fns@2.28.0, date-fns@^2.0.1:
+date-fns@2.28.0, date-fns@^2.0.1, date-fns@^2.28.0:
   version "2.28.0"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.28.0.tgz#9570d656f5fc13143e50c975a3b6bbeb46cd08b2"
   integrity sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==
@@ -1865,9 +1870,9 @@ dot-prop@^5.1.0:
     is-obj "^2.0.0"
 
 dotenv@^16.0.0:
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.0.tgz#c619001253be89ebb638d027b609c75c26e47411"
-  integrity sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==
+  version "16.0.1"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.1.tgz#8f8f9d94876c35dac989876a5d3a82a267fdce1d"
+  integrity sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ==
 
 ecdsa-sig-formatter@1.0.11:
   version "1.0.11"
@@ -3340,6 +3345,11 @@ lodash.once@^4.0.0:
   resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   integrity sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=
 
+lodash.startcase@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.startcase/-/lodash.startcase-4.4.0.tgz#9436e34ed26093ed7ffae1936144350915d9add8"
+  integrity sha1-lDbjTtJgk+1/+uGTYUQ1CRXZrdg=
+
 lodash@^4.17.10, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.21, lodash@^4.3.0:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
@@ -3581,11 +3591,11 @@ natural-compare@^1.4.0:
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
 next-intl@^2.7.1:
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-2.7.1.tgz#f6d5d00c90b737553b85828800de3b62b78e4c62"
-  integrity sha512-ZVB0sN+1kTtgPCm+FbqNjsatq54ghn3cQOPm/h2fMOwOuQ62nTcJ6M7ubjHqdYln8/n9Z6FkS51iiBScSFtNmw==
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-2.7.2.tgz#d8deff3ac8b0a5b2cb1f7238ffe2860d39ef2a1b"
+  integrity sha512-80CXKAUzRCsDOhRvxRvGtFWcVtCMvwCUEH9IRLIHBZ3b6kuVSgEDkBbHQ7ii/HFAe01c0XI45Pzs6R6tI/v+BA==
   dependencies:
-    use-intl "^2.7.1"
+    use-intl "^2.7.2"
 
 next-seo@^5.4.0:
   version "5.4.0"
@@ -5083,10 +5093,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-use-intl@^2.7.1:
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-2.7.1.tgz#9b166d1fd07dc5cd86e45e30b93ecb2b7af3abc4"
-  integrity sha512-ue5r/YbEkW0Sby7Ljd1AF8hc23q6jHoawUz2SkjjQug4XAeIXx2a4qvaBQw38R5afJbXlki6FDn6RA9T0V5OVw==
+use-intl@^2.7.2:
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-2.7.2.tgz#b593289337e927e5c5067cb8a538b62bc69e0a91"
+  integrity sha512-Mq7qaxPImhzmTmjJUP2kux2ykvcwaP5iEQWyKTP/9PlseRS5MnDH+4MNwQXNatBwKXFOjGRDjXKdOGVPSgC6NQ==
   dependencies:
     "@formatjs/ecma402-abstract" "^1.11.4"
     intl-messageformat "^9.3.18"

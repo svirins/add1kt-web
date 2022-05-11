@@ -18,7 +18,7 @@ export default function BlogIndexPage({ pagePosts, page, totalPages }) {
         </Head>
         <Container>
           <Intro />
-          {/* {pagePosts.length > 0 && <MorePosts posts={pagePosts} />} */}
+          {pagePosts.length > 0 && <MorePosts posts={pagePosts} />}
         </Container>
       </Layout>
     </>
