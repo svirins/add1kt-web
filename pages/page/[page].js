@@ -9,7 +9,6 @@ import Intro from '@/components/intro';
 import Layout from '@/components/layout';
 
 export default function BlogIndexPage({ pagePosts, page, totalPages }) {
-  console.log('page', page, 'totalPages', totalPages, 'pagePosts', pagePosts);
   return (
     <>
       <Layout preview={false}>
@@ -18,7 +17,7 @@ export default function BlogIndexPage({ pagePosts, page, totalPages }) {
         </Head>
         <Container>
           <Intro />
-          {pagePosts.length > 0 && <MorePosts posts={pagePosts} />}
+          {pagePosts?.length > 0 && <MorePosts posts={pagePosts} />}
         </Container>
       </Layout>
     </>
@@ -56,7 +55,8 @@ export async function getStaticProps({ params, locale }) {
     props: {
       pagePosts: pagePosts,
       page: params.page,
-      totalPages: totalPages
+      totalPages: totalPages,
+      messages: (await import(`../../messages/${locale}.json`)).default
     }
   };
 }

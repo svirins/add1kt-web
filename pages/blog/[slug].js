@@ -11,6 +11,7 @@ import Layout from '@/components/layout';
 import PostTitle from '@/components/post-title';
 import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import { getAllSlugs, getPostAndMorePosts } from '@/lib/api';
+import PaginationControls from '@/components/pagination-controls';
 
 export default function Post({ post, morePosts }) {
   const router = useRouter();
