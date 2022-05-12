@@ -4,7 +4,6 @@ import Config from '@/config/global-config';
 import {
   FULL_POST_DATA,
   SHORT_POST_DATA,
-  BASIC_POST_DATA,
   HOMEPAGE_DATA,
   AUTHOR_DATA,
   TAG_DATA
@@ -151,10 +150,10 @@ export async function getPostAndRelatedPosts(slug, locale) {
     relatedPosts: dataB?.postCollection?.items ?? null
   };
 }
-export async function getAuthorIdBySlug(slug) {
+export async function getAuthorIdBySlug(slug, locale) {
   const query = gql`
-    query GetAuthorId($slug: String!) {
-      authorCollection(where: { slug: $slug }) {
+    query GetAuthorId($slug: String!, $locale: String!) {
+      authorCollection(where: { slug: $slug }, locale: $locale) {
         items {
           sys {
             id
@@ -164,7 +163,8 @@ export async function getAuthorIdBySlug(slug) {
     }
   `;
   const variables = {
-    slug: slug
+    slug: slug,
+    locale: locale
   };
   const data = await apiRequest(query, variables);
   return data.authorCollection?.items[0]?.sys.id ?? null;
@@ -173,7 +173,7 @@ export async function getAuthorIdBySlug(slug) {
 export async function getAuthorAndRelatedPosts(id, locale) {
   const query = gql`
     ${AUTHOR_DATA}
-    ${BASIC_POST_DATA}
+    ${SHORT_POST_DATA}
     query GetAuthorData(
       $locale: String!
       $id: String!
@@ -183,7 +183,61 @@ export async function getAuthorAndRelatedPosts(id, locale) {
       author(locale: $locale, id: $id) {
         ...AuthorData
         linkedFrom {
-          postCollection(limit: $limit, skip: $skip) {
+          postCollection(limit: $limit, skip: $skip, locale: $locale) {
+            items {
+              ...ShortPostData
+            }
+          }
+        }
+      }
+    }
+  `;
+  const variables = {
+    locale: locale,
+    id: id,
+    limit: Config.pagination.morePostsSize,
+    skip: 0
+  };
+  const data = await apiRequest(query, variables);
+  return {
+    author: data?.author ?? null,
+    relatedPosts: data?.author?.linkedFrom?.postCollection?.items ?? null
+  };
+}
+export async function getTagIdBySlug(slug, locale) {
+  const query = gql`
+    query GetTagId($slug: String!, $locale: String!) {
+      tagCollection(where: { slug: $slug }, locale: $locale) {
+        items {
+          sys {
+            id
+          }
+        }
+      }
+    }
+  `;
+  const variables = {
+    slug: slug,
+    locale: locale
+  };
+  const data = await apiRequest(query, variables);
+  return data.tagCollection?.items[0]?.sys.id ?? null;
+}
+
+export async function getTagAndRelatedPosts(id, locale) {
+  const query = gql`
+    ${TAG_DATA}
+    ${SHORT_POST_DATA}
+    query GetTagData(
+      $locale: String!
+      $id: String!
+      $limit: Int!
+      $skip: Int!
+    ) {
+      tag(locale: $locale, id: $id) {
+        ...TagData
+        linkedFrom {
+          postCollection(limit: $limit, skip: $skip, locale: $locale) {
             items {
               ...BasicPostData
             }
@@ -195,56 +249,7 @@ export async function getAuthorAndRelatedPosts(id, locale) {
   const variables = {
     locale: locale,
     id: id,
-    limit: 2,
-    skip: 0
-  };
-  const data = await apiRequest(query, variables);
-  console.log(
-    'api reporting',
-    'author',
-    data?.author,
-    'relatedPosts',
-    data?.author?.linkedFrom?.postCollection?.items
-  );
-  return {
-    author: data?.author ?? null,
-    relatedPosts: data?.author?.linkedFrom?.postCollection?.items ?? null
-  };
-}
-
-export async function getTagAndRelatedPosts(slug, locale) {
-  const query = gql`
-    ${TAG_DATA}
-    ${BASIC_POST_DATA}
-    query GetTagData(
-      $locale: String!
-      $slug: String!
-      $limit: Int!
-      $skip: Int!
-    ) {
-      tagCollection(
-        locale: $locale
-        where: { slug: $slug }
-        limit: $limit
-        skip: $skip
-      ) {
-        items {
-          ...TagData
-          linkedFrom {
-            postCollection {
-              items {
-                ...BasicPostData
-              }
-            }
-          }
-        }
-      }
-    }
-  `;
-  const variables = {
-    locale: locale,
-    slug: slug,
-    limit: 6,
+    limit: Config.pagination.morePostsSize,
     skip: 0
   };
   const data = await apiRequest(query, variables);

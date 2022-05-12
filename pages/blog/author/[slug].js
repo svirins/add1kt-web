@@ -56,7 +56,6 @@ export async function getStaticPaths({ locales }) {
       }))
     )
     .flat();
-  // console.log('allPathsWithLocales', allPathsWithLocales);
   return {
     paths: allPathsWithLocales,
     fallback: true
@@ -65,8 +64,8 @@ export async function getStaticPaths({ locales }) {
 
 export async function getStaticProps({ params, locale }) {
   const id = await getAuthorIdBySlug(params.slug, locale);
-  console.log('get id', id);
   const data = await getAuthorAndRelatedPosts(id, locale);
+  console.log('response', data?.relatedPosts);
   return {
     props: {
       author: data?.author ?? null,

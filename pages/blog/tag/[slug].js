@@ -9,7 +9,7 @@ import PostHeader from '@/components/post-header';
 import SectionSeparator from '@/components/section-separator';
 import Layout from '@/components/layout';
 import PageTitle from '@/components/page-title';
-import { getAllTags, getTagAndRelatedPosts } from '@/lib/api';
+import { getAllTags, getTagAndRelatedPosts, getTagIdBySlug } from '@/lib/api';
 
 export default function Tag({ tag, relatedPosts }) {
   const router = useRouter();
@@ -43,9 +43,11 @@ export default function Tag({ tag, relatedPosts }) {
 export async function getStaticPaths({ locales }) {
   const allTags = await getAllTags();
   const allPathsWithLocales = allTags
-    .map(({ slug }) =>
+    .map((tag) =>
       locales.map((locale) => ({
-        params: { slug: `/tag/${slug}` },
+        params: {
+          slug: `/tag/${tag.slug}`
+        },
         locale: locale
       }))
     )
@@ -57,7 +59,9 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const data = await getTagAndRelatedPosts(params.slug, locale);
+  const id = await getTagIdBySlug(params.slug, locale);
+  const data = await getTagAndRelatedPosts(id, locale);
+  console.log('response', data?.relatedPosts);
   return {
     props: {
       tag: data?.tag ?? null,
