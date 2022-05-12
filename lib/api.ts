@@ -3,12 +3,6 @@ import apiRequest from '@/lib/fetcher';
 import Config from '@/config/global-config';
 import { POST_DATA, HOMEPAGE_DATA } from '@/lib/gql-fragments';
 
-function extractRelatedPosts(fetchResponse) {
-  return fetchResponse?.data?.postCollection?.items[0]?.relatedPostsCollection?.items.map(
-    ({ slug }) => slug
-  );
-}
-
 export async function getFeaturedPosts(locale) {
   const query = gql`
     ${POST_DATA}
@@ -82,12 +76,14 @@ export async function getPostAndRelatedPosts(slug, locale) {
 
   const variablesA = {
     locale: locale,
-    limit: Config.pagination.featuredPostsSize
+    slug: slug
   };
 
   const dataA = await apiRequest(queryA, variablesA);
-  const slugs = extractRelatedPosts(dataA);
-
+  const slugs =
+    dataA?.postCollection?.items[0]?.relatedPostsCollection.items.map(
+      ({ slug }) => slug
+    );
   const queryB = gql`
     ${POST_DATA}
     query GetPostBySlug($locale: String!, $slugs: [String]!, $limit: Int!) {
@@ -108,7 +104,6 @@ export async function getPostAndRelatedPosts(slug, locale) {
     slugs: slugs,
     limit: Config.pagination.morePostsSize
   };
-
   const dataB = await apiRequest(queryB, variablesB);
 
   return {
