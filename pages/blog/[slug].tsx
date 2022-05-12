@@ -20,7 +20,7 @@ export default function Post({ post, relatedPosts }) {
   const { readingTime } = getExcerptAndReadingTime(post?.body);
 
   return (
-    <Layout preview={false}>
+    <Layout>
       <Container>
         <Header />
         {router.isFallback ? (
@@ -38,14 +38,15 @@ export default function Post({ post, relatedPosts }) {
                 date={post.sys.firstPublishedAt}
                 authors={post.authorCollection.items}
                 tags={post.tagsCollection.items}
-                slug={post.slug}
                 featured={post.featured}
                 readingTime={readingTime}
               />
               <PostBody content={post.body} />
             </article>
             <SectionSeparator />
-            {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
+            {relatedPosts?.length > 0 && (
+              <MorePosts posts={relatedPosts} isHomePage={false} />
+            )}
           </>
         )}
       </Container>

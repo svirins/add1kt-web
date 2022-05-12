@@ -43,7 +43,7 @@ const Config = {
   },
   pagination: {
     pageSize: 6,
-    morePostsSize: 2,
+    morePostsSize: 6,
     featuredPostsSize: 4
   },
   menuLinks: [

@@ -13,7 +13,7 @@ import MorepostsControls from '@/components/moreposts-controls';
 export default function Index({ homePage, pagePosts }) {
   return (
     <>
-      <Layout preview={false}>
+      <Layout>
         <Head>
           <title>Next.js Blog Example</title>
         </Head>
@@ -28,7 +28,7 @@ export default function Index({ homePage, pagePosts }) {
             />
           )}
 
-          {pagePosts.length > 0 && (
+          {pagePosts?.length > 0 && (
             <MorePosts isHomePage={true} posts={pagePosts} />
           )}
           <MorepostsControls />
@@ -39,9 +39,9 @@ export default function Index({ homePage, pagePosts }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const homePage = await getHomepageContent(locale);
   const pagePosts = await getFeaturedPosts(locale);
-
+  const homePage = await getHomepageContent(locale);
+  // console.log('pagePosts', pagePosts, 'homePage', homePage);
   return {
     props: {
       homePage,
