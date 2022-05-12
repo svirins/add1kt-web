@@ -17,24 +17,6 @@ type Query {
     where: PostFilter
     order: [PostOrder]
   ): PostCollection
-  homepage(id: String!, preview: Boolean, locale: String): Homepage
-  homepageCollection(
-    skip: Int = 0
-    limit: Int = 100
-    preview: Boolean
-    locale: String
-    where: HomepageFilter
-    order: [HomepageOrder]
-  ): HomepageCollection
-  author(id: String!, preview: Boolean, locale: String): Author
-  authorCollection(
-    skip: Int = 0
-    limit: Int = 100
-    preview: Boolean
-    locale: String
-    where: AuthorFilter
-    order: [AuthorOrder]
-  ): AuthorCollection
   tag(id: String!, preview: Boolean, locale: String): Tag
   tagCollection(
     skip: Int = 0
@@ -44,6 +26,24 @@ type Query {
     where: TagFilter
     order: [TagOrder]
   ): TagCollection
+  author(id: String!, preview: Boolean, locale: String): Author
+  authorCollection(
+    skip: Int = 0
+    limit: Int = 100
+    preview: Boolean
+    locale: String
+    where: AuthorFilter
+    order: [AuthorOrder]
+  ): AuthorCollection
+  homepage(id: String!, preview: Boolean, locale: String): Homepage
+  homepageCollection(
+    skip: Int = 0
+    limit: Int = 100
+    preview: Boolean
+    locale: String
+    where: HomepageFilter
+    order: [HomepageOrder]
+  ): HomepageCollection
   page(id: String!, preview: Boolean, locale: String): Page
   pageCollection(
     skip: Int = 0
@@ -235,24 +235,24 @@ type AssetLinkingCollections {
     preview: Boolean
     locale: String
   ): PostCollection
-  homepageCollection(
-    skip: Int = 0
-    limit: Int = 100
-    preview: Boolean
-    locale: String
-  ): HomepageCollection
-  authorCollection(
-    skip: Int = 0
-    limit: Int = 100
-    preview: Boolean
-    locale: String
-  ): AuthorCollection
   tagCollection(
     skip: Int = 0
     limit: Int = 100
     preview: Boolean
     locale: String
   ): TagCollection
+  authorCollection(
+    skip: Int = 0
+    limit: Int = 100
+    preview: Boolean
+    locale: String
+  ): AuthorCollection
+  homepageCollection(
+    skip: Int = 0
+    limit: Int = 100
+    preview: Boolean
+    locale: String
+  ): HomepageCollection
 }
 
 type EntryCollection {
@@ -336,9 +336,7 @@ type Author implements Entry {
   picture(preview: Boolean, locale: String): Asset
   coverImage(preview: Boolean, locale: String): Asset
   subtitle(locale: String): String
-  personalInfo(locale: String): String
   social(locale: String): [String]
-  location(locale: String): String
 }
 
 type AuthorLinkingCollections {
@@ -420,6 +418,20 @@ type PostRelatedPostsCollection {
   items: [Post]!
 }
 
+type TagCollection {
+  total: Int!
+  skip: Int!
+  limit: Int!
+  items: [Tag]!
+}
+
+type AuthorCollection {
+  total: Int!
+  skip: Int!
+  limit: Int!
+  items: [Author]!
+}
+
 type HomepageCollection {
   total: Int!
   skip: Int!
@@ -465,20 +477,6 @@ type HomepageBodyEntries {
 type HomepageBodyAssets {
   hyperlink: [Asset]!
   block: [Asset]!
-}
-
-type AuthorCollection {
-  total: Int!
-  skip: Int!
-  limit: Int!
-  items: [Author]!
-}
-
-type TagCollection {
-  total: Int!
-  skip: Int!
-  limit: Int!
-  items: [Tag]!
 }
 
 type AssetCollection {
@@ -676,7 +674,7 @@ enum PostOrder {
   sys_publishedVersion_DESC
 }
 
-input HomepageFilter {
+input TagFilter {
   sys: SysFilter
   contentfulMetadata: ContentfulMetadataFilter
   title_exists: Boolean
@@ -686,17 +684,32 @@ input HomepageFilter {
   title_not_in: [String]
   title_contains: String
   title_not_contains: String
-  body_exists: Boolean
-  body_contains: String
-  body_not_contains: String
   coverImage_exists: Boolean
-  OR: [HomepageFilter]
-  AND: [HomepageFilter]
+  slug_exists: Boolean
+  slug: String
+  slug_not: String
+  slug_in: [String]
+  slug_not_in: [String]
+  slug_contains: String
+  slug_not_contains: String
+  description_exists: Boolean
+  description: String
+  description_not: String
+  description_in: [String]
+  description_not_in: [String]
+  description_contains: String
+  description_not_contains: String
+  OR: [TagFilter]
+  AND: [TagFilter]
 }
 
-enum HomepageOrder {
+enum TagOrder {
   title_ASC
   title_DESC
+  slug_ASC
+  slug_DESC
+  description_ASC
+  description_DESC
   sys_id_ASC
   sys_id_DESC
   sys_publishedAt_ASC
@@ -733,24 +746,10 @@ input AuthorFilter {
   subtitle_not_in: [String]
   subtitle_contains: String
   subtitle_not_contains: String
-  personal_info_exists: Boolean
-  personal_info: String
-  personal_info_not: String
-  personal_info_in: [String]
-  personal_info_not_in: [String]
-  personal_info_contains: String
-  personal_info_not_contains: String
   social_exists: Boolean
   social_contains_all: [String]
   social_contains_some: [String]
   social_contains_none: [String]
-  location_exists: Boolean
-  location: String
-  location_not: String
-  location_in: [String]
-  location_not_in: [String]
-  location_contains: String
-  location_not_contains: String
   OR: [AuthorFilter]
   AND: [AuthorFilter]
 }
@@ -762,8 +761,6 @@ enum AuthorOrder {
   slug_DESC
   subtitle_ASC
   subtitle_DESC
-  location_ASC
-  location_DESC
   sys_id_ASC
   sys_id_DESC
   sys_publishedAt_ASC
@@ -774,7 +771,7 @@ enum AuthorOrder {
   sys_publishedVersion_DESC
 }
 
-input TagFilter {
+input HomepageFilter {
   sys: SysFilter
   contentfulMetadata: ContentfulMetadataFilter
   title_exists: Boolean
@@ -784,30 +781,17 @@ input TagFilter {
   title_not_in: [String]
   title_contains: String
   title_not_contains: String
+  body_exists: Boolean
+  body_contains: String
+  body_not_contains: String
   coverImage_exists: Boolean
-  slug_exists: Boolean
-  slug: String
-  slug_not: String
-  slug_in: [String]
-  slug_not_in: [String]
-  slug_contains: String
-  slug_not_contains: String
-  description_exists: Boolean
-  description: String
-  description_not: String
-  description_in: [String]
-  description_not_in: [String]
-  description_contains: String
-  description_not_contains: String
-  OR: [TagFilter]
-  AND: [TagFilter]
+  OR: [HomepageFilter]
+  AND: [HomepageFilter]
 }
 
-enum TagOrder {
+enum HomepageOrder {
   title_ASC
   title_DESC
-  slug_ASC
-  slug_DESC
   sys_id_ASC
   sys_id_DESC
   sys_publishedAt_ASC

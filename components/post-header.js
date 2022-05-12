@@ -1,7 +1,7 @@
 import Authors from '@/components/authors';
 import DateReadingTime from '@/components/date-reading-time';
 import CoverImage from '@/components/cover-image';
-import PostTitle from '@/components/post-title';
+import PageTitle from '@/components/page-title';
 import Tags from '@/components/tags';
 
 export default function PostHeader({
@@ -15,7 +15,7 @@ export default function PostHeader({
 }) {
   return (
     <>
-      <PostTitle>{title}</PostTitle>
+      <PageTitle>{title}</PageTitle>
       <div className="mb-8 md:mb-16 sm:mx-0">
         <CoverImage
           title={title}

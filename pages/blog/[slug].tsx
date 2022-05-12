@@ -8,7 +8,7 @@ import Header from '@/components/header';
 import PostHeader from '@/components/post-header';
 import SectionSeparator from '@/components/section-separator';
 import Layout from '@/components/layout';
-import PostTitle from '@/components/post-title';
+import PageTitle from '@/components/page-title';
 import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
 
@@ -24,7 +24,7 @@ export default function Post({ post, relatedPosts }) {
       <Container>
         <Header />
         {router.isFallback ? (
-          <PostTitle>Translated text</PostTitle>
+          <PageTitle>Translated text</PageTitle>
         ) : (
           <>
             <article>

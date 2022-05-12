@@ -1,11 +1,18 @@
 import { gql } from 'graphql-request';
 import apiRequest from '@/lib/fetcher';
 import Config from '@/config/global-config';
-import { POST_DATA, HOMEPAGE_DATA } from '@/lib/gql-fragments';
+import {
+  FULL_POST_DATA,
+  SHORT_POST_DATA,
+  BASIC_POST_DATA,
+  HOMEPAGE_DATA,
+  AUTHOR_DATA,
+  TAG_DATA
+} from '@/lib/gql-fragments';
 
 export async function getFeaturedPosts(locale) {
   const query = gql`
-    ${POST_DATA}
+    ${SHORT_POST_DATA}
     query GetFeaturedPosts($locale: String!, $limit: Int!) {
       postCollection(
         order: sys_firstPublishedAt_DESC
@@ -14,7 +21,7 @@ export async function getFeaturedPosts(locale) {
         where: { featured: true }
       ) {
         items {
-          ...PostData
+          ...ShortPostData
         }
       }
     }
@@ -62,13 +69,46 @@ export async function getAllSlugs() {
   return data?.postCollection?.items ?? null;
 }
 
+export async function getAllAuthors() {
+  const query = gql`
+    query {
+      authorCollection {
+        items {
+          slug
+          sys {
+            id
+          }
+        }
+      }
+    }
+  `;
+  const variables = {};
+  const data = await apiRequest(query, variables);
+  return data?.authorCollection?.items ?? null;
+}
+
+export async function getAllTags() {
+  const query = gql`
+    query {
+      tagCollection {
+        items {
+          slug
+        }
+      }
+    }
+  `;
+  const variables = {};
+  const data = await apiRequest(query, variables);
+  return data?.authorCollection?.items ?? null;
+}
+
 export async function getPostAndRelatedPosts(slug, locale) {
   const queryA = gql`
-    ${POST_DATA}
+    ${FULL_POST_DATA}
     query GetPostBySlug($locale: String!, $slug: String!) {
       postCollection(limit: 1, locale: $locale, where: { slug: $slug }) {
         items {
-          ...PostData
+          ...FullPostData
         }
       }
     }
@@ -85,7 +125,7 @@ export async function getPostAndRelatedPosts(slug, locale) {
       ({ slug }) => slug
     );
   const queryB = gql`
-    ${POST_DATA}
+    ${SHORT_POST_DATA}
     query GetPostBySlug($locale: String!, $slugs: [String]!, $limit: Int!) {
       postCollection(
         limit: $limit
@@ -93,7 +133,7 @@ export async function getPostAndRelatedPosts(slug, locale) {
         where: { slug_in: $slugs }
       ) {
         items {
-          ...PostData
+          ...ShortPostData
         }
       }
     }
@@ -109,6 +149,108 @@ export async function getPostAndRelatedPosts(slug, locale) {
   return {
     post: dataA?.postCollection?.items[0] ?? null,
     relatedPosts: dataB?.postCollection?.items ?? null
+  };
+}
+export async function getAuthorIdBySlug(slug) {
+  const query = gql`
+    query GetAuthorId($slug: String!) {
+      authorCollection(where: { slug: $slug }) {
+        items {
+          sys {
+            id
+          }
+        }
+      }
+    }
+  `;
+  const variables = {
+    slug: slug
+  };
+  const data = await apiRequest(query, variables);
+  return data.authorCollection?.items[0]?.sys.id ?? null;
+}
+
+export async function getAuthorAndRelatedPosts(id, locale) {
+  const query = gql`
+    ${AUTHOR_DATA}
+    ${BASIC_POST_DATA}
+    query GetAuthorData(
+      $locale: String!
+      $id: String!
+      $limit: Int!
+      $skip: Int!
+    ) {
+      author(locale: $locale, id: $id) {
+        ...AuthorData
+        linkedFrom {
+          postCollection(limit: $limit, skip: $skip) {
+            items {
+              ...BasicPostData
+            }
+          }
+        }
+      }
+    }
+  `;
+  const variables = {
+    locale: locale,
+    id: id,
+    limit: 2,
+    skip: 0
+  };
+  const data = await apiRequest(query, variables);
+  console.log(
+    'api reporting',
+    'author',
+    data?.author,
+    'relatedPosts',
+    data?.author?.linkedFrom?.postCollection?.items
+  );
+  return {
+    author: data?.author ?? null,
+    relatedPosts: data?.author?.linkedFrom?.postCollection?.items ?? null
+  };
+}
+
+export async function getTagAndRelatedPosts(slug, locale) {
+  const query = gql`
+    ${TAG_DATA}
+    ${BASIC_POST_DATA}
+    query GetTagData(
+      $locale: String!
+      $slug: String!
+      $limit: Int!
+      $skip: Int!
+    ) {
+      tagCollection(
+        locale: $locale
+        where: { slug: $slug }
+        limit: $limit
+        skip: $skip
+      ) {
+        items {
+          ...TagData
+          linkedFrom {
+            postCollection {
+              items {
+                ...BasicPostData
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+  const variables = {
+    locale: locale,
+    slug: slug,
+    limit: 6,
+    skip: 0
+  };
+  const data = await apiRequest(query, variables);
+  return {
+    tag: data?.tagCollection?.items[0] ?? null,
+    relatedPosts: data?.postCollection?.items ?? null
   };
 }
 
@@ -135,7 +277,7 @@ export async function getPaginatedPosts(page, locale) {
     skipMultiplier > 0 ? Config.pagination.pageSize * skipMultiplier : 0;
 
   const query = gql`
-    ${POST_DATA}
+    ${SHORT_POST_DATA}
     query GetPaginatedPosts($locale: String!, $limit: Int!, $skip: Int!) {
       postCollection(
         order: sys_firstPublishedAt_DESC
@@ -144,7 +286,7 @@ export async function getPaginatedPosts(page, locale) {
         skip: $skip
       ) {
         items {
-          ...PostData
+          ...ShortPostData
         }
       }
     }

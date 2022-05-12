@@ -13,7 +13,7 @@ export default function Avatar({ name, picture, slug }) {
           alt={name}
         />
       </div>
-      <Link href={`/author/${slug}`}>
+      <Link href={`/blog/author/${slug}`}>
         <a className="hover:underline text-base font-medium ">{name}</a>
       </Link>
     </div>
