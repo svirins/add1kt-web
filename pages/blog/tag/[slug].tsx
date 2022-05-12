@@ -9,15 +9,11 @@ import PostHeader from '@/components/post-header';
 import SectionSeparator from '@/components/section-separator';
 import Layout from '@/components/layout';
 import PageTitle from '@/components/page-title';
-import {
-  getAllAuthors,
-  getAuthorAndRelatedPosts,
-  getAuthorIdBySlug
-} from '@/lib/api';
+import { getAllTags, getTagAndRelatedPosts, getTagIdBySlug } from '@/lib/api';
 
-export default function Author({ author, relatedPosts }) {
+export default function Tag({ tag, relatedPosts }) {
   const router = useRouter();
-  if (!router.isFallback && !author) {
+  if (!router.isFallback && !tag) {
     return <ErrorPage statusCode={404} />;
   }
 
@@ -31,10 +27,10 @@ export default function Author({ author, relatedPosts }) {
           <>
             <section>
               <Head>
-                <title>{author.name} | Translated text</title>
-                <meta property="og:image" content={author.coverImage.url} />
+                <title>{tag.title} | Translated text</title>
+                <meta property="og:image" content={tag.coverImage.url} />
               </Head>
-              <div>{author.name}</div>
+              <div>{tag.title}</div>
             </section>
             <SectionSeparator />
           </>
@@ -45,12 +41,12 @@ export default function Author({ author, relatedPosts }) {
 }
 
 export async function getStaticPaths({ locales }) {
-  const allAuthors = await getAllAuthors();
-  const allPathsWithLocales = allAuthors
-    .map((author) =>
+  const allTags = await getAllTags();
+  const allPathsWithLocales = allTags
+    .map((tag) =>
       locales.map((locale) => ({
         params: {
-          slug: `/author/${author.slug}`
+          slug: `/tag/${tag.slug}`
         },
         locale: locale
       }))
@@ -63,12 +59,11 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const id = await getAuthorIdBySlug(params.slug, locale);
-  const data = await getAuthorAndRelatedPosts(id, locale);
-  console.log('response', data?.relatedPosts);
+  const id = await getTagIdBySlug(params.slug, locale);
+  const data = await getTagAndRelatedPosts(id, locale);
   return {
     props: {
-      author: data?.author ?? null,
+      tag: data?.tag ?? null,
       relatedPosts: data?.relatedPosts ?? null,
       messages: (await import(`../../../messages/${locale}.json`)).default
     }

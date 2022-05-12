@@ -10,7 +10,7 @@ import Intro from '@/components/intro';
 import Layout from '@/components/layout';
 import MorepostsControls from '@/components/moreposts-controls';
 
-export default function Index({ homePage, pagePosts }) {
+export default function About({ homePage, pagePosts }) {
   return (
     <>
       <Layout>

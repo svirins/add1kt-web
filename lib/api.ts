@@ -33,7 +33,6 @@ export async function getFeaturedPosts(locale) {
   const data = await apiRequest(query, variables);
   return data?.postCollection?.items ?? null;
 }
-
 export async function getHomepageContent(locale) {
   const query = gql`
     ${HOMEPAGE_DATA}
@@ -52,7 +51,6 @@ export async function getHomepageContent(locale) {
   const data = await apiRequest(query, variables);
   return data?.homepageCollection?.items[0] ?? null;
 }
-
 export async function getAllSlugs() {
   const query = gql`
     query {
@@ -67,7 +65,6 @@ export async function getAllSlugs() {
   const data = await apiRequest(query, variables);
   return data?.postCollection?.items ?? null;
 }
-
 export async function getAllAuthors() {
   const query = gql`
     query {
@@ -85,7 +82,6 @@ export async function getAllAuthors() {
   const data = await apiRequest(query, variables);
   return data?.authorCollection?.items ?? null;
 }
-
 export async function getAllTags() {
   const query = gql`
     query {
@@ -98,9 +94,8 @@ export async function getAllTags() {
   `;
   const variables = {};
   const data = await apiRequest(query, variables);
-  return data?.authorCollection?.items ?? null;
+  return data?.tagCollection?.items ?? null;
 }
-
 export async function getPostAndRelatedPosts(slug, locale) {
   const queryA = gql`
     ${FULL_POST_DATA}
@@ -169,7 +164,6 @@ export async function getAuthorIdBySlug(slug, locale) {
   const data = await apiRequest(query, variables);
   return data.authorCollection?.items[0]?.sys.id ?? null;
 }
-
 export async function getAuthorAndRelatedPosts(id, locale) {
   const query = gql`
     ${AUTHOR_DATA}
@@ -223,7 +217,6 @@ export async function getTagIdBySlug(slug, locale) {
   const data = await apiRequest(query, variables);
   return data.tagCollection?.items[0]?.sys.id ?? null;
 }
-
 export async function getTagAndRelatedPosts(id, locale) {
   const query = gql`
     ${TAG_DATA}
@@ -239,7 +232,7 @@ export async function getTagAndRelatedPosts(id, locale) {
         linkedFrom {
           postCollection(limit: $limit, skip: $skip, locale: $locale) {
             items {
-              ...BasicPostData
+              ...ShortPostData
             }
           }
         }
@@ -254,15 +247,13 @@ export async function getTagAndRelatedPosts(id, locale) {
   };
   const data = await apiRequest(query, variables);
   return {
-    tag: data?.tagCollection?.items[0] ?? null,
-    relatedPosts: data?.postCollection?.items ?? null
+    tag: data?.tag ?? null,
+    relatedPosts: data?.tag?.linkedFrom?.items ?? null
   };
 }
-
 export async function getAllPostsForAlgolia() {
   return [];
 }
-
 export async function getTotalPostsNumber() {
   const query = gql`
     query {
@@ -275,7 +266,6 @@ export async function getTotalPostsNumber() {
   const data = await apiRequest(query, variables);
   return data?.postCollection?.total ?? 0;
 }
-
 export async function getPaginatedPosts(page, locale) {
   const skipMultiplier = page === 1 ? 0 : page - 1;
   const skip =
