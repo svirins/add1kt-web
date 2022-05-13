@@ -1,5 +1,5 @@
-import Alert from '@/components/alert';
-import Footer from '@/components/footer';
+import Alert from '@/components/layout/alert';
+import Footer from '@/components/layout/footer';
 import Meta from '@/components/meta';
 
 export default function Layout({ children }) {

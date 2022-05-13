@@ -1,4 +1,4 @@
-import Container from './container';
+import Container from '@/components/layout/container';
 import LocaleSwitcher from '@/components/locale-switcher';
 
 export default function Alert() {
