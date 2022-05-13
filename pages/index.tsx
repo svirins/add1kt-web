@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import { getFeaturedPosts, getHomepageContent } from '@/lib/api';
+import { getFeaturedPosts, getPageContent } from '@/lib/api';
+import Config from '@/config/global-config';
 
 import AlgoliaSearch from '../components/algolia-search';
 import Container from '@/components/container';
@@ -10,7 +11,7 @@ import Intro from '@/components/intro';
 import Layout from '@/components/layout';
 import MorepostsControls from '@/components/moreposts-controls';
 
-export default function Index({ homePage, pagePosts }) {
+export default function Index({ pageData, pagePosts }) {
   return (
     <>
       <Layout>
@@ -20,11 +21,11 @@ export default function Index({ homePage, pagePosts }) {
         <Container>
           <Intro />
           <AlgoliaSearch />
-          {homePage && (
+          {pageData && (
             <HomePage
-              title={homePage.title}
-              coverImage={homePage.coverImage}
-              body={homePage.body}
+              title={pageData.title}
+              coverImage={pageData.coverImage}
+              body={pageData.body}
             />
           )}
 
@@ -40,10 +41,10 @@ export default function Index({ homePage, pagePosts }) {
 
 export async function getStaticProps({ locale }) {
   const pagePosts = await getFeaturedPosts(locale);
-  const homePage = await getHomepageContent(locale);
+  const pageData = await getPageContent(locale, Config.routes.homepageSlug);
   return {
     props: {
-      homePage,
+      pageData,
       pagePosts,
       messages: (await import(`../messages/${locale}.json`)).default
     }

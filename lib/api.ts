@@ -4,7 +4,7 @@ import Config from '@/config/global-config';
 import {
   FULL_POST_DATA,
   SHORT_POST_DATA,
-  HOMEPAGE_DATA,
+  PAGE_DATA,
   AUTHOR_DATA,
   TAG_DATA
 } from '@/lib/gql-fragments';
@@ -33,23 +33,24 @@ export async function getFeaturedPosts(locale) {
   const data = await apiRequest(query, variables);
   return data?.postCollection?.items ?? null;
 }
-export async function getHomepageContent(locale) {
+export async function getPageContent(locale, slug) {
   const query = gql`
-    ${HOMEPAGE_DATA}
-    query GetHomepageData($locale: String!) {
-      homepageCollection(locale: $locale) {
+    ${PAGE_DATA}
+    query GetPageData($locale: String!, $slug: String!) {
+      pageCollection(limit: 1, locale: $locale, where: { slug: $slug }) {
         items {
-          ...HomepageData
+          ...PageData
         }
       }
     }
   `;
   const variables = {
-    locale: locale
+    locale: locale,
+    slug: slug
   };
 
   const data = await apiRequest(query, variables);
-  return data?.homepageCollection?.items[0] ?? null;
+  return data?.pageCollection?.items[0] ?? null;
 }
 export async function getAllSlugs() {
   const query = gql`

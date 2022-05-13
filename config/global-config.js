@@ -46,6 +46,9 @@ const Config = {
     morePostsSize: 6,
     featuredPostsSize: 4
   },
+  routes: {
+    homepageSlug: 'addict-cf'
+  },
   menuLinks: [
     {
       displayName: 'Home',

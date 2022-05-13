@@ -1,5 +1,4 @@
 import { gql } from 'graphql-request';
-
 export const FULL_POST_DATA = gql`
   fragment FullPostData on Post {
     slug
@@ -123,16 +122,30 @@ export const BASIC_POST_DATA = gql`
   }
 `;
 
-export const HOMEPAGE_DATA = gql`
-  fragment HomepageData on Homepage {
+export const PAGE_DATA = gql`
+  fragment PageData on Page {
     title
-    body {
-      json
-    }
+    slug
     coverImage {
       url
       width
       height
+    }
+    body {
+      json
+      links {
+        assets {
+          block {
+            sys {
+              id
+            }
+            url
+            description
+            width
+            height
+          }
+        }
+      }
     }
   }
 `;
@@ -165,28 +178,6 @@ export const TAG_DATA = gql`
       url
       width
       height
-    }
-  }
-`;
-export const PAGE_DATA = gql`
-  fragment PageData on Page {
-    slug
-    title
-    body {
-      json
-      links {
-        assets {
-          block {
-            sys {
-              id
-            }
-            url
-            description
-            width
-            height
-          }
-        }
-      }
     }
   }
 `;
