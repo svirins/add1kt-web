@@ -249,7 +249,7 @@ export async function getTagAndRelatedPosts(id, locale) {
   const data = await apiRequest(query, variables);
   return {
     tag: data?.tag ?? null,
-    relatedPosts: data?.tag?.linkedFrom?.items ?? null
+    relatedPosts: data?.tag?.linkedFrom?.postCollection?.items ?? null
   };
 }
 export async function getAllPostsForAlgolia() {

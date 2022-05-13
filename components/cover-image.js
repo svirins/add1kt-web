@@ -4,7 +4,13 @@ import Link from 'next/link';
 import cn from 'classnames';
 
 // TODO: fix animation
-export default function CoverImage({ title, url, slug, width, height }) {
+export default function CoverImage({
+  title,
+  url,
+  slug = undefined,
+  width,
+  height
+}) {
   const image = (
     <Image
       width={width}

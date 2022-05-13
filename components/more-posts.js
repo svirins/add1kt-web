@@ -3,7 +3,7 @@ import { getExcerptAndReadingTime } from '@/lib/content-utils';
 
 import PostPreview from '@/components/post-preview';
 
-export default function MorePosts({ posts, isHomePage }) {
+export default function MorePosts({ posts, isHomePage = false }) {
   const t = useTranslations('Post');
 
   return (

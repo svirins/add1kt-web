@@ -6,6 +6,7 @@ import AlgoliaSearch from '../components/algolia-search';
 import Container from '@/components/container';
 import MorePosts from '@/components/more-posts';
 import HomePage from '@/components/homepage';
+import SectionSeparator from '@/components/section-separator';
 
 import Intro from '@/components/intro';
 import Layout from '@/components/layout';
@@ -28,7 +29,7 @@ export default function Index({ pageData, pagePosts }) {
               body={pageData.body}
             />
           )}
-
+          <SectionSeparator />
           {pagePosts?.length > 0 && (
             <MorePosts isHomePage={true} posts={pagePosts} />
           )}

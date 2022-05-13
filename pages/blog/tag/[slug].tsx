@@ -1,15 +1,16 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import ErrorPage from 'next/error';
+
+import { getAllTags, getTagAndRelatedPosts, getTagIdBySlug } from '@/lib/api';
+
+import TagDetails from '@/components/tag-details';
 import Container from '@/components/container';
-import PostBody from '@/components/post-body';
 import MorePosts from '@/components/more-posts';
 import Header from '@/components/header';
-import PostHeader from '@/components/post-header';
 import SectionSeparator from '@/components/section-separator';
 import Layout from '@/components/layout';
 import PageTitle from '@/components/page-title';
-import { getAllTags, getTagAndRelatedPosts, getTagIdBySlug } from '@/lib/api';
 
 export default function Tag({ tag, relatedPosts }) {
   const router = useRouter();
@@ -25,14 +26,13 @@ export default function Tag({ tag, relatedPosts }) {
           <PageTitle>Translated text</PageTitle>
         ) : (
           <>
-            <section>
-              <Head>
-                <title>{tag.title} | Translated text</title>
-                <meta property="og:image" content={tag.coverImage.url} />
-              </Head>
-              <div>{tag.title}</div>
-            </section>
+            <Head>
+              <title>{tag?.title} | Translated text</title>
+              <meta property="og:image" content={tag?.coverImage.url} />
+            </Head>
+            <TagDetails title={tag.title} coverImage={tag?.coverImage} />
             <SectionSeparator />
+            {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
           </>
         )}
       </Container>
@@ -61,6 +61,8 @@ export async function getStaticPaths({ locales }) {
 export async function getStaticProps({ params, locale }) {
   const id = await getTagIdBySlug(params.slug, locale);
   const data = await getTagAndRelatedPosts(id, locale);
+
+  console.log('dats', data);
   return {
     props: {
       tag: data?.tag ?? null,

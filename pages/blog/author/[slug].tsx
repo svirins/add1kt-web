@@ -1,19 +1,20 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import ErrorPage from 'next/error';
-import Container from '@/components/container';
-import PostBody from '@/components/post-body';
-import MorePosts from '@/components/more-posts';
-import Header from '@/components/header';
-import PostHeader from '@/components/post-header';
-import SectionSeparator from '@/components/section-separator';
-import Layout from '@/components/layout';
-import PageTitle from '@/components/page-title';
+
 import {
   getAllAuthors,
   getAuthorAndRelatedPosts,
   getAuthorIdBySlug
 } from '@/lib/api';
+
+import AuthorDetails from '@/components/author-details';
+import Container from '@/components/container';
+import MorePosts from '@/components/more-posts';
+import Header from '@/components/header';
+import SectionSeparator from '@/components/section-separator';
+import Layout from '@/components/layout';
+import PageTitle from '@/components/page-title';
 
 export default function Author({ author, relatedPosts }) {
   const router = useRouter();
@@ -29,14 +30,16 @@ export default function Author({ author, relatedPosts }) {
           <PageTitle>Translated text</PageTitle>
         ) : (
           <>
-            <section>
-              <Head>
-                <title>{author.name} | Translated text</title>
-                <meta property="og:image" content={author.coverImage.url} />
-              </Head>
-              <div>{author.name}</div>
-            </section>
+            <Head>
+              <title>{author?.name} | Translated text</title>
+              <meta property="og:image" content={author?.coverImage.url} />
+            </Head>
+            <AuthorDetails
+              title={author.name}
+              coverImage={author?.coverImage}
+            />
             <SectionSeparator />
+            {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
           </>
         )}
       </Container>
