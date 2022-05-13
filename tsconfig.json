@@ -29,7 +29,8 @@
     "additional.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "lib/**/*"
+    "lib/**/*",
+    "config/global-config.js"
   ],
   "exclude": ["node_modules"]
 }

@@ -89,39 +89,6 @@ export const SHORT_POST_DATA = gql`
   }
 `;
 
-export const BASIC_POST_DATA = gql`
-  fragment BasicPostData on Post {
-    slug
-    title
-    coverImage {
-      url
-      width
-      height
-    }
-    featured
-    authorCollection {
-      items {
-        name
-        slug
-        picture {
-          url
-          width
-          height
-        }
-      }
-    }
-    tagsCollection {
-      items {
-        title
-        slug
-      }
-    }
-    sys {
-      firstPublishedAt
-    }
-  }
-`;
-
 export const PAGE_DATA = gql`
   fragment PageData on Page {
     title

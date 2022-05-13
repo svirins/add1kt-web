@@ -9,11 +9,11 @@ import {
 } from '@/lib/api';
 
 import AuthorDetails from '@/components/author-details';
-import Container from '@/components/container';
+import Container from '@/components/layout/container';
 import MorePosts from '@/components/more-posts';
-import Header from '@/components/header';
+import Header from '@/components/layout/header';
 import SectionSeparator from '@/components/section-separator';
-import Layout from '@/components/layout';
+import Layout from '@/components/layout/layout';
 import PageTitle from '@/components/page-title';
 
 export default function Author({ author, relatedPosts }) {

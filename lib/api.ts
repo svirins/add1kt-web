@@ -252,9 +252,7 @@ export async function getTagAndRelatedPosts(id, locale) {
     relatedPosts: data?.tag?.linkedFrom?.postCollection?.items ?? null
   };
 }
-export async function getAllPostsForAlgolia() {
-  return [];
-}
+
 export async function getTotalPostsNumber() {
   const query = gql`
     query {

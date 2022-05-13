@@ -1,46 +1,88 @@
-import { getAllPostsForAlgolia } from '@/lib/api';
-const dotenv = require('dotenv');
+const dotenv = require('dotenv').config();
 const algoliasearch = require('algoliasearch/lite');
+const { gql, request } = require('graphql-request');
+const Config = require('../config/global-config');
+
+const ALGOLIA_POST_DATA = gql`
+  fragment AlgoliaPostData on Post {
+    slug
+    title
+    featured
+    tagsCollection {
+      items {
+        title
+      }
+    }
+    sys {
+      id
+      firstPublishedAt
+    }
+  }
+`;
+
+async function apiRequest(query, variables) {
+  const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`;
+  const headers = {
+    authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`
+  };
+  try {
+    const data = await request({
+      url: endpoint,
+      document: query,
+      variables: variables,
+      requestHeaders: headers
+    });
+    return data;
+  } catch (error) {
+    console.error(JSON.stringify(error));
+    return error;
+  }
+}
+
+async function getAllPostsForAlgolia(locale) {
+  const query = gql`
+    ${ALGOLIA_POST_DATA}
+    query GetAlgoliaPosts($locale: String!) {
+      postCollection(order: sys_firstPublishedAt_DESC, locale: $locale) {
+        items {
+          ...AlgoliaPostData
+        }
+      }
+    }
+  `;
+  const variables = {
+    locale: locale
+  };
+  const data = await apiRequest(query, variables);
+  return data?.postCollection?.items ?? [];
+}
 
 function transformPostsToSearchObjects(posts) {
   const transformed = posts.map((post) => {
     return {
       objectID: post.sys.id,
-      locale: post.sys.locale,
       title: post.title,
-      content: post.content,
-      excerpt: post.excerpt,
       slug: post.slug,
-      authorCollection: { items: post.authorCollection.items },
-      tagsCollection: { items: post.authorCollection.items },
-      date: post.sys.publishedAt
+      featured: post.featured,
+      tagCollection: { items: post.tagsCollection.items },
+      date: post.sys.firstPublishedAt
     };
   });
-
   return transformed;
 }
 
-(async function () {
-  dotenv.config();
+async function createIndex(indexName, locale) {
   try {
-    const posts = await getAllPostsForAlgolia();
+    const posts = await getAllPostsForAlgolia(locale);
     const transformed = transformPostsToSearchObjects(posts);
-
-    // initialize the client with your environment variables
     const client = algoliasearch(
       process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
       process.env.ALGOLIA_SEARCH_ADMIN_KEY
     );
-
-    // initialize the index with your index name
-    const index = client.initIndex('dev_addicts');
-
-    // save the objects!
+    const index = client.initIndex(indexName);
     const algoliaResponse = await index.saveObjects(transformed);
-
-    // check the output of the response in the console
     console.log(
-      `🎉 Sucessfully added ${
+      `🎉 Sucessfully created index for ${locale} locale ${
         algoliaResponse.objectIDs.length
       } records to Algolia search. Object IDs:\n${algoliaResponse.objectIDs.join(
         '\n'
@@ -49,4 +91,12 @@ function transformPostsToSearchObjects(posts) {
   } catch (error) {
     console.log(error);
   }
-})();
+}
+
+async function runTask() {
+  for await (const i of Config.algoliaIndexes) {
+    createIndex(i.indexName, i.locale);
+  }
+}
+
+runTask();

@@ -49,6 +49,10 @@ const Config = {
   routes: {
     homepageSlug: 'addict-cf'
   },
+  algoliaIndexes: [
+    { indexName: 'addict-ru', locale: 'ru' },
+    { indexName: 'addict-pl', locale: 'pl' }
+  ],
   menuLinks: [
     {
       displayName: 'Home',
@@ -61,4 +65,4 @@ const Config = {
   ]
 };
 
-export default Config;
+module.exports = Config;

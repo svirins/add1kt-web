@@ -5,11 +5,11 @@ import ErrorPage from 'next/error';
 import { getAllTags, getTagAndRelatedPosts, getTagIdBySlug } from '@/lib/api';
 
 import TagDetails from '@/components/tag-details';
-import Container from '@/components/container';
+import Container from '@/components/layout/container';
 import MorePosts from '@/components/more-posts';
-import Header from '@/components/header';
+import Header from '@/components/layout/header';
 import SectionSeparator from '@/components/section-separator';
-import Layout from '@/components/layout';
+import Layout from '@/components/layout/layout';
 import PageTitle from '@/components/page-title';
 
 export default function Tag({ tag, relatedPosts }) {

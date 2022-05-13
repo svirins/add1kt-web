@@ -4,10 +4,10 @@ import Head from 'next/head';
 import { getTotalPostsNumber, getPaginatedPosts } from '@/lib/api';
 import Config from '@/config/global-config';
 import AlgoliaSearch from '@/components/algolia-search';
-import Container from '@/components/container';
+import Container from '@/components/layout/container';
 import MorePosts from '@/components/more-posts';
 import Intro from '@/components/intro';
-import Layout from '@/components/layout';
+import Layout from '@/components/layout/layout';
 import PaginationControls from '@/components/pagination-controls';
 
 export default function BlogIndexPage({ pagePosts, page, totalPages }) {
