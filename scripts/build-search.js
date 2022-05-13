@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 const dotenv = require('dotenv').config();
 const algoliasearch = require('algoliasearch/lite');
 const { gql, request } = require('graphql-request');
@@ -7,7 +8,6 @@ const ALGOLIA_POST_DATA = gql`
   fragment AlgoliaPostData on Post {
     slug
     title
-    featured
     tagsCollection {
       items {
         title
@@ -63,8 +63,9 @@ function transformPostsToSearchObjects(posts) {
       objectID: post.sys.id,
       title: post.title,
       slug: post.slug,
-      featured: post.featured,
-      tagCollection: { items: post.tagsCollection.items },
+      tagCollection: {
+        tags: post.tagsCollection.items.map((tag) => tag.title)
+      },
       date: post.sys.firstPublishedAt
     };
   });

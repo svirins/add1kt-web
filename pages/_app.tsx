@@ -1,7 +1,7 @@
 import { DefaultSeo } from 'next-seo';
 import { NextIntlProvider } from 'next-intl';
 import { usePanelbear } from '@panelbear/panelbear-nextjs';
-
+import 'instantsearch.css/themes/satellite-min.css';
 import '@/styles/index.css';
 
 import SEO from '@/config/next-seo.config';

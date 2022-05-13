@@ -6,5 +6,8 @@
     "more_posts": "больше постов",
     "previous_page": "предыдущие посты",
     "next_page": "следующие посты"
+  },
+  "Search": {
+    "placeholder": "поиск по постам"
   }
 }

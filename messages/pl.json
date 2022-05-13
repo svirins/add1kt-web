@@ -6,5 +6,8 @@
     "more_posts": "więcej stanowisk",
     "previous_page": "poprzednie posty",
     "next_page": "następujące posty"
+  },
+  "Search": {
+    "placeholder": "wyszukiwanie według postów"
   }
 }
