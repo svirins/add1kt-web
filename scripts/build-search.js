@@ -4,22 +4,6 @@ const algoliasearch = require('algoliasearch/lite');
 const { gql, request } = require('graphql-request');
 const Config = require('../config/global-config');
 
-const ALGOLIA_POST_DATA = gql`
-  fragment AlgoliaPostData on Post {
-    slug
-    title
-    tagsCollection {
-      items {
-        title
-      }
-    }
-    sys {
-      id
-      firstPublishedAt
-    }
-  }
-`;
-
 async function apiRequest(query, variables) {
   const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`;
   const headers = {
@@ -41,11 +25,20 @@ async function apiRequest(query, variables) {
 
 async function getAllPostsForAlgolia(locale) {
   const query = gql`
-    ${ALGOLIA_POST_DATA}
     query GetAlgoliaPosts($locale: String!) {
       postCollection(order: sys_firstPublishedAt_DESC, locale: $locale) {
         items {
-          ...AlgoliaPostData
+          slug
+          title
+          tagsCollection {
+            items {
+              title
+            }
+          }
+          sys {
+            id
+            firstPublishedAt
+          }
         }
       }
     }
