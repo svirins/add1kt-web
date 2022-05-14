@@ -50,8 +50,16 @@ const Config = {
     homepageSlug: 'addict-cf'
   },
   algoliaIndexes: [
-    { indexName: 'addict-ru', locale: 'ru' },
-    { indexName: 'addict-pl', locale: 'pl' }
+    {
+      indexName: 'addict-ru',
+      locale: 'ru',
+      querySuggestionsIndexName: 'addict-ru_query_suggestions'
+    },
+    {
+      indexName: 'addict-pl',
+      locale: 'pl',
+      querySuggestionsIndexName: 'addict-pl_query_suggestions'
+    }
   ],
   menuLinks: [
     {

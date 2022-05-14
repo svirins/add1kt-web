@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { shimmer, toBase64 } from '@api/content-utils';
+import { shimmer, toBase64 } from '@/lib/content-utils';
 
 export const ShimmerImage = ({ title, url, slug, width, height }) => {
   const image = (

@@ -97,6 +97,7 @@ async function createIndex(indexName, locale) {
 async function runTask() {
   for await (const i of Config.algoliaIndexes) {
     createIndex(i.indexName, i.locale);
+    createIndex(i.querySuggestionsIndexName, i.locale);
   }
 }
 

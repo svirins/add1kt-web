@@ -2,13 +2,13 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import ErrorPage from 'next/error';
 import Container from '@/components/layout/container';
-import PostBody from '@/components/post-body';
-import MorePosts from '@/components/more-posts';
+import PostBody from '@/components/post/post-body';
+import MorePosts from '@/components/post/more-posts';
 import Header from '@/components/layout/header';
-import PostHeader from '@/components/post-header';
+import PostHeader from '@/components/post/post-header';
 import SectionSeparator from '@/components/section-separator';
 import Layout from '@/components/layout/layout';
-import PageTitle from '@/components/page-title';
+import PageTitle from '@/components/misc/page-title';
 import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
 

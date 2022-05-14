@@ -1,7 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
-import RichTextAsset from '@/components/rich-text-asset';
-import { FBShare } from '@/components/social-share';
+import RichTextAsset from '@/components/misc/rich-text-asset';
+import { FBShare } from '@/components/misc/social-share';
 import markdownStyles from '@/styles/markdown-styles.module.css';
 
 const customMarkdownOptions = (content) => ({

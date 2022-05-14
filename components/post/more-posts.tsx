@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { getExcerptAndReadingTime } from '@/lib/content-utils';
 
-import PostPreview from '@/components/post-preview';
+import PostPreview from '@/components/post/post-preview';
 
 export default function MorePosts({ posts, isHomePage = false }) {
   const t = useTranslations('Post');

@@ -1,5 +1,5 @@
-import ShimmerImage from '@/components/cover-image';
-import PostBody from '@/components/post-body';
+import ShimmerImage from '@/components/image/cover-image';
+import PostBody from '@/components/post/post-body';
 
 export default function HomePage({ title, coverImage, body }) {
   return (

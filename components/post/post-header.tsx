@@ -1,8 +1,8 @@
-import Authors from '@/components/authors';
-import DateReadingTime from '@/components/date-reading-time';
-import CoverImage from '@/components/cover-image';
-import PageTitle from '@/components/page-title';
-import Tags from '@/components/tags';
+import Authors from '@/components/author/authors';
+import DateReadingTime from '@/components/date/date-reading-time';
+import CoverImage from '@/components/image/cover-image';
+import PageTitle from '@/components/misc/page-title';
+import Tags from '@/components/tag/tags';
 
 export default function PostHeader({
   title,

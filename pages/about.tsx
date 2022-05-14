@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import { getFeaturedPosts, getPageContent } from '@/lib/api';
 
-import AlgoliaSearch from '@/components/search/algolia-search-autocomplete';
+import AlgoliaSearch from '@/components/search/algolia-search';
 
 import Container from '@/components/layout/container';
-import MorePosts from '@/components/more-posts';
-import HomePage from '@/components/homepage';
+import MorePosts from '@/components/post/more-posts';
+import HomePage from '@/components/page/homepage';
 
 import Intro from '@/components/intro';
 import Layout from '@/components/layout/layout';
-import MorepostsControls from '@/components/moreposts-controls';
+import MorepostsControls from '@/components/post/moreposts-controls';
 
 export default function About({ homePage, pagePosts }) {
   return (

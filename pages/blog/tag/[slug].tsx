@@ -4,13 +4,13 @@ import ErrorPage from 'next/error';
 
 import { getAllTags, getTagAndRelatedPosts, getTagIdBySlug } from '@/lib/api';
 
-import TagDetails from '@/components/tag-details';
+import TagDetails from '@/components/tag/tag-details';
 import Container from '@/components/layout/container';
-import MorePosts from '@/components/more-posts';
+import MorePosts from '@/components/post/more-posts';
 import Header from '@/components/layout/header';
 import SectionSeparator from '@/components/section-separator';
 import Layout from '@/components/layout/layout';
-import PageTitle from '@/components/page-title';
+import PageTitle from '@/components/misc/page-title';
 
 export default function Tag({ tag, relatedPosts }) {
   const router = useRouter();

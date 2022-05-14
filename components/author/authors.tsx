@@ -1,4 +1,4 @@
-import Avatar from '@/components/avatar';
+import Avatar from '@/components/author/avatar';
 
 export default function Authors({ authors }) {
   return (
