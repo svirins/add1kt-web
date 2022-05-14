@@ -28,11 +28,7 @@ async function getAllPostsForAlgolia(locale) {
     query GetAlgoliaPosts($locale: String!) {
       postCollection(order: sys_firstPublishedAt_DESC, locale: $locale) {
         items {
-          slug
-          title
-          tagsCollection {
-            items {
-              title
+          sluggenetate
             }
           }
           sys {
@@ -87,11 +83,11 @@ async function createIndex(indexName, locale) {
   }
 }
 
-async function runTask() {
+async function generate() {
   for await (const i of Config.algoliaIndexes) {
     createIndex(i.indexName, i.locale);
     createIndex(i.querySuggestionsIndexName, i.locale);
   }
 }
 
-runTask();
+generate();
