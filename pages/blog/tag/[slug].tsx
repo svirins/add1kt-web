@@ -52,7 +52,7 @@ export async function getStaticPaths({ locales }) {
     .flat();
   return {
     paths: allPathsWithLocales,
-    fallback: true
+    fallback: 'blocking'
   };
 }
 

@@ -1,14 +1,13 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
-import { useIntl } from 'next-intl';
-import { useTranslations } from 'next-intl';
-import NextLink from 'next/link';
 import cn from 'classnames';
+import { useIntl, useTranslations } from 'next-intl';
+import { useTheme } from 'next-themes';
+import Head from 'next/head';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
-import LocaleSwitcher from '@/components/misc/locale-switcher';
 import Footer from '@/components/layout/footer';
+import LocaleSwitcher from '@/components/misc/locale-switcher';
 
 function NavItem({ href, text }) {
   const router = useRouter();

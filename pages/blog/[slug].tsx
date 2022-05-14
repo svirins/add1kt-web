@@ -64,7 +64,7 @@ export async function getStaticPaths({ locales }) {
     .flat();
   return {
     paths: allPathsWithLocales,
-    fallback: true
+    fallback: 'blocking'
   };
 }
 
@@ -74,7 +74,7 @@ export async function getStaticProps({ params, locale }) {
     props: {
       post: data?.post ?? null,
       relatedPosts: data?.relatedPosts ?? null,
-      messages: (await import(`../../messages/${locale}.json`)).default
+      messages: (await import(`../../../messages/${locale}.json`)).default
     }
   };
 }

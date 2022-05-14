@@ -3,7 +3,6 @@ import Head from 'next/head';
 
 import { getTotalPostsNumber, getPaginatedPosts } from '@/lib/api';
 import Config from '@/config/global-config';
-import AlgoliaSearch from '@/components/search/algolia-search';
 import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
 import Intro from '@/components/misc/intro';
@@ -16,7 +15,6 @@ export default function BlogIndexPage({ pagePosts, page, totalPages }) {
     <Layout>
       <Container>
         <Intro />
-        <AlgoliaSearch />
         {pagePosts?.length > 0 && (
           <MorePosts posts={pagePosts} isHomePage={false} />
         )}
@@ -47,7 +45,7 @@ export async function getStaticPaths({ locales }) {
 
   return {
     paths: allPathsWithLocales,
-    fallback: true
+    fallback: 'blocking'
   };
 }
 

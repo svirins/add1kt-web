@@ -5,7 +5,6 @@ const { withPlaiceholder } = require('@plaiceholder/next');
 module.exports = withPlaiceholder({
   swcMinify: true,
   reactStrictMode: true,
-
   i18n: {
     defaultLocale: 'ru',
     locales: ['ru', 'pl']

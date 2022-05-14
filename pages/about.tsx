@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { getFeaturedPosts, getPageContent } from '@/lib/api';
 
-import AlgoliaSearch from '@/components/search/algolia-search';
-
 import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
 import HomePage from '@/components/page/homepage';
@@ -16,7 +14,6 @@ export default function About({ homePage, pagePosts }) {
     <Layout>
       <Container>
         <Intro />
-        <AlgoliaSearch />
         {homePage && (
           <HomePage
             title={homePage.title}
