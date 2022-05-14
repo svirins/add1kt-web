@@ -14,7 +14,7 @@ export default function PostHeader({
   readingTime
 }) {
   return (
-    <>
+    <section>
       <PageTitle>{title}</PageTitle>
       <div className="mb-8 md:mb-16">
           <CoverImage
@@ -24,13 +24,10 @@ export default function PostHeader({
             height={coverImage.height}
           />
         </div>
-        <div className="hidden md:block md:mb-12">
+        <div className="md:block md:mb-12">
           <Authors authors={authors} />
         </div>
         <div>
-          <div className="block md:hidden mb-6">
-            <Authors authors={authors} />
-          </div>
           <div className="mb-6 text-lg  flex flex-row justify-between items-end">
             <DateReadingTime date={date} readingTime={readingTime} />
           </div>
@@ -38,6 +35,6 @@ export default function PostHeader({
             <Tags tags={tags} featured={featured} />
           </div>
         </div>
-    </>
+    </section>
   );
 }

@@ -16,6 +16,9 @@ export default function BlogIndexPage({ pagePosts, page, totalPages }) {
       type="page"
     >
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+        {pagePosts?.length > 0 && (
+          <MorePosts posts={pagePosts} isHomePage={false} />
+        )}
         <PaginationControls
           currentPage={Number(page)}
           totalPages={Number(totalPages)}
