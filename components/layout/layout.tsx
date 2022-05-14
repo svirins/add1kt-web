@@ -77,7 +77,7 @@ export default function Container(props) {
           </a>
           <div className="ml-[-0.60rem]">
             <NavItem href="/" text={t('home')} />
-            <NavItem href="/blog/1" text={t('blog')} />
+            <NavItem href="/blog/page/1" text={t('blog')} />
             <NavItem href="/about" text={t('about')} />
           </div>
           <LocaleSwitcher />

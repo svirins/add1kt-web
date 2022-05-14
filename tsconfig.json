@@ -29,8 +29,7 @@
     "additional.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "lib/**/*",
-    "components/search/algolia-search.tsx"
+    "messages/**.json"
   ],
   "exclude": ["node_modules"]
 }
