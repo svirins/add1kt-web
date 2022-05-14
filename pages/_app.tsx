@@ -1,6 +1,7 @@
 import { DefaultSeo } from 'next-seo';
 import { NextIntlProvider } from 'next-intl';
 import { usePanelbear } from '@panelbear/panelbear-nextjs';
+//  TODO: do we need default classes for
 import 'instantsearch.css/themes/satellite-min.css';
 import '@/styles/index.css';
 

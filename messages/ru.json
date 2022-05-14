@@ -8,6 +8,8 @@
     "next_page": "следующие посты"
   },
   "Search": {
-    "placeholder": "поиск по постам"
+    "clearButtonTitle": "очистить",
+    "detachedCancelButtonText": "отмена",
+    "submitButtonTitle": "поиск"
   }
 }

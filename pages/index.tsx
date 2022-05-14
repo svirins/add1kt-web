@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { getFeaturedPosts, getPageContent } from '@/lib/api';
 import Config from '@/config/global-config';
 
-import AlgoliaSearch from '@/components/search/algolia-search';
+import AlgoliaSearch from '@/components/search/algolia-search-autocomplete';
 import Container from '@/components/layout/container';
 import MorePosts from '@/components/more-posts';
 import HomePage from '@/components/homepage';

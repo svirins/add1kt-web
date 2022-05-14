@@ -8,6 +8,10 @@
     "next_page": "następujące posty"
   },
   "Search": {
-    "placeholder": "wyszukiwanie według postów"
+    "Search": {
+      "clearButtonTitle": "jasne",
+      "detachedCancelButtonText": "anulowanie",
+      "submitButtonTitle": "szukaj"
+    }
   }
 }
