@@ -2,8 +2,11 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import { useIntl } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import NextLink from 'next/link';
 import cn from 'classnames';
+
 import LocaleSwitcher from '@/components/misc/locale-switcher';
 import Footer from '@/components/layout/footer';
 
@@ -30,7 +33,8 @@ function NavItem({ href, text }) {
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
-
+  const intl = useIntl();
+  const t = useTranslations('Navigation');
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
 
@@ -72,9 +76,9 @@ export default function Container(props) {
             Skip to content
           </a>
           <div className="ml-[-0.60rem]">
-            <NavItem href="/" text="Home" />
-            <NavItem href="/blog" text="Blog" />
-            <NavItem href="/about" text="Snippets" />
+            <NavItem href="/" text={t('home')} />
+            <NavItem href="/blog/1" text={t('blog')} />
+            <NavItem href="/about" text={t('about')} />
           </div>
           <LocaleSwitcher />
           <button

@@ -11,5 +11,10 @@
     "clearButtonTitle": "очистить",
     "detachedCancelButtonText": "отмена",
     "submitButtonTitle": "поиск"
+  },
+  "Navigation": {
+    "home": "главная",
+    "blog": "блог",
+    "about": "о проекте"
   }
 }

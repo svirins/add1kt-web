@@ -4,7 +4,6 @@ import ErrorPage from 'next/error';
 import Container from '@/components/layout/container';
 import PostBody from '@/components/post/post-body';
 import MorePosts from '@/components/post/more-posts';
-import Header from '@/components/layout/header';
 import PostHeader from '@/components/post/post-header';
 import SectionSeparator from '@/components/misc/section-separator';
 import Layout from '@/components/layout/layout';
@@ -22,7 +21,6 @@ export default function Post({ post, relatedPosts }) {
   return (
     <Layout>
       <Container>
-        <Header />
         {router.isFallback ? (
           <PageTitle>Translated text</PageTitle>
         ) : (
