@@ -14,29 +14,24 @@ import MorepostsControls from '@/components/post/moreposts-controls';
 
 export default function Index({ pageData, pagePosts }) {
   return (
-    <>
-      <Layout>
-        <Head>
-          <title>Next.js Blog Example</title>
-        </Head>
-        <Container>
-          <Intro />
-          {/* <AlgoliaSearch /> */}
-          {pageData && (
-            <HomePage
-              title={pageData.title}
-              coverImage={pageData.coverImage}
-              body={pageData.body}
-            />
-          )}
-          <SectionSeparator />
-          {pagePosts?.length > 0 && (
-            <MorePosts isHomePage={true} posts={pagePosts} />
-          )}
-          <MorepostsControls />
-        </Container>
-      </Layout>
-    </>
+    <Layout>
+      <Container>
+        <Intro />
+        {/* <AlgoliaSearch /> */}
+        {pageData && (
+          <HomePage
+            title={pageData.title}
+            coverImage={pageData.coverImage}
+            body={pageData.body}
+          />
+        )}
+        <SectionSeparator />
+        {pagePosts?.length > 0 && (
+          <MorePosts isHomePage={true} posts={pagePosts} />
+        )}
+        <MorepostsControls />
+      </Container>
+    </Layout>
   );
 }
 

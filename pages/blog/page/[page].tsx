@@ -13,24 +13,19 @@ import PaginationControls from '@/components/post/pagination-controls';
 
 export default function BlogIndexPage({ pagePosts, page, totalPages }) {
   return (
-    <>
-      <Layout>
-        <Head>
-          <title>Next.js Blog Example</title>
-        </Head>
-        <Container>
-          <Intro />
-          <AlgoliaSearch />
-          {pagePosts?.length > 0 && (
-            <MorePosts posts={pagePosts} isHomePage={false} />
-          )}
-          <PaginationControls
-            currentPage={Number(page)}
-            totalPages={Number(totalPages)}
-          />
-        </Container>
-      </Layout>
-    </>
+    <Layout>
+      <Container>
+        <Intro />
+        <AlgoliaSearch />
+        {pagePosts?.length > 0 && (
+          <MorePosts posts={pagePosts} isHomePage={false} />
+        )}
+        <PaginationControls
+          currentPage={Number(page)}
+          totalPages={Number(totalPages)}
+        />
+      </Container>
+    </Layout>
   );
 }
 

@@ -13,29 +13,24 @@ import MorepostsControls from '@/components/post/moreposts-controls';
 
 export default function About({ homePage, pagePosts }) {
   return (
-    <>
-      <Layout>
-        <Head>
-          <title>Next.js Blog Example</title>
-        </Head>
-        <Container>
-          <Intro />
-          <AlgoliaSearch />
-          {homePage && (
-            <HomePage
-              title={homePage.title}
-              coverImage={homePage.coverImage}
-              body={homePage.body}
-            />
-          )}
+    <Layout>
+      <Container>
+        <Intro />
+        <AlgoliaSearch />
+        {homePage && (
+          <HomePage
+            title={homePage.title}
+            coverImage={homePage.coverImage}
+            body={homePage.body}
+          />
+        )}
 
-          {pagePosts?.length > 0 && (
-            <MorePosts isHomePage={true} posts={pagePosts} />
-          )}
-          <MorepostsControls />
-        </Container>
-      </Layout>
-    </>
+        {pagePosts?.length > 0 && (
+          <MorePosts isHomePage={true} posts={pagePosts} />
+        )}
+        <MorepostsControls />
+      </Container>
+    </Layout>
   );
 }
 
