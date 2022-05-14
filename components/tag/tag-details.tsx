@@ -3,9 +3,9 @@ import PageTitle from '@/components/misc/page-title';
 
 export default function TagDetails({ title, coverImage }) {
   return (
-    <>
+    <section>
       <PageTitle>{title}</PageTitle>
-      <div className="mb-8 md:mb-16 sm:mx-0">
+      <div className="mb-8 md:mb-16">
         <CoverImage
           title={title}
           url={coverImage.url}
@@ -13,7 +13,6 @@ export default function TagDetails({ title, coverImage }) {
           height={coverImage.height}
         />
       </div>
-      <div className="max-w-2xl mx-auto"></div>
-    </>
+=    </section>
   );
 }

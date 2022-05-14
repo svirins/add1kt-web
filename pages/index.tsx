@@ -1,22 +1,24 @@
-import Head from 'next/head';
 import { getFeaturedPosts, getPageContent } from '@/lib/api';
 import Config from '@/config/global-config';
 
 import AlgoliaSearch from '@/components/search/algolia-search';
-import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
 import HomePage from '@/components/page/homepage';
 import SectionSeparator from '@/components/misc/section-separator';
-
-import Intro from '@/components/misc/intro';
-import Layout from '@/components/layout/layout';
+import PageTitle from '@/components/misc/page-title';
+import Container from '@/components/layout/container';
 import MorepostsControls from '@/components/post/moreposts-controls';
 
 export default function Index({ pageData, pagePosts }) {
   return (
-    <Layout>
-      <Container>
-        <Intro />
+    <Container
+      // title={ }
+      // description={}
+      // image={ }
+      // date={ }
+      type="page"
+    >
+      <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         {/* <AlgoliaSearch /> */}
         {pageData && (
           <HomePage
@@ -30,8 +32,8 @@ export default function Index({ pageData, pagePosts }) {
           <MorePosts isHomePage={true} posts={pagePosts} />
         )}
         <MorepostsControls />
-      </Container>
-    </Layout>
+      </main>
+    </Container>
   );
 }
 

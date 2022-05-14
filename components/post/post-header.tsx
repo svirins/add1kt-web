@@ -16,15 +16,14 @@ export default function PostHeader({
   return (
     <>
       <PageTitle>{title}</PageTitle>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage
-          title={title}
-          url={coverImage.url}
-          width={coverImage.width}
-          height={coverImage.height}
-        />
-      </div>
-      <div className="max-w-2xl mx-auto">
+      <div className="mb-8 md:mb-16">
+          <CoverImage
+            title={title}
+            url={coverImage.url}
+            width={coverImage.width}
+            height={coverImage.height}
+          />
+        </div>
         <div className="hidden md:block md:mb-12">
           <Authors authors={authors} />
         </div>
@@ -39,7 +38,6 @@ export default function PostHeader({
             <Tags tags={tags} featured={featured} />
           </div>
         </div>
-      </div>
     </>
   );
 }

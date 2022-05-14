@@ -1,29 +1,27 @@
 /* eslint-disable no-unused-vars */
-import Head from 'next/head';
-
 import { getTotalPostsNumber, getPaginatedPosts } from '@/lib/api';
 import Config from '@/config/global-config';
 import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
-import Intro from '@/components/misc/intro';
 import SectionSeparator from '@/components/misc/section-separator';
-import Layout from '@/components/layout/layout';
 import PaginationControls from '@/components/post/pagination-controls';
 
 export default function BlogIndexPage({ pagePosts, page, totalPages }) {
   return (
-    <Layout>
-      <Container>
-        <Intro />
-        {pagePosts?.length > 0 && (
-          <MorePosts posts={pagePosts} isHomePage={false} />
-        )}
+    <Container
+      // title={ }
+      // description={}
+      // image={ }
+      // date={ }
+      type="page"
+    >
+      <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PaginationControls
           currentPage={Number(page)}
           totalPages={Number(totalPages)}
         />
-      </Container>
-    </Layout>
+      </main>
+    </Container>
   );
 }
 

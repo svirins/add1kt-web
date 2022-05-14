@@ -3,7 +3,7 @@ import PageTitle from '@/components/misc/page-title';
 
 export default function AuthorDetails({ title, coverImage }) {
   return (
-    <>
+    <section>
       <PageTitle>{title}</PageTitle>
       <div className="mb-8 md:mb-16 sm:mx-0">
         <CoverImage
@@ -13,7 +13,6 @@ export default function AuthorDetails({ title, coverImage }) {
           height={coverImage.height}
         />
       </div>
-      <div className="max-w-2xl mx-auto"></div>
-    </>
+    </section>
   );
 }
