@@ -2,7 +2,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import RichTextAsset from '@/components/misc/rich-text-asset';
 import { FBShare } from '@/components/misc/social-share';
-import markdownStyles from '@/styles/markdown-styles.module.css';
 
 const customMarkdownOptions = (content) => ({
   renderNode: {
@@ -24,7 +23,7 @@ const customMarkdownOptions = (content) => ({
 export default function PostBody({ content }) {
   return (
     <div className="max-w-2xl mx-auto">
-      <section className={markdownStyles['markdown']}>
+      <section className="markdown">
         {documentToReactComponents(
           content.json,
           customMarkdownOptions(content)

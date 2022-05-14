@@ -3,10 +3,11 @@ import Head from 'next/head';
 
 import { getTotalPostsNumber, getPaginatedPosts } from '@/lib/api';
 import Config from '@/config/global-config';
-import AlgoliaSearch from '@/components/algolia-search';
+import AlgoliaSearch from '@/components/search/algolia-search';
 import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
-import Intro from '@/components/intro';
+import Intro from '@/components/misc/intro';
+import SectionSeparator from '@/components/misc/section-separator';
 import Layout from '@/components/layout/layout';
 import PaginationControls from '@/components/post/pagination-controls';
 

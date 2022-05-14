@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 import Authors from '@/components/author/authors';
 import Tags from '@/components/tag/tags';
-import DateReadingTime from '@/components/date-reading-time';
-import ShimmerImage from '@/components/cover-image';
+import DateReadingTime from '@/components/date/date-reading-time';
+import ShimmerImage from '@/components/image/cover-image';
 
 export default function PostPreview({
   title,

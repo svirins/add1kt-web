@@ -38,7 +38,7 @@ export default function AlgoliaSearch() {
     openOnFocus: true,
     plugins: [recentSearchesPlugin, querySuggestionsPlugin],
     translations: {
-      clearButtonTitle: t('clearButtonTite'),
+      clearButtonTitle: t('clearButtonTitle'),
       detachedCancelButtonText: t('detachedCancelButtonText'),
       submitButtonTitle: t('submitButtonTitle')
     },

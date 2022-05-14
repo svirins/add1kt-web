@@ -30,8 +30,7 @@
     "**/*.ts",
     "**/*.tsx",
     "lib/**/*",
-    "config/global-config.js",
-    "components/search/algolia-search.jsx"
+    "components/search/algolia-search.tsx"
   ],
   "exclude": ["node_modules"]
 }

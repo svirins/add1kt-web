@@ -6,9 +6,9 @@ import AlgoliaSearch from '@/components/search/algolia-search';
 import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
 import HomePage from '@/components/page/homepage';
-import SectionSeparator from '@/components/section-separator';
+import SectionSeparator from '@/components/misc/section-separator';
 
-import Intro from '@/components/intro';
+import Intro from '@/components/misc/intro';
 import Layout from '@/components/layout/layout';
 import MorepostsControls from '@/components/post/moreposts-controls';
 
@@ -21,7 +21,7 @@ export default function Index({ pageData, pagePosts }) {
         </Head>
         <Container>
           <Intro />
-          <AlgoliaSearch />
+          {/* <AlgoliaSearch /> */}
           {pageData && (
             <HomePage
               title={pageData.title}

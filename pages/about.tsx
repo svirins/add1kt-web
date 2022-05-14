@@ -7,7 +7,7 @@ import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
 import HomePage from '@/components/page/homepage';
 
-import Intro from '@/components/intro';
+import Intro from '@/components/misc/intro';
 import Layout from '@/components/layout/layout';
 import MorepostsControls from '@/components/post/moreposts-controls';
 

@@ -6,7 +6,7 @@ import PostBody from '@/components/post/post-body';
 import MorePosts from '@/components/post/more-posts';
 import Header from '@/components/layout/header';
 import PostHeader from '@/components/post/post-header';
-import SectionSeparator from '@/components/section-separator';
+import SectionSeparator from '@/components/misc/section-separator';
 import Layout from '@/components/layout/layout';
 import PageTitle from '@/components/misc/page-title';
 import { getExcerptAndReadingTime } from '@/lib/content-utils';

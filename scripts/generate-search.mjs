@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
-const dotenv = require('dotenv').config();
-const algoliasearch = require('algoliasearch/lite');
-const { gql, request } = require('graphql-request');
-const Config = require('../config/global-config');
+import dotenv from 'dotenv';
+import algoliasearch from 'algoliasearch/lite';
+import { gql, request } from 'graphql-request';
+import Config from '../config/global-config';
 
 async function apiRequest(query, variables) {
   const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`;
@@ -28,7 +28,7 @@ async function getAllPostsForAlgolia(locale) {
     query GetAlgoliaPosts($locale: String!) {
       postCollection(order: sys_firstPublishedAt_DESC, locale: $locale) {
         items {
-          sluggenetate
+          slug
             }
           }
           sys {
@@ -84,6 +84,7 @@ async function createIndex(indexName, locale) {
 }
 
 async function generate() {
+  dotenv.config();
   for await (const i of Config.algoliaIndexes) {
     createIndex(i.indexName, i.locale);
     createIndex(i.querySuggestionsIndexName, i.locale);

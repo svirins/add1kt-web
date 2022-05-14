@@ -1,13 +1,14 @@
+import 'styles/global.css';
+
+import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'next-themes';
 import { DefaultSeo } from 'next-seo';
 import { NextIntlProvider } from 'next-intl';
 import { usePanelbear } from '@panelbear/panelbear-nextjs';
-//  TODO: do we need default classes for
-import 'instantsearch.css/themes/satellite-min.css';
-import '@/styles/index.css';
 
 import SEO from '@/config/next-seo.config';
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }: AppProps) {
   usePanelbear(process.env.NEXT_PUBLIC_PANELBEAR_SITE_ID, {
     debug: false
   });
@@ -25,11 +26,14 @@ function MyApp({ Component, pageProps }) {
           }
         }}
       >
-        <DefaultSeo {...SEO} />
-        <Component {...pageProps} />
+        {' '}
+        <ThemeProvider attribute="class">
+          <DefaultSeo {...SEO} />
+          <Component {...pageProps} />
+        </ThemeProvider>
       </NextIntlProvider>
     </>
   );
 }
 
-export default MyApp;
+export default App;

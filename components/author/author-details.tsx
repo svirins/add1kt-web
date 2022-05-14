@@ -1,4 +1,4 @@
-import CoverImage from '@/components/cover-image';
+import CoverImage from '@/components/image/cover-image';
 import PageTitle from '@/components/misc/page-title';
 
 export default function AuthorDetails({ title, coverImage }) {
