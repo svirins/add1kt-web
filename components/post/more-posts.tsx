@@ -11,7 +11,7 @@ export default function MorePosts({ posts, title = '' }) {
       <h2 className="mb-8 text-3xl font-medium tracking-tight text-black md:text-5xl dark:text-white">
         {title ?? t('featured_posts')}
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-12 gap-y-12 mb-16">
         {posts.map((post) => {
           const { excerpt, readingTime } = getExcerptAndReadingTime(post.body);
           return (
