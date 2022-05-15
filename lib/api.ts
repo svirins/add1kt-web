@@ -1,5 +1,5 @@
 import { gql } from 'graphql-request';
-import apiRequest from '@/lib/fetcher';
+import apiRequest from '@/lib/api-request';
 import Config from '@/config/global-config';
 import {
   FULL_POST_DATA,

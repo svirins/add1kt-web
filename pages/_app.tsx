@@ -20,7 +20,7 @@ function App({ Component, pageProps }: AppProps) {
           dateTime: {
             short: {
               day: 'numeric',
-              month: 'long',
+              month: 'short',
               year: 'numeric'
             }
           }

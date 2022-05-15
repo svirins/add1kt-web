@@ -1,23 +1,10 @@
-import { request } from 'graphql-request';
+import { NextApiRequest, NextApiResponse } from 'next';
+// FIXME: correct types
 
-const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`;
-
-const headers = {
-  authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`
-};
-
-async function apiRequest(query, variables) {
-  try {
-    const data = await request({
-      url: endpoint,
-      document: query,
-      variables: variables,
-      requestHeaders: headers
-    });
-    return data;
-  } catch (error) {
-    console.error(JSON.stringify(error));
-    return error;
-  }
+export default async function fetcher<JSON = any>(
+  input: NextApiRequest,
+  init?: NextApiResponse
+): Promise<JSON> {
+  const res = await fetch(input, init);
+  return res.json();
 }
-export default apiRequest;
