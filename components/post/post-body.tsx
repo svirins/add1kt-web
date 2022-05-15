@@ -1,7 +1,6 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import RichTextAsset from '@/components/misc/rich-text-asset';
-import { FBShare } from '@/components/misc/social-share';
 
 const customMarkdownOptions = (content) => ({
   renderNode: {
@@ -19,17 +18,13 @@ const customMarkdownOptions = (content) => ({
     }, []);
   }
 });
-// dark: prose - invert;
 export default function PostBody({ content }) {
   return (
-    <div className="max-w-2xl mx-auto">
-      <section className="markdown">
+    <div className="w-full mt-4 prose dark:prose-dark max-w-none">
         {documentToReactComponents(
           content.json,
           customMarkdownOptions(content)
         )}
-        <FBShare />
-      </section>
     </div>
   );
 }

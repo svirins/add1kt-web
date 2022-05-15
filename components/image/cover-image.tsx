@@ -1,31 +1,28 @@
 import Image from 'next/image';
-
 import Link from 'next/link';
 import cn from 'classnames';
 
 // TODO: fix animation
 export default function CoverImage({
   title,
-  url,
+  imageData,
   slug = undefined,
-  width,
-  height
 }) {
   const image = (
     <Image
-      width={width}
-      height={height}
+      width={imageData.width}
+      height={imageData.height}
       layout="responsive"
       alt={`Cover Image for ${title}`}
       className={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': slug
       })}
-      src={url}
+      src={imageData.url}
     />
   );
 
   return (
-    <div className="sm:mx-0">
+    <div className="mb-8 md:mb-16 sm:mx-0">
       {slug ? (
         <Link href={`/blog/${slug}`}>
           <a aria-label={title}>{image}</a>

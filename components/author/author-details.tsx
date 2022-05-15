@@ -5,7 +5,7 @@ export default function AuthorDetails({ title, coverImage }) {
   return (
     <section>
       <PageTitle>{title}</PageTitle>
-      <div className="mb-8 md:mb-16 sm:mx-0">
+      <div className="mb-8 md:mb-16">
         <CoverImage
           title={title}
           url={coverImage.url}

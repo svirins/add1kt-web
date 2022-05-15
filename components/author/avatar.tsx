@@ -3,19 +3,17 @@ import Image from 'next/image';
 
 export default function Avatar({ name, picture, slug }) {
   return (
-    <div className="flex items-center mr-4">
-      <div className="relative w-12 h-12 mr-2">
-        <Image
-          src={picture.url}
-          width="100%"
-          height="100%"
-          className="rounded-full"
-          alt={name}
-        />
-      </div>
+    <>
+      <Image
+        src={picture.url}
+            height={24}
+            width={24}
+        className="rounded-full"
+        alt={name}
+      />
       <Link href={`/blog/author/${slug}`}>
-        <a className="hover:underline text-base font-medium ">{name}</a>
+        <a className="hover:underline ml-2 text-sm text-gray-700 dark:text-gray-300">{name}</a>
       </Link>
-    </div>
+    </>
   );
 }

@@ -1,12 +1,11 @@
 import Authors from '@/components/author/authors';
-import DateReadingTime from '@/components/date/date-reading-time';
-import CoverImage from '@/components/image/cover-image';
-import PageTitle from '@/components/misc/page-title';
+import PublishedDate from '@/components/date/published-date'
+import ReadingTime from '@/components/date/reading-time';
+import ViewCounter from '@/components/misc/view-counter';
 import Tags from '@/components/tag/tags';
 
 export default function PostHeader({
-  title,
-  coverImage,
+  slug,
   date,
   authors,
   tags,
@@ -14,27 +13,20 @@ export default function PostHeader({
   readingTime
 }) {
   return (
-    <section>
-      <PageTitle>{title}</PageTitle>
-      <div className="mb-8 md:mb-16">
-          <CoverImage
-            title={title}
-            url={coverImage.url}
-            width={coverImage.width}
-            height={coverImage.height}
-          />
-        </div>
-        <div className="md:block md:mb-12">
+    <div className="flex flex-col items-start justify-between w-full mt-2 md:flex-row md:items-center">
+      <div className="flex items-center">
+        <p className="ml-2 text-sm text-gray-700 dark:text-gray-300">
           <Authors authors={authors} />
+          {' / '}
+          <PublishedDate date={date} />
+        </p>
         </div>
-        <div>
-          <div className="mb-6 text-lg  flex flex-row justify-between items-end">
-            <DateReadingTime date={date} readingTime={readingTime} />
-          </div>
-          <div className="flex flex-row mb-2  flex-wrap">
-            <Tags tags={tags} featured={featured} />
-          </div>
-        </div>
-    </section>
+        <p className="text-sm text-gray-600 dark:text-gray-400 min-w-32 md:mt-0">
+          <ReadingTime readingTime={readingTime} />
+          {` • `}
+          <ViewCounter slug={slug} />
+        </p>
+        <Tags tags={tags} featured={featured} />
+    </div>
   );
 }
