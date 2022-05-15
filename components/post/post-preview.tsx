@@ -24,7 +24,7 @@ export default function PostPreview({
         </Link>
       </h4>
       <div className="flex flex-row text-sm text-gray-700 dark:text-gray-300 mb-4">
-        <PostDetails date={date} readingTime={readingTime} slug={slug} />
+        <PostDetails date={date} readingTime={readingTime} />
       </div>
       <div className="flex flex-row mb-4 text-sm">
         <Tags tags={tags} featured={featured} />

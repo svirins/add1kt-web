@@ -5,5 +5,17 @@
     "react/prop-types": 0,
     "react/no-unescaped-entities": 0,
     "import/no-anonymous-default-export": 0
+  },
+  "globals": {
+    "React": true,
+    "google": true,
+    "mount": true,
+    "mountWithRouter": true,
+    "shallow": true,
+    "shallowWithRouter": true,
+    "context": true,
+    "expect": true,
+    "jsdom": true,
+    "JSX": true
   }
 }

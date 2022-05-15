@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import Footer from '@/components/layout/footer';
 import LocaleSwitcher from '@/components/misc/locale-switcher';
 import ThemeSwitcher from '@/components/misc/theme-switcher';
+import MobileMenu from '@/components/misc/mobile-menu';
 
 import { ContainerProps } from 'additional';
 
@@ -75,6 +76,7 @@ export default function Container(props: ContainerProps) {
             Skip to content
           </a>
           <div className="ml-[-0.60rem]">
+            <MobileMenu />
             <NavItem href="/" text={t('home')} />
             <NavItem href="/blog/page/1" text={t('blog')} />
             <NavItem href="/about" text={t('about')} />
