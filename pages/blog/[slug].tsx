@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl';
+
 import Container from '@/components/layout/container';
 import PostBody from '@/components/post/post-body';
 import MorePosts from '@/components/post/more-posts';
@@ -12,13 +14,14 @@ import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
 
 export default function Post({ post, relatedPosts }) {
   const { readingTime } = getExcerptAndReadingTime(post?.body);
+  const t = useTranslations('Post');
 
   return (
     <Container
       title={`${post.title} – translated text`}
       // description="seo text"
-      // image={`https://leerob.io${post.image}`}
-      // date={new Date(post.firstPublishedAt).toISOString()}
+      image={post.coverImage.url}
+      date={post.sys.firstPublishedAt}
       type="article"
     >
       <article className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
@@ -31,13 +34,17 @@ export default function Post({ post, relatedPosts }) {
           featured={post.featured}
           readingTime={readingTime}
         />
-        <CoverImage title={post.title} imageData={post.coverImage} />
+        <CoverImage
+          title={post.title}
+          width={post.coverImage.width}
+          url={post.coverImage.url}
+        />
         <PostBody content={post.body} />
         <FBShare />
       </article>
       <SectionSeparator />
       {relatedPosts?.length > 0 && (
-        <MorePosts posts={relatedPosts} isHomePage={false} />
+        <MorePosts posts={relatedPosts} title={t('related_posts')} />
       )}
     </Container>
   );

@@ -1,11 +1,15 @@
 {
   "Post": {
     "reading_time": "min. czytanie",
-    "paginated_posts": "posty",
+    "paginated_posts": "Strona bloga ",
     "featured_posts": "faworyci",
+    "related_posts": "podobne posty",
+    "more_authors_posts": "więcej artykułów tego autora",
+    "more_tags_posts": "więcej artykułów w tej kategorii",
     "more_posts": "więcej stanowisk",
     "previous_page": "poprzednie posty",
-    "next_page": "następujące posty"
+    "next_page": "następujące posty",
+    "blog": "Blog"
   },
   "Search": {
     "clearButtonTitle": "jasne",

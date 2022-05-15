@@ -3,7 +3,13 @@ import Link from 'next/link';
 import { shimmer, toBase64 } from '@/lib/content-utils';
 import { CoverImageProps } from 'additional';
 
-const CoverImage = ({ title, url, slug, width, height }: CoverImageProps) => {
+const CoverImage = ({
+  title,
+  url,
+  slug,
+  width,
+  height = 1000
+}: CoverImageProps) => {
   const image = (
     <Image
       width={width}

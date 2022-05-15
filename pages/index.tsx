@@ -1,6 +1,7 @@
 import { getFeaturedPosts, getPageContent } from '@/lib/api';
 import Config from '@/config/global-config';
 import AlgoliaSearch from '@/components/search/algolia-search';
+import { useTranslations } from 'next-intl';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
 import PageTitle from '@/components/misc/page-title';
@@ -10,10 +11,10 @@ import PostBody from '@/components/post/post-body';
 import CoverImage from '@/components/image/cover-image';
 
 export default function Index({ pageData, pagePosts }) {
-  console.log(pageData.coverImage);
+  const t = useTranslations('Post');
   return (
     <Container
-      // title={ }
+      title={pageData.title}
       // description={}
       // image={ }
       // date={ }
@@ -27,7 +28,6 @@ export default function Index({ pageData, pagePosts }) {
             <CoverImage
               title={pageData.title}
               width={pageData.coverImage.width}
-              heigth={pageData.coverImage.height}
               url={pageData.coverImage.url}
             />
             <PostBody content={pageData.body} />
@@ -35,7 +35,7 @@ export default function Index({ pageData, pagePosts }) {
           </>
         )}
         {pagePosts?.length > 0 && (
-          <MorePosts isHomePage={true} posts={pagePosts} />
+          <MorePosts posts={pagePosts} title={t('featured_posts')} />
         )}
         <MorepostsControls />
       </main>

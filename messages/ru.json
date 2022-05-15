@@ -1,11 +1,15 @@
 {
   "Post": {
     "reading_time": "мин. чтения",
-    "paginated_posts": "посты",
-    "featured_posts": "featured",
+    "paginated_posts": "Блог страница ",
+    "featured_posts": "избранное",
+    "related_posts": "похожие посты",
+    "more_authors_posts": "еще статьи этого автора",
+    "more_tags_posts": "еще статьи в этой категории",
     "more_posts": "больше постов",
     "previous_page": "предыдущие посты",
-    "next_page": "следующие посты"
+    "next_page": "следующие посты",
+    "blog": "Блог"
   },
   "Search": {
     "clearButtonTitle": "очистить",
