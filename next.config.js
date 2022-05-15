@@ -1,8 +1,4 @@
-const { withPlaiceholder } = require('@plaiceholder/next');
-/**
- * @type {import('next').NextConfig}
- */
-module.exports = withPlaiceholder({
+module.exports = {
   swcMinify: true,
   reactStrictMode: true,
   i18n: {
@@ -25,4 +21,4 @@ module.exports = withPlaiceholder({
 
     return config;
   }
-});
+};

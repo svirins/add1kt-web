@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 
 import Footer from '@/components/layout/footer';
 import LocaleSwitcher from '@/components/misc/locale-switcher';
-import { ContainerType } from 'additional';
+import { ContainerProps } from 'additional';
 
 function NavItem({ href, text }) {
   const router = useRouter();
