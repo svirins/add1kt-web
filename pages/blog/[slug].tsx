@@ -5,7 +5,7 @@ import PostHeader from '@/components/post/post-header';
 import SectionSeparator from '@/components/misc/section-separator';
 import PageTitle from '@/components/misc/page-title';
 import CoverImage from '@/components/image/cover-image';
-import FBShare from '@/components/misc/social-share'
+import FBShare from '@/components/misc/social-share';
 
 import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
@@ -31,10 +31,7 @@ export default function Post({ post, relatedPosts }) {
           featured={post.featured}
           readingTime={readingTime}
         />
-        <CoverImage
-          title={post.title}
-          imageData={post.coverImage}
-        />
+        <CoverImage title={post.title} imageData={post.coverImage} />
         <PostBody content={post.body} />
         <FBShare />
       </article>

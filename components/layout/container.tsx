@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 
 import Footer from '@/components/layout/footer';
 import LocaleSwitcher from '@/components/misc/locale-switcher';
+import { ContainerType } from 'additional';
 
 function NavItem({ href, text }) {
   const router = useRouter();
@@ -29,7 +30,7 @@ function NavItem({ href, text }) {
   );
 }
 
-export default function Container(props) {
+export default function Container(props: ContainerProps) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
   const intl = useIntl();

@@ -1,6 +1,6 @@
 import { FacebookShareButton, FacebookIcon } from 'next-share';
 
-export const FBShare = () => {
+const FBShare = () => {
   return (
     <FacebookShareButton
       url={'https://github.com/next-share'}
@@ -11,3 +11,5 @@ export const FBShare = () => {
     </FacebookShareButton>
   );
 };
+
+export default FBShare;

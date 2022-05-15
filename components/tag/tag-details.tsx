@@ -13,6 +13,7 @@ export default function TagDetails({ title, coverImage }) {
           height={coverImage.height}
         />
       </div>
-=    </section>
+      ={' '}
+    </section>
   );
 }

@@ -21,10 +21,7 @@ const customMarkdownOptions = (content) => ({
 export default function PostBody({ content }) {
   return (
     <div className="w-full mt-4 prose dark:prose-dark max-w-none">
-        {documentToReactComponents(
-          content.json,
-          customMarkdownOptions(content)
-        )}
+      {documentToReactComponents(content.json, customMarkdownOptions(content))}
     </div>
   );
 }

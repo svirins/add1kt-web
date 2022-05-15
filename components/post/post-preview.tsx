@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Authors from '@/components/author/authors';
 import Tags from '@/components/tag/tags';
 import ReadingTime from '@/components/date/reading-time';
-import PublishedDate from '@/components/date/published-date'
+import PublishedDate from '@/components/date/published-date';
 import CoverImage from '@/components/image/cover-image';
 
 export default function PostPreview({

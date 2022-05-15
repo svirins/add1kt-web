@@ -10,6 +10,7 @@ import PostBody from '@/components/post/post-body';
 import CoverImage from '@/components/image/cover-image';
 
 export default function Index({ pageData, pagePosts }) {
+  console.log(pageData.coverImage);
   return (
     <Container
       // title={ }
@@ -20,13 +21,19 @@ export default function Index({ pageData, pagePosts }) {
     >
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         {/* <AlgoliaSearch /> */}
-        <PageTitle>{pageData.title}</PageTitle>
-        <CoverImage
-          title={pageData.title}
-          imageData={pageData.coverImage}
-        />
-        <PostBody content={pageData.body} />
-        <SectionSeparator />
+        {pageData && (
+          <>
+            <PageTitle>{pageData.title}</PageTitle>
+            <CoverImage
+              title={pageData.title}
+              width={pageData.coverImage.width}
+              heigth={pageData.coverImage.height}
+              url={pageData.coverImage.url}
+            />
+            <PostBody content={pageData.body} />
+            <SectionSeparator />
+          </>
+        )}
         {pagePosts?.length > 0 && (
           <MorePosts isHomePage={true} posts={pagePosts} />
         )}

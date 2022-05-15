@@ -19,5 +19,4 @@ export default function ViewCounter({ slug }) {
 
   // return <span>{`${views > 0 ? views.toLocaleString() : '–––'} views`}</span>;
   return <span>{`207 : ––– views`}</span>;
-
 }

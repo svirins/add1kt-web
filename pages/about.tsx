@@ -17,10 +17,7 @@ export default function About({ pageData, pagePosts }) {
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         {/* <AlgoliaSearch /> */}
         <PageTitle>{pageData.title}</PageTitle>
-        <CoverImage
-          title={pageData.title}
-          imageData={pageData.coverImage}
-        />
+        <CoverImage title={pageData.title} imageData={pageData.coverImage} />
         <PostBody content={pageData.body} />
       </main>
     </Container>
