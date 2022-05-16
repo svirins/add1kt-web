@@ -4,8 +4,6 @@ import {
   getPropertyByPath
 } from 'instantsearch.js/es/lib/utils';
 
-import cn from 'classnames';
-
 type HighlightPartProps = {
   children: React.ReactNode;
   highlightedTagName: React.ElementType;

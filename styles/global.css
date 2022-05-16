@@ -231,21 +231,44 @@ table {
   margin: 0 !important;
 }
 
-.markdown {
-  @apply text-lg leading-relaxed;
+.aa-Panel {
+  position: fixed;
 }
 
-.markdown p,
-.markdown ul,
-.markdown ol,
-.markdown blockquote {
-  @apply my-6;
+/* InstantSearch */
+
+.ais-Hits-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+.ais-Hits-item {
+  padding: 1rem !important;
 }
 
-.markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+.hit {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+}
+
+.hit h1 {
+  font-size: 1rem;
+}
+
+.hit p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.hit-image {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+.hit-image img {
+  max-height: 100%;
 }

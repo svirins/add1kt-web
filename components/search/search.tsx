@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch } from 'react-instantsearch-hooks';
 
-import '@/styles/root-search.css';
 import Config from '@/config/global-config';
 
 import Autocomplete from '@/components/search/autocomplete';

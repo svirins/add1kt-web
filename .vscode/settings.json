@@ -9,5 +9,9 @@
   "WillLuke.nextjs.hasPrompted": true,
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 13,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "css.format.enable": false,
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false
 }
