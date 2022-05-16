@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
-import dotenv from 'dotenv';
-import algoliasearch from 'algoliasearch/lite';
-import { gql, request } from 'graphql-request';
-import Config from '../config/global-config';
+const dotenv = require('dotenv').config();
+const algoliasearch = require('algoliasearch/lite');
+const { gql, request } = require('graphql-request');
+const Config = require('../config/global-config');
 
 async function apiRequest(query, variables) {
   const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`;

@@ -14,7 +14,8 @@
   "Search": {
     "clearButtonTitle": "очистить",
     "detachedCancelButtonText": "отмена",
-    "submitButtonTitle": "поиск"
+    "submitButtonTitle": "поиск",
+    "inputPlaceholder": "Поиск"
   },
   "Navigation": {
     "home": "главная",

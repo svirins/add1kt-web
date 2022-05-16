@@ -14,7 +14,8 @@
   "Search": {
     "clearButtonTitle": "jasne",
     "detachedCancelButtonText": "anulowanie",
-    "submitButtonTitle": "szukaj"
+    "submitButtonTitle": "szukaj",
+    "inputPlaceholder": "Szukaj"
   },
   "Navigation": {
     "home": "główna",

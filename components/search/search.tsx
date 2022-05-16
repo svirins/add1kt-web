@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router';
 
 import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch } from 'react-instantsearch-hooks';
+import { InstantSearch, Configure } from 'react-instantsearch-hooks';
+import { useTranslations } from 'next-intl';
 
 import Config from '@/config/global-config';
 
@@ -10,7 +11,8 @@ import Hit from '@/components/search/hit';
 import Hits from '@/components/search/hits';
 
 function Search() {
-  let { locale } = useRouter();
+  const { locale } = useRouter();
+  const t = useTranslations('Search');
   const { indexName, querySuggestionsIndexName } = Config.algoliaIndexes.find(
     (index) => index.locale === locale
   );
@@ -18,7 +20,11 @@ function Search() {
     process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
     process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
   );
-
+  console.log(
+    'FROM SEARCH_COMPONENT:',
+    'querySuggestionsIndexName:',
+    querySuggestionsIndexName
+  );
   return (
     <div>
       <InstantSearch
@@ -30,10 +36,15 @@ function Search() {
           <Autocomplete
             searchClient={searchClient}
             indexName={querySuggestionsIndexName}
-            placeholder="Search products"
+            placeholder={t('inputPlaceholder')}
             detachedMediaQuery="none"
             openOnFocus
-          />{' '}
+            className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
+          />
+          <Configure
+            attributesToSnippet={['name:20']}
+            snippetEllipsisText="…"
+          />
           <Hits hitComponent={Hit} />
         </div>
       </InstantSearch>

@@ -7,7 +7,9 @@ import {
   useState,
   useMemo
 } from 'react';
+
 import { render } from 'react-dom';
+
 import type { SearchClient } from 'algoliasearch/lite';
 import { usePagination, useSearchBox } from 'react-instantsearch-hooks';
 import { autocomplete, AutocompleteOptions } from '@algolia/autocomplete-js';
