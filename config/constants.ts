@@ -1,0 +1,3 @@
+export const INSTANT_SEARCH_INDEX_NAME = 'instant_search';
+export const INSTANT_SEARCH_QUERY_SUGGESTIONS =
+  'instant_search_demo_query_suggestions';

@@ -1,6 +1,6 @@
 import { getFeaturedPosts, getPageContent } from '@/lib/api';
 import Config from '@/config/global-config';
-import AlgoliaSearch from '@/components/search/algolia-search';
+import Search from '@/components/search/search';
 import { useTranslations } from 'next-intl';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
@@ -21,7 +21,9 @@ export default function Index({ pageData, pagePosts }) {
       type="page"
     >
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
-        {/* <AlgoliaSearch /> */}
+        <div id="autocomplete" className="relative w-full mb-4">
+          <Search />
+        </div>
         {pageData && (
           <>
             <PageTitle>{pageData.title}</PageTitle>

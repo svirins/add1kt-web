@@ -6,12 +6,10 @@ export type CoverImageProps = {
   title: string;
 };
 
-export type ContainerProps =
-  | {
-      title: string;
-      description?: string;
-      imageUrl?: string;
-      type: string;
-      date?: string;
-    }
-  | any;
+export type ContainerProps = {
+  title: string;
+  description?: string;
+  imageUrl?: string;
+  type: string;
+  date?: string;
+};
