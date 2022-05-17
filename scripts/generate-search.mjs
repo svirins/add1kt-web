@@ -1,14 +1,18 @@
 // eslint-disable-next-line no-unused-vars
-const dotenv = require('dotenv').config();
-const algoliasearch = require('algoliasearch/lite');
-const { gql, request } = require('graphql-request');
-const Config = require('../config/global-config');
+import dotenv from 'dotenv';
+import algoliasearch from 'algoliasearch';
+import { gql, request } from 'graphql-request';
+
+import Config from '../config/global-config.js';
+
+dotenv.config();
+const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`;
+
+const headers = {
+  authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`
+};
 
 async function apiRequest(query, variables) {
-  const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`;
-  const headers = {
-    authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`
-  };
   try {
     const data = await request({
       url: endpoint,
@@ -22,13 +26,18 @@ async function apiRequest(query, variables) {
     return error;
   }
 }
+export default apiRequest;
 
-async function getAllPostsForAlgolia(locale) {
+async function GetDataForAlgolia(locale) {
   const query = gql`
-    query GetAlgoliaPosts($locale: String!) {
+    query GetPaginatedPosts($locale: String!) {
       postCollection(order: sys_firstPublishedAt_DESC, locale: $locale) {
         items {
+          title
           slug
+          tagsCollection {
+            items {
+              title
             }
           }
           sys {
@@ -40,10 +49,10 @@ async function getAllPostsForAlgolia(locale) {
     }
   `;
   const variables = {
-    locale: locale
+    locale
   };
   const data = await apiRequest(query, variables);
-  return data?.postCollection?.items ?? [];
+  return data?.postCollection?.items ?? null;
 }
 
 function transformPostsToSearchObjects(posts) {
@@ -63,7 +72,7 @@ function transformPostsToSearchObjects(posts) {
 
 async function createIndex(indexName, locale) {
   try {
-    const posts = await getAllPostsForAlgolia(locale);
+    const posts = await GetDataForAlgolia(locale);
     const transformed = transformPostsToSearchObjects(posts);
     const client = algoliasearch(
       process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
@@ -84,10 +93,8 @@ async function createIndex(indexName, locale) {
 }
 
 async function generate() {
-  dotenv.config();
   for await (const i of Config.algoliaIndexes) {
     createIndex(i.indexName, i.locale);
-    createIndex(i.querySuggestionsIndexName, i.locale);
   }
 }
 
