@@ -1,6 +1,6 @@
 import { getFeaturedPosts, getPageContent } from '@/lib/api';
 import Config from '@/config/global-config';
-import Search from '@/components/search/search';
+import { Autocomplete } from '@/components/search/autocomplete';
 import { useTranslations } from 'next-intl';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
@@ -22,7 +22,7 @@ export default function Index({ pageData, pagePosts }) {
     >
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <div id="autocomplete" className="relative w-full mb-4">
-          <Search />
+          <Autocomplete />
         </div>
         {pageData && (
           <>
