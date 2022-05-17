@@ -40,7 +40,7 @@
     "@algolia/autocomplete-preset-algolia" "1.6.3"
     "@algolia/autocomplete-shared" "1.6.3"
 
-"@algolia/autocomplete-preset-algolia@1.6.3":
+"@algolia/autocomplete-preset-algolia@1.6.3", "@algolia/autocomplete-preset-algolia@^1.6.3":
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.6.3.tgz#110e56228aa41e47712bbdeb093b613c5b62ddd5"
   integrity sha512-IJVyknSDZJRheE5sKffRJN7ukJJDAtvuKiHrk0VLZCJHR/o7XQkowu/6axhUIBRZ6Q2JFzV9hzYZ0PbtSJo9gA==

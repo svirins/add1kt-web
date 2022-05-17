@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "generate": "NODE_OPTIONS='--experimental-json-modules'  ./scripts/generate-search.mjs",
-    "postbuild": "NODE_OPTIONS='--experimental-json-modules' node ./scripts/generate-search.mjs",
+    "generate": "node --experimental-json-modules  ./scripts/generate-search.mjs",
+    "postbuild": "node --experimental-json-modules  ./scripts/generate-search.mjs",
     "start": "next start",
     "lint": "next lint --fix",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
@@ -17,6 +17,7 @@
     "@algolia/autocomplete-js": "^1.6.3",
     "@algolia/autocomplete-plugin-query-suggestions": "^1.6.3",
     "@algolia/autocomplete-plugin-recent-searches": "^1.6.3",
+    "@algolia/autocomplete-preset-algolia": "^1.6.3",
     "@algolia/autocomplete-theme-classic": "^1.6.3",
     "@contentful/rich-text-plain-text-renderer": "^15.12.1",
     "@contentful/rich-text-react-renderer": "^15.4.0",
