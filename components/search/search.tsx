@@ -20,11 +20,6 @@ function Search() {
     process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
     process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
   );
-  console.log(
-    'FROM SEARCH_COMPONENT:',
-    'querySuggestionsIndexName:',
-    indexName
-  );
   return (
     <div>
       <InstantSearch searchClient={searchClient} indexName={indexName} routing>
@@ -35,7 +30,7 @@ function Search() {
             placeholder={t('inputPlaceholder')}
             detachedMediaQuery="none"
             openOnFocus
-            className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
+            // className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
           />
           <Configure
             attributesToSnippet={['name:10']}

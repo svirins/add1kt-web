@@ -1,5 +1,5 @@
 import { Hit as AlgoliaHit } from '@algolia/client-search';
-
+import Link from 'next/link';
 import Snippet from '@/components/search/snippet';
 // TODO: implement display slug as next.js Link component
 type HitProps = {
@@ -15,9 +15,9 @@ function Hit({ hit }: HitProps) {
   return (
     <article className="hit">
       <div>
-        <h1>
+        <a href={`/blog/loveaddiction`}>
           <Snippet hit={hit} attribute="name" />
-        </h1>
+        </a>
         <div>
           {/* {hit?.tags?.map((tag, index) => (
             <strong key={index}>tag</strong>
