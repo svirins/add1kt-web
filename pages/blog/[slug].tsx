@@ -22,7 +22,7 @@ export default function Post({ post, relatedPosts }) {
     <Container
       title={`${post.title} – translated text`}
       // description="seo text"
-      image={post.coverImage.url}
+      imageUrl={post.coverImage.url}
       date={post.sys.firstPublishedAt}
       type="article"
     >
@@ -52,9 +52,10 @@ export default function Post({ post, relatedPosts }) {
         </div>
         <CoverImage
           title={post.title}
+          slug={post.slug}
           width={post.coverImage.width}
-          height={post.coverImage.height}
           url={post.coverImage.url}
+          height={post.coverImage.height}
         />
         <PostBody content={post.body} />
         <FBShare />

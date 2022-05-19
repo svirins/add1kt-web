@@ -22,6 +22,7 @@ export default function Author({ author, relatedPosts }) {
         <CoverImage
           title={author.name}
           width={author.coverImage.width}
+          height={author.coverImage.height}
           url={author.coverImage.url}
         />
         <SectionSeparator />

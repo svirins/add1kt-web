@@ -79,7 +79,6 @@ async function createIndex(indexName, locale) {
       process.env.ALGOLIA_SEARCH_ADMIN_KEY
     );
     const index = client.initIndex(indexName);
-    // console.log('LOCALE', locale, transformed);
     const algoliaResponse = await index.saveObjects(transformed);
     console.log(
       `🎉 Sucessfully created index for ${locale} locale ${

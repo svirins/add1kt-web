@@ -35,8 +35,8 @@ export default function PostPreview({
       <CoverImage
         title={title}
         slug={slug}
-        url={coverImage.url}
         width={coverImage.width}
+        url={coverImage.url}
         height={coverImage.height}
       />
       <p className="w-full mt-4 prose dark:prose-dark max-w-none">{excerpt}</p>

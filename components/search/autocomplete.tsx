@@ -1,4 +1,4 @@
-import React, { createElement, Fragment, useEffect, useRef } from 'react';
+import { createElement, Fragment, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import { autocomplete } from '@algolia/autocomplete-js';
 
@@ -34,3 +34,5 @@ export function Autocomplete(props) {
 
   return <div ref={containerRef} />;
 }
+
+export default Autocomplete;

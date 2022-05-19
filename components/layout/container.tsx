@@ -10,7 +10,7 @@ import LocaleSwitcher from '@/components/misc/locale-switcher';
 import ThemeSwitcher from '@/components/misc/theme-switcher';
 import MobileMenu from '@/components/misc/mobile-menu';
 
-import { ContainerProps } from 'additional';
+import { ContainerProps } from 'extra-types';
 
 function NavItem({ href, text }) {
   const router = useRouter();

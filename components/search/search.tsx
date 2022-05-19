@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import Config from '@/config/global-config';
 
 import { Autocomplete } from '@/components/search/autocomplete';
-import { PostItem } from '@/components/search/postItem';
+import { PostItem } from '@/components/search/post-item';
 
 function Search() {
   const { locale } = useRouter();
@@ -25,7 +25,7 @@ function Search() {
         openOnFocus={true}
         getSources={({ query }) => [
           {
-            sourceId: 'products',
+            sourceId: 'posts',
             getItems() {
               return getAlgoliaResults({
                 searchClient,

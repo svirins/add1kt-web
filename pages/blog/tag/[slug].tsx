@@ -18,6 +18,7 @@ export default function Tag({ tag, relatedPosts }) {
         <CoverImage
           title={tag.name}
           width={tag.coverImage.width}
+          height={tag.coverImage.heigh}
           url={tag.coverImage.url}
         />
         <SectionSeparator />

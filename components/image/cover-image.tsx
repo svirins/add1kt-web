@@ -1,22 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { shimmer, toBase64 } from '@/lib/content-utils';
-import { CoverImageProps } from 'additional';
+import { ImageProps } from 'extra-types';
 import cn from 'classnames';
 
-const CoverImage = ({
-  title,
-  url,
-  slug,
-  width,
-  height = 1000
-}: CoverImageProps) => {
+const CoverImage = ({ title, url, width, height, slug }: ImageProps) => {
   const image = (
     <Image
       width={width}
       height={height}
+      src={url}
       placeholder="blur"
-      blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
+      blurDataURL={`data:image/svg+xml;base64,${toBase64(
+        shimmer(width, height)
+      )}`}
       layout="intrinsic"
       alt={`Cover Image for ${title}`}
       className={cn(
@@ -25,7 +22,6 @@ const CoverImage = ({
           : 'shadow-2xl',
         'rounded-lg drop-shadow-md'
       )}
-      src={url}
     />
   );
 

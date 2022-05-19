@@ -1,6 +1,6 @@
 import { getFeaturedPosts, getPageContent } from '@/lib/api';
 import Config from '@/config/global-config';
-import { Autocomplete } from '@/components/search/autocomplete';
+import Search from '@/components/search/search';
 import { useTranslations } from 'next-intl';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
@@ -11,6 +11,7 @@ import PostBody from '@/components/post/post-body';
 import CoverImage from '@/components/image/cover-image';
 
 export default function Index({ pageData, pagePosts }) {
+  console.log(pageData.imageData);
   const t = useTranslations('Post');
   return (
     <Container
@@ -22,7 +23,7 @@ export default function Index({ pageData, pagePosts }) {
     >
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <div id="autocomplete" className="relative w-full mb-4">
-          <Autocomplete />
+          <Search />
         </div>
         {pageData && (
           <>
@@ -31,6 +32,7 @@ export default function Index({ pageData, pagePosts }) {
               title={pageData.title}
               width={pageData.coverImage.width}
               url={pageData.coverImage.url}
+              height={pageData.coverImage.height}
             />
             <PostBody content={pageData.body} />
             <SectionSeparator />
