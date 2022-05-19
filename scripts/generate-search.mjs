@@ -59,9 +59,9 @@ function transformPostsToSearchObjects(posts) {
   const transformed = posts.map((post) => {
     return {
       objectID: post.sys.id,
-      title: post.title,
+      name: post.title,
       slug: post.slug,
-      tagCollection: {
+      tags: {
         tags: post.tagsCollection.items.map((tag) => tag.title)
       },
       date: post.sys.firstPublishedAt

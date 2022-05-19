@@ -1,7 +1,7 @@
 import { getFeaturedPosts, getPageContent } from '@/lib/api';
 import Config from '@/config/global-config';
-import Search from '@/components/search/search';
 import { useTranslations } from 'next-intl';
+import Search from '@/components/search/search';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
 import PageTitle from '@/components/misc/page-title';
@@ -11,7 +11,6 @@ import PostBody from '@/components/post/post-body';
 import CoverImage from '@/components/image/cover-image';
 
 export default function Index({ pageData, pagePosts }) {
-  console.log(pageData.imageData);
   const t = useTranslations('Post');
   return (
     <Container

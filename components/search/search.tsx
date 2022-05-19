@@ -1,13 +1,14 @@
-import { createElement } from 'react';
 import { useRouter } from 'next/router';
-import { getAlgoliaResults } from '@algolia/autocomplete-js';
-import algoliasearch from 'algoliasearch';
 
+import algoliasearch from 'algoliasearch/lite';
+import { InstantSearch, Configure } from 'react-instantsearch-hooks';
 import { useTranslations } from 'next-intl';
+
 import Config from '@/config/global-config';
 
-import { Autocomplete } from '@/components/search/autocomplete';
-import { PostItem } from '@/components/search/post-item';
+import Autocomplete from '@/components/search/autocomplete';
+import Hit from '@/components/search/hit';
+import Hits from '@/components/search/hits';
 
 function Search() {
   const { locale } = useRouter();
@@ -19,32 +20,30 @@ function Search() {
     process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
     process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
   );
+  console.log(
+    'FROM SEARCH_COMPONENT:',
+    'querySuggestionsIndexName:',
+    indexName
+  );
   return (
-    <div className="app-container">
-      <Autocomplete
-        openOnFocus={true}
-        getSources={({ query }) => [
-          {
-            sourceId: 'posts',
-            getItems() {
-              return getAlgoliaResults({
-                searchClient,
-                queries: [
-                  {
-                    indexName,
-                    query
-                  }
-                ]
-              });
-            },
-            templates: {
-              item({ item, components }) {
-                return <PostItem hit={item} components={components} />;
-              }
-            }
-          }
-        ]}
-      />
+    <div>
+      <InstantSearch searchClient={searchClient} indexName={indexName} routing>
+        <div className="container wrapper">
+          <Autocomplete
+            searchClient={searchClient}
+            indexName={indexName}
+            placeholder={t('inputPlaceholder')}
+            detachedMediaQuery="none"
+            openOnFocus
+            className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
+          />
+          <Configure
+            attributesToSnippet={['name:10']}
+            snippetEllipsisText="…"
+          />
+          <Hits hitComponent={Hit} />
+        </div>
+      </InstantSearch>
     </div>
   );
 }

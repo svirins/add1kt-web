@@ -16,7 +16,7 @@ function Hits<THit extends AlgoliaHit<Record<string, unknown>>>({
   return (
     <div className={cn('ais-Hits', props.classNames)}>
       <ol className="ais-Hits-list">
-        {hits.map((hit) => (
+        {hits?.map((hit) => (
           <li key={hit.objectID} className="ais-Hit-item">
             <Hit hit={hit as unknown as THit} />
           </li>
