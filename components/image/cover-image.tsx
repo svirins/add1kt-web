@@ -7,14 +7,14 @@ import cn from 'classnames';
 const CoverImage = ({ title, url, width, height, slug }: ImageProps) => {
   const image = (
     <Image
-      // width={width}
-      // height={height}
+      width={width}
+      height={height}
       src={url}
       placeholder="blur"
       blurDataURL={`data:image/svg+xml;base64,${toBase64(
         shimmer(width, height)
       )}`}
-      layout="fill"
+      layout="intrinsic"
       alt={`Cover Image for ${title}`}
       className={cn(
         { 'hover:opacity-75 transition-opacity': slug },
