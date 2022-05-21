@@ -10,7 +10,7 @@ export default function LocaleSwitcher() {
       className="flex items-center "
       onClick={() => handleLocale(router.locale === 'ru' ? 'pl' : 'ru')}
     >
-      <span className="font-semibold hover:underline  transition-all duration-300">
+      <span className="font-semibold hover:underline  transition-all duration-300 text-xl">
         {router.locale === 'ru' ? 'ru' : 'pl'}
       </span>
     </button>

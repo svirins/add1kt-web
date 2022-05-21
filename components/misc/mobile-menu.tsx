@@ -5,6 +5,8 @@ import useDelayedRender from 'use-delayed-render';
 import { useTranslations } from 'next-intl';
 import styles from '@/styles/mobile-menu.module.css';
 
+import Config from '@/config/global-config';
+
 export default function MobileMenu() {
   const t = useTranslations('Navigation');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,30 +53,17 @@ export default function MobileMenu() {
             isMenuRendered && styles.menuRendered
           )}
         >
-          <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: '150ms' }}
-          >
-            <Link href="/">
-              <a className="flex w-auto pb-4">{t('home')}</a>
-            </Link>
-          </li>
-          <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: '175ms' }}
-          >
-            <Link href="/blop/page/1">
-              <a className="flex w-auto pb-4">{t('blog')}</a>
-            </Link>
-          </li>
-          <li
-            className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
-            style={{ transitionDelay: '200ms' }}
-          >
-            <Link href="/about">
-              <a className="flex w-auto pb-4">{t('about')}</a>
-            </Link>
-          </li>
+          {Config.menuLinks.map((link) => (
+            <li
+              key={link.title}
+              className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+              style={{ transitionDelay: '150ms' }}
+            >
+              <Link href={link.href}>
+                <a className="flex w-auto pb-4">{t(link.title)}</a>
+              </Link>
+            </li>
+          ))}
         </ul>
       )}
     </>

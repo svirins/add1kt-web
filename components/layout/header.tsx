@@ -21,8 +21,8 @@ function NavItem({ href, text }) {
         className={cn(
           isActive
             ? 'font-semibold text-gray-800 dark:text-gray-200'
-            : 'font-normal text-gray-600 dark:text-gray-400',
-          'hidden md:inline-block p-1 sm:px-2 sm:py-2 items-center hover:underline active:font-semibold transition-all'
+            : 'font-medium  text-gray-600 dark:text-gray-400',
+          'hidden text-xl md:inline-block p-2 lg:py-4 items-center hover:underline transition-all'
         )}
       >
         <span className="capsize">{text}</span>
@@ -45,11 +45,13 @@ function Header() {
           Skip to content
         </a>
         <div className="ml-[-0.60rem] inline-flex flex items-center">
-          <Logo />
           <MobileMenu />
-          {Config.menuLinks.slice(1).map((link) => (
-            // <div key={link.title} className="px-12 py-4">
-            <NavItem href={link.href} text={t(link.title)} key={link.title} />
+          {Config.menuLinks.map((link, index) => (
+            <NavItem
+              href={link.href}
+              text={index === 0 ? '//' : t(link.title)}
+              key={link.title}
+            />
           ))}
         </div>
         {mounted && (
