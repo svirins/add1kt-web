@@ -4,10 +4,10 @@ import CustomHead from '@/components/seo/custom-head';
 import { ContainerProps } from 'extra-types';
 
 export default function Container(props: ContainerProps) {
-  const { children, ...customMeta } = props;
+  const { children, type = 'page', ...customMeta } = props;
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
-      <CustomHead customMeta={customMeta} contentType="article" />
+      <CustomHead customMeta={customMeta} contentType={type} />
       <header>
         <Header />
       </header>
