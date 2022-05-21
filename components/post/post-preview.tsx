@@ -23,6 +23,14 @@ export default function PostPreview({
           <a className="hover:underline">{title}</a>
         </Link>
       </h4>
+
+      <CoverImage
+        title={title}
+        slug={slug}
+        width={coverImage.width}
+        url={coverImage.url}
+        height={coverImage.height}
+      />
       <div className="flex flex-row text-sm text-gray-700 dark:text-gray-300 mb-4">
         <PostDetails date={date} readingTime={readingTime} />
       </div>
@@ -32,14 +40,8 @@ export default function PostPreview({
       <div className="flex flex-row mb-4">
         <Authors authors={authors} />
       </div>
-      <CoverImage
-        title={title}
-        slug={slug}
-        width={coverImage.width}
-        url={coverImage.url}
-        height={coverImage.height}
-      />
-      <p className="w-full mt-4 prose dark:prose-dark max-w-none">{excerpt}</p>
+
+      {/* <p className="w-full mt-4 prose dark:prose-dark max-w-none">{excerpt}</p> */}
     </div>
   );
 }
