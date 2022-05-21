@@ -62,14 +62,11 @@ const Config = {
     }
   ],
   menuLinks: [
-    {
-      displayName: 'Home',
-      path: '/'
-    },
-    {
-      displayName: 'Blog',
-      path: '/blog'
-    }
+    { href: '/', title: 'home' },
+    { href: '/blog/1', title: 'blog' },
+    { href: '/tags', title: 'tags' },
+    { href: '/authors', title: 'authors' },
+    { href: '/about', title: 'about' }
   ]
 };
 

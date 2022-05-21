@@ -1,11 +1,15 @@
 import cn from 'classnames';
 import { useTranslations } from 'next-intl';
 import NextLink from 'next/link';
+
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import LocaleSwitcher from '@/components/misc/locale-switcher';
 import ThemeSwitcher from '@/components/misc/theme-switcher';
 import MobileMenu from '@/components/misc/mobile-menu';
+import Logo from '@/components/misc/logo';
+
+import Config from '@/config/global-config';
 
 function NavItem({ href, text }) {
   const router = useRouter();
@@ -18,7 +22,7 @@ function NavItem({ href, text }) {
           isActive
             ? 'font-semibold text-gray-800 dark:text-gray-200'
             : 'font-normal text-gray-600 dark:text-gray-400',
-          'hidden md:inline-block p-1 sm:px-3 sm:py-2 items-center hover:underline font-semibold transition-all'
+          'hidden md:inline-block p-1 sm:px-2 sm:py-2 items-center hover:underline active:font-semibold transition-all'
         )}
       >
         <span className="capsize">{text}</span>
@@ -40,11 +44,13 @@ function Header() {
         <a href="#skip" className="skip-nav">
           Skip to content
         </a>
-        <div className="ml-[-0.60rem]">
+        <div className="ml-[-0.60rem] inline-flex flex items-center">
+          <Logo />
           <MobileMenu />
-          <NavItem href="/" text={t('home')} />
-          <NavItem href="/blog/page/1" text={t('blog')} />
-          <NavItem href="/about" text={t('about')} />
+          {Config.menuLinks.slice(1).map((link) => (
+            // <div key={link.title} className="px-12 py-4">
+            <NavItem href={link.href} text={t(link.title)} key={link.title} />
+          ))}
         </div>
         {mounted && (
           <div className="inline-flex flex">
