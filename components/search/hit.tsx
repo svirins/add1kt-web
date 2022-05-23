@@ -11,7 +11,6 @@ type HitProps = {
 };
 
 function Hit({ hit }: HitProps) {
-  console.log('HIT COMPONENT REPORTING:', hit);
   return (
     <article className="hit">
       <div>
