@@ -24,6 +24,8 @@
     "tag_related_articles": "Еще посты с тегом ",
     "blog_page": "Блог, страница ",
     "featured_posts": "Избранные посты",
-    "related_posts": "Похожие посты"
+    "related_posts": "Похожие посты",
+    "authors": "Авторы",
+    "tags": "Теги"
   }
 }

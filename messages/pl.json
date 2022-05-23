@@ -24,6 +24,8 @@
     "tag_related_articles": "Wszystkie artykuły w kategorii ",
     "blog_page": "Blog, strona  ",
     "featured_posts": "Wybrane posty",
-    "related_posts": "Podobne posty"
+    "related_posts": "Podobne posty",
+        "authors": "Autorzy",
+    "tags": "Tagi"
   }
 }
