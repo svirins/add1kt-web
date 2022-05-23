@@ -2,8 +2,7 @@
   "Post": {
     "reading_time": "min. czytanie",
     "paginated_posts": "Strona bloga ",
-    "featured_posts": "faworyci",
-    "related_posts": "podobne posty",
+
     "more_authors_posts": "więcej artykułów tego autora",
     "more_tags_posts": "więcej artykułów w tej kategorii",
     "more_posts": "więcej stanowisk",
@@ -24,9 +23,11 @@
     "about": "o projekcie"
   },
   "Titles": {
-    "home": "główna",
-    "blog": "blog",
-    "authors+tags": "autorzy+kategorie",
-    "about": "o projekcie"
+    "authors+tags": "Autorzy+Kategorie",
+    "author_related_articles": "Wszystkie artykuły autora ",
+    "tag_related_articles": "Wszystkie artykuły w kategorii ",
+    "blog_page": "Blog, strona  ",
+    "featured_posts": "faworyci",
+    "related_posts": "podobne posty"
   }
 }

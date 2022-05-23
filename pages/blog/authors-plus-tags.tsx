@@ -18,7 +18,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
       // date={ }
       type="page"
     >
-      <main className="justify-center items-start">
+      <main className="flex flex-col justify-center items-start max-w-3xl w-full mx-auto mb-16">
         <PageTitle>{t('authors+tags')}</PageTitle>
         {/* {authors && <AllAuthors />}
         {tags && <AllTags />} */}

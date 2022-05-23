@@ -3,14 +3,16 @@ import { getExcerptAndReadingTime } from '@/lib/content-utils';
 
 import PostPreview from '@/components/post/post-preview';
 
-export default function MorePosts({ posts, title = '' }) {
+export default function MorePosts({ posts, subtitle = '' }) {
   const t = useTranslations('Post');
 
   return (
     <section>
-      <h2 className="mb-8 text-3xl font-medium tracking-tight text-black md:text-5xl dark:text-white">
-        {title ?? t('featured_posts')}
-      </h2>
+      {subtitle ?? (
+        <h2 className="mb-8 text-3xl font-medium tracking-tight text-black md:text-5xl dark:text-white">
+          {subtitle}
+        </h2>
+      )}
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-12 md:gap-y-8 mb-16">
         {posts.map((post) => {
           const { excerpt, readingTime } = getExcerptAndReadingTime(post.body);

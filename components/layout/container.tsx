@@ -12,7 +12,7 @@ export default function Container(props: ContainerProps) {
       <header>
         <Header />
       </header>
-      <main id="skip" className="flex flex-col justify-center px-8">
+      <main id="skip" className="flex flex-col justify-center px-8 max-w-3xl">
         {children}
         <Footer />
       </main>

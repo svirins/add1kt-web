@@ -10,24 +10,24 @@ import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
 import PageTitle from '@/components/misc/page-title';
-import CoverImage from '@/components/image/cover-image';
+import Avatar from '@/components/author/avatar';
 
 export default function Author({ author, relatedPosts }) {
-  const t = useTranslations('Post');
+  const t = useTranslations('Titles');
 
   return (
-    <Container type="page" title={author.name} image={author.coverImage.url}>
+    <Container type="page" title={author.name}>
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTitle>{author.name}</PageTitle>
-        <CoverImage
-          title={author.name}
-          width={author.coverImage.width}
-          height={author.coverImage.height}
-          url={author.coverImage.url}
+        <Avatar
+          name={author.name}
+          width={64}
+          height={64}
+          picture={author.picture}
         />
         <SectionSeparator />
         {relatedPosts?.length > 0 && (
-          <MorePosts posts={relatedPosts} title={t('more_authors_posts')} />
+          <MorePosts posts={relatedPosts} subtitle={t('related_posts')} />
         )}
       </main>
     </Container>

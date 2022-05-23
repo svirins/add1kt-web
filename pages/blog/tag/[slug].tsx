@@ -2,28 +2,22 @@ import { useTranslations } from 'next-intl';
 
 import { getAllTags, getTagAndRelatedPosts, getTagIdBySlug } from '@/lib/api';
 
-import CoverImage from '@/components/image/cover-image';
 import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
 import PageTitle from '@/components/misc/page-title';
 
 export default function Tag({ tag, relatedPosts }) {
-  const t = useTranslations('Post');
+  const t = useTranslations('Titles');
 
   return (
-    <Container type="page" title={tag.name} image={tag.coverImage.url}>
+    <Container type="page" title={tag.name}>
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTitle>{tag.title}</PageTitle>
-        <CoverImage
-          title={tag.name}
-          width={tag.coverImage.width}
-          height={tag.coverImage.heigh}
-          url={tag.coverImage.url}
-        />
+        <p>{tag.description}</p>
         <SectionSeparator />
         {relatedPosts?.length > 0 && (
-          <MorePosts posts={relatedPosts} title={t('more_tags_posts')} />
+          <MorePosts posts={relatedPosts} subtitle={t('related_posts')} />
         )}
       </main>
     </Container>

@@ -2,8 +2,7 @@
   "Post": {
     "reading_time": "мин. чтения",
     "paginated_posts": "Блог страница ",
-    "featured_posts": "избранное",
-    "related_posts": "похожие посты",
+
     "more_authors_posts": "еще статьи этого автора",
     "more_tags_posts": "еще статьи в этой категории",
     "more_posts": "больше постов",
@@ -24,9 +23,11 @@
     "about": "о проекте"
   },
   "Titles": {
-    "home": "главная",
-    "blog": "блог",
-    "authors+tags": "авторы+теги",
-    "about": "о проекте"
+    "authors+tags": "Авторы+Теги",
+    "author_related_articles": "Все статьи автора ",
+    "tag_related_articles": "Все статьи в категории ",
+    "blog_page": "Блог, страница ",
+    "featured_posts": "избранное",
+    "related_posts": "похожие посты"
   }
 }

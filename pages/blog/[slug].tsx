@@ -16,7 +16,7 @@ import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
 
 export default function Post({ post, relatedPosts }) {
   const { readingTime } = getExcerptAndReadingTime(post.body);
-  const t = useTranslations('Post');
+  const t = useTranslations('Titles');
 
   return (
     <Container
@@ -62,7 +62,7 @@ export default function Post({ post, relatedPosts }) {
       </article>
       <SectionSeparator />
       {relatedPosts?.length > 0 && (
-        <MorePosts posts={relatedPosts} title={t('related_posts')} />
+        <MorePosts posts={relatedPosts} subsubtitle={t('related_posts')} />
       )}
     </Container>
   );

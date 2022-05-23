@@ -11,15 +11,9 @@ import PostBody from '@/components/post/post-body';
 import CoverImage from '@/components/image/cover-image';
 
 export default function Index({ pageData, pagePosts }) {
-  const t = useTranslations('Post');
+  const t = useTranslations('Titles');
   return (
-    <Container
-      title={pageData.title}
-      // description={}
-      // image={ }
-      // date={ }
-      type="page"
-    >
+    <Container title={pageData.title} type="page">
       <main className="flex flex-col justify-center items-start max-w-3xl mx-auto pb-16">
         <div id="autocomplete" className="relative w-full mb-4">
           <Search />
@@ -28,12 +22,12 @@ export default function Index({ pageData, pagePosts }) {
           <>
             <PageTitle>{pageData.title}</PageTitle>
             <PostBody content={pageData.body} />
-            <SectionSeparator />
           </>
         )}
         {pagePosts?.length > 0 && (
-          <MorePosts posts={pagePosts} title={t('featured_posts')} />
+          <MorePosts posts={pagePosts} subtitle={t('featured_posts')} />
         )}
+        <SectionSeparator />
         <MorepostsControls />
       </main>
     </Container>
