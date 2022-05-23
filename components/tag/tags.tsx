@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Tags({ tags, featured }) {
   return (
     <>
-      {featured && (
+      {/* {featured && (
         <span className="mr-2 text-sm  items-center font-bold leading-sm px-1 bg-red-200 text-red-700 rounded-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ export default function Tags({ tags, featured }) {
             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
           </svg>
         </span>
-      )}
+      )} */}
       {tags &&
         tags.map((tag) => (
           <Link href={`/blog/tag/${tag.slug}`} key={tag.slug}>
