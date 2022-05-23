@@ -18,36 +18,10 @@ const Config = {
     domain: 'nextjs--blog-starter.vercel.app',
     email: 'example@example.com'
   },
-  pageMeta: {
-    openGraph: {
-      twitterUser: 'svirins'
-    },
-    home: {
-      url: SITE_URL,
-      slug: '/'
-    },
-    blogIndex: {
-      url: `${SITE_URL}/blog`,
-      slug: '/blog'
-    },
-    blogIndexPage: {
-      slug: '/blog/page/[page]'
-    },
-    post: {
-      slug: '/blog/[slug]'
-    },
-    notFound: {
-      url: SITE_URL,
-      slug: '/404'
-    }
-  },
   pagination: {
     pageSize: 6,
     morePostsSize: 6,
     featuredPostsSize: 4
-  },
-  routes: {
-    homepageSlug: 'addict-cf'
   },
   algoliaIndexes: [
     {
@@ -64,8 +38,7 @@ const Config = {
   menuLinks: [
     { href: '/', title: 'home' },
     { href: '/blog/page/1', title: 'blog' },
-    { href: '/blog/tags', title: 'tags' },
-    { href: '/blog/authors', title: 'authors' },
+    { href: '/blog/authors-plus-tags', title: 'authors+tags' },
     { href: '/about', title: 'about' }
   ]
 };

@@ -52,7 +52,7 @@ export default function Document(props) {
           name="google-site-verification"
         /> */}
       </Head>
-      <body className="bg-white dark:bg-black text-white dark:text-black">
+      <body className="bg-gray-50 dark:bg-gray-900text-gray-900 dark:text-gray-50">
         <Main />
         <NextScript />
       </body>

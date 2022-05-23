@@ -6,7 +6,9 @@ import {
   SHORT_POST_DATA,
   PAGE_DATA,
   AUTHOR_DATA,
-  TAG_DATA
+  TAG_DATA,
+  TAG_AND_TOTAL_POSTS,
+  AUTHOR_AND_TOTAL_POSTS
 } from '@/lib/gql-fragments';
 
 export async function getFeaturedPosts(locale) {
@@ -292,4 +294,37 @@ export async function getPaginatedPosts(page, locale) {
   };
   const data = await apiRequest(query, variables);
   return data?.postCollection?.items ?? null;
+}
+
+export async function AllAuthorsTagsAndTotalPosts(locale) {
+  const queryAuthors = gql`
+    ${AUTHOR_AND_TOTAL_POSTS}
+    query GetAuthorsAndTotalPosts($locale: String!) {
+      authorCollection(locale: $locale) {
+        items {
+          ...AuthorAndPosts
+        }
+      }
+    }
+  `;
+  const queryTags = gql`
+    ${TAG_AND_TOTAL_POSTS}
+    query GetTagsAndTotalPosts($locale: String!) {
+      tagCollection(locale: $locale) {
+        items {
+          ...TagAndPosts
+        }
+      }
+    }
+  `;
+  const variables = {
+    locale: locale
+  };
+  const authors = await apiRequest(queryAuthors, variables);
+  const tags = await apiRequest(queryTags, variables);
+
+  return {
+    authors: authors?.authorCollection?.items ?? null,
+    tags: tags?.tagCollection?.items ?? null
+  };
 }

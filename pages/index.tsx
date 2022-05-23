@@ -21,12 +21,13 @@ export default function Index({ pageData, pagePosts }) {
       type="page"
     >
       <main className="flex flex-col justify-center items-start max-w-3xl mx-auto pb-16">
-        <div id="autocomplete" className="relative w-full mb-4"></div>
+        <div id="autocomplete" className="relative w-full mb-4">
+          <Search />
+        </div>
         {pageData && (
           <>
             <PageTitle>{pageData.title}</PageTitle>
             <PostBody content={pageData.body} />
-            <Search />
             <SectionSeparator />
           </>
         )}
@@ -41,7 +42,7 @@ export default function Index({ pageData, pagePosts }) {
 
 export async function getStaticProps({ locale }) {
   const pagePosts = await getFeaturedPosts(locale);
-  const pageData = await getPageContent(locale, Config.routes.homepageSlug);
+  const pageData = await getPageContent(locale, '/');
   return {
     props: {
       pageData,

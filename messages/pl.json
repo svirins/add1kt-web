@@ -20,8 +20,13 @@
   "Navigation": {
     "home": "główna",
     "blog": "blog",
-    "tags": "kategorie",
-    "authors": "autorzy",
+    "authors+tags": "autorzy+kategorie",
+    "about": "o projekcie"
+  },
+  "Titles": {
+    "home": "główna",
+    "blog": "blog",
+    "authors+tags": "autorzy+kategorie",
     "about": "o projekcie"
   }
 }

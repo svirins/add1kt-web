@@ -143,3 +143,27 @@ export const TAG_DATA = gql`
     }
   }
 `;
+
+export const TAG_AND_TOTAL_POSTS = gql`
+  fragment TagAndPosts on Tag {
+    slug
+    title
+    linkedFrom {
+      postCollection {
+        total
+      }
+    }
+  }
+`;
+
+export const AUTHOR_AND_TOTAL_POSTS = gql`
+  fragment AuthorAndPosts on Author {
+    slug
+    name
+    linkedFrom {
+      postCollection {
+        total
+      }
+    }
+  }
+`;

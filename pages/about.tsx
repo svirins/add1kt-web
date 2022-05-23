@@ -28,7 +28,7 @@ export default function About({ pageData, pagePosts }) {
 
 export async function getStaticProps({ locale }) {
   const pagePosts = await getFeaturedPosts(locale);
-  const pageData = await getPageContent(locale, Config.routes.aboutSlug);
+  const pageData = await getPageContent(locale, 'about');
   return {
     props: {
       pageData,
