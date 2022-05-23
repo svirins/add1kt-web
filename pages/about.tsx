@@ -3,7 +3,6 @@ import Config from '@/config/global-config';
 import PageTitle from '@/components/misc/page-title';
 import Container from '@/components/layout/container';
 import PostBody from '@/components/post/post-body';
-import CoverImage from '@/components/image/cover-image';
 
 export default function About({ pageData, pagePosts }) {
   return (
@@ -19,12 +18,6 @@ export default function About({ pageData, pagePosts }) {
         {pageData && (
           <>
             <PageTitle>{pageData.title}</PageTitle>
-            <CoverImage
-              title={pageData?.title}
-              width={pageData.coverImage.width}
-              url={pageData.coverImage.url}
-              height={pageData.coverImage.height}
-            />
             <PostBody content={pageData.body} />
           </>
         )}

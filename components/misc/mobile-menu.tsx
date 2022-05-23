@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import styles from '@/styles/mobile-menu.module.css';
 
 import Config from '@/config/global-config';
-
+// FIXME:  mobile menu visibility
 export default function MobileMenu() {
   const t = useTranslations('Navigation');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,11 +56,13 @@ export default function MobileMenu() {
           {Config.menuLinks.map((link) => (
             <li
               key={link.title}
-              className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+              className="border-b border-gray-300 dark:border-gray-700 text-sm"
               style={{ transitionDelay: '150ms' }}
             >
               <Link href={link.href}>
-                <a className="flex w-auto pb-4">{t(link.title)}</a>
+                <a className="flex w-auto pb-4 font-medium  text-gray-600 dark:text-gray-400">
+                  {t(link.title)}
+                </a>
               </Link>
             </li>
           ))}

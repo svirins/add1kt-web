@@ -15,12 +15,12 @@ import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
 
 export default function Post({ post, relatedPosts }) {
-  const { readingTime } = getExcerptAndReadingTime(post?.body);
+  const { readingTime } = getExcerptAndReadingTime(post.body);
   const t = useTranslations('Post');
 
   return (
     <Container
-      title={`${post.title} – translated text`}
+      title={`${post?.title} – translated text`}
       // description="seo text"
       imageUrl={post.coverImage.url}
       date={post.sys.firstPublishedAt}
@@ -86,6 +86,7 @@ export async function getStaticPaths({ locales }) {
 
 export async function getStaticProps({ params, locale }) {
   const data = await getPostAndRelatedPosts(params.slug, locale);
+  console.log(data?.post);
   return {
     props: {
       post: data?.post ?? null,

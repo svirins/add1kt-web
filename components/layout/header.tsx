@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 import LocaleSwitcher from '@/components/misc/locale-switcher';
 import ThemeSwitcher from '@/components/misc/theme-switcher';
 import MobileMenu from '@/components/misc/mobile-menu';
-import Logo from '@/components/misc/logo';
 
 import Config from '@/config/global-config';
 

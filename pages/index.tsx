@@ -20,20 +20,13 @@ export default function Index({ pageData, pagePosts }) {
       // date={ }
       type="page"
     >
-      <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
-        <div id="autocomplete" className="relative w-full mb-4">
-          <Search />
-        </div>
+      <main className="flex flex-col justify-center items-start max-w-3xl mx-auto pb-16">
+        <div id="autocomplete" className="relative w-full mb-4"></div>
         {pageData && (
           <>
             <PageTitle>{pageData.title}</PageTitle>
-            <CoverImage
-              title={pageData.title}
-              width={pageData.coverImage.width}
-              url={pageData.coverImage.url}
-              height={pageData.coverImage.height}
-            />
             <PostBody content={pageData.body} />
+            <Search />
             <SectionSeparator />
           </>
         )}

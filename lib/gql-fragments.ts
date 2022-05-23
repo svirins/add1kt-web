@@ -93,11 +93,6 @@ export const PAGE_DATA = gql`
   fragment PageData on Page {
     title
     slug
-    coverImage {
-      url
-      width
-      height
-    }
     body {
       json
       links {

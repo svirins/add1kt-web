@@ -220,12 +220,6 @@ type AssetLinkingCollections {
     preview: Boolean
     locale: String
   ): EntryCollection
-  pageCollection(
-    skip: Int = 0
-    limit: Int = 100
-    preview: Boolean
-    locale: String
-  ): PageCollection
   authorCollection(
     skip: Int = 0
     limit: Int = 100
@@ -256,57 +250,6 @@ type EntryCollection {
 interface Entry {
   sys: Sys!
   contentfulMetadata: ContentfulMetadata!
-}
-
-type PageCollection {
-  total: Int!
-  skip: Int!
-  limit: Int!
-  items: [Page]!
-}
-
-# Standalone page (e.g. About page) [See type definition](https://app.contentful.com/spaces/s0zztu9gjury/content_types/page)
-type Page implements Entry {
-  sys: Sys!
-  contentfulMetadata: ContentfulMetadata!
-  linkedFrom(allowedLocales: [String]): PageLinkingCollections
-  title(locale: String): String
-  coverImage(preview: Boolean, locale: String): Asset
-  slug(locale: String): String
-  body(locale: String): PageBody
-}
-
-type PageLinkingCollections {
-  entryCollection(
-    skip: Int = 0
-    limit: Int = 100
-    preview: Boolean
-    locale: String
-  ): EntryCollection
-}
-
-type PageBody {
-  json: JSON!
-  links: PageBodyLinks!
-}
-
-# The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
-scalar JSON
-
-type PageBodyLinks {
-  entries: PageBodyEntries!
-  assets: PageBodyAssets!
-}
-
-type PageBodyEntries {
-  inline: [Entry]!
-  hyperlink: [Entry]!
-  block: [Entry]!
-}
-
-type PageBodyAssets {
-  hyperlink: [Asset]!
-  block: [Asset]!
 }
 
 type AuthorCollection {
@@ -407,6 +350,9 @@ type PostBody {
   json: JSON!
   links: PostBodyLinks!
 }
+
+# The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+scalar JSON
 
 type PostBodyLinks {
   entries: PostBodyEntries!
@@ -618,6 +564,53 @@ enum AssetOrder {
   sys_publishedVersion_DESC
 }
 
+# Standalone page (e.g. About page) [See type definition](https://app.contentful.com/spaces/s0zztu9gjury/content_types/page)
+type Page implements Entry {
+  sys: Sys!
+  contentfulMetadata: ContentfulMetadata!
+  linkedFrom(allowedLocales: [String]): PageLinkingCollections
+  title(locale: String): String
+  slug(locale: String): String
+  body(locale: String): PageBody
+}
+
+type PageLinkingCollections {
+  entryCollection(
+    skip: Int = 0
+    limit: Int = 100
+    preview: Boolean
+    locale: String
+  ): EntryCollection
+}
+
+type PageBody {
+  json: JSON!
+  links: PageBodyLinks!
+}
+
+type PageBodyLinks {
+  entries: PageBodyEntries!
+  assets: PageBodyAssets!
+}
+
+type PageBodyEntries {
+  inline: [Entry]!
+  hyperlink: [Entry]!
+  block: [Entry]!
+}
+
+type PageBodyAssets {
+  hyperlink: [Asset]!
+  block: [Asset]!
+}
+
+type PageCollection {
+  total: Int!
+  skip: Int!
+  limit: Int!
+  items: [Page]!
+}
+
 input PageFilter {
   sys: SysFilter
   contentfulMetadata: ContentfulMetadataFilter
@@ -628,7 +621,6 @@ input PageFilter {
   title_not_in: [String]
   title_contains: String
   title_not_contains: String
-  coverImage_exists: Boolean
   slug_exists: Boolean
   slug: String
   slug_not: String
