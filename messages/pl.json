@@ -2,13 +2,9 @@
   "Post": {
     "reading_time": "min. czytanie",
     "paginated_posts": "Strona bloga ",
-
-    "more_authors_posts": "więcej artykułów tego autora",
-    "more_tags_posts": "więcej artykułów w tej kategorii",
-    "more_posts": "więcej stanowisk",
+    "more_posts": "więcej posty",
     "previous_page": "poprzednie posty",
-    "next_page": "następujące posty",
-    "blog": "Blog"
+    "next_page": "następujące posty"
   },
   "Search": {
     "clearButtonTitle": "jasne",
@@ -19,15 +15,15 @@
   "Navigation": {
     "home": "główna",
     "blog": "blog",
-    "authors+tags": "autorzy+kategorie",
+    "authors+tags": "autorzy+Tagi",
     "about": "o projekcie"
   },
   "Titles": {
-    "authors+tags": "Autorzy+Kategorie",
-    "author_related_articles": "Wszystkie artykuły autora ",
+    "authors+tags": "Autorzy+Tagi",
+    "author_related_articles": "Więcej postów tego autora ",
     "tag_related_articles": "Wszystkie artykuły w kategorii ",
     "blog_page": "Blog, strona  ",
-    "featured_posts": "faworyci",
-    "related_posts": "podobne posty"
+    "featured_posts": "Wybrane posty",
+    "related_posts": "Podobne posty"
   }
 }

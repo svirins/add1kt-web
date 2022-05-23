@@ -2,13 +2,9 @@
   "Post": {
     "reading_time": "мин. чтения",
     "paginated_posts": "Блог страница ",
-
-    "more_authors_posts": "еще статьи этого автора",
-    "more_tags_posts": "еще статьи в этой категории",
-    "more_posts": "больше постов",
+    "more_posts": "еще посты",
     "previous_page": "предыдущие посты",
-    "next_page": "следующие посты",
-    "blog": "Блог"
+    "next_page": "следующие посты"
   },
   "Search": {
     "clearButtonTitle": "очистить",
@@ -24,10 +20,10 @@
   },
   "Titles": {
     "authors+tags": "Авторы+Теги",
-    "author_related_articles": "Все статьи автора ",
-    "tag_related_articles": "Все статьи в категории ",
+    "author_related_articles": "Еще посты автора ",
+    "tag_related_articles": "Еще посты с тегом ",
     "blog_page": "Блог, страница ",
-    "featured_posts": "избранное",
-    "related_posts": "похожие посты"
+    "featured_posts": "Избранные посты",
+    "related_posts": "Похожие посты"
   }
 }

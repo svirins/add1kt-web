@@ -1,17 +1,7 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true
-  },
   "WillLuke.nextjs.addTypesOnSave": true,
   "WillLuke.nextjs.hasPrompted": true,
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 13,
-  "editor.tabSize": 2,
-  "css.format.enable": false,
-  "css.validate": false,
-  "scss.validate": false,
-  "less.validate": false
+  "editor.tabSize": 2
 }

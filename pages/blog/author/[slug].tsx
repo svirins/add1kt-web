@@ -6,6 +6,7 @@ import {
   getAuthorIdBySlug
 } from '@/lib/api';
 
+import Subtitle from '@/components/misc/subtitle';
 import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
@@ -14,6 +15,7 @@ import Avatar from '@/components/author/avatar';
 
 export default function Author({ author, relatedPosts }) {
   const t = useTranslations('Titles');
+  // FIXME: related posts don't displaqy, when change language
 
   return (
     <Container type="page" title={author.name}>
@@ -21,14 +23,14 @@ export default function Author({ author, relatedPosts }) {
         <PageTitle>{author.name}</PageTitle>
         <Avatar
           name={author.name}
-          width={64}
-          height={64}
+          width={192}
+          height={192}
           picture={author.picture}
         />
+        <p>{author.subtitle}</p>
         <SectionSeparator />
-        {relatedPosts?.length > 0 && (
-          <MorePosts posts={relatedPosts} subtitle={t('related_posts')} />
-        )}
+        <Subtitle>{t('author_related_articles')}{author.name}</Subtitle>
+        {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
       </main>
     </Container>
   );

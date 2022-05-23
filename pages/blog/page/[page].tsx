@@ -21,9 +21,8 @@ export default function BlogIndexPage({ pagePosts, page, totalPages }) {
     >
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTitle>{`${t('blog_page')} ${page}/${totalPages}`}</PageTitle>
-
-        {pagePosts?.length > 0 && <MorePosts posts={pagePosts} />}
         <SectionSeparator />
+        {pagePosts?.length > 0 && <MorePosts posts={pagePosts} />}
         <PaginationControls
           currentPage={Number(page)}
           totalPages={Number(totalPages)}

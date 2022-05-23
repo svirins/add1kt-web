@@ -6,19 +6,22 @@ import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
 import PageTitle from '@/components/misc/page-title';
+import Subtitle from '@/components/misc/subtitle';
 
 export default function Tag({ tag, relatedPosts }) {
   const t = useTranslations('Titles');
-
+  // FIXME: related posts don't displaqy, when change language
   return (
     <Container type="page" title={tag.name}>
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTitle>{tag.title}</PageTitle>
         <p>{tag.description}</p>
         <SectionSeparator />
-        {relatedPosts?.length > 0 && (
-          <MorePosts posts={relatedPosts} subtitle={t('related_posts')} />
-        )}
+        <Subtitle>
+         {`${t('tag_related_articles')}
+          "${tag.title.toLowerCase()}"`}
+        </Subtitle>
+        {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
       </main>
     </Container>
   );

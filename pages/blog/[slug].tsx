@@ -10,6 +10,7 @@ import FBShare from '@/components/misc/social-share';
 import Authors from '@/components/author/authors';
 import Tags from '@/components/tag/tags';
 import PostDetails from '@/components/post/post-details';
+import Subtitle from '@/components/misc/subtitle'
 
 import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
@@ -21,7 +22,6 @@ export default function Post({ post, relatedPosts }) {
   return (
     <Container
       title={`${post?.title} – translated text`}
-      // description="seo text"
       imageUrl={post.coverImage.url}
       date={post.sys.firstPublishedAt}
       type="article"
@@ -61,8 +61,9 @@ export default function Post({ post, relatedPosts }) {
         <FBShare />
       </article>
       <SectionSeparator />
+      <Subtitle>{t('related_posts')}</Subtitle>
       {relatedPosts?.length > 0 && (
-        <MorePosts posts={relatedPosts} subsubtitle={t('related_posts')} />
+        <MorePosts posts={relatedPosts}  />
       )}
     </Container>
   );
