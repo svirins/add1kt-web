@@ -48,12 +48,11 @@ export async function getStaticPaths({ locales }) {
   )
     .map((page) =>
       locales.map((locale) => ({
-        params: { page: `/page/${page}` },
+        params: { page: `/blog/page/${page}` },
         locale: locale
       }))
     )
     .flat();
-
   return {
     paths: allPathsWithLocales,
     fallback: 'blocking'
@@ -64,7 +63,6 @@ export async function getStaticProps({ params, locale }) {
   const pagePosts = await getPaginatedPosts(Number(params.page), locale);
   const totalPosts = await getTotalPostsNumber();
   const totalPages = Math.ceil(totalPosts / Config.pagination.pageSize);
-
   return {
     props: {
       pagePosts: pagePosts,

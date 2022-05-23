@@ -63,9 +63,9 @@ const Config = {
   ],
   menuLinks: [
     { href: '/', title: 'home' },
-    { href: '/blog/1', title: 'blog' },
-    { href: '/tags', title: 'tags' },
-    { href: '/authors', title: 'authors' },
+    { href: '/blog/page/1', title: 'blog' },
+    { href: '/blog/tags', title: 'tags' },
+    { href: '/blog/authors', title: 'authors' },
     { href: '/about', title: 'about' }
   ]
 };

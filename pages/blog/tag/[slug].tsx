@@ -36,7 +36,7 @@ export async function getStaticPaths({ locales }) {
     .map((tag) =>
       locales.map((locale) => ({
         params: {
-          slug: `/tag/${tag.slug}`
+          slug: `/blog/tag/${tag.slug}`
         },
         locale: locale
       }))

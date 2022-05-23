@@ -40,7 +40,7 @@ export async function getStaticPaths({ locales }) {
     .map((author) =>
       locales.map((locale) => ({
         params: {
-          slug: `/author/${author.slug}`
+          slug: `/blog/author/${author.slug}`
         },
         locale: locale
       }))
