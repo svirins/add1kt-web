@@ -19,9 +19,9 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
   return (
     <Container title={t('categories')} type="page">
       <main className="flex flex-col justify-center items-start max-w-3xl w-full mx-auto mb-16">
-        <div className="flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
-          <div className="space-x-2 pt-6 pb-8 md:space-y-5">
-            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:border-r-2 md:px-6 md:text-6xl md:leading-14">
+        <div className="flex flex-col items-start justify-start divide-y divide-gray-300 dark:divide-gray-500 md:mb-6 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
+          <div className="space-x-2 pt-2 pb-4 md:space-y-5">
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight sm:leading-10 md:border-r-2 md:pr-6 md:leading-14">
               {t('authors')}
             </h1>
           </div>
@@ -30,20 +30,19 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
             {sortedAutors.map((autor) => {
               return (
                 <div key={autor} className="mt-2 mb-2 mr-5">
-                  <Link
-                    href={`/tag/${autor.slug}`}
-                    className="mr-3 text-sm font-medium uppercase text-orange-500 hover:text-orange-600 dark:hover:text-orange-400"
-                  >
-                    {`${autor.name} (${autor.linkedFrom.postCollection.total})`}
+                  <Link href={`/tag/${autor.slug}`}>
+                    <a className="mr-3 text-base font-medium  hover:text-orange-600 dark:hover:text-orange-400 hover:underline transition-all delay-100">
+                      {`${autor.name} (${autor.linkedFrom.postCollection.total})`}
+                    </a>
                   </Link>
                 </div>
               );
             })}
           </div>
         </div>
-        <div className="flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
-          <div className="space-x-2 pt-6 pb-8 md:space-y-5">
-            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:border-r-2 md:px-6 md:text-6xl md:leading-14">
+        <div className="flex flex-col items-start justify-start divide-y divide-gray-300 dark:divide-gray-500 mb-6 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
+          <div className="space-x-2 pt-2 pb-4 md:space-y-5">
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight sm:leading-10 md:border-r-2 md:pr-6 md:leading-14">
               {t('tags')}
             </h1>
           </div>
@@ -52,11 +51,10 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
             {sortedTags.map((tag) => {
               return (
                 <div key={tag} className="mt-2 mb-2 mr-5">
-                  <Link
-                    href={`/tag/${tag.slug}`}
-                    className="mr-3 text-sm font-medium uppercase text-orange-500 hover:text-orange-600 dark:hover:text-orange-400"
-                  >
-                    {`${tag.title} (${tag.linkedFrom.postCollection.total})`}
+                  <Link href={`/author/${tag.slug}`}>
+                    <a className="mr-3 text-base font-medium  hover:text-orange-600 dark:hover:text-orange-400 hover:underline transition-all delay-100">
+                      {`${tag.title} (${tag.linkedFrom.postCollection.total})`}
+                    </a>
                   </Link>
                 </div>
               );
