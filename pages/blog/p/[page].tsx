@@ -42,7 +42,7 @@ export async function getStaticPaths({ locales }) {
   )
     .map((page) =>
       locales.map((locale) => ({
-        params: { page: `/blog/page/${page}` },
+        params: { page: `/blog/p/${page}` },
         locale: locale
       }))
     )

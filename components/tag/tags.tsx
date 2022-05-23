@@ -23,7 +23,7 @@ export default function Tags({ tags, featured }) {
       )} */}
       {tags &&
         tags.map((tag) => (
-          <Link href={`/blog/tag/${tag.slug}`} key={tag.slug}>
+          <Link href={`/tag/${tag.slug}`} key={tag.slug}>
             <a className="mr-2 text-sm items-center font-base leading-sm  px-1  border-solid  bg-orange-200 hover:bg-orange-300 text-orange-700 rounded-lg">
               {tag.title}
             </a>

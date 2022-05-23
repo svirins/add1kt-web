@@ -42,7 +42,7 @@ export async function getStaticPaths({ locales }) {
     .map((author) =>
       locales.map((locale) => ({
         params: {
-          slug: `/blog/author/${author.slug}`
+          slug: `/author/${author.slug}`
         },
         locale: locale
       }))
@@ -61,7 +61,7 @@ export async function getStaticProps({ params, locale }) {
     props: {
       author: data?.author ?? null,
       relatedPosts: data?.relatedPosts ?? null,
-      messages: (await import(`../../../messages/${locale}.json`)).default
+      messages: (await import(`../../messages/${locale}.json`)).default
     }
   };
 }

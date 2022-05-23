@@ -9,23 +9,29 @@ import { useTranslations } from 'next-intl';
 
 export default function GetAllAuthorsAndTags({ authors, tags }) {
   const t = useTranslations('Titles');
-  console.log(authors, tags);
+  const sortedAutors = authors.sort(
+    (a, b) =>
+      a.linkedFrom.postCollection.total - b.linkedFrom.postCollection.total
+  );
+  const sortedTags = tags.sort(
+    (a, b) =>
+      a.linkedFrom.postCollection.total - b.linkedFrom.postCollection.total
+  );
   return (
     <Container title={t('authors+tags')} type="page">
       <main className="flex flex-col justify-center items-start max-w-3xl w-full mx-auto mb-16">
         <PageTitle>{t('authors+tags')}</PageTitle>
-        {authors &&
-          authors.map(author => (
-            <Link href={`/blog/tag/${author.slug}`} key={author.slug}>
+        {sortedAutors &&
+          sortedAutors.map((author) => (
+            <Link href={`/author/${author.slug}`} key={author.slug}>
               <a className="mr-2 text-sm items-center font-base leading-sm  px-1  border-solid  bg-orange-200 hover:bg-orange-300 text-orange-700 rounded-lg">
                 {`${author.name} ${author.linkedFrom.postCollection.total}`}
               </a>
             </Link>
-
           ))}
-        {tags &&
-          tags.map(tag => (
-            <Link href={`/blog/tag/${tag.slug}`} key={tag.slug}>
+        {sortedTags &&
+          sortedTags.map((tag) => (
+            <Link href={`/tag/${tag.slug}`} key={tag.slug}>
               <a className="mr-2 text-sm items-center font-base leading-sm  px-1  border-solid  bg-orange-200 hover:bg-orange-300 text-orange-700 rounded-lg">
                 {`${tag.title} ${tag.linkedFrom.postCollection.total}`}
               </a>
@@ -44,7 +50,7 @@ export async function getStaticProps({ locale }) {
     props: {
       authors,
       tags,
-      messages: (await import(`../../messages/${locale}.json`)).default
+      messages: (await import(`../messages/${locale}.json`)).default
     }
   };
 }

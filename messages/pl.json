@@ -15,11 +15,11 @@
   "Navigation": {
     "home": "główna",
     "blog": "blog",
-    "authors+tags": "autorzy+Tagi",
+    "categories": "kategorie",
     "about": "o projekcie"
   },
   "Titles": {
-    "authors+tags": "Autorzy+Tagi",
+    "categories": "Kategorie",
     "author_related_articles": "Więcej postów tego autora ",
     "tag_related_articles": "Wszystkie artykuły w kategorii ",
     "blog_page": "Blog, strona  ",

@@ -18,8 +18,8 @@ const Config = {
   ],
   menuLinks: [
     { href: '/', title: 'home' },
-    { href: '/blog/page/1', title: 'blog' },
-    { href: '/blog/authors-plus-tags', title: 'authors+tags' },
+    { href: '/blog/p/1', title: 'blog' },
+    { href: '/categories', title: 'categories' },
     { href: '/about', title: 'about' }
   ]
 };

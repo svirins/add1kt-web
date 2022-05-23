@@ -15,11 +15,11 @@
   "Navigation": {
     "home": "главная",
     "blog": "блог",
-    "authors+tags": "авторы+теги",
+    "categories": "категории",
     "about": "о проекте"
   },
   "Titles": {
-    "authors+tags": "Авторы+Теги",
+    "categories": "Категории",
     "author_related_articles": "Еще посты автора ",
     "tag_related_articles": "Еще посты с тегом ",
     "blog_page": "Блог, страница ",

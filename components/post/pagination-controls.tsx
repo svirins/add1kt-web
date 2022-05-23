@@ -9,12 +9,12 @@ export default function PaginationControls({ currentPage, totalPages = 0 }) {
 
   return (
     <div className="flex flex-row justify-between">
-      <Link href={`/blog/page/${Number(currentPage - 1)}`}>
+      <Link href={`/blog/p/${Number(currentPage - 1)}`}>
         <a className="flex border-2 border-blue-500 font-bold text-blue-500 px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white mr-6">
           {t('previous_page')}
         </a>
       </Link>
-      <Link href={`/blog/page/${Number(currentPage + 1)}`}>
+      <Link href={`/blog/p/${Number(currentPage + 1)}`}>
         <a className="flex border-2 border-blue-500 font-bold text-blue-500 px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white mr-6">
           {t('next_page')}
         </a>

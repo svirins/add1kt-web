@@ -16,7 +16,7 @@ import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
 
 export default function Post({ post, relatedPosts }) {
-  const { readingTime } = getExcerptAndReadingTime(post.body);
+  const { readingTime } = getExcerptAndReadingTime(post?.body);
   const t = useTranslations('Titles');
 
   return (

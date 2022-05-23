@@ -18,7 +18,7 @@ export default function Avatar({
         alt={name}
       />
       {slug && (
-        <Link href={`/blog/author/${slug}`}>
+        <Link href={`/author/${slug}`}>
           <a className="hover:underline ml-2 text-sm text-gray-700 dark:text-gray-300">
             {name}
           </a>
