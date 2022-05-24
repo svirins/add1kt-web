@@ -13,6 +13,7 @@ function Hits<THit extends AlgoliaHit<Record<string, unknown>>>({
   ...props
 }: HitsProps<THit>) {
   const { hits } = useHits(props);
+  console.log('HITS FOUND:',  hits)
   return (
     <div className={cn('ais-Hits', props.classNames)}>
       <ol className="ais-Hits-list">
