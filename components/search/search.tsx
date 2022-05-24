@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 
 import algoliasearch from 'algoliasearch/lite';
 import { useTranslations } from 'next-intl';
-import { InstantSearch } from 'react-instantsearch-hooks';
+import { InstantSearch, Configure } from 'react-instantsearch-hooks';
 
 import Config from '@/config/global-config';
 
@@ -20,6 +20,7 @@ function Search() {
     process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
     process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
   );
+  console.log
   return (
     <div>
       <InstantSearch searchClient={searchClient} indexName={indexName} routing>
@@ -30,12 +31,12 @@ function Search() {
             placeholder={t('inputPlaceholder')}
             detachedMediaQuery="none"
             openOnFocus
-            className="block w-full  text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
+            className="block w-fulltext-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
           />
-          {/* <Configure
+          <Configure
             attributesToSnippet={['name:10']}
             snippetEllipsisText="…"
-          /> */}
+          />
           <Hits hitComponent={Hit} />
         </div>
       </InstantSearch>

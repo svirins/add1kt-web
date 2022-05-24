@@ -8,8 +8,6 @@ import {
   useMemo
 } from 'react';
 
-import { render } from 'react-dom';
-
 import type { SearchClient } from 'algoliasearch/lite';
 import { useSearchBox } from 'react-instantsearch-hooks';
 import { autocomplete, AutocompleteOptions } from '@algolia/autocomplete-js';
@@ -109,7 +107,7 @@ function Autocomplete({
           });
         }
       },
-      renderer: { createElement, Fragment, render },
+      renderer: { createElement, Fragment, render: () => {} },
       plugins
     });
 

@@ -16,7 +16,7 @@ export default function Index({ pageData, pagePosts }) {
   return (
     <Container title={pageData.title} type="page">
       <main className="flex flex-col justify-center items-start max-w-3xl mx-auto pb-16">
-        <div id="autocomplete" className="relative w-full mb-4">
+        <div id="autocomplete" className="relative w-full">
           <Search />
         </div>
         {pageData && (

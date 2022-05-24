@@ -24,7 +24,7 @@ const CoverImage = ({ title, url, width, height, slug }: ImageProps) => {
   );
 
   return (
-    <div className="sm:mx-0">
+    <div className="sm:mx-0 relative">
       {slug ? (
         <Link href={`/blog/${slug}`}>
           <a aria-label={title}>{image}</a>
