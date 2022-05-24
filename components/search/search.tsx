@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
 
 import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, Configure } from 'react-instantsearch-hooks';
 import { useTranslations } from 'next-intl';
+import { InstantSearch } from 'react-instantsearch-hooks';
 
 import Config from '@/config/global-config';
 
@@ -32,10 +32,10 @@ function Search() {
             openOnFocus
             // className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
           />
-          <Configure
+          {/* <Configure
             attributesToSnippet={['name:10']}
             snippetEllipsisText="…"
-          />
+          /> */}
           <Hits hitComponent={Hit} />
         </div>
       </InstantSearch>

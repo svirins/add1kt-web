@@ -9,7 +9,7 @@ import { ThemeProvider } from 'next-themes';
 import { DefaultSeo } from 'next-seo';
 import { NextIntlProvider } from 'next-intl';
 import { usePanelbear } from '@panelbear/panelbear-nextjs';
-
+// TODO: panelbear => splitbee
 import SEO from '@/config/next-seo.config';
 
 function App({ Component, pageProps }: AppProps) {

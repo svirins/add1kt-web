@@ -38,6 +38,7 @@
     "preact": "^10.7.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-instantsearch-dom": "^6.26.0",
     "react-instantsearch-hooks-web": "^6.26.0",
     "reading-time": "^1.5.0",
     "use-delayed-render": "^0.0.7"

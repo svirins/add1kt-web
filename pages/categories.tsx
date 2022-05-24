@@ -1,10 +1,10 @@
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+
+import Container from '@/components/layout/container';
 
 import { AllAuthorsTagsAndTotalPosts } from '@/lib/api';
 
-import Container from '@/components/layout/container';
-import PageTitle from '@/components/misc/page-title';
-import { useTranslations } from 'next-intl';
 
 export default function GetAllAuthorsAndTags({ authors, tags }) {
   const t = useTranslations('Titles');
@@ -18,7 +18,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
   );
   return (
     <Container title={t('categories')} type="page">
-      <main className="flex flex-col justify-center items-start max-w-3xl w-full mx-auto mb-16">
+      <main className="flex flex-col justify-center items-start max-w-3xl  mx-auto pb-16">
         <div className="flex flex-col items-start justify-start divide-y divide-gray-300 dark:divide-gray-500 md:mb-6 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
           <div className="space-x-2 pt-2 pb-4 md:space-y-5">
             <h1 className="text-3xl md:text-5xl font-bold tracking-tight sm:leading-10 md:border-r-2 md:pr-6 md:leading-14">
