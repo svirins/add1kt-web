@@ -9,7 +9,7 @@
   dependencies:
     "@algolia/autocomplete-shared" "1.6.3"
 
-"@algolia/autocomplete-js@1.6.3", "@algolia/autocomplete-js@^1.6.3":
+"@algolia/autocomplete-js@^1.6.3":
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/@algolia/autocomplete-js/-/autocomplete-js-1.6.3.tgz#a5bacfcced057a8587bc7a136a6c4f54052913fe"
   integrity sha512-WgzufbwaAU6owis5NK/02q21zPyUW5lji+KRr1zgJffxW8nX5SGZ8OWmv73J187klwURHymxqsBEV4fdj0LDuw==
@@ -20,27 +20,7 @@
     htm "^3.0.0"
     preact "^10.0.0"
 
-"@algolia/autocomplete-plugin-query-suggestions@^1.6.3":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-plugin-query-suggestions/-/autocomplete-plugin-query-suggestions-1.6.3.tgz#2841a6e39071e315ba75964371e6bc1650b33c2a"
-  integrity sha512-ob+xDwmh3Y3uQ/BuHtIGFFBn/ZWCp4lIdbhdkiP6BAQ2kCrCENXR4+6CqJWyjln7t/kANZgxuJXPgaUXc5jEAQ==
-  dependencies:
-    "@algolia/autocomplete-core" "1.6.3"
-    "@algolia/autocomplete-js" "1.6.3"
-    "@algolia/autocomplete-preset-algolia" "1.6.3"
-    "@algolia/autocomplete-shared" "1.6.3"
-
-"@algolia/autocomplete-plugin-recent-searches@^1.6.3":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-plugin-recent-searches/-/autocomplete-plugin-recent-searches-1.6.3.tgz#11f0d2f23c41182d518d4cb2298cb586d7c6aec5"
-  integrity sha512-WT43IeV62n2OG1DlMYDoj0/NlTRgo4as4WOqCh6c+6T8v/snB4Cjk66e0dkt6zm2ahESFgwTelI9S8SEk8pReA==
-  dependencies:
-    "@algolia/autocomplete-core" "1.6.3"
-    "@algolia/autocomplete-js" "1.6.3"
-    "@algolia/autocomplete-preset-algolia" "1.6.3"
-    "@algolia/autocomplete-shared" "1.6.3"
-
-"@algolia/autocomplete-preset-algolia@1.6.3":
+"@algolia/autocomplete-preset-algolia@1.6.3", "@algolia/autocomplete-preset-algolia@^1.6.3":
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.6.3.tgz#110e56228aa41e47712bbdeb093b613c5b62ddd5"
   integrity sha512-IJVyknSDZJRheE5sKffRJN7ukJJDAtvuKiHrk0VLZCJHR/o7XQkowu/6axhUIBRZ6Q2JFzV9hzYZ0PbtSJo9gA==

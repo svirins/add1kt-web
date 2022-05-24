@@ -38,7 +38,7 @@ function Autocomplete({
 
   useEffect(() => {
     setQuery(instantSearchUiState.query);
-  }, [instantSearchUiState,setQuery]);
+  }, [instantSearchUiState]);
 
 
   useEffect(() => {
@@ -67,7 +67,7 @@ function Autocomplete({
     });
 
     return () => autocompleteInstance.destroy();
-  }, [autocompleteProps, query]);
+  }, []);
 
   return <div className={className} ref={autocompleteContainer} />;
 }

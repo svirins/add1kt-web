@@ -30,13 +30,11 @@ function Search() {
             indexName={indexName}
             placeholder={t('inputPlaceholder')}
             detachedMediaQuery="none"
-            openOnFocus
+            // openOnFocus
+            // classNames={{item:''}}
             className="block w-fulltext-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
           />
-          <Configure
-            attributesToSnippet={['name:10']}
-            snippetEllipsisText="…"
-          />
+          <Configure analytics={false} hitsPerPage={8} typoTolerance={true} />
           <Hits hitComponent={Hit} />
         </div>
       </InstantSearch>

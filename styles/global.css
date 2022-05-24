@@ -232,37 +232,3 @@ table {
 .aa-Panel {
   position: fixed;
 }
-
-/* InstantSearch */
-
-.ais-Hits-list {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.ais-Hits-item {
-  padding: 1rem !important;
-}
-
-.hit {
-  align-items: center;
-  display: grid;
-  gap: 1rem;
-}
-
-.hit h1 {
-  font-size: 1rem;
-}
-
-.hit p {
-  font-size: 0.8rem;
-  opacity: 0.8;
-}
-
-.hit-image {
-  align-items: center;
-  display: flex;
-  height: 100px;
-  justify-content: center;
-}
