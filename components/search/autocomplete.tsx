@@ -1,11 +1,9 @@
 import {
   createElement,
-  ReactElement,
   Fragment,
   useEffect,
   useRef,
   useState,
-  useMemo
 } from 'react';
 
 import type { SearchClient } from 'algoliasearch/lite';
@@ -13,8 +11,6 @@ import { useSearchBox } from 'react-instantsearch-hooks';
 import { autocomplete, AutocompleteOptions } from '@algolia/autocomplete-js';
 import { BaseItem } from '@algolia/autocomplete-core';
 
-import { createLocalStorageRecentSearchesPlugin } from '@algolia/autocomplete-plugin-recent-searches';
-import { createQuerySuggestionsPlugin } from '@algolia/autocomplete-plugin-query-suggestions';
 import '@algolia/autocomplete-theme-classic';
 
 type AutocompleteProps = Partial<AutocompleteOptions<BaseItem>> & {
@@ -42,48 +38,8 @@ function Autocomplete({
 
   useEffect(() => {
     setQuery(instantSearchUiState.query);
-  }, [instantSearchUiState]);
+  }, [instantSearchUiState,setQuery]);
 
-  const plugins = useMemo(() => {
-    const recentSearches = createLocalStorageRecentSearchesPlugin({
-      key: 'instantsearch',
-      limit: 3,
-      transformSource({ source }) {
-        return {
-          ...source,
-          onSelect({ item }) {
-            setInstantSearchUiState({ query: item.label });
-          }
-        };
-      }
-    });
-    const querySuggestions = createQuerySuggestionsPlugin({
-      searchClient,
-      indexName,
-      getSearchParams() {
-        return recentSearches.data!.getAlgoliaSearchParams({
-          hitsPerPage: 6
-        });
-      },
-      transformSource({ source }) {
-        return {
-          ...source,
-          sourceId: 'querySuggestionsPlugin',
-          onSelect({ item }) {
-            setInstantSearchUiState({ query: item.query });
-          },
-          getItems(params) {
-            if (!params.state.query) {
-              return [];
-            }
-
-            return source.getItems(params);
-          }
-        };
-      }
-    });
-    return [recentSearches, querySuggestions];
-  }, []);
 
   useEffect(() => {
     if (!autocompleteContainer.current) {
@@ -108,11 +64,10 @@ function Autocomplete({
         }
       },
       renderer: { createElement, Fragment, render: () => {} },
-      plugins
     });
 
     return () => autocompleteInstance.destroy();
-  }, [plugins]);
+  }, [autocompleteProps, query]);
 
   return <div className={className} ref={autocompleteContainer} />;
 }
