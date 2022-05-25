@@ -21,6 +21,7 @@ export async function getFeaturedPosts(locale) {
         locale: $locale
         where: { featured: true }
       ) {
+        total
         items {
           ...ShortPostData
         }
@@ -33,7 +34,10 @@ export async function getFeaturedPosts(locale) {
   };
 
   const data = await apiRequest(query, variables);
-  return data?.postCollection?.items ?? null;
+  return {
+    featuredPosts: data?.postCollection?.items ?? null,
+    total: data?.postCollection?.total ?? 0
+  }
 }
 export async function getPageContent(locale, slug) {
   const query = gql`

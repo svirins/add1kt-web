@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl';
 import styles from '@/styles/mobile-menu.module.css';
 
 import Config from '@/config/global-config';
-// FIXME:  mobile menu visibility
 export default function MobileMenu() {
   const t = useTranslations('Navigation');
   const [isMenuOpen, setIsMenuOpen] = useState(false);

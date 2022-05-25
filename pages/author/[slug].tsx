@@ -15,7 +15,6 @@ import Avatar from '@/components/author/avatar';
 
 export default function Author({ author, relatedPosts }) {
   const t = useTranslations('Titles');
-  // FIXME: related posts don't displaqy, when change language
 
   return (
     <Container type="page" title={author.name}>

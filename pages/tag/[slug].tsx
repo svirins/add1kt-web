@@ -10,7 +10,6 @@ import Subtitle from '@/components/misc/subtitle';
 
 export default function Tag({ tag, relatedPosts }) {
   const t = useTranslations('Titles');
-  // FIXME: related posts don't displaqy, when change language
   return (
     <Container type="page" title={tag.name}>
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">

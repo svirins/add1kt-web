@@ -3,7 +3,6 @@ import Footer from '@/components/layout/footer';
 import CustomHead from '@/components/seo/custom-head';
 import { ContainerProps } from 'extra-types';
 
-// FIXME: eliminate shift layout
 export default function Container(props: ContainerProps) {
   const { children, type = 'page', ...customMeta } = props;
   return (

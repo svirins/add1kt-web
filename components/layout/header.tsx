@@ -21,7 +21,7 @@ function NavItem({ href, text }) {
           isActive
             ? 'font-bold text-orange-600 dark:text-orange-400'
             : 'font-medium ',
-          'hidden text-xl md:inline-block p-2 lg:py-4 items-center transition-all delay-100 hover:underline transition-all'
+          'hidden text-xl md:inline-block p-2 lg:py-4 items-center transition-all delay-100 hover:underline'
         )}
       >
         <span className="capsize">{text}</span>
