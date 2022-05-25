@@ -4,23 +4,25 @@ import { shimmer, toBase64 } from '@/lib/content-utils';
 import { ImageProps } from 'extra-types';
 import cn from 'classnames';
 
-const CoverImage = ({ title, url, width, height, slug }: ImageProps) => {
+const PreviewImage = ({ title, url, slug }: ImageProps) => {
   const image = (
     <Image
-      width={width}
-      height={height}
       src={url}
+      quality="90%"
+      width={16}
+      height={9}
       placeholder="blur"
       blurDataURL={`data:image/svg+xml;base64,${toBase64(
-        shimmer(width, height)
+        shimmer('100%', '100%')
       )}`}
       layout="responsive"
-      objectFit="contain"
-      objectPosition="center"
+      objectFit="cover"
+      // objectFit="contain"
+      // objectPosition="center"
       alt={`Cover Image for ${title}`}
       className={cn(
         { 'hover:opacity-75 transition-opacity': slug },
-        'rounded-md'
+        'rounded-lg'
       )}
     />
   );
@@ -32,10 +34,10 @@ const CoverImage = ({ title, url, width, height, slug }: ImageProps) => {
           <a aria-label={title}>{image}</a>
         </Link>
       ) : (
-        image
+        {image}
       )}
     </div>
   );
 };
 
-export default CoverImage;
+export default PreviewImage;

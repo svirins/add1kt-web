@@ -5,12 +5,12 @@ import PostBody from '@/components/post/post-body';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
 import PageTitle from '@/components/misc/page-title';
-import CoverImage from '@/components/image/cover-image';
+import HeroImage from '@/components/image/hero-image';
 import FBShare from '@/components/misc/social-share';
 import Authors from '@/components/author/authors';
 import Tags from '@/components/tag/tags';
 import PostDetails from '@/components/post/post-details';
-import Subtitle from '@/components/misc/subtitle'
+import Subtitle from '@/components/misc/subtitle';
 
 import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
@@ -28,42 +28,28 @@ export default function Post({ post, relatedPosts }) {
     >
       <article className="flex flex-col justify-center items-start max-w-3xl w-full border-gray-200 dark:border-gray-700 mx-auto mb-16">
         <PageTitle>{post.title}</PageTitle>
-        <div className="flex flex-col items-start w-full mt-2 md:flex-row md:items-center">
-          <div
-            className="flex items-
-          "
-          >
-            <div className="text-sm text-gray-700 dark:text-gray-300 mb-4">
-              <PostDetails
-                date={post.sys.firstPublishedAt}
-                readingTime={readingTime}
-              />
-              <div className="flex flex-row mb-4 text-sm">
-                <Tags
-                  tags={post.tagsCollection.items}
-                />
-              </div>
-              <div className="flex flex-row mb-4">
-                <Authors authors={post.authorCollection.items} />
-              </div>
+
+        <div className="flex flex-col  mt-2 md:flex-row md:items-center">
+          <HeroImage title={post.title} url={post.coverImage.url} />
+          <div className="text-sm text-gray-700 dark:text-gray-300 mb-4">
+            <PostDetails
+              date={post.sys.firstPublishedAt}
+              readingTime={readingTime}
+            />
+            <div className="flex flex-row mb-4 text-sm">
+              <Tags tags={post.tagsCollection.items} />
+            </div>
+            <div className="flex flex-row mb-4">
+              <Authors authors={post.authorCollection.items} />
             </div>
           </div>
         </div>
-        <CoverImage
-          title={post.title}
-          slug={post.slug}
-          width={post.coverImage.width}
-          url={post.coverImage.url}
-          height={post.coverImage.height}
-        />
         <PostBody content={post.body} />
         <FBShare />
       </article>
       <SectionSeparator />
       <Subtitle>{t('related_posts')}</Subtitle>
-      {relatedPosts?.length > 0 && (
-        <MorePosts posts={relatedPosts}  />
-      )}
+      {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
     </Container>
   );
 }

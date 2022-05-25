@@ -1,44 +1,30 @@
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+
+import NavItemFooter from '@/components/misc/nav-item-footer';
+import SectionSeparator from '@/components/misc/section-separator';
+import Config from '@/config/global-config';
 
 const ExternalLink = ({ href, children }) => (
-  <a
-    className="text-gray-500 hover:text-gray-600 transition"
-    target="_blank"
-    rel="noopener noreferrer"
-    href={href}
-  >
+  <a className="" target="_blank" rel="noopener noreferrer" href={href}>
     {children}
   </a>
 );
 
 export default function Footer() {
+  const t = useTranslations('Navigation');
+
   return (
     <footer className="flex flex-col justify-center items-start max-w-3xl mx-auto w-full mb-8">
-      <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-8" />
-      <div className="w-full max-w-3xl grid grid-cols-1 gap-6 pb-16 sm:grid-cols-3">
-        <div className="flex flex-col space-y-6">
-          <Link href="/">
-            <a className="text-gray-500 hover:text-gray-600 transition">Home</a>
-          </Link>
-          <Link href="/blog/page/1">
-            <a className="text-gray-500 hover:text-gray-600 transition">Blog</a>
-          </Link>
-          <Link href="/about">
-            <a className="text-gray-500 hover:text-gray-600 transition">
-              About
-            </a>
-          </Link>
+      <SectionSeparator />
+        <div className="inline-flex items-center">
+          {Config.menuLinks.map((link, index) => (
+            <NavItemFooter
+              href={link.href}
+              text={t(link.title)}
+              key={link.title}
+            />
+          ))}
         </div>
-        <div className="flex flex-col space-y-6">
-          <ExternalLink href="https://twitter.com/svirins">
-            Twitter
-          </ExternalLink>
-          <ExternalLink href="https://github.com/zvirinz">GitHub</ExternalLink>
-          <ExternalLink href="https://www.youtube.com/channel/">
-            YouTube
-          </ExternalLink>
-        </div>
-      </div>
     </footer>
   );
 }

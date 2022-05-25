@@ -5,7 +5,6 @@ import Container from '@/components/layout/container';
 
 import { AllAuthorsTagsAndTotalPosts } from '@/lib/api';
 
-
 export default function GetAllAuthorsAndTags({ authors, tags }) {
   const t = useTranslations('Titles');
   const sortedAutors = authors.sort(
@@ -65,27 +64,6 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
     </Container>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export async function getStaticProps({ locale }) {
   const { authors, tags } = await AllAuthorsTagsAndTotalPosts(locale);

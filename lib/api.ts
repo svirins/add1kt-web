@@ -37,7 +37,7 @@ export async function getFeaturedPosts(locale) {
   return {
     featuredPosts: data?.postCollection?.items ?? null,
     total: data?.postCollection?.total ?? 0
-  }
+  };
 }
 export async function getPageContent(locale, slug) {
   const query = gql`

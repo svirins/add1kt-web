@@ -1,5 +1,3 @@
-
-
 ## Configuration
 
 ### Step 1. Create an account and a space on Contentful

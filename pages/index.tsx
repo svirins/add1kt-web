@@ -12,7 +12,7 @@ import PostBody from '@/components/post/post-body';
 import Subtitle from '@/components/misc/subtitle';
 
 export default function Index({ pageData, featuredPosts, total }) {
-  console.log(total)
+  console.log(total);
   const t = useTranslations('Titles');
   return (
     <Container title={pageData.title} type="page">

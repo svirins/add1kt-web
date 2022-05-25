@@ -26,7 +26,7 @@
     "classnames": "2.3.1",
     "date-fns": "2.28.0",
     "dotenv": "^16.0.0",
-    "framer-motion": "latest",
+    "framer-motion": "6.3.4",
     "graphql": "^16.5.0",
     "graphql-request": "^4.2.0",
     "next": "latest",
@@ -42,7 +42,7 @@
     "use-delayed-render": "^0.0.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.0",
+    "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^17.0.0",
     "@tailwindcss/typography": "^0.5.2",
     "@types/node": "^17.0.35",

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-export default function MorepostsControls({ isDisabled}) {
+export default function MorepostsControls({ isDisabled }) {
   const t = useTranslations('Post');
   return (
     <div className="flex flex-row justify-center place-items-center  w-full flex-nowrap">
@@ -12,7 +12,7 @@ export default function MorepostsControls({ isDisabled}) {
       ) : (
         <Link href={`/blog/p/1`}>
           <a className="group inline-flex items-center font-medium hover:text-teal-600 text-base transition-all delay-100 dark:hover:text-teal-400">
-          <span>{`${t('more_posts')} →`}</span>
+            <span>{`${t('more_posts')} →`}</span>
           </a>
         </Link>
       )}

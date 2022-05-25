@@ -9,7 +9,7 @@ export type ContainerProps = {
 
 export type ImageProps = {
   title: string;
-  width: string | number;
+  width?: string | number;
   height?: string | number;
   url: string;
   slug?: string;

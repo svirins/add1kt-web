@@ -28,7 +28,10 @@ export default function Author({ author, relatedPosts }) {
         />
         <p>{author.subtitle}</p>
         <SectionSeparator />
-        <Subtitle>{t('author_related_articles')}{author.name}</Subtitle>
+        <Subtitle>
+          {t('author_related_articles')}
+          {author.name}
+        </Subtitle>
         {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
       </main>
     </Container>

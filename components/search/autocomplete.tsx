@@ -1,10 +1,4 @@
-import {
-  createElement,
-  Fragment,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { createElement, Fragment, useEffect, useRef, useState } from 'react';
 
 import type { SearchClient } from 'algoliasearch/lite';
 import { useSearchBox } from 'react-instantsearch-hooks';
@@ -40,7 +34,6 @@ function Autocomplete({
     setQuery(instantSearchUiState.query);
   }, [instantSearchUiState]);
 
-
   useEffect(() => {
     if (!autocompleteContainer.current) {
       return;
@@ -63,7 +56,7 @@ function Autocomplete({
           });
         }
       },
-      renderer: { createElement, Fragment, render: () => {} },
+      renderer: { createElement, Fragment, render: () => {} }
     });
 
     return () => autocompleteInstance.destroy();
