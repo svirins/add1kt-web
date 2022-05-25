@@ -31,7 +31,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
               return (
                 <div key={autor} className="mt-2 mb-2 mr-5">
                   <Link href={`/tag/${autor.slug}`}>
-                    <a className="mr-3 text-base font-medium  hover:text-orange-600 dark:hover:text-orange-400 hover:underline transition-all delay-100">
+                    <a className="mr-3 text-base font-medium text-teal-600 transition-all delay-100 hover:text-teal-800">
                       {`${autor.name} (${autor.linkedFrom.postCollection.total})`}
                     </a>
                   </Link>
@@ -52,7 +52,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
               return (
                 <div key={tag} className="mt-2 mb-2 mr-5">
                   <Link href={`/author/${tag.slug}`}>
-                    <a className="mr-3 text-base font-medium  hover:text-orange-600 dark:hover:text-orange-400 hover:underline transition-all delay-100">
+                    <a className="mr-3 text-base font-medium  text-teal-600 transition-all delay-100 hover:text-teal-800">
                       {`${tag.title} (${tag.linkedFrom.postCollection.total})`}
                     </a>
                   </Link>

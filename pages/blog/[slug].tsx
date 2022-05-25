@@ -41,7 +41,6 @@ export default function Post({ post, relatedPosts }) {
               <div className="flex flex-row mb-4 text-sm">
                 <Tags
                   tags={post.tagsCollection.items}
-                  featured={post.featured}
                 />
               </div>
               <div className="flex flex-row mb-4">

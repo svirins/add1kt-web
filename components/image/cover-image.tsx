@@ -14,11 +14,13 @@ const CoverImage = ({ title, url, width, height, slug }: ImageProps) => {
       blurDataURL={`data:image/svg+xml;base64,${toBase64(
         shimmer(width, height)
       )}`}
-      layout="intrinsic"
+      layout="responsive"
+      objectFit="contain"
+      objectPosition="center"
       alt={`Cover Image for ${title}`}
       className={cn(
         { 'hover:opacity-75 transition-opacity': slug },
-        'rounded-lg  drop-shadow-md'
+        'rounded-md'
       )}
     />
   );

@@ -6,7 +6,7 @@ import { ContainerProps } from 'extra-types';
 export default function Container(props: ContainerProps) {
   const { children, type = 'page', ...customMeta } = props;
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl  mx-auto">
       <CustomHead customMeta={customMeta} contentType={type} />
       <header>
         <Header />

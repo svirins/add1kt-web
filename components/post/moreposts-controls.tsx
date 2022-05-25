@@ -5,25 +5,17 @@ export default function MorepostsControls({ isDisabled}) {
   const t = useTranslations('Post');
   return (
     <div className="flex flex-row justify-center place-items-center  w-full flex-nowrap">
-      {/* <Link href={`/blog/p/1`}> */}
-      <a className="group inline-flex items-center font-medium hover:text-orange-600 hover:cursor-pointer dark:hover:text-orange-400 text-xl  transition-all delay-100 hover:underline">
-        {t('more_posts')}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 flex-none"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M14 5l7 7m0 0l-7 7m7-7H3"
-          />
-        </svg>
-      </a>
-      {/* </Link> */}
+      {isDisabled ? (
+        <p className="group  inline-flex items-center font-medium  text-lg md:text-xl text-gray-500">
+          <span>{`${t('more_posts')} →`}</span>
+        </p>
+      ) : (
+        <Link href={`/blog/p/1`}>
+          <a className="group inline-flex items-center font-medium hover:text-teal-600 text-base transition-all delay-100 dark:hover:text-teal-400">
+          <span>{`${t('more_posts')} →`}</span>
+          </a>
+        </Link>
+      )}
     </div>
   );
 }

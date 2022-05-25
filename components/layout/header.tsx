@@ -18,10 +18,8 @@ function NavItem({ href, text }) {
     <NextLink href={href}>
       <a
         className={cn(
-          isActive
-            ? 'font-bold text-orange-600 dark:text-orange-400'
-            : 'font-medium ',
-          'hidden text-xl md:inline-block p-2 lg:py-4 items-center transition-all delay-100 hover:underline'
+          isActive ? ' text-teal-600' : '',
+          'hidden font-medium text-xl md:inline-block p-2 lg:py-4 items-center transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400'
         )}
       >
         <span className="capsize">{text}</span>
@@ -43,7 +41,7 @@ function Header() {
         <a href="#skip" className="skip-nav">
           Skip to content
         </a>
-        <div className="ml-[-0.60rem] inline-flex flex items-center">
+        <div className="ml-[-0.60rem] inline-flex items-center">
           <MobileMenu />
           {Config.menuLinks.map((link, index) => (
             <NavItem
@@ -54,7 +52,7 @@ function Header() {
           ))}
         </div>
         {mounted && (
-          <div className="inline-flex flex">
+          <div className="inline-flex">
             <LocaleSwitcher />
             <ThemeSwitcher />
           </div>

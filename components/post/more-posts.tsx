@@ -16,7 +16,6 @@ export default function MorePosts({ posts }) {
             authors={post.authorCollection.items}
             tags={post.tagsCollection.items}
             slug={post.slug}
-            featured={post.featured}
             excerpt={excerpt}
             readingTime={readingTime}
           />

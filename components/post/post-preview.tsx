@@ -9,11 +9,9 @@ export default function PostPreview({
   title,
   coverImage,
   date,
-  excerpt,
   authors,
   tags,
   slug,
-  featured,
   readingTime
 }) {
   return (
@@ -35,7 +33,7 @@ export default function PostPreview({
         <PostDetails date={date} readingTime={readingTime} />
       </div>
       <div className="flex flex-row mb-4 text-sm">
-        <Tags tags={tags} featured={featured} />
+        <Tags tags={tags} />
       </div>
       <div className="flex flex-row mb-4">
         <Authors authors={authors} />
