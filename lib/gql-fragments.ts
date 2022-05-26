@@ -116,14 +116,9 @@ export const AUTHOR_DATA = gql`
   fragment AuthorData on Author {
     slug
     name
-    subtitle
+    description
     social
     picture {
-      url
-      width
-      height
-    }
-    coverImage {
       url
       width
       height
@@ -136,11 +131,6 @@ export const TAG_DATA = gql`
     slug
     title
     description
-    coverImage {
-      url
-      width
-      height
-    }
   }
 `;
 

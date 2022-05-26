@@ -78,9 +78,6 @@ export async function getAllAuthors() {
       authorCollection {
         items {
           slug
-          sys {
-            id
-          }
         }
       }
     }

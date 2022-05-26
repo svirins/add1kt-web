@@ -15,11 +15,12 @@ import Avatar from '@/components/author/avatar';
 
 export default function Author({ author, relatedPosts }) {
   const t = useTranslations('Titles');
-
+  console.log(author.social);
   return (
     <Container type="page" title={author.name}>
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTitle>{author.name}</PageTitle>
+        <p>{author.description}</p>
         <Avatar
           name={author.name}
           width={192}

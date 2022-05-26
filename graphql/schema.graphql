@@ -8,6 +8,15 @@ type Query {
     where: AssetFilter
     order: [AssetOrder]
   ): AssetCollection
+  author(id: String!, preview: Boolean, locale: String): Author
+  authorCollection(
+    skip: Int = 0
+    limit: Int = 100
+    preview: Boolean
+    locale: String
+    where: AuthorFilter
+    order: [AuthorOrder]
+  ): AuthorCollection
   post(id: String!, preview: Boolean, locale: String): Post
   postCollection(
     skip: Int = 0
@@ -26,15 +35,6 @@ type Query {
     where: PageFilter
     order: [PageOrder]
   ): PageCollection
-  author(id: String!, preview: Boolean, locale: String): Author
-  authorCollection(
-    skip: Int = 0
-    limit: Int = 100
-    preview: Boolean
-    locale: String
-    where: AuthorFilter
-    order: [AuthorOrder]
-  ): AuthorCollection
   tag(id: String!, preview: Boolean, locale: String): Tag
   tagCollection(
     skip: Int = 0
@@ -220,18 +220,18 @@ type AssetLinkingCollections {
     preview: Boolean
     locale: String
   ): EntryCollection
-  postCollection(
-    skip: Int = 0
-    limit: Int = 100
-    preview: Boolean
-    locale: String
-  ): PostCollection
   authorCollection(
     skip: Int = 0
     limit: Int = 100
     preview: Boolean
     locale: String
   ): AuthorCollection
+  postCollection(
+    skip: Int = 0
+    limit: Int = 100
+    preview: Boolean
+    locale: String
+  ): PostCollection
   tagCollection(
     skip: Int = 0
     limit: Int = 100
@@ -250,6 +250,40 @@ type EntryCollection {
 interface Entry {
   sys: Sys!
   contentfulMetadata: ContentfulMetadata!
+}
+
+type AuthorCollection {
+  total: Int!
+  skip: Int!
+  limit: Int!
+  items: [Author]!
+}
+
+# Info, short bio and contacts [See type definition](https://app.contentful.com/spaces/s0zztu9gjury/content_types/author)
+type Author implements Entry {
+  sys: Sys!
+  contentfulMetadata: ContentfulMetadata!
+  linkedFrom(allowedLocales: [String]): AuthorLinkingCollections
+  name(locale: String): String
+  slug(locale: String): String
+  picture(preview: Boolean, locale: String): Asset
+  description(locale: String): String
+  social(locale: String): [String]
+}
+
+type AuthorLinkingCollections {
+  entryCollection(
+    skip: Int = 0
+    limit: Int = 100
+    preview: Boolean
+    locale: String
+  ): EntryCollection
+  postCollection(
+    skip: Int = 0
+    limit: Int = 100
+    preview: Boolean
+    locale: String
+  ): PostCollection
 }
 
 type PostCollection {
@@ -309,34 +343,6 @@ type PostAuthorCollection {
   skip: Int!
   limit: Int!
   items: [Author]!
-}
-
-# Info, short bio and contacts [See type definition](https://app.contentful.com/spaces/s0zztu9gjury/content_types/author)
-type Author implements Entry {
-  sys: Sys!
-  contentfulMetadata: ContentfulMetadata!
-  linkedFrom(allowedLocales: [String]): AuthorLinkingCollections
-  name(locale: String): String
-  slug(locale: String): String
-  picture(preview: Boolean, locale: String): Asset
-  coverImage(preview: Boolean, locale: String): Asset
-  subtitle(locale: String): String
-  social(locale: String): [String]
-}
-
-type AuthorLinkingCollections {
-  entryCollection(
-    skip: Int = 0
-    limit: Int = 100
-    preview: Boolean
-    locale: String
-  ): EntryCollection
-  postCollection(
-    skip: Int = 0
-    limit: Int = 100
-    preview: Boolean
-    locale: String
-  ): PostCollection
 }
 
 type PostBody {
@@ -401,13 +407,6 @@ type PostRelatedPostsCollection {
   skip: Int!
   limit: Int!
   items: [Post]!
-}
-
-type AuthorCollection {
-  total: Int!
-  skip: Int!
-  limit: Int!
-  items: [Author]!
 }
 
 type TagCollection {
@@ -564,6 +563,56 @@ enum AssetOrder {
   sys_publishedVersion_DESC
 }
 
+input AuthorFilter {
+  sys: SysFilter
+  contentfulMetadata: ContentfulMetadataFilter
+  name_exists: Boolean
+  name: String
+  name_not: String
+  name_in: [String]
+  name_not_in: [String]
+  name_contains: String
+  name_not_contains: String
+  slug_exists: Boolean
+  slug: String
+  slug_not: String
+  slug_in: [String]
+  slug_not_in: [String]
+  slug_contains: String
+  slug_not_contains: String
+  picture_exists: Boolean
+  description_exists: Boolean
+  description: String
+  description_not: String
+  description_in: [String]
+  description_not_in: [String]
+  description_contains: String
+  description_not_contains: String
+  social_exists: Boolean
+  social_contains_all: [String]
+  social_contains_some: [String]
+  social_contains_none: [String]
+  OR: [AuthorFilter]
+  AND: [AuthorFilter]
+}
+
+enum AuthorOrder {
+  name_ASC
+  name_DESC
+  slug_ASC
+  slug_DESC
+  description_ASC
+  description_DESC
+  sys_id_ASC
+  sys_id_DESC
+  sys_publishedAt_ASC
+  sys_publishedAt_DESC
+  sys_firstPublishedAt_ASC
+  sys_firstPublishedAt_DESC
+  sys_publishedVersion_ASC
+  sys_publishedVersion_DESC
+}
+
 input PostFilter {
   sys: SysFilter
   contentfulMetadata: ContentfulMetadataFilter
@@ -688,57 +737,6 @@ enum PageOrder {
   title_DESC
   slug_ASC
   slug_DESC
-  sys_id_ASC
-  sys_id_DESC
-  sys_publishedAt_ASC
-  sys_publishedAt_DESC
-  sys_firstPublishedAt_ASC
-  sys_firstPublishedAt_DESC
-  sys_publishedVersion_ASC
-  sys_publishedVersion_DESC
-}
-
-input AuthorFilter {
-  sys: SysFilter
-  contentfulMetadata: ContentfulMetadataFilter
-  name_exists: Boolean
-  name: String
-  name_not: String
-  name_in: [String]
-  name_not_in: [String]
-  name_contains: String
-  name_not_contains: String
-  slug_exists: Boolean
-  slug: String
-  slug_not: String
-  slug_in: [String]
-  slug_not_in: [String]
-  slug_contains: String
-  slug_not_contains: String
-  picture_exists: Boolean
-  coverImage_exists: Boolean
-  subtitle_exists: Boolean
-  subtitle: String
-  subtitle_not: String
-  subtitle_in: [String]
-  subtitle_not_in: [String]
-  subtitle_contains: String
-  subtitle_not_contains: String
-  social_exists: Boolean
-  social_contains_all: [String]
-  social_contains_some: [String]
-  social_contains_none: [String]
-  OR: [AuthorFilter]
-  AND: [AuthorFilter]
-}
-
-enum AuthorOrder {
-  name_ASC
-  name_DESC
-  slug_ASC
-  slug_DESC
-  subtitle_ASC
-  subtitle_DESC
   sys_id_ASC
   sys_id_DESC
   sys_publishedAt_ASC

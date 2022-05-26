@@ -34,7 +34,7 @@ const PreviewImage = ({ title, url, slug }: ImageProps) => {
           <a aria-label={title}>{image}</a>
         </Link>
       ) : (
-        {image}
+        image
       )}
     </div>
   );
