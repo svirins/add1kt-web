@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Authors from '@/components/author/authors';
+import Avatar from '@/components/author/avatar';
 import Tags from '@/components/tag/tags';
 import PostDetails from '@/components/post/post-details';
 import PreviewImage from '@/components/image/preview-image';
@@ -9,7 +9,7 @@ export default function PostPreview({
   title,
   previewImage,
   date,
-  authors,
+  author,
   tags,
   slug,
   readingTime
@@ -29,9 +29,12 @@ export default function PostPreview({
         <Tags tags={tags} />
       </div>
       <div className="flex flex-row mb-4">
-        <Authors authors={authors} />
+        <Avatar
+          name={author.name}
+          slug={author.slug}
+          picture={author.picture}
+        />
       </div>
-
       {/* <p className="w-full mt-4 prose dark:prose-dark max-w-none">{excerpt}</p> */}
     </div>
   );

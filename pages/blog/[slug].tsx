@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, } from 'next-intl';
 
 import Container from '@/components/layout/container';
 import PostBody from '@/components/post/post-body';
@@ -7,10 +7,10 @@ import SectionSeparator from '@/components/misc/section-separator';
 import PageTitle from '@/components/misc/page-title';
 import HeroImage from '@/components/image/hero-image';
 import FBShare from '@/components/misc/social-share';
-import Authors from '@/components/author/authors';
 import Tags from '@/components/tag/tags';
 import PostDetails from '@/components/post/post-details';
 import Subtitle from '@/components/misc/subtitle';
+import Avatar from '@/components/author/avatar';
 
 import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
@@ -21,29 +21,35 @@ export default function Post({ post, relatedPosts }) {
 
   return (
     <Container
-      title={`${post?.title} – translated text`}
+      title={`${post?.title}`}
       imageUrl={post.coverImage.url}
       date={post.sys.firstPublishedAt}
       type="article"
     >
-      <article className="flex flex-col justify-center items-start max-w-3xl w-full border-gray-200 dark:border-gray-700 mx-auto mb-16">
-        <PageTitle>{post.title}</PageTitle>
+      <article className="flex flex-col justify-center items-start max-w-3xl w-full mx-auto mb-16">
+        <section id="post-header" className="flex box-border">
+          <div>
+            <HeroImage title={post.title} url={post.coverImage.url} />
+          </div>
+          <div className="flex md:items:start flex-col md:flex-row">
+            <div className="flex flex-1 mb-4 items-start">
+              <Avatar
+                name={post.authorCollection.items[0].name}
+                picture={post.authorCollection.items[0].picture}
+                slug={post.authorCollection.items[0].slug}
+              />
+              <PostDetails
+                date={post.sys.firstPublishedAt}
+                readingTime={readingTime}
+              />
+            </div>
+            <PageTitle>{post.title}</PageTitle>
 
-        <div className="flex flex-col  mt-2 md:flex-row md:items-center">
-          <HeroImage title={post.title} url={post.coverImage.url} />
-          <div className="text-sm text-gray-700 dark:text-gray-300 mb-4">
-            <PostDetails
-              date={post.sys.firstPublishedAt}
-              readingTime={readingTime}
-            />
             <div className="flex flex-row mb-4 text-sm">
               <Tags tags={post.tagsCollection.items} />
             </div>
-            <div className="flex flex-row mb-4">
-              <Authors authors={post.authorCollection.items} />
-            </div>
           </div>
-        </div>
+        </section>
         <PostBody content={post.body} />
         <FBShare />
       </article>

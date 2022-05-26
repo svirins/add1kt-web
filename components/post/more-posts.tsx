@@ -12,7 +12,7 @@ export default function MorePosts({ posts }) {
             title={post.title}
             previewImage={post.coverImage}
             date={post.sys.firstPublishedAt}
-            authors={post.authorCollection.items}
+            author={post.authorCollection.items[0]}
             tags={post.tagsCollection.items}
             slug={post.slug}
             readingTime={readingTime}
