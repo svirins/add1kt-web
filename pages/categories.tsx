@@ -17,7 +17,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
   );
   return (
     <Container title={t('categories')} type="page">
-      <main className="flex flex-col justify-center items-start max-w-3xl  mx-auto pb-16">
+      <main className="flex flex-col justify-center items-start max-w-3xl h-screen mx-auto pb-16">
         <div className="flex flex-col items-start justify-start divide-y divide-gray-300 dark:divide-gray-500 md:mb-6 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
           <div className="space-x-2 pt-2 pb-4 md:space-y-5">
             <h1 className="text-3xl md:text-5xl font-bold tracking-tight sm:leading-10 md:border-r-2 md:pr-6 md:leading-14">
@@ -30,7 +30,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
               return (
                 <div key={autor} className="mt-2 mb-2 mr-5">
                   <Link href={`/tag/${autor.slug}`}>
-                    <a className="mr-3 text-base font-medium text-teal-600 transition-all delay-100 hover:text-teal-800">
+                    <a className="mr-3 text-base font-medium text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
                       {`${autor.name} (${autor.linkedFrom.postCollection.total})`}
                     </a>
                   </Link>
@@ -51,8 +51,8 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
               return (
                 <div key={tag} className="mt-2 mb-2 mr-5">
                   <Link href={`/author/${tag.slug}`}>
-                    <a className="mr-3 text-base font-medium  text-teal-600 transition-all delay-100 hover:text-teal-800">
-                      {`${tag.title} (${tag.linkedFrom.postCollection.total})`}
+                    <a className="mr-3 text-base font-medium  text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
+                      {`#${tag.title} (${tag.linkedFrom.postCollection.total})`}
                     </a>
                   </Link>
                 </div>

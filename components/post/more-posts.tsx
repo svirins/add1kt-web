@@ -3,9 +3,9 @@ import { getExcerptAndReadingTime } from '@/lib/content-utils';
 import PostPreview from '@/components/post/post-preview';
 export default function MorePosts({ posts }) {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 md:gap-x-12 md:gap-y-8 mb-16">
+    <section className="grid grid-cols-1 md:grid-cols-2 md:gap-x-12 gap-y-12 mb-12">
       {posts.map((post) => {
-        const { excerpt, readingTime } = getExcerptAndReadingTime(post.body);
+        const { readingTime } = getExcerptAndReadingTime(post.body);
         return (
           <PostPreview
             key={post.slug}

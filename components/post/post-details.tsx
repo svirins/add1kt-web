@@ -1,20 +1,42 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
 import { useTranslations, useIntl } from 'next-intl';
 import { parseISO } from 'date-fns';
 
-export default function PostDetails({ date, readingTime }) {
+
+export default function PostDetails({ author, date, readingTime }) {
   const intl = useIntl();
   const t = useTranslations('Post');
-
   return (
-    <div className="flex max-w-full justify-between">
-      <time>
-        {intl.formatDateTime(parseISO(date), {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric'
-        })}
-      </time>
-      <div>{`${readingTime} ${t('reading_time')}`}</div>
-    </div>
+    <>
+      <div className="relative">
+        <Image
+          src={author.picture.url}
+          height="44"
+          width="44"
+          className="rounded-full align-middle"
+          alt={author.name}
+        />
+      </div>
+      <div className="pl-3 flex-1">
+        <Link href={`/author/${author.slug}`}>
+          <a className="font-bold text-base hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400">
+            {author.name}
+          </a>
+        </Link>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          <time>
+            {intl.formatDateTime(parseISO(date), {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </time>
+          {` • `}
+          <span>{`${readingTime} ${t('reading_time')}`}</span>
+        </p>
+      </div>
+    </>
   );
 }

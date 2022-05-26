@@ -5,8 +5,8 @@ export default function Avatar({
   name,
   picture,
   slug = '',
-  height =32,
-  width = 32
+  height =40,
+  width = 40
 }) {
   return (
     <div className="flex items-center flex-nowrap">

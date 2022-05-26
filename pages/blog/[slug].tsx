@@ -18,7 +18,6 @@ import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
 export default function Post({ post, relatedPosts }) {
   const { readingTime } = getExcerptAndReadingTime(post?.body);
   const t = useTranslations('Titles');
-
   return (
     <Container
       title={`${post?.title}`}
@@ -26,22 +25,21 @@ export default function Post({ post, relatedPosts }) {
       date={post.sys.firstPublishedAt}
       type="article"
     >
-      <article className="flex flex-col justify-center items-start max-w-3xl w-full mx-auto mb-16">
-        <section id="post-header" className="flex box-border">
-          <div>
+      <article className="flex justify-center items-start max-w-3xl w-full mx-auto mb-16">
+        <section id="post-header" className="flex">
+          {/* <div>
             <HeroImage title={post.title} url={post.coverImage.url} />
-          </div>
-          <div className="flex md:items:start flex-col md:flex-row">
+          </div> */}
+          <div className="flex flex-row">
             <div className="flex flex-1 mb-4 items-start">
-              <Avatar
-                name={post.authorCollection.items[0].name}
-                picture={post.authorCollection.items[0].picture}
-                slug={post.authorCollection.items[0].slug}
-              />
+              {post && (
               <PostDetails
+                author={post.authorCollection.items[0]}
                 date={post.sys.firstPublishedAt}
                 readingTime={readingTime}
               />
+              )}
+
             </div>
             <PageTitle>{post.title}</PageTitle>
 
@@ -52,7 +50,7 @@ export default function Post({ post, relatedPosts }) {
         </section>
         <PostBody content={post.body} />
         <FBShare />
-      </article>
+        </article>
       <SectionSeparator />
       <Subtitle>{t('related_posts')}</Subtitle>
       {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
