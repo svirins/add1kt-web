@@ -7,7 +7,6 @@ import ThemeSwitcher from '@/components/misc/theme-switcher';
 import NavItemHeader from '@/components/misc/nav-item-header';
 import Config from '@/config/global-config';
 
-
 function Header() {
   const [mounted, setMounted] = useState(false);
   const t = useTranslations('Navigation');

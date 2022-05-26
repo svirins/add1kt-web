@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useTranslations, useIntl } from 'next-intl';
 import { parseISO } from 'date-fns';
 
-
 export default function PostMeta({ author, date, readingTime }) {
   const intl = useIntl();
   const t = useTranslations('Post');

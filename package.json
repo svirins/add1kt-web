@@ -11,7 +11,7 @@
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "prettier": "prettier --write .",
     "prepare": "husky install",
-    "export": "contentful space export --config ./contentful/config.json"
+    "export": "contentful space export --config ./contentful/export-config.json"
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.6.3",

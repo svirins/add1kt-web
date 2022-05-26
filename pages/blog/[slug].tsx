@@ -1,4 +1,4 @@
-import { useTranslations, } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 import PostHeader from '@/components/post/post-header';
 import Container from '@/components/layout/container';
@@ -34,7 +34,7 @@ export default function Post({ post, relatedPosts }) {
         />
         <PostBody content={post.body} />
         <FBShare />
-        </article>
+      </article>
       <SectionSeparator />
       <Subtitle>{t('related_posts')}</Subtitle>
       {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
@@ -66,6 +66,5 @@ export async function getStaticProps({ params, locale }) {
       relatedPosts: data?.relatedPosts ?? null,
       messages: (await import(`../../messages/${locale}.json`)).default
     }
-
   };
 }

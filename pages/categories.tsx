@@ -26,12 +26,12 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
           </div>
           <div className="flex max-w-lg flex-wrap">
             {sortedAutors.length === 0 && 'No tags found.'}
-            {sortedAutors.map((autor) => {
+            {sortedAutors.map((author) => {
               return (
-                <div key={autor} className="mt-2 mb-2 mr-5">
-                  <Link href={`/tag/${autor.slug}`}>
+                <div key={author} className="mt-2 mb-2 mr-5">
+                  <Link href={`/author/${author.slug}`}>
                     <a className="mr-3 text-base font-medium text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
-                      {`${autor.name} (${autor.linkedFrom.postCollection.total})`}
+                      {`${author.name} (${author.linkedFrom.postCollection.total})`}
                     </a>
                   </Link>
                 </div>
@@ -50,7 +50,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
             {sortedTags.map((tag) => {
               return (
                 <div key={tag} className="mt-2 mb-2 mr-5">
-                  <Link href={`/author/${tag.slug}`}>
+                  <Link href={`/tag/${tag.slug}`}>
                     <a className="mr-3 text-base font-medium  text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
                       {`#${tag.title} (${tag.linkedFrom.postCollection.total})`}
                     </a>

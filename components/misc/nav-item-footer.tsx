@@ -19,4 +19,4 @@ function NavItemFooter({ href, text }) {
     </NextLink>
   );
 }
-export default NavItemFooter
+export default NavItemFooter;

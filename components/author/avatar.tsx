@@ -5,7 +5,7 @@ export default function Avatar({
   name,
   picture,
   slug = '',
-  height =40,
+  height = 40,
   width = 40
 }) {
   return (

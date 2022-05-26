@@ -19,4 +19,4 @@ function NavItemHeader({ href, text }) {
     </NextLink>
   );
 }
-export default NavItemHeader
+export default NavItemHeader;
