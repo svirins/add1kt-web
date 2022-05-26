@@ -29,7 +29,7 @@
     "framer-motion": "6.3.4",
     "graphql": "^16.5.0",
     "graphql-request": "^4.2.0",
-    "next": "latest",
+    "next": "^12.1.7-canary.16",
     "next-intl": "^2.7.3",
     "next-seo": "^5.4.0",
     "next-share": "^0.13.0",

@@ -1,27 +1,35 @@
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
-export default function NotFound() {
+export default function FourZeroFour() {
+  const t = useTranslations('404');
+
   return (
-    <main className="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]">
-      <h1 className="text-9xl font-extrabold text-white tracking-widest">
-        404
-      </h1>
-      <div className="bg-[#FF6A3D] px-2 text-sm rounded rotate-12 absolute">
-        Page Not Found
+    <div className="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
+      <div className="space-x-2 pt-6 pb-8 md:space-y-5">
+        <h1 className="text-6xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:border-r-2 md:px-6 md:text-8xl md:leading-14">
+          404
+        </h1>
       </div>
-      <button className="mt-5">
-        <a className="relative inline-block text-sm font-medium text-[#FF6A3D] group active:text-orange-500 focus:outline-none focus:ring">
-          <span className="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] group-hover:translate-y-0 group-hover:translate-x-0"></span>
-
-          <span className="relative block px-8 py-3 bg-[#1A2238] border border-current">
-            <Link href="/">
-              <a className="p-1 sm:p-4 w-64 font-bold mx-auto bg-gray-200 dark:bg-gray-800 text-center rounded-md text-black dark:text-white">
-                Return Home
-              </a>
-            </Link>
-          </span>
-        </a>
-      </button>
-    </main>
+      <div className="max-w-md">
+        <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
+          {t('title')}
+        </p>
+        <p className="mb-8">{t('body')}</p>
+        <Link href="/">
+          <button className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-teal-600 px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-teal-800 focus:outline-none dark:hover:bg-teal-400">
+            {t('button')}
+          </button>
+        </Link>
+      </div>
+    </div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: (await import(`../messages/${locale}.json`)).default
+    }
+  };
 }

@@ -27,5 +27,10 @@
     "related_posts": "Podobne posty",
     "authors": "Autorzy",
     "tags": "Tagi"
+  },
+  "404": {
+    "title": "Niestety, nie udało nam się znaleźć tej strony.",
+    "body": "Ale nie martw się, na naszej stronie znajdziesz mnóstwo innych rzeczy.",
+    "button": "Powrót do strony głównej"
   }
 }
