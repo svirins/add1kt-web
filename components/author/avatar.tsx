@@ -5,11 +5,11 @@ export default function Avatar({
   name,
   picture,
   slug = '',
-  height = 24,
-  width = 24
+  height =32,
+  width = 32
 }) {
   return (
-    <>
+    <div className="flex items-center flex-nowrap">
       <Image
         src={picture.url}
         height={height}
@@ -24,6 +24,6 @@ export default function Avatar({
           </a>
         </Link>
       )}
-    </>
+    </div>
   );
 }
