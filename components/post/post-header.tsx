@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 import Tags from '@/components/tag/tags';
-import PostDetails from '@/components/post/post-details';
+import PostMeta from '@/components/post/post-meta';
 import PreviewImage from '@/components/image/preview-image';
 
-export default function PostPreview({
+export default function PostHeader({
   title,
   previewImage,
   date,
@@ -22,7 +22,7 @@ export default function PostPreview({
         </Link>
       </h4>
       <div className="flex flex-row ">
-        <PostDetails date={date} readingTime={readingTime} author={author} />
+        <PostMeta date={date} readingTime={readingTime} author={author} />
       </div>
       <div className="flex flex-row text-sm">
         <Tags tags={tags} />

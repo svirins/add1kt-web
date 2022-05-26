@@ -5,7 +5,7 @@ import { useTranslations, useIntl } from 'next-intl';
 import { parseISO } from 'date-fns';
 
 
-export default function PostDetails({ author, date, readingTime }) {
+export default function PostMeta({ author, date, readingTime }) {
   const intl = useIntl();
   const t = useTranslations('Post');
   return (
@@ -19,7 +19,7 @@ export default function PostDetails({ author, date, readingTime }) {
           alt={author.name}
         />
       </div>
-      <div className="pl-3 flex-1">
+      <div className="pl-2 flex-1">
         <Link href={`/author/${author.slug}`}>
           <a className="font-bold text-base hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400">
             {author.name}
