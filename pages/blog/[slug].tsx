@@ -8,11 +8,11 @@ import SectionSeparator from '@/components/misc/section-separator';
 import FBShare from '@/components/misc/social-share';
 import Subtitle from '@/components/misc/subtitle';
 
-import { getExcerptAndReadingTime } from '@/lib/content-utils';
-import { getAllSlugs, getPostAndRelatedPosts } from '@/lib/api';
+import { getReadingTime } from '@/lib/content-utils';
+import { getAllPostSlugs, getPostAndRelatedPosts } from '@/lib/api';
 
 export default function Post({ post, relatedPosts }) {
-  const { readingTime } = getExcerptAndReadingTime(post?.body);
+  const { readingTime } = getReadingTime(post?.text);
   const t = useTranslations('Titles');
   return (
     <Container
@@ -43,7 +43,7 @@ export default function Post({ post, relatedPosts }) {
 }
 
 export async function getStaticPaths({ locales }) {
-  const allPosts = await getAllSlugs();
+  const allPosts = await getAllPostSlugs();
   const allPathsWithLocales = allPosts
     .map(({ slug }) =>
       locales.map((locale) => ({

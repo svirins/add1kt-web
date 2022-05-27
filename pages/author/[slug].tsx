@@ -1,9 +1,8 @@
 import { useTranslations } from 'next-intl';
 
 import {
-  getAllAuthors,
+  getAllAuthorSlugs,
   getAuthorAndRelatedPosts,
-  getAuthorIdBySlug
 } from '@/lib/api';
 
 import Subtitle from '@/components/misc/subtitle';
@@ -40,7 +39,7 @@ export default function Author({ author, relatedPosts }) {
 }
 
 export async function getStaticPaths({ locales }) {
-  const allAuthors = await getAllAuthors();
+  const allAuthors = await   getAllAuthorSlugs();
   const allPathsWithLocales = allAuthors
     .map((author) =>
       locales.map((locale) => ({
@@ -58,8 +57,7 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const id = await getAuthorIdBySlug(params.slug, locale);
-  const data = await getAuthorAndRelatedPosts(id, locale);
+  const data = await getAuthorAndRelatedPosts(params.slug, locale);
   return {
     props: {
       author: data?.author ?? null,

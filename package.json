@@ -1,36 +1,35 @@
 {
   "private": true,
   "license": "MIT",
+  "author": "Dzmitry Sviryn",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
+    "dev": "concurrently \"next --port $PORT\" \"cd studio && sanity start\"",
+    "start": "vercel dev",
+    "build": "echo 'Building Sanity to public/studio…' && cd studio && sanity build ../public/studio -y && cd .. && next build",
     "generate": "node --experimental-json-modules  ./scripts/generate-search.mjs",
     "postbuild": "node --experimental-json-modules  ./scripts/generate-search.mjs",
-    "start": "next start",
     "lint": "next lint --fix",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "prettier": "prettier --write .",
     "prepare": "husky install",
+    "postinstall": "lerna bootstrap",
     "export": "contentful space export --config ./contentful/export-config.json"
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.6.3",
     "@algolia/autocomplete-preset-algolia": "^1.6.3",
     "@algolia/autocomplete-theme-classic": "^1.6.3",
-    "@contentful/rich-text-plain-text-renderer": "^15.12.1",
-    "@contentful/rich-text-react-renderer": "^15.4.0",
-    "@contentful/rich-text-types": "^15.12.1",
     "@fontsource/ibm-plex-sans": "^4.5.10",
     "@panelbear/panelbear-nextjs": "^1.0.3",
     "@portabletext/react": "^1.0.6",
+    "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^3.3.0",
+    "@sanity/image-url": "^1.0.1",
     "algoliasearch": "^4.13.1",
     "classnames": "2.3.1",
     "date-fns": "2.28.0",
     "dotenv": "^16.0.0",
     "framer-motion": "6.3.4",
-    "graphql": "^16.5.0",
-    "graphql-request": "^4.2.0",
     "groq": "^2.29.3",
     "next": "^12.1.7-canary.16",
     "next-intl": "^2.7.3",
@@ -49,16 +48,18 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^17.0.0",
+    "@next/bundle-analyzer": "^12.1.6",
     "@tailwindcss/typography": "^0.5.2",
     "@types/node": "^17.0.35",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
     "autoprefixer": "10.4.7",
-    "contentful-cli": "^1.12.38",
+    "concurrently": "^7.2.1",
     "eslint": "^8.16.0",
     "eslint-config-next": "^12.1.6",
     "graphql-config": "^4.3.1",
     "husky": "^8.0.1",
+    "lerna": "^5.0.0",
     "postcss": "8.4.14",
     "prettier": "^2.6.2",
     "sanity-codegen": "^0.9.8",
@@ -67,8 +68,11 @@
     "typescript": "^4.7.2"
   },
   "engines": {
-    "node": "^14.0.0",
-    "yarn": "^1.22.0",
+    "node": "^16.15.0",
+    "yarn": "^1.22.18",
     "npm": "please-use-yarn"
+  },
+  "volta": {
+    "node": "16.15.0"
   }
 }

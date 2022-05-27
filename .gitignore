@@ -32,8 +32,7 @@ yarn-error.log*
 
 # vercel
 .vercel
-.npmrc
-.nvmrc
+
 
 #contentful
-/contentful/
+/public/studio

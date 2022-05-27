@@ -23,7 +23,7 @@ export default function Index({ pageData, featuredPosts, total }) {
         {pageData && (
           <>
             <PageTitle>{pageData.title}</PageTitle>
-            <PostBody content={pageData.body} />
+            <PostBody content={pageData.text} />
             <SectionSeparator />
             <Subtitle>{t('featured_posts')}</Subtitle>
           </>

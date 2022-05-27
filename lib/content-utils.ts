@@ -1,15 +1,10 @@
 import readingTime from 'reading-time';
-import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
-
-export const getExcerptAndReadingTime = (body, max = 192, suffix = ' ...') => {
-  const convertedString = documentToPlainTextString(body?.json);
+// TODO: calculate reading time
+export const getReadingTime = (body, max = 192, suffix = ' ...') => {
+  const convertedString = (body?.json);
   const { minutes } = readingTime(convertedString);
-  const truncatedString = convertedString
-    .replace(/[|&;$%@<>()+_*,]/g, '')
-    .substring(0, max);
-  const lastSpace = truncatedString.lastIndexOf(' ');
+
   return {
-    excerpt: `${truncatedString.substring(0, lastSpace + 1)}${suffix}`,
     readingTime: Math.ceil(minutes)
   };
 };

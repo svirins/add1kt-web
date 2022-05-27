@@ -1,3 +1,13 @@
+const STUDIO_REWRITE = {
+  source: '/studio/:path*',
+  destination:
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:3333/studio/:path*'
+      : '/studio/index.html'
+};
+
+// TODO: implement image sizes
+
 module.exports = {
   swcMinify: true,
   reactStrictMode: true,
@@ -8,9 +18,11 @@ module.exports = {
   images: {
     images: {
       domains: ['cdn.sanity.io'],
+      // imageSizes: [24, 64, 300],
       loader: 'custom'
     }
   },
+  rewrites: () => [STUDIO_REWRITE],
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build
     if (!dev && !isServer) {

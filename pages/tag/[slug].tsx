@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-import { getAllTags, getTagAndRelatedPosts, getTagIdBySlug } from '@/lib/api';
+import { getAllTagSlugs, getTagAndRelatedPosts } from '@/lib/api';
 
 import Container from '@/components/layout/container';
 import MorePosts from '@/components/post/more-posts';
@@ -27,7 +27,7 @@ export default function Tag({ tag, relatedPosts }) {
 }
 
 export async function getStaticPaths({ locales }) {
-  const allTags = await getAllTags();
+  const allTags = await getAllTagSlugs();
   const allPathsWithLocales = allTags
     .map((tag) =>
       locales.map((locale) => ({
@@ -45,8 +45,7 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const id = await getTagIdBySlug(params.slug, locale);
-  const data = await getTagAndRelatedPosts(id, locale);
+  const data = await getTagAndRelatedPosts(params.slug, locale);
   return {
     props: {
       tag: data?.tag ?? null,
