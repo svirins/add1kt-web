@@ -33,23 +33,20 @@ const query = groq`*[_type== 'page']`
 }
 
 export async function getAllPostSlug() {
-  const variables = {};
-  const query = groq`*[_type== 'post']`
-  const data = await apiRequest(query, variables);
+  const query = groq`*[_type == 'post'] {"slug": slug.current}`
+  const data = await apiRequest(query);
   return data ?? null;
 }
 
 export async function getAllAuthosrSlug() {
-  const variables = {};
-  const query = groq`*[_type== 'author']`
-  const data = await apiRequest(query, variables);
+  const query = groq`*[_type == 'author'] {"slug": slug.current}`
+  const data = await apiRequest(query);
   return data ?? null;
 }
 
 export async function getAllTagsSlug() {
-  const variables = {};
-  const query = groq`*[_type== 'tag']`
-  const data = await apiRequest(query, variables);
+  const query = groq`*[_type == 'tag'] { "slug": slug.current}`
+  const data = await apiRequest(query);
   return data ?? null;
 }
 

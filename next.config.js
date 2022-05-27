@@ -6,7 +6,10 @@ module.exports = {
     locales: ['ru', 'pl']
   },
   images: {
-    domains: ['images.ctfassets.net']
+    images: {
+      domains: ['cdn.sanity.io'],
+      loader: 'custom'
+    }
   },
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build
