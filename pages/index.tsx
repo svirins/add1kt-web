@@ -1,6 +1,10 @@
 import { useTranslations } from 'next-intl';
 
-import { getFeaturedPosts, getPageContent } from '@/lib/api';
+import {
+  getFeaturedPosts,
+  getPageContent,
+  getTotalPostsNumber
+} from '@/lib/api';
 
 import Search from '@/components/search/search';
 import MorePosts from '@/components/post/more-posts';
@@ -15,15 +19,15 @@ export default function Index({ pageData, featuredPosts, total }) {
   console.log(total);
   const t = useTranslations('Titles');
   return (
-    <Container title={pageData.title} type="page">
+    <Container title={pageData.pageTitle} type="page">
       <main className="flex flex-col justify-center items-start max-w-3xl mx-auto pb-16">
         <div id="autocomplete" className="relative w-full">
           <Search />
         </div>
         {pageData && (
           <>
-            <PageTitle>{pageData.title}</PageTitle>
-            <PostBody content={pageData.text} />
+            <PageTitle>{pageData.pageTitle}</PageTitle>
+            <PostBody content={pageData.pageText} />
             <SectionSeparator />
             <Subtitle>{t('featured_posts')}</Subtitle>
           </>
@@ -36,8 +40,10 @@ export default function Index({ pageData, featuredPosts, total }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const { featuredPosts, total } = await getFeaturedPosts(locale);
+  const featuredPosts = await getFeaturedPosts(locale);
   const pageData = await getPageContent(locale, '/');
+  const total = await getTotalPostsNumber();
+
   return {
     props: {
       pageData,

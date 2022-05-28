@@ -14,23 +14,23 @@ export default function Post({ post, relatedPosts }) {
   const t = useTranslations('Titles');
   return (
     <Container
-      title={`${post?.title}`}
-      imageUrl={post.coverImage.url}
-      date={post.sys.firstPublishedAt}
+      title={`${post?.postTitle}`}
+      imageUrl={post.postImageUrl}
+      date={post.postDate}
       type="article"
     >
       <article className="flex flex-col justify-center items-start max-w-3xl mx-auto pb-16">
         <PostHeader
-          key={post.slug}
-          title={post.title}
-          previewImage={post.coverImage}
-          date={post.sys.firstPublishedAt}
-          author={post.authorCollection.items[0]}
-          tags={post.tagsCollection.items}
-          slug={post.slug}
+          key={post.postSlug}
+          title={post.postTitle}
+          previewImage={post.postImageUrl}
+          date={post.postDate}
+          author={post.author}
+          tags={post.tags}
+          slug={post.postSlug}
           readingTime={post.readingTime}
         />
-        <PostBody content={post.body} />
+        <PostBody content={post.postText} />
         <FBShare />
       </article>
       <SectionSeparator />
@@ -57,11 +57,11 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const data = await getPostAndRelatedPosts(locale, params.slug);
+  const { relatedPosts, ...post } = await getPostAndRelatedPosts(locale, params.slug);
   return {
     props: {
-      post: data?.post ?? null,
-      relatedPosts: data?.relatedPosts ?? null,
+      post,
+      relatedPosts,
       messages: (await import(`../../messages/${locale}.json`)).default
     }
   };

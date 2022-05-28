@@ -8,28 +8,26 @@ import PageTitle from '@/components/misc/page-title';
 import SectionSeparator from '@/components/misc/section-separator';
 import Subtitle from '@/components/misc/subtitle';
 import MorePosts from '@/components/post/more-posts';
+// TODO: render authorBio as portable text+ reneder  authorSocilas
 
-export default function Author({ author, relatedPosts }) {
+export default function Author({ author, authorPosts }) {
   const t = useTranslations('Titles');
-  console.log(author.social);
   return (
-    <Container type="page" title={author.name}>
+    <Container type="page" title={author.authorTitle}>
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
-        <PageTitle>{author.name}</PageTitle>
-        <p>{author.description}</p>
+        <PageTitle>{author.authorTitle}</PageTitle>
         <Avatar
-          name={author.name}
+          name={author.authorTitle}
           width={192}
           height={192}
           picture={author.picture}
         />
-        <p>{author.subtitle}</p>
         <SectionSeparator />
         <Subtitle>
           {t('author_related_articles')}
-          {author.name}
+          {author.authorTitle}
         </Subtitle>
-        {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
+        {authorPosts?.length > 0 && <MorePosts posts={authorPosts} />}
       </main>
     </Container>
   );
@@ -54,11 +52,11 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const data = await getAuthorAndRelatedPosts(locale, params.slug);
+  const { authorPosts, ...author } = await getAuthorAndRelatedPosts(locale, params.slug);
   return {
     props: {
-      author: data?.author ?? null,
-      relatedPosts: data?.relatedPosts ?? null,
+      author,
+      authorPosts,
       messages: (await import(`../../messages/${locale}.json`)).default
     }
   };

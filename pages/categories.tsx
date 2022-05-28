@@ -11,12 +11,10 @@ import {
 export default function GetAllAuthorsAndTags({ authors, tags }) {
   const t = useTranslations('Titles');
   const sortedAutors = authors.sort(
-    (a, b) =>
-      b.linkedFrom.postCollection.total - a.linkedFrom.postCollection.total
+    (a, b) => b.relatedPostsCount - a.relatedPostsCount
   );
   const sortedTags = tags.sort(
-    (a, b) =>
-      b.linkedFrom.postCollection.total - a.linkedFrom.postCollection.total
+    (a, b) => b.relatedPostsCount - a.relatedPostsCount
   );
   return (
     <Container title={t('categories')} type="page">
@@ -34,7 +32,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
                 <div key={author} className="mt-2 mb-2 mr-5">
                   <Link href={`/author/${author.slug}`}>
                     <a className="mr-3 text-base font-medium text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
-                      {`${author.name} (${author.linkedFrom.postCollection.total})`}
+                      {`${author.title} (${author.relatedPostsCount})`}
                     </a>
                   </Link>
                 </div>
@@ -55,7 +53,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
                 <div key={tag} className="mt-2 mb-2 mr-5">
                   <Link href={`/tag/${tag.slug}`}>
                     <a className="mr-3 text-base font-medium  text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
-                      {`#${tag.title} (${tag.linkedFrom.postCollection.total})`}
+                      {`#${tag.title} (${tag.relatedPostsCount})`}
                     </a>
                   </Link>
                 </div>
@@ -69,8 +67,8 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const { authors } = await getAuthorsAndRelatedPostsCount(locale);
-  const { tags } = await getTagsAndRelatedPostsCount(locale);
+  const authors = await getAuthorsAndRelatedPostsCount(locale);
+  const tags  = await getTagsAndRelatedPostsCount(locale);
 
   return {
     props: {

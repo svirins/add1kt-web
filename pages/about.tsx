@@ -5,13 +5,13 @@ import PostBody from '@/components/post/post-body';
 
 export default function About({ pageData }) {
   return (
-    <Container title={pageData.title} type="page">
+    <Container title={pageData.pageTitle} type="page">
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         {/* <AlgoliaSearch /> */}
         {pageData && (
           <>
-            <PageTitle>{pageData.title}</PageTitle>
-            <PostBody content={pageData.text} />
+            <PageTitle>{pageData.pageTitle}</PageTitle>
+            <PostBody content={pageData.pageText} />
           </>
         )}
       </main>

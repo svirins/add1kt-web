@@ -9,7 +9,7 @@ import { globalConfig } from '@/lib/config';
 
 import PaginationControls from '@/components/post/pagination-controls';
 
-export default function BlogIndexPage({ pagePosts, page, totalPages }) {
+export default function BlogIndexPage({ paginatedPosts, page, totalPages }) {
   const t = useTranslations('Titles');
 
   return (
@@ -23,7 +23,7 @@ export default function BlogIndexPage({ pagePosts, page, totalPages }) {
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTitle>{`${t('blog_page')} ${page}/${totalPages}`}</PageTitle>
         <SectionSeparator />
-        {pagePosts?.length > 0 && <MorePosts posts={pagePosts} />}
+        {paginatedPosts?.length > 0 && <MorePosts posts={paginatedPosts} />}
         <PaginationControls
           currentPage={Number(page)}
           totalPages={Number(totalPages)}
@@ -55,12 +55,12 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const pagePosts = await getPaginatedPosts(locale, Number(params.page));
+  const paginatedPosts = await getPaginatedPosts(locale, Number(params.page));
   const totalPosts = await getTotalPostsNumber();
   const totalPages = Math.ceil(totalPosts / globalConfig.pagination.pageSize);
   return {
     props: {
-      pagePosts: pagePosts,
+      pagePosts: paginatedPosts,
       page: params.page,
       totalPages: totalPages,
       messages: (await import(`../../../messages/${locale}.json`)).default
