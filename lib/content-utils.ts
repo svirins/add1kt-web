@@ -1,15 +1,4 @@
-import readingTime from 'reading-time';
 import { globalConfig } from '@/lib/config';
-
-// TODO: calculate reading time based on post.text field
-export const getReadingTime = (body, max = 192, suffix = ' ...') => {
-  const convertedString = body?.json;
-  const { minutes } = readingTime(convertedString);
-
-  return {
-    readingTime: Math.ceil(minutes)
-  };
-};
 
 export const shimmer = (w, h) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

@@ -8,11 +8,9 @@ import SectionSeparator from '@/components/misc/section-separator';
 import FBShare from '@/components/misc/social-share';
 import Subtitle from '@/components/misc/subtitle';
 
-import { getReadingTime } from '@/lib/content-utils';
 import { getAllPostSlugs, getPostAndRelatedPosts } from '@/lib/api';
 
 export default function Post({ post, relatedPosts }) {
-  const { readingTime } = getReadingTime(post?.text);
   const t = useTranslations('Titles');
   return (
     <Container
@@ -30,7 +28,7 @@ export default function Post({ post, relatedPosts }) {
           author={post.authorCollection.items[0]}
           tags={post.tagsCollection.items}
           slug={post.slug}
-          readingTime={readingTime}
+          readingTime={post.readingTime}
         />
         <PostBody content={post.body} />
         <FBShare />

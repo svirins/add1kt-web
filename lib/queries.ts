@@ -3,6 +3,7 @@ import { groq } from 'next-sanity';
 export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true] {
   "postTitle": title[$locale],
   "postSlug": slug.current,
+  "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
   "author": author -> {
     "authorName": title[$locale],
     "authorSlug": slug.current
@@ -35,6 +36,7 @@ export const getAllTagSlugsQuery = groq`*[_type == 'tag'] {
 export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.current == $slug] {
   "postTitle": title[$locale],
   "postSlug": slug.current,
+  "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 )
   "author": author -> {
     "authorName": title[$locale],
     "authorSlug": slug.current
@@ -50,6 +52,7 @@ export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.curre
       "postTitle": title[$locale],
       "postSlug": slug.current,
       "postDate": _createdAt,
+      "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
       "author": author -> {
         "authorName": title[$locale],
         "authorSlug": slug.current
@@ -70,6 +73,7 @@ export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.cu
   "authorPosts": *[_type == 'post' && references(^._id)] {
     "postTitle": title[$locale],
     "postSlug": slug.current,
+    "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
     "author": author -> {
       "authorName": title[$locale],
       "authorSlug": slug.current
@@ -90,6 +94,7 @@ export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current
   "sameTagPosts": *[_type == 'post' && references(^._id)] {
     "postTitle": title[$locale],
     "postSlug": slug.current,
+    "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
     "author": author -> {
       "authorName": title[$locale],
       "authorSlug": slug.current
@@ -105,6 +110,7 @@ export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current
 export const getPaginatedPostsQuery = groq`*[_type == 'post'] {
   "postTitle": title[$locale],
   "postSlug": slug.current,
+  "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
   "author": author -> {
     "authorName": title[$locale],
     "authorSlug": slug.current
