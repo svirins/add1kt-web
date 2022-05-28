@@ -2,9 +2,8 @@ import { useRouter } from 'next/router';
 
 import algoliasearch from 'algoliasearch/lite';
 import { useTranslations } from 'next-intl';
-import { InstantSearch, Configure } from 'react-instantsearch-hooks';
+import { Configure, InstantSearch } from 'react-instantsearch-hooks';
 
-import Config from '@/config/global-config';
 
 import Autocomplete from '@/components/search/autocomplete';
 import Hit from '@/components/search/hit';

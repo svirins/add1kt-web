@@ -2,10 +2,11 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
+import { globalConfig } from '@/lib/config';
+
 import LocaleSwitcher from '@/components/misc/locale-switcher';
-import ThemeSwitcher from '@/components/misc/theme-switcher';
 import NavItemHeader from '@/components/misc/nav-item-header';
-import Config from '@/config/global-config';
+import ThemeSwitcher from '@/components/misc/theme-switcher';
 
 function Header() {
   const [mounted, setMounted] = useState(false);
@@ -21,7 +22,7 @@ function Header() {
         </a>
         <div className="ml-[-0.60rem] inline-flex items-center">
           {/* <MobileMenu /> */}
-          {Config.menuLinks.map((link, index) => (
+          {globalConfig.menuLinks.map((link, index) => (
             <NavItemHeader
               href={link.href}
               text={index === 0 ? '//' : t(link.title)}

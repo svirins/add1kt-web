@@ -1,10 +1,11 @@
-import { useTranslations } from 'next-intl';
-import { getTotalPostsNumber, getPaginatedPosts } from '@/lib/api';
-import Config from '@/config/global-config';
 import Container from '@/components/layout/container';
-import MorePosts from '@/components/post/more-posts';
-import SectionSeparator from '@/components/misc/section-separator';
 import PageTitle from '@/components/misc/page-title';
+import SectionSeparator from '@/components/misc/section-separator';
+import MorePosts from '@/components/post/more-posts';
+import { getPaginatedPosts, getTotalPostsNumber } from '@/lib/api';
+import { useTranslations } from 'next-intl';
+
+import { globalConfig } from '@/lib/config';
 
 import PaginationControls from '@/components/post/pagination-controls';
 
@@ -56,7 +57,7 @@ export async function getStaticPaths({ locales }) {
 export async function getStaticProps({ params, locale }) {
   const pagePosts = await getPaginatedPosts(Number(params.page), locale);
   const totalPosts = await getTotalPostsNumber();
-  const totalPages = Math.ceil(totalPosts / Config.pagination.pageSize);
+  const totalPages = Math.ceil(totalPosts / globalConfig.pagination.pageSize);
   return {
     props: {
       pagePosts: pagePosts,

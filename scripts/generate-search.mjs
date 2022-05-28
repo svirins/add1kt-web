@@ -1,10 +1,6 @@
 // eslint-disable-next-line no-unused-vars
-import dotenv from 'dotenv';
 import algoliasearch from 'algoliasearch';
-import { gql, request } from 'graphql-request';
-
-import Config from '../config/global-config.js';
-
+import { globalConfig } from '@/lib/config';
 
 function transformPostsToSearchObjects(posts) {
   const transformed = posts.map((post) => {
@@ -44,7 +40,7 @@ async function createIndex(indexName, locale) {
 }
 
 async function generate() {
-  for await (const i of Config.algoliaIndexes) {
+  for await (const i of globalConfig.algoliaIndexes) {
     createIndex(i.indexName, i.locale);
   }
 }
