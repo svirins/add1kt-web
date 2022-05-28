@@ -59,7 +59,7 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const data = await getPostAndRelatedPosts(params.slug, locale);
+  const data = await getPostAndRelatedPosts(locale, params.slug);
   return {
     props: {
       post: data?.post ?? null,

@@ -18,9 +18,9 @@ export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true]
 export const getPageContentQuery = groq`*[_type == 'page' && slug.current == $slug]{
   "title": title[$locale],
   "text": text[$locale]
-}[0...1]`;
+}[0]`;
 
-export const getAllPostSlugsQuery = groq`*[_type == 'post'  && slug.current == $slug] {
+export const getAllPostSlugsQuery = groq`*[_type == 'post'] {
   "slug": slug.current,
 }`;
 
@@ -59,7 +59,7 @@ export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.curre
         "tagSlug": slug.current
       },
   }
-} [0]`;
+}[0]`;
 
 export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.current ==  $slug]{
   "authorTitle": title[$locale],
@@ -81,7 +81,7 @@ export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.cu
       "postImageUrl": coverImage.asset-> url,
       "postDate": _createdAt
   } [$skip...$limit] | order(_createdAt desc)
-}`;
+}[0]`;
 
 export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current ==  $slug] {
   "tagTitle": title[$locale],
@@ -101,7 +101,7 @@ export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current
       "postImageUrl": coverImage.asset-> url,
       "postDate": _createdAt
   } [$skip...$limit] | order(_createdAt desc)
-}`;
+}[0]`;
 export const getPaginatedPostsQuery = groq`*[_type == 'post'] {
   "postTitle": title[$locale],
   "postSlug": slug.current,
@@ -117,13 +117,13 @@ export const getPaginatedPostsQuery = groq`*[_type == 'post'] {
   "postDate": _createdAt
 } [$skip...$limit] | order(_createdAt desc)`;
 
-export const getTagAndPostsCount = groq`*[_type=="tag"] {
+export const getTagsAndRelatedPostsCountQuery = groq`*[_type=="tag"] {
   "tagTitle": title[$locale],
   "tagSlug": slug.current,
   "relatedPostsCount": count(*[_type=='post' && references(^._id)])
 }`;
 
-export const getAuthorAndPostsCount = groq`*[_type=="author"] {
+export const getAuthorsAndRelatedPostsCountQuery = groq`*[_type=="author"] {
   "authorTitle": title[$locale],
   "authorSlug": slug.current,
   "relatedPostsCount": count(*[_type=='post' && references(^._id)])

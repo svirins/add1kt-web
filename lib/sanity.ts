@@ -1,19 +1,25 @@
-import { createClient } from 'next-sanity';
+import {
+  createClient,
+  createPreviewSubscriptionHook,
+  createCurrentUserHook
+} from 'next-sanity';
+import createImageUrlBuilder from '@sanity/image-url';
 
-const config = {
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  useCdn: process.env.NODE_ENV === 'production',
-  apiVersion: '2021-10-21'
-};
+import { sanityConfig } from '@/lib/config';
 
-// export const imageBuilder = (source) =>
-//   createImageUrlBuilder(config).image(source);
-// export const usePreviewSubscription = createPreviewSubscriptionHook(config);
-export const client = createClient(config);
+export const imageBuilder = (source) =>
+  createImageUrlBuilder(sanityConfig).image(source);
+
+export const urlFor = (source) =>
+  createImageUrlBuilder(sanityConfig).image(source);
+
+export const usePreviewSubscription =
+  createPreviewSubscriptionHook(sanityConfig);
+export const useCurrentUser = createCurrentUserHook(sanityConfig);
+
+export const client = createClient(sanityConfig);
 export const previewClient = createClient({
-  ...config,
-  useCdn: false,
+  ...sanityConfig,
   token: process.env.SANITY_API_TOKEN
 });
 

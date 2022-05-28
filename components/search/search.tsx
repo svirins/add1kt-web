@@ -4,6 +4,7 @@ import algoliasearch from 'algoliasearch/lite';
 import { useTranslations } from 'next-intl';
 import { Configure, InstantSearch } from 'react-instantsearch-hooks';
 
+import { globalConfig } from '@/lib/config';
 
 import Autocomplete from '@/components/search/autocomplete';
 import Hit from '@/components/search/hit';
@@ -12,7 +13,7 @@ import Hits from '@/components/search/hits';
 function Search() {
   const { locale } = useRouter();
   const t = useTranslations('Search');
-  const { indexName } = Config.algoliaIndexes.find(
+  const { indexName } = globalConfig.algoliaIndexes.find(
     (index) => index.locale === locale
   );
   const searchClient = algoliasearch(

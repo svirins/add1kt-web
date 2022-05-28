@@ -44,7 +44,7 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const data = await getTagAndRelatedPosts(params.slug, locale);
+  const data = await getTagAndRelatedPosts(locale, params.slug);
   return {
     props: {
       tag: data?.tag ?? null,

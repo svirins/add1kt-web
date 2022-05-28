@@ -35,7 +35,7 @@ export default function BlogIndexPage({ pagePosts, page, totalPages }) {
 
 export async function getStaticPaths({ locales }) {
   const totalPosts = await getTotalPostsNumber();
-  const totalPages = Math.ceil(totalPosts / Config.pagination.pageSize);
+  const totalPages = Math.ceil(totalPosts / globalConfig.pagination.pageSize);
 
   const allPathsWithLocales = Array.from(
     { length: totalPages - 1 },
@@ -55,7 +55,7 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const pagePosts = await getPaginatedPosts(Number(params.page), locale);
+  const pagePosts = await getPaginatedPosts(locale, Number(params.page));
   const totalPosts = await getTotalPostsNumber();
   const totalPages = Math.ceil(totalPosts / globalConfig.pagination.pageSize);
   return {

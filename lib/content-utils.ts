@@ -1,7 +1,6 @@
 import readingTime from 'reading-time';
-
 import { globalConfig } from '@/lib/config';
-;
+
 // TODO: calculate reading time based on post.text field
 export const getReadingTime = (body, max = 192, suffix = ' ...') => {
   const convertedString = body?.json;

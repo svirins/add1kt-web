@@ -9,7 +9,7 @@ import { ThemeProvider } from 'next-themes';
 import { DefaultSeo } from 'next-seo';
 import { NextIntlProvider } from 'next-intl';
 import { usePanelbear } from '@panelbear/panelbear-nextjs';
-import SEO from '@/config/next-seo.config';
+import { seoConfig } from '@/lib/config';
 
 function App({ Component, pageProps }: AppProps) {
   usePanelbear(process.env.NEXT_PUBLIC_PANELBEAR_SITE_ID, {
@@ -31,7 +31,7 @@ function App({ Component, pageProps }: AppProps) {
       >
         {' '}
         <ThemeProvider attribute="class">
-          <DefaultSeo {...SEO} />
+          <DefaultSeo {...seoConfig} />
           <Component {...pageProps} />
         </ThemeProvider>
       </NextIntlProvider>

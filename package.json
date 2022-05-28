@@ -12,8 +12,7 @@
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "prettier": "prettier --write .",
     "prepare": "husky install",
-    "postinstall": "lerna bootstrap",
-    "export": "contentful space export --config ./contentful/export-config.json"
+    "postinstall": "lerna bootstrap"
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.6.3",
@@ -55,7 +54,6 @@
     "concurrently": "^7.2.1",
     "eslint": "^8.16.0",
     "eslint-config-next": "^12.1.6",
-    "graphql-config": "^4.3.1",
     "husky": "^8.0.1",
     "lerna": "^5.0.0",
     "postcss": "8.4.14",

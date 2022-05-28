@@ -3,7 +3,10 @@ import { useTranslations } from 'next-intl';
 
 import Container from '@/components/layout/container';
 
-import { GetCategories } from '@/lib/api';
+import {
+  getAuthorsAndRelatedPostsCount,
+  getTagsAndRelatedPostsCount
+} from '@/lib/api';
 
 export default function GetAllAuthorsAndTags({ authors, tags }) {
   const t = useTranslations('Titles');
@@ -66,7 +69,9 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const { authors, tags } = await GetCategories(locale);
+  const { authors } = await getAuthorsAndRelatedPostsCount(locale);
+  const { tags } = await getTagsAndRelatedPostsCount(locale);
+
   return {
     props: {
       authors,

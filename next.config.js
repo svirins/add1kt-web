@@ -18,7 +18,7 @@ module.exports = {
   images: {
     images: {
       domains: ['cdn.sanity.io'],
-      // imageSizes: [24, 64, 300],
+      imageSizes: [24, 64, 300],
       loader: 'custom'
     }
   },
@@ -33,7 +33,6 @@ module.exports = {
         'react-dom': 'preact/compat'
       });
     }
-
     return config;
   }
 };
