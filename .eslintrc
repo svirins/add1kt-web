@@ -1,5 +1,5 @@
 {
-  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended","plugin:@asbjorn/groq/recommended"],
   "rules": {
     "no-unused-vars": [0, { "args": "after-used" }],
     "react/prop-types": 0,

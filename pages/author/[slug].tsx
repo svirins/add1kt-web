@@ -1,16 +1,16 @@
 import { useTranslations } from 'next-intl';
 
 import {
-  getAllAuthorSlugs,
-  getAuthorAndRelatedPosts,
+    getAllAuthorSlugs,
+    getAuthorAndRelatedPosts
 } from '@/lib/api';
 
-import Subtitle from '@/components/misc/subtitle';
-import Container from '@/components/layout/container';
-import MorePosts from '@/components/post/more-posts';
-import SectionSeparator from '@/components/misc/section-separator';
-import PageTitle from '@/components/misc/page-title';
 import Avatar from '@/components/author/avatar';
+import Container from '@/components/layout/container';
+import PageTitle from '@/components/misc/page-title';
+import SectionSeparator from '@/components/misc/section-separator';
+import Subtitle from '@/components/misc/subtitle';
+import MorePosts from '@/components/post/more-posts';
 
 export default function Author({ author, relatedPosts }) {
   const t = useTranslations('Titles');

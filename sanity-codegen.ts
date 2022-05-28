@@ -3,7 +3,7 @@ import { SanityCodegenConfig } from 'sanity-codegen';
 // TODO: follow instructions from https://www.npmjs.com/package/sanity-codegen
 
 const config: SanityCodegenConfig = {
-  schemaPath: './path/to/your/schema',
+  schemaPath: './studio/schemas/schema.js',
   outputPath: './schema.ts'
 
   // NOTE: The CLI ships with a pre-configured babel config that shims out
