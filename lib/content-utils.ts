@@ -1,7 +1,9 @@
 import readingTime from 'reading-time';
-// TODO: calculate reading time
+import Config from '@/config/global-config';
+
+// TODO: calculate reading time based on post.text field
 export const getReadingTime = (body, max = 192, suffix = ' ...') => {
-  const convertedString = (body?.json);
+  const convertedString = body?.json;
   const { minutes } = readingTime(convertedString);
 
   return {
@@ -27,3 +29,8 @@ export const toBase64 = (str) =>
   typeof window === 'undefined'
     ? Buffer.from(str).toString('base64')
     : window.btoa(str);
+
+export function getSkipValue(page) {
+  const skipMultiplier = page === 1 ? 0 : page - 1;
+  return skipMultiplier > 0 ? Config.pagination.pageSize * skipMultiplier : 0;
+}

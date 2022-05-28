@@ -1,9 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-import {
-    getAllAuthorSlugs,
-    getAuthorAndRelatedPosts
-} from '@/lib/api';
+import { getAllAuthorSlugs, getAuthorAndRelatedPosts } from '@/lib/api';
 
 import Avatar from '@/components/author/avatar';
 import Container from '@/components/layout/container';
@@ -39,7 +36,7 @@ export default function Author({ author, relatedPosts }) {
 }
 
 export async function getStaticPaths({ locales }) {
-  const allAuthors = await   getAllAuthorSlugs();
+  const allAuthors = await getAllAuthorSlugs();
   const allPathsWithLocales = allAuthors
     .map((author) =>
       locales.map((locale) => ({

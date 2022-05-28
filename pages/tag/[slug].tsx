@@ -19,7 +19,7 @@ export default function Tag({ tag, relatedPosts }) {
         <Subtitle>
           {`${t('tag_related_articles')}
           "${tag.title.toLowerCase()}"`}
-          </Subtitle>
+        </Subtitle>
       </main>
     </Container>
   );

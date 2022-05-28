@@ -1,4 +1,4 @@
-import { groq } from 'next-sanity'
+import { groq } from 'next-sanity';
 
 export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true] {
   "postTitle": title[$locale],
@@ -35,7 +35,7 @@ export const getAllTagSlugsAnsIdsQuery = groq`*[_type == 'tag'] {
   "id": _id
 }`;
 
-export  const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.current == $slug] {
+export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.current == $slug] {
   "postTitle": title[$locale],
   "postSlug": slug.current,
   "author": author -> {
@@ -86,7 +86,7 @@ export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && _id == 
   } [$skip...$limit] | order(_createdAt desc)
 }`;
 
-export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag']`
+export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag']`;
 export const getPaginatedPostsQuery = groq`*[_type == 'post'] {
   "postTitle": title[$locale],
   "postSlug": slug.current,
@@ -102,6 +102,16 @@ export const getPaginatedPostsQuery = groq`*[_type == 'post'] {
   "postDate": _createdAt
 } [$skip...$limit] | order(_createdAt desc)`;
 
-export const getCategoriesQuery = groq`*[_type == 'author']`
+export const getTagAndPostsCount = groq`*[_type=="tag"] {
+  "tagTitle": title[$locale],
+  "tagSlug": slug.current,
+  "relatedPostsCount": count(*[_type=='post' && references(^._id)])
+}`;
 
-export const getTotalPostsNumberQuery = groq`*[_type == 'post']`
+export const getAuthorAndPostsCount = groq`*[_type=="author"] {
+  "authorTitle": title[$locale],
+  "authorSlug": slug.current,
+  "relatedPostsCount": count(*[_type=='post' && references(^._id)])
+}`;
+
+export const getTotalPostsNumberQuery = groq`count(*[_type == 'post'])`;
