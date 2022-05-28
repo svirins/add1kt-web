@@ -22,17 +22,14 @@ export const getPageContentQuery = groq`*[_type == 'page' && slug.current == $sl
 
 export const getAllPostSlugsQuery = groq`*[_type == 'post'  && slug.current == $slug] {
   "slug": slug.current,
-   "id": _id
 }`;
 
-export const getAllAuthorSlugsAndIdsQuery = groq`*[_type == 'author'] {
+export const getAllAuthorSlugsQuery = groq`*[_type == 'author'] {
   "slug": slug.current,
-  "id": _id
 }`;
 
-export const getAllTagSlugsAnsIdsQuery = groq`*[_type == 'tag'] {
+export const getAllTagSlugsQuery = groq`*[_type == 'tag'] {
   "slug": slug.current,
-  "id": _id
 }`;
 
 export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.current == $slug] {
@@ -64,13 +61,13 @@ export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.curre
   }
 } [0]`;
 
-export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && _id == $id]{
+export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.current ==  $slug]{
   "authorTitle": title[$locale],
   "authorSlug": slug.current,
   "authorBio": bio[$locale],
   "authorPicture": picture.asset -> url,
   "authorSocials": social,
-  "authorPosts": *[_type == 'post' && author._ref == $id] {
+  "authorPosts": *[_type == 'post' && references(^._id)] {
     "postTitle": title[$locale],
     "postSlug": slug.current,
     "author": author -> {
@@ -86,7 +83,25 @@ export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && _id == 
   } [$skip...$limit] | order(_createdAt desc)
 }`;
 
-export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag']`;
+export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current ==  $slug] {
+  "tagTitle": title[$locale],
+  "tagSlug": slug.current,
+  "tagText": text[$locale],
+  "sameTagPosts": *[_type == 'post' && references(^._id)] {
+    "postTitle": title[$locale],
+    "postSlug": slug.current,
+    "author": author -> {
+      "authorName": title[$locale],
+      "authorSlug": slug.current
+      },
+      "tags": tags[] -> {
+        "tagName": title[$locale],
+        "tagSlug": slug.current
+      },
+      "postImageUrl": coverImage.asset-> url,
+      "postDate": _createdAt
+  } [$skip...$limit] | order(_createdAt desc)
+}`;
 export const getPaginatedPostsQuery = groq`*[_type == 'post'] {
   "postTitle": title[$locale],
   "postSlug": slug.current,
