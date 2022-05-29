@@ -1,8 +1,8 @@
 import { SearchIndex } from 'algoliasearch';
 export type LocalizedIndex = {
-  indexName: SearchIndex,
-  locale: String,
-  querySuggestionsIndexName?: String
+  indexName: string,
+  locale: string,
+  querySuggestionsIndexName?: string
 }
 
 export const globalConfig = {
