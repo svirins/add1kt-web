@@ -2,8 +2,8 @@ import { useTranslations } from 'next-intl';
 
 import Tags from '@/components/tag/tags';
 import PostMeta from '@/components/post/post-meta';
-import PostImage from '@/components/image/post-image';
-import CoverImage from '@/components/image/cover-image';
+import { ResponsiveImage } from '@/components/image/next-sanity-image';
+
 
 import Container from '@/components/layout/container';
 import PostBody from '@/components/misc/post-body';
@@ -24,7 +24,7 @@ export default function Post({ post, relatedPosts }) {
       type="article"
     >
       <article className="flex flex-col justify-center items-start max-w-3xl mx-auto pb-16">
-        <PostImage title={post.postTitle} url={post.postImageUrl} />
+        <ResponsiveImage alt={post.postTitle} url={post.postImageUrl} />
         <h4 className="w-full my-4 text-base font-medium  md:text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400 ">
           {post.postTitle}
         </h4>

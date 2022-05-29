@@ -42,7 +42,6 @@ export async function getStaticProps({ locale }) {
   const featuredPosts = await getFeaturedPosts(locale);
   const pageData = await getPageContent(locale, '/');
   const total = await getTotalPostsNumber();
-
   return {
     props: {
       pageData,

@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 
 import { getAllAuthorSlugs, getAuthorAndRelatedPosts } from '@/lib/api';
 
-import Avatar from '@/components/author/avatar';
+import { AvatarImage } from '@/components/image/next-sanity-image';
 import Container from '@/components/layout/container';
 import PageTitle from '@/components/misc/page-title';
 import SectionSeparator from '@/components/misc/section-separator';
@@ -16,11 +16,11 @@ export default function Author({ author, authorPosts }) {
     <Container type="page" title={author.authorTitle}>
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTitle>{author.authorTitle}</PageTitle>
-        <Avatar
-          name={author.authorTitle}
+        <AvatarImage
+          alt={author.authorTitle}
           width={192}
           height={192}
-          picture={author.picture}
+          url={author.authorPicture}
         />
         <SectionSeparator />
         <Subtitle>

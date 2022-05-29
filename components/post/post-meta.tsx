@@ -1,20 +1,17 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 import { useTranslations, useIntl } from 'next-intl';
 import { parseISO } from 'date-fns';
 
+import { AvatarImage } from '@/components/image/next-sanity-image';
 export default function PostMeta({ author, date, readingTime }) {
   const intl = useIntl();
   const t = useTranslations('Post');
   return (
     <>
       <div className="relative">
-        <Image
-          src={author.authorPicture}
-          height="44"
-          width="44"
-          className="rounded-full align-middle"
+        <AvatarImage
+          url={author.authorPicture}
           alt={author.authorName}
         />
       </div>

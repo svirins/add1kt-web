@@ -12,7 +12,7 @@ export default function MorePosts({ posts }) {
             author={post.author}
             tags={post.tags}
             slug={post.postSlug}
-            readingTime={post.readingTime}
+            readingTime={Number(post.readingTime)}
           />
         );
       })}

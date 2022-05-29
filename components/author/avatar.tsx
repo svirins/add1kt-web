@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import AvatarImage from 'next/image';
+// import { AvatarImage } from '@/components/image/next-sanity-image';
 
 export default function Avatar({
   name,
@@ -10,13 +10,12 @@ export default function Avatar({
 }) {
   return (
     <div className="flex items-center flex-nowrap">
-      <AvatarImage
-        src={picture}
+      {/* <AvatarImage
+        url={picture}
         height={height}
         width={width}
-        className="rounded-full"
         alt={name}
-      />
+      /> */}
       {slug && (
         <Link href={`/author/${slug}`}>
           <a className="hover:underline ml-2 text-sm text-gray-700 dark:text-gray-300">

@@ -37,7 +37,7 @@ export const getAllTagSlugsQuery = groq`*[_type == 'tag'] {
 export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.current == $slug] {
   "postTitle": title[$locale],
   "postSlug": slug.current,
-  "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 )
+  "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
   "postImageUrl": coverImage.asset-> url,
   "postDate": _createdAt,
   "postText": text[$locale],

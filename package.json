@@ -20,6 +20,7 @@
     "@fontsource/ibm-plex-sans": "^4.5.10",
     "@panelbear/panelbear-nextjs": "^1.0.3",
     "@portabletext/react": "^1.0.6",
+    "@sanity/image-url": "^1.0.1",
     "algoliasearch": "^4.13.1",
     "classnames": "2.3.1",
     "date-fns": "2.28.0",
