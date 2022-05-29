@@ -1,4 +1,3 @@
-
 import PostCard from '@/components/post/post-card';
 export default function MorePosts({ posts }) {
   return (

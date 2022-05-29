@@ -5,7 +5,6 @@ import PostMeta from '@/components/post/post-meta';
 import PostImage from '@/components/image/post-image';
 import CoverImage from '@/components/image/cover-image';
 
-
 import Container from '@/components/layout/container';
 import PostBody from '@/components/misc/post-body';
 import MorePosts from '@/components/post/more-posts';
@@ -66,7 +65,10 @@ export async function getStaticPaths({ locales }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const { relatedPosts, ...post } = await getPostAndRelatedPosts(locale, params.slug);
+  const { relatedPosts, ...post } = await getPostAndRelatedPosts(
+    locale,
+    params.slug
+  );
   return {
     props: {
       post,

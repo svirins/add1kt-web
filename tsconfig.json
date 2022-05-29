@@ -20,7 +20,7 @@
       "@/pages/*": ["pages/*"],
       "@/lib/*": ["lib/*"],
       "@/styles/*": ["styles/*"],
-      "@/messages/*": ["messages/*"],
+      "@/messages/*": ["messages/*"]
     }
   },
   "include": [

@@ -68,7 +68,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
 
 export async function getStaticProps({ locale }) {
   const authors = await getAuthorsAndRelatedPostsCount(locale);
-  const tags  = await getTagsAndRelatedPostsCount(locale);
+  const tags = await getTagsAndRelatedPostsCount(locale);
 
   return {
     props: {

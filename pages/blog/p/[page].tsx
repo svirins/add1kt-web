@@ -13,10 +13,7 @@ export default function BlogIndexPage({ paginatedPosts, page, totalPages }) {
   const t = useTranslations('Titles');
 
   return (
-    <Container
-      title={`${t('blog_page')} ${page}/${totalPages}`}
-      type="page"
-    >
+    <Container title={`${t('blog_page')} ${page}/${totalPages}`} type="page">
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTitle>{`${t('blog_page')} ${page}/${totalPages}`}</PageTitle>
         <SectionSeparator />
