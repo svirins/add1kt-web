@@ -12,11 +12,10 @@ import SectionSeparator from '@/components/misc/section-separator';
 import PageTitle from '@/components/misc/page-title';
 import Container from '@/components/layout/container';
 import MorepostsControls from '@/components/post/moreposts-controls';
-import PostBody from '@/components/post/post-body';
+import PostBody from '@/components/misc/post-body';
 import Subtitle from '@/components/misc/subtitle';
 
 export default function Index({ pageData, featuredPosts, total }) {
-  console.log(total);
   const t = useTranslations('Titles');
   return (
     <Container title={pageData.pageTitle} type="page">
@@ -27,7 +26,7 @@ export default function Index({ pageData, featuredPosts, total }) {
         {pageData && (
           <>
             <PageTitle>{pageData.pageTitle}</PageTitle>
-            <PostBody content={pageData.pageText} />
+            <PostBody text={pageData.pageText} />
             <SectionSeparator />
             <Subtitle>{t('featured_posts')}</Subtitle>
           </>

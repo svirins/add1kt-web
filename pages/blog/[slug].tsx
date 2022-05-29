@@ -1,8 +1,13 @@
 import { useTranslations } from 'next-intl';
 
-import PostHeader from '@/components/post/post-header';
+import Tags from '@/components/tag/tags';
+import PostMeta from '@/components/post/post-meta';
+import PostImage from '@/components/image/post-image';
+import CoverImage from '@/components/image/cover-image';
+
+
 import Container from '@/components/layout/container';
-import PostBody from '@/components/post/post-body';
+import PostBody from '@/components/misc/post-body';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
 import FBShare from '@/components/misc/social-share';
@@ -14,23 +19,27 @@ export default function Post({ post, relatedPosts }) {
   const t = useTranslations('Titles');
   return (
     <Container
-      title={`${post?.postTitle}`}
+      title={post.postTitle}
       imageUrl={post.postImageUrl}
       date={post.postDate}
       type="article"
     >
       <article className="flex flex-col justify-center items-start max-w-3xl mx-auto pb-16">
-        <PostHeader
-          key={post.postSlug}
-          title={post.postTitle}
-          previewImage={post.postImageUrl}
-          date={post.postDate}
-          author={post.author}
-          tags={post.tags}
-          slug={post.postSlug}
-          readingTime={post.readingTime}
-        />
-        <PostBody content={post.postText} />
+        <PostImage title={post.postTitle} url={post.postImageUrl} />
+        <h4 className="w-full my-4 text-base font-medium  md:text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400 ">
+          {post.postTitle}
+        </h4>
+        <div className="flex flex-row ">
+          <PostMeta
+            date={post.postDate}
+            readingTime={post.readingTime}
+            author={post.author}
+          />
+        </div>
+        <div className="flex flex-row text-sm">
+          <Tags tags={post.tags} />
+        </div>
+        <PostBody text={post.postText} />
         <FBShare />
       </article>
       <SectionSeparator />

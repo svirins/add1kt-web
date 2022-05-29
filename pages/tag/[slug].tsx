@@ -7,6 +7,8 @@ import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
 import PageTitle from '@/components/misc/page-title';
 import Subtitle from '@/components/misc/subtitle';
+import PostBody from '@/components/misc/post-body';
+
 // TODO: render tagText as portable text+ reneder  authorSocilas
 
 export default function Tag({ tag, sameTagPosts }) {
@@ -15,6 +17,7 @@ export default function Tag({ tag, sameTagPosts }) {
     <Container type="page" title={tag.tagTitle}>
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTitle>{tag.tagTitle}</PageTitle>
+        <PostBody text={tag.tagText} />
         <SectionSeparator />
         <Subtitle>
           {`${t('tag_related_articles')}

@@ -6,7 +6,8 @@ export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true]
   "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
   "author": author -> {
     "authorName": title[$locale],
-    "authorSlug": slug.current
+    "authorSlug": slug.current,
+    "authorPicture": picture.asset -> url,
   },
   "tags": tags[] -> {
     "tagName": title[$locale],
@@ -37,17 +38,18 @@ export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.curre
   "postTitle": title[$locale],
   "postSlug": slug.current,
   "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 )
+  "postImageUrl": coverImage.asset-> url,
+  "postDate": _createdAt,
+  "postText": text[$locale],
   "author": author -> {
     "authorName": title[$locale],
-    "authorSlug": slug.current
+    "authorSlug": slug.current,
+    "authorPicture": picture.asset -> url,
   },
   "tags": tags[] -> {
     "tagName": title[$locale],
     "tagSlug": slug.current
   },
-  "postImageUrl": coverImage.asset-> url,
-  "postDate": _createdAt,
-  "postText": text[$locale],
   "relatedPosts": relatedPosts[] -> {
       "postTitle": title[$locale],
       "postSlug": slug.current,
@@ -56,7 +58,8 @@ export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.curre
       "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
       "author": author -> {
         "authorName": title[$locale],
-        "authorSlug": slug.current
+        "authorSlug": slug.current,
+        "authorPicture": picture.asset -> url,
       },
       "tags": tags[] -> {
         "tagName": title[$locale],
@@ -79,7 +82,8 @@ export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.cu
     "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
     "author": author -> {
       "authorName": title[$locale],
-      "authorSlug": slug.current
+      "authorSlug": slug.current,
+      "authorPicture": picture.asset -> url,
     },
     "tags": tags[] -> {
       "tagName": title[$locale],
@@ -100,7 +104,8 @@ export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current
     "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
     "author": author -> {
       "authorName": title[$locale],
-      "authorSlug": slug.current
+      "authorSlug": slug.current,
+      "authorPicture": picture.asset -> url,
     },
     "tags": tags[] -> {
       "tagName": title[$locale],
@@ -116,7 +121,8 @@ export const getPaginatedPostsQuery = groq`*[_type == 'post'] {
   "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
   "author": author -> {
     "authorName": title[$locale],
-    "authorSlug": slug.current
+    "authorSlug": slug.current,
+    "authorPicture": picture.asset -> url,
   },
   "tags": tags[] -> {
     "tagName": title[$locale],

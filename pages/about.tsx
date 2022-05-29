@@ -1,7 +1,8 @@
 import { getPageContent } from '@/lib/api';
+
 import PageTitle from '@/components/misc/page-title';
 import Container from '@/components/layout/container';
-import PostBody from '@/components/post/post-body';
+import PostBody from '@/components/misc/post-body';
 
 export default function About({ pageData }) {
   return (
@@ -11,7 +12,7 @@ export default function About({ pageData }) {
         {pageData && (
           <>
             <PageTitle>{pageData.pageTitle}</PageTitle>
-            <PostBody content={pageData.pageText} />
+            <PostBody text={pageData.pageText} />
           </>
         )}
       </main>

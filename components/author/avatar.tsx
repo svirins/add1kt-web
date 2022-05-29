@@ -11,7 +11,7 @@ export default function Avatar({
   return (
     <div className="flex items-center flex-nowrap">
       <Image
-        src={picture.url}
+        src={picture}
         height={height}
         width={width}
         className="rounded-full"

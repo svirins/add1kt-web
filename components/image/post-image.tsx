@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { shimmer, toBase64 } from '@/lib/content-utils';
 
-const HeroImage = ({ title, url }) => {
+const PostImage = ({ title, url }) => {
   const image = (
     <Image
       src={url}
+      alt={`Cover Image for ${title}`}
       quality="90%"
       width="100%"
       height="100%"
@@ -17,7 +17,6 @@ const HeroImage = ({ title, url }) => {
       // objectFit="cover"
       // objectFit="contain"
       // objectPosition="center"
-      alt={`Cover Image for ${title}`}
       className="rounded-lg"
     />
   );
@@ -25,4 +24,4 @@ const HeroImage = ({ title, url }) => {
   return <div className="sm:mx-0">{image}</div>;
 };
 
-export default HeroImage;
+export default PostImage;
