@@ -1,6 +1,7 @@
 import algoliasearch from 'algoliasearch';
 import sanityClient, { SanityDocumentStub } from '@sanity/client';
-import { NowRequest, NowResponse } from '@vercel/node';
+import type { VercelRequest, VercelResponse } from '@vercel/node';
+
 import index from 'sanity-algolia';
 
 const algolia = algoliasearch(
