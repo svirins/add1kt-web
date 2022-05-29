@@ -1,3 +1,10 @@
+import { SearchIndex } from 'algoliasearch';
+export type LocalizedIndex = {
+  indexName: SearchIndex,
+  locale: String,
+  querySuggestionsIndexName?: String
+}
+
 export const globalConfig = {
   pagination: {
     pageSize: 6,
@@ -5,18 +12,6 @@ export const globalConfig = {
     featuredPostsSize: 4,
     allPostsSize: 50
   },
-  algoliaIndexes: [
-    {
-      indexName: 'addict-ru',
-      locale: 'ru',
-      querySuggestionsIndexName: 'addict-ru_query_suggestions'
-    },
-    {
-      indexName: 'addict-pl',
-      locale: 'pl',
-      querySuggestionsIndexName: 'addict-pl_query_suggestions'
-    }
-  ],
   menuLinks: [
     { href: '/', title: 'home' },
     { href: '/blog/p/1', title: 'blog' },
@@ -24,6 +19,19 @@ export const globalConfig = {
     { href: '/about', title: 'about' }
   ]
 };
+
+export const localizedAlgoliaIndices: LocalizedIndex[] = [
+  {
+    indexName: 'addict-ru',
+    locale: 'ru',
+    querySuggestionsIndexName: 'addict-ru_query_suggestions'
+  },
+  {
+    indexName: 'addict-pl',
+    locale: 'pl',
+    querySuggestionsIndexName: 'addict-pl_query_suggestions'
+  }
+];
 
 export const sanityConfig = {
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',

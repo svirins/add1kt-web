@@ -29,6 +29,6 @@
     "**/*.ts",
     "**/*.tsx",
     "messages/**.json"
-, "scripts/generate-sanity-algolia.ts"  ],
+, "scripts/sanity-algolia.ts"  ],
   "exclude": ["node_modules"]
 }
