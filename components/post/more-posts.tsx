@@ -6,13 +6,13 @@ export default function MorePosts({ posts }) {
       {posts.map((post) => {
         return (
           <PostCard
-            key={post.slug}
-            title={post.title}
-            previewImage={post.coverImage}
-            date={post.sys.firstPublishedAt}
-            author={post.authorCollection.items[0]}
-            tags={post.tagsCollection.items}
-            slug={post.slug}
+            key={post.postSlug}
+            title={post.postTitle}
+            previewImage={post.postImageUrl}
+            date={post.postDate}
+            author={post.author}
+            tags={post.tags}
+            slug={post.postSlug}
             readingTime={post.readingTime}
           />
         );
