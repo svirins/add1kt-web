@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import AvatarImage from 'next/image';
 
 export default function Avatar({
   name,
@@ -10,7 +10,7 @@ export default function Avatar({
 }) {
   return (
     <div className="flex items-center flex-nowrap">
-      <Image
+      <AvatarImage
         src={picture}
         height={height}
         width={width}

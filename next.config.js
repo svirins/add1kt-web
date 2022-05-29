@@ -6,9 +6,11 @@ const STUDIO_REWRITE = {
       : '/studio/index.html'
 };
 
-// TODO: implement image sizes
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+});
 
-module.exports = {
+module.exports = withBundleAnalyzer({
   swcMinify: true,
   reactStrictMode: true,
   i18n: {
@@ -18,13 +20,11 @@ module.exports = {
   images: {
     images: {
       domains: ['cdn.sanity.io'],
-      imageSizes: [24, 64, 300],
       loader: 'custom'
     }
   },
   rewrites: () => [STUDIO_REWRITE],
   webpack: (config, { dev, isServer }) => {
-    // Replace React with Preact only in client production build
     if (!dev && !isServer) {
       Object.assign(config.resolve.alias, {
         'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
@@ -35,4 +35,4 @@ module.exports = {
     }
     return config;
   }
-};
+});

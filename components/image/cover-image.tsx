@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { imageBuilder } from '@/lib/sanity';
 
 export default function CoverImage({ title, url }) {
   return (
@@ -9,7 +8,7 @@ export default function CoverImage({ title, url }) {
         height={540}
         alt={`Cover Image for ${title}`}
         className="shadow-small"
-        src={imageBuilder(url).width(1240).height(540).url()}
+        src={url}
       />
     </div>
   );

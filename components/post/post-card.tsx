@@ -15,7 +15,7 @@ export default function PostCard({
 }) {
   return (
     <div>
-      <PreviewImage title={title} slug={slug} url={previewImage.url} />
+      <PreviewImage title={title} slug={slug} url={previewImage} />
       <h4 className="w-full my-4 text-base font-medium  md:text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400 ">
         <Link href={`/blog/${slug}`}>
           <a>{title}</a>

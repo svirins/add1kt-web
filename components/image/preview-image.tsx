@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+
 import { shimmer, toBase64 } from '@/lib/content-utils';
 import { ImageProps } from 'extra-types';
 import cn from 'classnames';
@@ -9,11 +10,11 @@ const PreviewImage = ({ title, url, slug }: ImageProps) => {
     <Image
       src={url}
       quality="90%"
-      width={16}
-      height={9}
+      width={640}
+      height={480}
       placeholder="blur"
       blurDataURL={`data:image/svg+xml;base64,${toBase64(
-        shimmer('100%', '100%')
+        shimmer('640', '480')
       )}`}
       layout="responsive"
       objectFit="cover"
