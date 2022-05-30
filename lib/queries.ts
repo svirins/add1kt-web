@@ -19,7 +19,8 @@ export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true]
 
 export const getPageContentQuery = groq`*[_type == 'page' && slug.current == $slug]{
   "pageTitle": title[$locale],
-  "text": text[$locale]
+  "pagePicture": picture.asset -> url,
+  "pageText": text[$locale]
 }[0]`;
 
 export const getAllPostSlugsQuery = groq`*[_type == 'post'] {
@@ -96,6 +97,7 @@ export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current
   "tagTitle": title[$locale],
   "tagSlug": slug.current,
   "tagText": text[$locale],
+  "tagPicture": picture.asset -> url,
   "sameTagPosts": *[_type == 'post' && references(^._id)] {
     "postTitle": title[$locale],
     "postSlug": slug.current,

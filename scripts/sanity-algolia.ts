@@ -43,15 +43,14 @@ const handler = (req: VercelRequest, res: VercelResponse) => {
         title: document.title,
         slug: document.slug,
         body: document.body,
-        tags: document.tags,
-      }
+        tags: document.tags
+      };
     }
-  )
+  );
 
   return sanityAlgolia
     .webhookSync(sanity, req.body)
     .then(() => res.status(200).send('ok'));
 };
-
 
 export default handler;

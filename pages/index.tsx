@@ -9,10 +9,9 @@ import {
 import Search from '@/components/search/search';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
-import PageTitle from '@/components/misc/page-title';
 import Container from '@/components/layout/container';
 import MorepostsControls from '@/components/post/moreposts-controls';
-import PostBody from '@/components/misc/post-body';
+import PageTop from '@/components/layout/page-top';
 import Subtitle from '@/components/misc/subtitle';
 
 export default function Index({ pageData, featuredPosts, total }) {
@@ -23,14 +22,14 @@ export default function Index({ pageData, featuredPosts, total }) {
         <div id="autocomplete" className="relative w-full">
           <Search />
         </div>
-        {pageData && (
-          <>
-            <PageTitle>{pageData.pageTitle}</PageTitle>
-            <PostBody text={pageData.pageText} />
-            <SectionSeparator />
-            <Subtitle>{t('featured_posts')}</Subtitle>
-          </>
-        )}
+        <PageTop
+          title={pageData.pageTitle}
+          subtitle=""
+          pictureUrl={pageData.pagePicture}
+          text={pageData.pageText}
+        />
+        <SectionSeparator />
+        <Subtitle>{t('featured_posts')}</Subtitle>
         {featuredPosts?.length > 0 && <MorePosts posts={featuredPosts} />}
         <MorepostsControls isDisabled={total < 6} />
       </main>

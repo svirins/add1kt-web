@@ -4,7 +4,6 @@ import Tags from '@/components/tag/tags';
 import PostMeta from '@/components/post/post-meta';
 import { ResponsiveImage } from '@/components/image/next-sanity-image';
 
-
 import Container from '@/components/layout/container';
 import PostBody from '@/components/misc/post-body';
 import MorePosts from '@/components/post/more-posts';

@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { urlFor } from '@/lib/sanity'
+import { urlFor } from '@/lib/sanity';
 import cn from 'classnames';
-
 
 /* TODO: change next-sanity-image back to original repo/package, when a new version has been released
 when a new version has been released */
@@ -30,8 +29,6 @@ export function ResponsiveImage({ url, alt, slug = '' }) {
     </div>
   );
 }
-
-
 
 export function AvatarImage({ url, height = 44, width = 44, alt }) {
   // const imageProps: UseNextSanityImageProps = useNextSanityImage({

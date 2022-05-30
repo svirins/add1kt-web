@@ -19,7 +19,7 @@ module.exports = withBundleAnalyzer({
   },
   images: {
     images: {
-      domains: ['cdn.sanity.io'],
+      domains: ['cdn.sanity.io']
     }
   },
   rewrites: () => [STUDIO_REWRITE],

@@ -1,5 +1,4 @@
 import Container from '@/components/layout/container';
-import PageTitle from '@/components/misc/page-title';
 import SectionSeparator from '@/components/misc/section-separator';
 import MorePosts from '@/components/post/more-posts';
 import {
@@ -11,18 +10,25 @@ import { useTranslations } from 'next-intl';
 
 import { globalConfig } from '@/lib/config';
 
+import PageTop from '@/components/layout/page-top';
 import PaginationControls from '@/components/post/pagination-controls';
-import PostBody from '@/components/misc/post-body';
-export default function BlogIndexPage({ pageData, paginatedPosts, page, totalPages }) {
+export default function BlogIndexPage({
+  pageData,
+  paginatedPosts,
+  page,
+  totalPages
+}) {
   const t = useTranslations('Titles');
 
   return (
     <Container title={`${t('blog_page')} ${page}/${totalPages}`} type="page">
       <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
-=        <PageTitle>
-          {`${pageData.pageTitle} (${page}/${totalPages})`}
-        </PageTitle>
-        <PostBody text={pageData.pageText} />
+        <PageTop
+          title={`${pageData.pageTitle} (${page}/${totalPages})`}
+          subtitle=""
+          pictureUrl={pageData.pagePicture}
+          text={pageData.pageText}
+        />
         <SectionSeparator />
         {paginatedPosts?.length > 0 && <MorePosts posts={paginatedPosts} />}
         <PaginationControls

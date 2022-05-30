@@ -28,7 +28,8 @@
     "extra-types.ts",
     "**/*.ts",
     "**/*.tsx",
-    "messages/**.json"
-, "scripts/sanity-algolia.ts"  ],
+    "messages/**.json",
+    "scripts/sanity-algolia.ts"
+  ],
   "exclude": ["node_modules"]
 }
