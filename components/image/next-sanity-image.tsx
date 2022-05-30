@@ -40,7 +40,7 @@ export function AvatarImage({ url, height = 44, width = 44, alt }) {
   //   }, url);
   return (
     <img
-      src={urlFor(url).width(44).url()}
+      src={urlFor(url).width(width).url()}
       className="rounded-full align-middle"
       // height={`${height}px`}
       // width={`${width}px`}

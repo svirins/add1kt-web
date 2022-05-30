@@ -30,9 +30,9 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
             {sortedAutors.map((author) => {
               return (
                 <div key={author} className="mt-2 mb-2 mr-5">
-                  <Link href={`/author/${author.slug}`}>
+                  <Link href={`/author/${author.authorSlug}`}>
                     <a className="mr-3 text-base font-medium text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
-                      {`${author.title} (${author.relatedPostsCount})`}
+                      {`${author.authorTitle} (${author.relatedPostsCount})`}
                     </a>
                   </Link>
                 </div>
@@ -51,9 +51,9 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
             {sortedTags.map((tag) => {
               return (
                 <div key={tag} className="mt-2 mb-2 mr-5">
-                  <Link href={`/tag/${tag.slug}`}>
+                  <Link href={`/tag/${tag.tagSlug}`}>
                     <a className="mr-3 text-base font-medium  text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
-                      {`#${tag.title} (${tag.relatedPostsCount})`}
+                      {`#${tag.tagTitle} (${tag.relatedPostsCount})`}
                     </a>
                   </Link>
                 </div>

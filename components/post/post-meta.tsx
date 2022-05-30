@@ -7,6 +7,7 @@ import { AvatarImage } from '@/components/image/next-sanity-image';
 export default function PostMeta({ author, date, readingTime }) {
   const intl = useIntl();
   const t = useTranslations('Post');
+  // const { authorSlug = '', authorName ='', authorPicture='' } = author;
   return (
     <>
       <div className="relative">

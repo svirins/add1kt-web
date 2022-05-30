@@ -19,7 +19,7 @@ export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true]
 
 export const getPageContentQuery = groq`*[_type == 'page' && slug.current == $slug]{
   "pageTitle": title[$locale],
-  "pageText": text[$locale]
+  "text": text[$locale]
 }[0]`;
 
 export const getAllPostSlugsQuery = groq`*[_type == 'post'] {
