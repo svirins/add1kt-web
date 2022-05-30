@@ -12,6 +12,7 @@ import { globalConfig } from '@/lib/config';
 
 import PageTop from '@/components/layout/page-top';
 import PaginationControls from '@/components/post/pagination-controls';
+
 export default function BlogIndexPage({
   pageData,
   paginatedPosts,
@@ -22,7 +23,7 @@ export default function BlogIndexPage({
 
   return (
     <Container title={`${t('blog_page')} ${page}/${totalPages}`} type="page">
-      <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTop
           title={`${pageData.pageTitle} (${page}/${totalPages})`}
           subtitle=""
@@ -35,7 +36,7 @@ export default function BlogIndexPage({
           currentPage={Number(page)}
           totalPages={Number(totalPages)}
         />
-      </main>
+      </div>
     </Container>
   );
 }

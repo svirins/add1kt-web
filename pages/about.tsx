@@ -1,21 +1,19 @@
 import { getPageContent } from '@/lib/api';
 
-import PageTitle from '@/components/misc/page-title';
+import PageTop from '@/components/layout/page-top';
 import Container from '@/components/layout/container';
-import PostBody from '@/components/misc/post-body';
 
 export default function About({ pageData }) {
   return (
     <Container title={pageData.pageTitle} type="page">
-      <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
-        {/* <AlgoliaSearch /> */}
-        {pageData && (
-          <>
-            <PageTitle>{pageData.pageTitle}</PageTitle>
-            <PostBody text={pageData.pageText} />
-          </>
-        )}
-      </main>
+      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+        <PageTop
+          title={pageData.pageTitle}
+          subtitle=""
+          pictureUrl={pageData.pagePicture}
+          text={pageData.pageText}
+        />
+      </div>
     </Container>
   );
 }

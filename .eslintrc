@@ -1,5 +1,5 @@
 {
-    "extends": [
+  "extends": [
     "next",
     "next/core-web-vitals",
     "plugin:@asbjorn/groq/recommended"
@@ -9,7 +9,7 @@
     "react/no-unescaped-entities": 0,
     "import/no-anonymous-default-export": 0
   },
-    "globals": {
+  "globals": {
     "React": true,
     "google": true,
     "mount": true,

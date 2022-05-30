@@ -15,29 +15,27 @@ function Header() {
 
   const router = useRouter();
   return (
-    <div className="flex flex-col justify-center px-8">
-      <nav className="flex items-center justify-between w-full relative max-w-3xl  mx-auto pt-4 pb-4 md:pb-8">
-        <a href="#skip" className="skip-nav">
-          Skip to content
-        </a>
-        <div className="ml-[-0.60rem] inline-flex items-center">
-          {/* <MobileMenu /> */}
-          {globalConfig.menuLinks.map((link, index) => (
-            <NavItemHeader
-              href={link.href}
-              text={index === 0 ? '//' : t(link.title)}
-              key={link.title}
-            />
-          ))}
+    <>
+      <a href="#skip" className="skip-nav">
+        Skip to content
+      </a>
+      <div className="ml-[-0.60rem] inline-flex items-center">
+        {/* <MobileMenu /> */}
+        {globalConfig.menuLinks.map((link, index) => (
+          <NavItemHeader
+            href={link.href}
+            text={index === 0 ? '//' : t(link.title)}
+            key={link.title}
+          />
+        ))}
+      </div>
+      {mounted && (
+        <div className="inline-flex">
+          <LocaleSwitcher />
+          <ThemeSwitcher />
         </div>
-        {mounted && (
-          <div className="inline-flex">
-            <LocaleSwitcher />
-            <ThemeSwitcher />
-          </div>
-        )}
-      </nav>
-    </div>
+      )}
+    </>
   );
 }
 

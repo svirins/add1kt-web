@@ -18,7 +18,7 @@ export default function Index({ pageData, featuredPosts, total }) {
   const t = useTranslations('Titles');
   return (
     <Container title={pageData.pageTitle} type="page">
-      <main className="flex flex-col justify-center items-start max-w-3xl mx-auto pb-16">
+      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <div id="autocomplete" className="relative w-full">
           <Search />
         </div>
@@ -32,7 +32,7 @@ export default function Index({ pageData, featuredPosts, total }) {
         <Subtitle>{t('featured_posts')}</Subtitle>
         {featuredPosts?.length > 0 && <MorePosts posts={featuredPosts} />}
         <MorepostsControls isDisabled={total < 6} />
-      </main>
+      </div>
     </Container>
   );
 }

@@ -12,7 +12,7 @@ export default function Author({ author, authorPosts }) {
   const t = useTranslations('Titles');
   return (
     <Container type="page" title={author.authorTitle}>
-      <main className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTop
           title={author.authorTitle}
           subtitle=""
@@ -26,7 +26,7 @@ export default function Author({ author, authorPosts }) {
           {author.authorTitle}
         </Subtitle>
         {authorPosts?.length > 0 && <MorePosts posts={authorPosts} />}
-      </main>
+      </div>
     </Container>
   );
 }

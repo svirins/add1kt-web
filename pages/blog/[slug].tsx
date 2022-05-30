@@ -22,27 +22,29 @@ export default function Post({ post, relatedPosts }) {
       date={post.postDate}
       type="article"
     >
-      <article className="flex flex-col justify-center items-start max-w-3xl mx-auto pb-16">
-        <ResponsiveImage alt={post.postTitle} url={post.postImageUrl} />
-        <h4 className="w-full my-4 text-base font-medium  md:text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400 ">
-          {post.postTitle}
-        </h4>
-        <div className="flex flex-row ">
-          <PostMeta
-            date={post.postDate}
-            readingTime={post.readingTime}
-            author={post.author}
-          />
-        </div>
-        <div className="flex flex-row text-sm">
-          <Tags tags={post.tags} />
+      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+        <div className="flex flex-col">
+          <ResponsiveImage alt={post.postTitle} url={post.postImageUrl} />
+          <h4 className="w-full my-4 text-base font-medium  md:text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400 ">
+            {post.postTitle}
+          </h4>
+          <div className="flex flex-row ">
+            <PostMeta
+              date={post.postDate}
+              readingTime={post.readingTime}
+              author={post.author}
+            />
+          </div>
+          <div className="flex flex-row text-sm">
+            <Tags tags={post.tags} />
+          </div>
         </div>
         <PostBody text={post.postText} />
         <FBShare />
-      </article>
-      <SectionSeparator />
-      <Subtitle>{t('related_posts')}</Subtitle>
-      {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
+        <SectionSeparator />
+        <Subtitle>{t('related_posts')}</Subtitle>
+        {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
+      </div>
     </Container>
   );
 }
