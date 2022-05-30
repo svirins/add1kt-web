@@ -18,8 +18,8 @@ export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true]
 } [$skip...$limit] | order(_createdAt desc)`;
 
 export const getPageContentQuery = groq`*[_type == 'page' && slug.current == $slug]{
-  "title": title[$locale],
-  "text": text[$locale]
+  "pageTitle": title[$locale],
+  "pageText": text[$locale]
 }[0]`;
 
 export const getAllPostSlugsQuery = groq`*[_type == 'post'] {

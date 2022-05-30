@@ -98,7 +98,7 @@ export async function getPaginatedPosts(locale, page) {
   const data = await client.fetch(getPaginatedPostsQuery, {
     locale,
     skip: getSkipValue(page),
-    limit: globalConfig.pagination.pageSize
+    limit: globalConfig.pagination.pageSize + getSkipValue(page)
   });
   return data;
 }
