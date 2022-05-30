@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     "messages/**.json",
-    "scripts/sanity-algolia.ts"
+    "scripts/sanity-algolia.js"
   ],
   "exclude": ["node_modules"]
 }

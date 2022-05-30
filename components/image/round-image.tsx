@@ -1,6 +1,6 @@
 import { urlFor } from '@/lib/sanity';
 
-function RoundImage({ url, height = 44, width = 44, alt, className }) {
+function RoundImage({ url, height = 44, width = 44, alt }) {
   // const imageProps: UseNextSanityImageProps = useNextSanityImage({
   //   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   //   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,

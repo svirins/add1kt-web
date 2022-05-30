@@ -1,6 +1,5 @@
 import algoliasearch from 'algoliasearch';
-import sanityClient, { SanityDocumentStub } from '@sanity/client';
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import sanityClient from '@sanity/client';
 import indexer from 'sanity-algolia';
 
 // TODO: im[plement 2 language search
@@ -17,7 +16,7 @@ export const sanity = sanityClient({
   useCdn: false
 });
 
-const handler = (req: VercelRequest, res: VercelResponse) => {
+const handler = (req, res) => {
   if (req.headers['content-type'] !== 'application/json') {
     res.status(400);
     res.json({ message: 'Bad request' });
@@ -38,7 +37,7 @@ const handler = (req: VercelRequest, res: VercelResponse) => {
         }`
       }
     },
-    (document: SanityDocumentStub) => {
+    (document) => {
       return {
         title: document.title,
         slug: document.slug,

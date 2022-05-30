@@ -1,7 +1,6 @@
-import { SearchIndex } from 'algoliasearch';
 
 export type LocalizedIndex = {
-  indexName: SearchIndex;
+  indexName: string;
   locale: string;
   querySuggestionsIndexName?: string;
 };

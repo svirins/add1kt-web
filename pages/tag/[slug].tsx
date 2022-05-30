@@ -24,7 +24,7 @@ export default function Tag({ tag, sameTagPosts }) {
           {`${t('tag_related_articles')}
           "${tag.tagTitle.toLowerCase()}"`}
         </Subtitle>
-        {sameTagPosts?.length > 0 && <MorePosts posts={sameTagPosts} />}
+        {sameTagPosts && <MorePosts posts={sameTagPosts} />}
       </div>
     </Container>
   );

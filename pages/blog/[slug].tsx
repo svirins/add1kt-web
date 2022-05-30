@@ -41,7 +41,7 @@ export default function Post({ post, relatedPosts }) {
         <PostBody text={post.postText} />
         <SectionSeparator />
         <Subtitle>{t('related_posts')}</Subtitle>
-        {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
+        {relatedPosts && <MorePosts posts={relatedPosts} />}
       </div>
     </Container>
   );

@@ -30,7 +30,6 @@ export default function PageTop({
           width={176}
           height={176}
           url={pictureUrl}
-          className="w-24 h-24"
         />
       </div>
     </div>

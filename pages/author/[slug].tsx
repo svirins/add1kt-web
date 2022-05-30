@@ -25,7 +25,7 @@ export default function Author({ author, authorPosts }) {
           {t('author_related_articles')}
           {author.authorTitle}
         </Subtitle>
-        {authorPosts?.length > 0 && <MorePosts posts={authorPosts} />}
+        {authorPosts && <MorePosts posts={authorPosts} />}
       </div>
     </Container>
   );
