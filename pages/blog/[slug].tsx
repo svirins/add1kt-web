@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-import Tags from '@/components/tag/tags';
+import Tags from '@/components/tag/Tags';
 import PostMeta from '@/components/post/post-meta';
 import { ResponsiveImage } from '@/components/image/next-sanity-image';
 
@@ -23,19 +23,20 @@ export default function Post({ post, relatedPosts }) {
     >
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <div className="flex flex-col">
-          <ResponsiveImage alt={post.postTitle} url={post.postImageUrl} />
-          <h4 className="w-full my-4 text-base font-medium  md:text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400 ">
+          <h1 className="font-bold text-3xl md:text-5xl tracking-tight">
             {post.postTitle}
-          </h4>
-          <div className="flex flex-row ">
+          </h1>
+          <div className="flex flex-row text-sm justify-end mb-4">
+            <Tags tags={post.tags} />
+          </div>
+          <ResponsiveImage alt={post.postTitle} url={post.postImageUrl} />
+
+          <div className="flex flex-row mt-4">
             <PostMeta
               date={post.postDate}
               readingTime={post.readingTime}
               author={post.author}
             />
-          </div>
-          <div className="flex flex-row text-sm">
-            <Tags tags={post.tags} />
           </div>
         </div>
         <PostBody text={post.postText} />

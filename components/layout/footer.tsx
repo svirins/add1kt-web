@@ -21,7 +21,9 @@ export default function Footer() {
   const t = useTranslations('Navigation');
 
   return (
-    <footer className="flex flex-col  max-w-2xl mx-auto w-full mb-8">
+    <footer className="flex flex-col  max-w-2xl mx-auto w-full mb-8
+
+            ">
       <SectionSeparator />
       <div className="flex justify-between">
         <div className="inline-flex items-center">
