@@ -18,7 +18,11 @@ export const globalConfig = {
     { href: '/blog/p/1', title: 'blog' },
     { href: '/categories', title: 'categories' },
     { href: '/about', title: 'about' }
-  ]
+  ],
+  siteUrl: 'https://addict.cf',
+  youtubeLink: "youtube",
+  facebookLink: "facebook",
+  telegramLink: "facebook",
 };
 
 export const localizedAlgoliaIndices: LocalizedIndex[] = [
@@ -42,7 +46,3 @@ export const sanityConfig = {
 };
 
 export const seoConfig = {};
-
-export const siteMeta = {
-  siteUrl: 'https://addict.cf'
-}

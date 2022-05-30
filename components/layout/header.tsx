@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 
 import { globalConfig } from '@/lib/config';
 
-import LocaleSwitcher from '@/components/misc/locale-switcher';
-import NavItemHeader from '@/components/misc/nav-item-header';
-import ThemeSwitcher from '@/components/misc/theme-switcher';
+import LocaleSwitcher from '@/components/misc/LocaleSwitcher';
+import NavItemHeader from '@/components/misc/NavItemHeader';
+import ThemeSwitcher from '@/components/misc/ThemeSwitcher';
 
 function Header() {
   const [mounted, setMounted] = useState(false);
@@ -20,7 +20,6 @@ function Header() {
         Skip to content
       </a>
       <div className="ml-[-0.60rem] inline-flex items-center">
-        {/* <MobileMenu /> */}
         {globalConfig.menuLinks.map((link, index) => (
           <NavItemHeader
             href={link.href}

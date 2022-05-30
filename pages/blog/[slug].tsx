@@ -8,7 +8,6 @@ import Container from '@/components/layout/container';
 import PostBody from '@/components/misc/post-body';
 import MorePosts from '@/components/post/more-posts';
 import SectionSeparator from '@/components/misc/section-separator';
-import FBShare from '@/components/misc/social-share';
 import Subtitle from '@/components/misc/subtitle';
 
 import { getAllPostSlugs, getPostAndRelatedPosts } from '@/lib/api';
@@ -40,7 +39,6 @@ export default function Post({ post, relatedPosts }) {
           </div>
         </div>
         <PostBody text={post.postText} />
-        <FBShare />
         <SectionSeparator />
         <Subtitle>{t('related_posts')}</Subtitle>
         {relatedPosts?.length > 0 && <MorePosts posts={relatedPosts} />}
