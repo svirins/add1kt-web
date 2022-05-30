@@ -42,3 +42,7 @@ export const sanityConfig = {
 };
 
 export const seoConfig = {};
+
+export const siteMeta = {
+  siteUrl: 'https://addict.cf'
+}

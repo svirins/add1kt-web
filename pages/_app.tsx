@@ -11,6 +11,8 @@ import { NextIntlProvider } from 'next-intl';
 import { usePanelbear } from '@panelbear/panelbear-nextjs';
 import { seoConfig } from '@/lib/config';
 
+import { Analytics } from '@/components/Analytics';
+
 function App({ Component, pageProps }: AppProps) {
   usePanelbear(process.env.NEXT_PUBLIC_PANELBEAR_SITE_ID, {
     debug: false
@@ -31,6 +33,7 @@ function App({ Component, pageProps }: AppProps) {
       >
         {' '}
         <ThemeProvider attribute="class">
+          <Analytics />
           <DefaultSeo {...seoConfig} />
           <Component {...pageProps} />
         </ThemeProvider>

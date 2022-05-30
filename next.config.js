@@ -5,6 +5,16 @@ const STUDIO_REWRITE = {
       ? 'http://localhost:3333/studio/:path*'
       : '/studio/index.html'
 };
+const BEE_REWRITE = {
+        source: '/bee.js',
+        destination: 'https://cdn.splitbee.io/sb.js',
+      }
+
+const HIVE_REWRITE =
+      {
+        source: '/_hive/:slug',
+        destination: 'https://hive.splitbee.io/:slug',
+}
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
@@ -22,7 +32,9 @@ module.exports = withBundleAnalyzer({
       domains: ['cdn.sanity.io']
     }
   },
-  rewrites: () => [STUDIO_REWRITE],
+  async rewrites() {
+    return [STUDIO_REWRITE, BEE_REWRITE, HIVE_REWRITE]
+  },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       Object.assign(config.resolve.alias, {
