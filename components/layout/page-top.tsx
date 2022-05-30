@@ -1,6 +1,4 @@
 import RoundImage from '@/components/image/round-image';
-import PageTitle from '@/components/misc/page-title';
-import Subtitle from '@/components/misc/subtitle';
 import PostBody from '@/components/misc/post-body';
 
 export default function PageTop({
@@ -11,19 +9,30 @@ export default function PageTop({
   text
 }) {
   return (
-    <section>
-      <PageTitle>{title}</PageTitle>
-      {subtitle && <Subtitle>{subtitle}</Subtitle>}
-      <RoundImage
-        alt={title}
-        // width={128}
-        // height={128}
-        url={pictureUrl}
-        className="w-24 h-24"
-      />
-      <PostBody text={text} />
-      {socials.length > 0 &&
-        socials.map((social, index) => <p key={index}>{social}</p>)}
-    </section>
+    <div className="flex flex-col-reverse sm:flex-row items-start">
+      <div className="flex flex-col pr-8">
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1">
+          {title}
+        </h1>
+        {subtitle && (
+          <h2 className="text-2xl md:text-3xl font-medium tracking-tight">
+            {subtitle}
+          </h2>
+        )}
+        <PostBody text={text} />
+        {socials.map((social, index) => (
+          <p key={index}>{social}</p>
+        ))}
+      </div>
+      <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
+        <RoundImage
+          alt={title}
+          width={176}
+          height={176}
+          url={pictureUrl}
+          className="w-24 h-24"
+        />
+      </div>
+    </div>
   );
 }

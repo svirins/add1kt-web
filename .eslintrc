@@ -1,17 +1,15 @@
 {
-  "extends": [
+    "extends": [
     "next",
     "next/core-web-vitals",
-    "eslint:recommended",
     "plugin:@asbjorn/groq/recommended"
   ],
   "rules": {
-    "no-unused-vars": [0, { "args": "after-used" }],
     "react/prop-types": 0,
     "react/no-unescaped-entities": 0,
     "import/no-anonymous-default-export": 0
   },
-  "globals": {
+    "globals": {
     "React": true,
     "google": true,
     "mount": true,

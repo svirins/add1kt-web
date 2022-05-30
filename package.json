@@ -67,5 +67,11 @@
   },
   "volta": {
     "node": "16.15.0"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none"
   }
 }

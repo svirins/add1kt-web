@@ -1,7 +1,7 @@
 export default function PageTitle({ children }) {
   return (
-    <h2 className="mb-4 md:mb-8 text-3xl md:text-5xl font-bold tracking-tight">
+    <h1 className="mfont-bold text-3xl md:text-5xl tracking-tight mb-1">
       {children}
-    </h2>
+    </h1>
   );
 }
