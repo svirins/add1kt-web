@@ -24,8 +24,8 @@ export default function PageTop({
           <p key={index}>{social}</p>
         ))}
       </div>
-      <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
-        <RoundImage alt={title} width={176} height={176} url={pictureUrl} />
+      <div className=" mb-8 md:mb-0   w-32 h-32 md:w-64 md:h-64 ">
+        <RoundImage alt={title} width={256} height={256} url={pictureUrl} />
       </div>
     </div>
   );

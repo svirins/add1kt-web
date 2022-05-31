@@ -7,7 +7,7 @@ function RoundImage({ url, height = 44, width = 44, alt }) {
   //   }, url);
   return (
     <img
-      src={urlFor(url).width(width).url()}
+      src={urlFor(url).width(width).height(height).url()}
       className="rounded-full align-middle"
       // height={`${height}px`}
       // width={`${width}px`}
