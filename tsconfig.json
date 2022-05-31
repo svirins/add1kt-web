@@ -30,6 +30,6 @@
     "**/*.tsx",
     "messages/**.json",
     "scripts/sanity-algolia.js"
-  ],
+, "pages/api/algolia/index.js"  ],
   "exclude": ["node_modules"]
 }
