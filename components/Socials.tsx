@@ -10,5 +10,5 @@ export default function Socials({ socials }) {
       </ExternalLink>
     );
   });
-  return <div className="inline-flex">{icons}</div>;
+  return <>{icons}</>;
 }

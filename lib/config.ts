@@ -9,7 +9,7 @@ export const globalConfig = {
     pageSize: 6,
     morePostsSize: 6,
     featuredPostsSize: 6,
-    allPostsSize: 50
+    allPostsSize: 50,
   },
   menuLinks: [
     { href: '/', title: 'home' },
@@ -20,7 +20,9 @@ export const globalConfig = {
   siteUrl: 'https://addict.cf',
   youtubeLink: 'https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A/',
   facebookLink: 'https://www.facebook.com/doktorGrin/',
-  telegramLink: 'https://tg.me'
+  telegramLink: 'https://tg.me',
+  trimmedHeaderLength:55
+
 };
 
 export const localizedAlgoliaIndices: LocalizedIndex[] = [

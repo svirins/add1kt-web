@@ -16,7 +16,7 @@ export const instagram = (
 export const youtube = (
   <svg
   xmlns="http://www.w3.org/2000/svg"
-  className="w-8 h-6"
+  className="w-5 h-5"
   fill="currentColor"
   viewBox="-35.20005 -41.33325 305.0671 247.9995"
 >
@@ -28,7 +28,7 @@ export const youtube = (
 
 export const facebook = (
   <svg
-    className="w-6 h-6"
+    className="w-5 h-5"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -39,7 +39,7 @@ export const facebook = (
 
 export const telegram = (
   <svg
-    className="w-6 h-6"
+    className="w-5 h-5"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 496 512"
     fill="currentColor"

@@ -20,12 +20,14 @@ export default function PageTop({
           </h2>
         )}
         <PostBody text={text} />
+        <div className="flex itms-center align-middle mb-2">
+          {socials.length > 0 && <Socials socials={socials} />}
+        </div>
       </div>
       <div className="flex-col">
-        <div className=" mb-8 md:mb-0   w-32 h-32 md:w-64 md:h-64">
+        <div className="mb-4 md:mb-0   w-32 h-32 md:w-48 md:h-48">
           <RoundImage alt={title} width={256} height={256} url={pictureUrl} />
         </div>
-        {socials.length > 0 && <Socials socials={socials} />}
       </div>
     </div>
   );
