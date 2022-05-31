@@ -6,13 +6,13 @@ import {
   getTotalPostsNumber
 } from '@/lib/api';
 
-import Search from '@/components/search/search';
-import MorePosts from '@/components/post/more-posts';
-import SectionSeparator from '@/components/misc/section-separator';
-import Container from '@/components/layout/container';
-import MorepostsControls from '@/components/post/moreposts-controls';
-import PageTop from '@/components/layout/page-top';
-import Subtitle from '@/components/misc/subtitle';
+import Search from '@/components/search/Search';
+import MorePosts from '@/components/post/MorePosts';
+import SectionSeparator from '@/components/misc/SectionSeparator';
+import Container from '@/components/layout/Container';
+import MorepostsControls from '@/components/post/MorePostsControls';
+import PageTop from '@/components/layout/PageTop';
+import Subtitle from '@/components/misc/Subtitle';
 
 export default function Index({ pageData, featuredPosts, total }) {
   const t = useTranslations('Titles');

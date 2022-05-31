@@ -1,6 +1,6 @@
-import Container from '@/components/layout/container';
-import SectionSeparator from '@/components/misc/section-separator';
-import MorePosts from '@/components/post/more-posts';
+import Container from '@/components/layout/Container';
+import SectionSeparator from '@/components/misc/SectionSeparator';
+import MorePosts from '@/components/post/MorePosts';
 import {
   getPaginatedPosts,
   getTotalPostsNumber,
@@ -10,8 +10,8 @@ import { useTranslations } from 'next-intl';
 
 import { globalConfig } from '@/lib/config';
 
-import PageTop from '@/components/layout/page-top';
-import PaginationControls from '@/components/post/pagination-controls';
+import PageTop from '@/components/layout/PageTop';
+import PaginationControls from '@/components/post/PaginationContols';
 
 export default function BlogIndexPage({
   pageData,

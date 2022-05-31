@@ -1,5 +1,5 @@
 import Script from 'next/script';
-import { globalConfig } from '@/lib/config'
+import { globalConfig } from '@/lib/config';
 export const Analytics: React.VFC = () =>
   typeof window != 'undefined' &&
   window.location.href.includes(globalConfig.siteUrl) ? (

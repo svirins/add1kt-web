@@ -1,4 +1,3 @@
-
 export type LocalizedIndex = {
   indexName: string;
   locale: string;
@@ -19,9 +18,9 @@ export const globalConfig = {
     { href: '/about', title: 'about' }
   ],
   siteUrl: 'https://addict.cf',
-  youtubeLink: "youtube",
-  facebookLink: "facebook",
-  telegramLink: "facebook",
+  youtubeLink: 'https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A/',
+  facebookLink: 'https://www.facebook.com/doktorGrin/',
+  telegramLink: 'https://tg.me'
 };
 
 export const localizedAlgoliaIndices: LocalizedIndex[] = [

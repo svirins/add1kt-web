@@ -29,7 +29,8 @@
     "**/*.ts",
     "**/*.tsx",
     "messages/**.json",
-    "scripts/sanity-algolia.js"
-, "pages/api/algolia/index.js"  ],
+    "scripts/sanity-algolia.js",
+    "pages/api/algolia/index.js"
+  ],
   "exclude": ["node_modules"]
 }

@@ -6,15 +6,14 @@ const STUDIO_REWRITE = {
       : '/studio/index.html'
 };
 const BEE_REWRITE = {
-        source: '/bee.js',
-        destination: 'https://cdn.splitbee.io/sb.js',
-      }
+  source: '/bee.js',
+  destination: 'https://cdn.splitbee.io/sb.js'
+};
 
-const HIVE_REWRITE =
-      {
-        source: '/_hive/:slug',
-        destination: 'https://hive.splitbee.io/:slug',
-}
+const HIVE_REWRITE = {
+  source: '/_hive/:slug',
+  destination: 'https://hive.splitbee.io/:slug'
+};
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
@@ -33,7 +32,7 @@ module.exports = withBundleAnalyzer({
     }
   },
   async rewrites() {
-    return [STUDIO_REWRITE, BEE_REWRITE, HIVE_REWRITE]
+    return [STUDIO_REWRITE, BEE_REWRITE, HIVE_REWRITE];
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {

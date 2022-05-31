@@ -1,7 +1,7 @@
 import { getPageContent } from '@/lib/api';
 
-import PageTop from '@/components/layout/page-top';
-import Container from '@/components/layout/container';
+import PageTop from '@/components/layout/PageTop';
+import Container from '@/components/layout/Container';
 
 export default function About({ pageData }) {
   return (

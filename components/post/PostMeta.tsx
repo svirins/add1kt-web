@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useTranslations, useIntl } from 'next-intl';
 import { parseISO } from 'date-fns';
 
-import RoundImage from '@/components/image/round-image';
+import RoundImage from '@/components/image/RoundImage';
 export default function PostMeta({ author, date, readingTime }) {
   const intl = useIntl();
   const t = useTranslations('Post');

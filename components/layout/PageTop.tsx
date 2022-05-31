@@ -1,5 +1,5 @@
-import RoundImage from '@/components/image/round-image';
-import PostBody from '@/components/misc/post-body';
+import RoundImage from '@/components/image/RoundImage';
+import PostBody from '@/components/misc/PostBody';
 
 export default function PageTop({
   title,
@@ -25,12 +25,7 @@ export default function PageTop({
         ))}
       </div>
       <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
-        <RoundImage
-          alt={title}
-          width={176}
-          height={176}
-          url={pictureUrl}
-        />
+        <RoundImage alt={title} width={176} height={176} url={pictureUrl} />
       </div>
     </div>
   );
