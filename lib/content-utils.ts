@@ -1,4 +1,5 @@
 import { globalConfig } from '@/lib/config';
+import { youtube, facebook, telegram } from '@/components/Icons';
 
 export const shimmer = (w, h) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -24,4 +25,18 @@ export function getSkipValue(page) {
   return skipMultiplier > 0
     ? globalConfig.pagination.pageSize * skipMultiplier
     : 0;
+}
+
+export function getSocialIconByLink(url) {
+  if (url.search(/youtube/i) !== -1) {
+    return youtube;
+  }
+  if (url.search(/facebook/i) !== -1) {
+    return facebook;
+  }
+  if (url.search(/t.me/i) !== -1) {
+    return telegram;
+  }
+
+  return null;
 }

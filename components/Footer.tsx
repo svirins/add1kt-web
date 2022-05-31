@@ -3,21 +3,11 @@ import { useTranslations } from 'next-intl';
 import { globalConfig } from '@/lib/config';
 import NavItemFooter from '@/components/NavItemFooter';
 import SectionSeparator from '@/components/SectionSeparator';
+import ExternalLink from '@/components/ExternalLink';
 
 import { youtube, facebook, telegram, vercel } from '@/components/Icons';
 
-const ExternalLink = ({ href, children }) => (
-  <a
-    className="font-medium text-base p-2 items-center transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400"
-    target="_blank"
-    rel="noopener noreferrer"
-    href={href}
-  >
-    {children}
-  </a>
-);
-
-export default function Footer() {
+function Footer() {
   const t = useTranslations('Navigation');
 
   return (
@@ -59,3 +49,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default  Footer

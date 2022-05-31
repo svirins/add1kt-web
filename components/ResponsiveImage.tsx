@@ -8,7 +8,7 @@ when a new version has been released */
 function ResponsiveImage({ url, alt, slug = '' }) {
   const image = (
     <img
-      src={urlFor(url).width(800).url()}
+      src={urlFor(url).width(800).height(480).url()}
       alt={alt}
       className={cn(
         { 'hover:opacity-75 transition-opacity': slug },

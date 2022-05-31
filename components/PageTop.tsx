@@ -1,6 +1,6 @@
 import RoundImage from '@/components/RoundImage';
 import PostBody from '@/components/PostBody';
-
+import Socials from '@/components/Socials';
 export default function PageTop({
   title,
   subtitle = '',
@@ -20,12 +20,12 @@ export default function PageTop({
           </h2>
         )}
         <PostBody text={text} />
-        {socials.map((social, index) => (
-          <p key={index}>{social}</p>
-        ))}
       </div>
-      <div className=" mb-8 md:mb-0   w-32 h-32 md:w-64 md:h-64 ">
-        <RoundImage alt={title} width={256} height={256} url={pictureUrl} />
+      <div className="flex-col">
+        <div className=" mb-8 md:mb-0   w-32 h-32 md:w-64 md:h-64">
+          <RoundImage alt={title} width={256} height={256} url={pictureUrl} />
+        </div>
+        {socials.length > 0 && <Socials socials={socials} />}
       </div>
     </div>
   );

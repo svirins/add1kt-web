@@ -20,8 +20,8 @@
   },
   "Titles": {
     "categories": "Категории",
-    "author_related_articles": "Еще посты автора ",
-    "tag_related_articles": "Еще посты с тегом ",
+    "author_related_articles": "Все посты автора ",
+    "tag_related_articles": "Все посты с тегом ",
     "blog_page": "Блог, страница ",
     "featured_posts": "Избранные посты",
     "related_posts": "Похожие посты",

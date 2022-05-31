@@ -14,14 +14,14 @@ export default function PostCard({
   readingTime
 }) {
   return (
-    <div>
+    <div className="my-4 md:my-0">
       <ResponsiveImage alt={title} slug={slug} url={previewImage} />
-      <h4 className="w-full mt-4 text-base font-medium  md:text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400 ">
+      <h4 className="w-full mt-4  font-medium  text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400 ">
         <Link href={`/blog/${slug}`}>
           <a>{title}</a>
         </Link>
       </h4>
-      <div className="flex flex-row text-sm  justify-end mb-2">
+      <div className="flex flex-row text-sm  justify-end">
         <Tags tags={tags} />
       </div>
       <div className="flex flex-row ">
