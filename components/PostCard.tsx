@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-import Tags from '@/components/tag/Tags';
-import PostMeta from '@/components/post/PostMeta';
-import { ResponsiveImage } from '@/components/image/next-sanity-image';
+import Tags from '@/components/Tags';
+import PostMeta from '@/components/PostMeta';
+import ResponsiveImage from '@/components/ResponsiveImage';
 
 export default function PostCard({
   title,

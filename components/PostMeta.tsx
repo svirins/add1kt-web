@@ -3,14 +3,14 @@ import Link from 'next/link';
 import { useTranslations, useIntl } from 'next-intl';
 import { parseISO } from 'date-fns';
 
-import RoundImage from '@/components/image/RoundImage';
+import AvatarImage from '@/components/AvatarImage';
 export default function PostMeta({ author, date, readingTime }) {
   const intl = useIntl();
   const t = useTranslations('Post');
   return (
     <>
       <div className="relative">
-        <RoundImage url={author.authorPicture} alt={author.authorName} />
+        <AvatarImage url={author.authorPicture} alt={author.authorName} />
       </div>
       <div className="pl-2 flex-1">
         <Link href={`/author/${author.authorSlug}`}>

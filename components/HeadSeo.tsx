@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-function CustomHead({ contentType, customMeta }) {
+function HeadSeo({ contentType, customMeta }) {
   const router = useRouter();
 
   const meta = {
@@ -35,4 +35,4 @@ function CustomHead({ contentType, customMeta }) {
   );
 }
 
-export default CustomHead;
+export default HeadSeo;

@@ -2,11 +2,11 @@ import { useTranslations } from 'next-intl';
 
 import { getAllTagSlugs, getTagAndRelatedPosts } from '@/lib/api';
 
-import Container from '@/components/layout/Container';
-import SectionSeparator from '@/components/misc/SectionSeparator';
-import Subtitle from '@/components/misc/Subtitle';
-import MorePosts from '@/components/post/MorePosts';
-import PageTop from '@/components/layout/PageTop';
+import Container from '@/components/Container';
+import SectionSeparator from '@/components/SectionSeparator';
+import Subtitle from '@/components/Subtitle';
+import MorePosts from '@/components/MorePosts';
+import PageTop from '@/components/PageTop';
 
 export default function Tag({ tag, sameTagPosts }) {
   const t = useTranslations('Titles');

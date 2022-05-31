@@ -1,14 +1,14 @@
 import { useTranslations } from 'next-intl';
 
-import Tags from '@/components/tag/Tags';
-import PostMeta from '@/components/post/PostMeta';
-import { ResponsiveImage } from '@/components/image/next-sanity-image';
+import Tags from '@/components/Tags';
+import PostMeta from '@/components/PostMeta';
+import ResponsiveImage from '@/components/ResponsiveImage';
 
-import Container from '@/components/layout/Container';
-import PostBody from '@/components/misc/PostBody';
-import MorePosts from '@/components/post/MorePosts';
-import SectionSeparator from '@/components/misc/SectionSeparator';
-import Subtitle from '@/components/misc/Subtitle';
+import Container from '@/components/Container';
+import PostBody from '@/components/PostBody';
+import MorePosts from '@/components/MorePosts';
+import SectionSeparator from '@/components/SectionSeparator';
+import Subtitle from '@/components/Subtitle';
 
 import { getAllPostSlugs, getPostAndRelatedPosts } from '@/lib/api';
 

@@ -1,5 +1,5 @@
-import RoundImage from '@/components/image/RoundImage';
-import PostBody from '@/components/misc/PostBody';
+import RoundImage from '@/components/RoundImage';
+import PostBody from '@/components/PostBody';
 
 export default function PageTop({
   title,

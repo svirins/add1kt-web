@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 
 import { globalConfig } from '@/lib/config';
 
-import LocaleSwitcher from '@/components/misc/LocaleSwitcher';
-import NavItemHeader from '@/components/misc/NavItemHeader';
-import ThemeSwitcher from '@/components/misc/ThemeSwitcher';
+import LocaleSwitcher from '@/components/LocaleSwitcher';
+import NavItemHeader from '@/components/NavItemHeader';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
 
 function Header() {
   const [mounted, setMounted] = useState(false);

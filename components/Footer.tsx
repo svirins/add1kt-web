@@ -1,10 +1,10 @@
 import { useTranslations } from 'next-intl';
 
 import { globalConfig } from '@/lib/config';
-import NavItemFooter from '@/components/misc/NavItemFooter';
-import SectionSeparator from '@/components/misc/SectionSeparator';
+import NavItemFooter from '@/components/NavItemFooter';
+import SectionSeparator from '@/components/SectionSeparator';
 
-import { youtube, facebook, telegram, vercel } from '@/components/misc/Icons';
+import { youtube, facebook, telegram, vercel } from '@/components/Icons';
 
 const ExternalLink = ({ href, children }) => (
   <a

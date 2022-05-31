@@ -6,9 +6,9 @@ import { Configure, InstantSearch } from 'react-instantsearch-hooks';
 
 import { localizedAlgoliaIndices } from '@/lib/config';
 
-import Autocomplete from '@/components/search/Autocomplete';
-import Hit from '@/components/search/Hit';
-import Hits from '@/components/search/Hits';
+import Autocomplete from '@/components/Autocomplete';
+import Hit from '@/components/Hit';
+import Hits from '@/components/Hits';
 
 function Search() {
   const { locale } = useRouter();
