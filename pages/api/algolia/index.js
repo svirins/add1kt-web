@@ -18,12 +18,12 @@ const sanity = sanityClient({
   useCdn: false
 });
 
-export default function handler(request, _) {
-  // if (request.headers['content-type'] !== 'application/json') {
-  //   response.status(400);
-  //   response.json({ message: 'Bad request' });
-  //   return;
-  // }
+export default function handler(request, response) {
+  if (request.headers['content-type'] !== 'application/json') {
+    response.status(400);
+    response.json({ message: 'Bad request' });
+    return;
+  }
   const projection = `"objectID": _id,
                       "title": title.ru,
                       "slug": slug.current,
@@ -34,17 +34,26 @@ export default function handler(request, _) {
     {
       post: {
         index: algolia.initIndex(indexName),
-        projection
       }
     },
-    (document) => document
-  );
+    (document) => {
+      switch (document._type) {
+        case 'post':
+          return {
+            title: document.title,
+            slug: document.slug.current,
+          }
+        default:
+          throw new Error('You didnt handle a type you declared interest in')
+      }
+    }
+  )
 
   return (
     sanityAlgolia
       .webhookSync(sanity, request.bodyy)
       // .then(() => response.status(200).send('ok'))
-      .then(() => ({ status: 200, body: 'ok' }))
+      .then(() => res.status(200).send('ok'))
       .catch((error) => {
         logger.error(
           {
@@ -60,5 +69,5 @@ export default function handler(request, _) {
           error.message
         );
       })
-  )
+  );
 }
