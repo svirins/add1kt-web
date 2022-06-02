@@ -66,6 +66,10 @@
   "volta": {
     "node": "16.14.0"
   },
+  "engines": {
+   "yarn": "1.22.17",
+   "npm" : "please-use-yarn"
+  },
   "prettier": {
     "arrowParens": "always",
     "singleQuote": true,
