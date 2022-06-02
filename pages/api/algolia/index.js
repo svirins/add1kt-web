@@ -1,6 +1,6 @@
 import algoliasearch from 'algoliasearch';
 import sanityClient from '@sanity/client';
-import indexer from 'sanity-algolia';
+import indexer, { flattenBlocks } from 'sanity-algolia';
 
 // TODO: im[plement 2 language search
 
@@ -16,40 +16,33 @@ export const sanity = sanityClient({
   useCdn: false
 });
 
-const handler = (req, res) => {
+export default function handler(req, res)  {
   if (req.headers['content-type'] !== 'application/json') {
     res.status(400);
     res.json({ message: 'Bad request' });
     return;
   }
-
-  const algoliaIndex = algolia.initIndex('addict-ru');
-
   const sanityAlgolia = indexer(
     {
       post: {
-        index: 'addict-ru',
-        projection: `{
-          "title": title.ru
-          "slug": slug.current,
-          "tags: tags[]->title,
-          "body": pt::text(text.ru)
-        }`
-      }
+        index: algolia.initIndex('addict-ru'),
+      },
     },
-    (document) => {
-      return {
-        title: document.title,
-        slug: document.slug,
-        body: document.body,
-        tags: document.tags
-      };
+    document => {
+      switch (document._type) {
+        case 'post':
+          return {
+            title: document.title,
+            slug: document.slug.current,
+            tags: document.tags,
+          };
+        default:
+          throw new Error(`Unknown type: ${document.type}`);
+      }
     }
   );
 
   return sanityAlgolia
     .webhookSync(sanity, req.body)
     .then(() => res.status(200).send('ok'));
-};
-
-export default handler;
+}
