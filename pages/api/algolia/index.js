@@ -1,6 +1,7 @@
 import algoliasearch from 'algoliasearch';
 import sanityClient from '@sanity/client';
 import indexer, { flattenBlocks } from 'sanity-algolia';
+import { logger, formatObjectKeys } from '@/lib/logger';
 
 // TODO: im[plement 2 language search
 
@@ -42,7 +43,25 @@ export default function handler(req, res)  {
     }
   );
 
-  return sanityAlgolia
-    .webhookSync(sanity, req.body)
-    .then(() => res.status(200).send('ok'));
+  try {
+  const apiResponse = sanityAlgolia
+  .webhookSync(sanity, req.body)
+  .then(() => res.status(200).send('ok'));
+  }
+  catch (error) {
+    logger.error(
+      {
+        request: {
+          headers: formatObjectKeys(req.headers),
+          url: req.url,
+          method: req.method
+        },
+        response: {
+          statusCode: res.statusCode
+        }
+      },
+      error.message
+    );
+  }
+  return apiResponse;
 }
