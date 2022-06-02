@@ -5,7 +5,7 @@ import { getAllTagSlugs, getTagAndRelatedPosts } from '@/lib/api';
 import Container from '@/components/Container';
 import SectionSeparator from '@/components/SectionSeparator';
 import Subtitle from '@/components/Subtitle';
-import MorePosts from '@/components/MorePosts';
+import PostsGrid from '@/components/PostsGrid';
 import PageTop from '@/components/PageTop';
 
 export default function Tag({ tag, sameTagPosts }) {
@@ -24,7 +24,7 @@ export default function Tag({ tag, sameTagPosts }) {
           {`${t('tag_related_articles')}
           "${tag.tagTitle.toLowerCase()}"`}
         </Subtitle>
-        {sameTagPosts && <MorePosts posts={sameTagPosts} />}
+        {sameTagPosts && <PostsGrid posts={sameTagPosts} />}
       </div>
     </Container>
   );

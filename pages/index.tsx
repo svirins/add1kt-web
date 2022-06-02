@@ -7,7 +7,7 @@ import {
 } from '@/lib/api';
 
 import Search from '@/components/Search';
-import MorePosts from '@/components/MorePosts';
+import PostsGrid from '@/components/PostsGrid';
 import SectionSeparator from '@/components/SectionSeparator';
 import Container from '@/components/Container';
 import MorepostsControls from '@/components/MorePostsControls';
@@ -30,7 +30,7 @@ export default function Index({ pageData, featuredPosts, total }) {
         />
         <SectionSeparator />
         <Subtitle>{t('featured_posts')}</Subtitle>
-        {featuredPosts?.length > 0 && <MorePosts posts={featuredPosts} />}
+        {featuredPosts?.length > 0 && <PostsGrid posts={featuredPosts} />}
         <MorepostsControls isDisabled={total < 6} />
       </div>
     </Container>

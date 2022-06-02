@@ -10,7 +10,6 @@ export default function About({ pageData }) {
         <PageTop
           title={pageData.pageTitle}
           subtitle=""
-          pictureUrl={pageData.pagePicture}
           text={pageData.pageText}
         />
       </div>

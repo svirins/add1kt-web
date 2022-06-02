@@ -5,7 +5,7 @@ import { getAllAuthorSlugs, getAuthorAndRelatedPosts } from '@/lib/api';
 import Container from '@/components/Container';
 import SectionSeparator from '@/components/SectionSeparator';
 import Subtitle from '@/components/Subtitle';
-import MorePosts from '@/components/MorePosts';
+import PostsGrid from '@/components/PostsGrid';
 import PageTop from '@/components/PageTop';
 
 export default function Author({ author, authorPosts }) {
@@ -25,7 +25,7 @@ export default function Author({ author, authorPosts }) {
           {t('author_related_articles')}
           {author.authorTitle}
         </Subtitle>
-        {authorPosts && <MorePosts posts={authorPosts} />}
+        {authorPosts && <PostsGrid posts={authorPosts} />}
       </div>
     </Container>
   );

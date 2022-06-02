@@ -5,7 +5,7 @@ export default function PageTop({
   title,
   subtitle = '',
   socials = [],
-  pictureUrl,
+  pictureUrl = "",
   text
 }) {
   return (
@@ -24,11 +24,12 @@ export default function PageTop({
           {socials.length > 0 && <Socials socials={socials} />}
         </div>
       </div>
-      <div className="flex-col">
+      {pictureUrl && (      <div className="flex-col">
         <div className="mb-4 md:mb-0   w-32 h-32 md:w-48 md:h-48">
           <RoundImage alt={title} width={256} height={256} url={pictureUrl} />
         </div>
-      </div>
+      </div>)}
+
     </div>
   );
 }

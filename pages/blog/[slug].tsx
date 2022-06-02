@@ -6,7 +6,7 @@ import ResponsiveImage from '@/components/ResponsiveImage';
 
 import Container from '@/components/Container';
 import PostBody from '@/components/PostBody';
-import MorePosts from '@/components/MorePosts';
+import PostsGrid from '@/components/PostsGrid';
 import SectionSeparator from '@/components/SectionSeparator';
 import Subtitle from '@/components/Subtitle';
 
@@ -42,7 +42,7 @@ export default function Post({ post, relatedPosts }) {
         <PostBody text={post.postText} />
         <SectionSeparator />
         <Subtitle>{t('related_posts')}</Subtitle>
-        {relatedPosts && <MorePosts posts={relatedPosts} />}
+        {relatedPosts && <PostsGrid posts={relatedPosts} />}
       </div>
     </Container>
   );

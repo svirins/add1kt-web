@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { truncate } from '@/lib/content-utils'
+import { truncate } from '@/lib/content-utils';
 import Tags from '@/components/Tags';
 import PostMeta from '@/components/PostMeta';
 import ResponsiveImage from '@/components/ResponsiveImage';

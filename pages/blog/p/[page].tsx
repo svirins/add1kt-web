@@ -1,6 +1,6 @@
 import Container from '@/components/Container';
 import SectionSeparator from '@/components/SectionSeparator';
-import MorePosts from '@/components/MorePosts';
+import PostsGrid from '@/components/PostsGrid';
 import {
   getPaginatedPosts,
   getTotalPostsNumber,
@@ -31,7 +31,7 @@ export default function BlogIndexPage({
           text={pageData.pageText}
         />
         <SectionSeparator />
-        {paginatedPosts?.length > 0 && <MorePosts posts={paginatedPosts} />}
+        {paginatedPosts?.length > 0 && <PostsGrid posts={paginatedPosts} />}
         <PaginationControls
           currentPage={Number(page)}
           totalPages={Number(totalPages)}

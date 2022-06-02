@@ -3,8 +3,7 @@ import ExternalLink from '@/components/ExternalLink';
 
 export default function Socials({ socials }) {
   const icons = socials.map((social, index) => {
-
-      return (
+    return (
       <ExternalLink key={index} href={social}>
         {getSocialIconByLink(social)}
       </ExternalLink>

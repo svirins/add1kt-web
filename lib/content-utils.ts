@@ -41,22 +41,19 @@ export function getSocialIconByLink(url) {
   return null;
 }
 
-
-
-export function truncate (str) {
-    let i
-    let bits = str.split('');
-    if (bits.length > globalConfig.trimmedHeaderLength) {
-        for (i = bits.length - 1; i > -1; --i) {
-            if (i > globalConfig.trimmedHeaderLength) {
-                bits.length = i;
-            }
-            else if (' ' === bits[i]) {
-                bits.length = i;
-                break;
-            }
-        }
-        bits.push('...');
+export function truncate(str) {
+  let i;
+  let bits = str.split('');
+  if (bits.length > globalConfig.trimmedHeaderLength) {
+    for (i = bits.length - 1; i > -1; --i) {
+      if (i > globalConfig.trimmedHeaderLength) {
+        bits.length = i;
+      } else if (' ' === bits[i]) {
+        bits.length = i;
+        break;
+      }
     }
-    return bits.join('');
-};
+    bits.push('...');
+  }
+  return bits.join('');
+}
