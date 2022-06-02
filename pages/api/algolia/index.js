@@ -1,6 +1,5 @@
 import algoliasearch from 'algoliasearch';
 import sanityClient from '@sanity/client';
-import { NextApiRequest, NextApiResponse } from 'next';
 import indexer from 'sanity-algolia';
 import { logger, formatObjectKeys } from './_logger';
 
