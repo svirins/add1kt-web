@@ -22,12 +22,14 @@ export default function Index({ pageData, featuredPosts, total }) {
         <div id="autocomplete" className="relative w-full">
           <Search />
         </div>
-        <PageTop
-          title={pageData.pageTitle}
-          subtitle=""
-          pictureUrl={pageData.pagePicture}
-          text={pageData.pageText}
-        />
+        {pageData && (
+          <PageTop
+            title={pageData.pageTitle}
+            subtitle=""
+            pictureUrl={pageData.pagePicture}
+            text={pageData.pageText}
+          />
+        )}
         <SectionSeparator />
         <Subtitle>{t('featured_posts')}</Subtitle>
         {featuredPosts?.length > 0 && <PostsGrid posts={featuredPosts} />}
@@ -45,7 +47,7 @@ export async function getStaticProps({ locale }) {
     props: {
       pageData,
       featuredPosts,
-      total,
+      total: total && 0,
       messages: (await import(`../messages/${locale}.json`)).default
     }
   };

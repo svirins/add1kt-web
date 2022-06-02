@@ -12,19 +12,23 @@ export default function Tag({ tag, sameTagPosts }) {
   const t = useTranslations('Titles');
   return (
     <Container type="page" title={tag.tagTitle}>
-      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
-        <PageTop
-          title={tag.tagTitle}
-          subtitle=""
-          pictureUrl={tag.tagPicture}
-          text={tag.tagText}
-        />
-        <SectionSeparator />
-        <Subtitle>
-          {`${t('tag_related_articles')}
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto pb-16">
+        {tag && (
+          <>
+            <PageTop
+              title={tag.tagTitle}
+              subtitle=""
+              pictureUrl={tag.tagPicture}
+              text={tag.tagText}
+            />
+            <SectionSeparator />
+            <Subtitle>
+              {`${t('tag_related_articles')}
           "${tag.tagTitle.toLowerCase()}"`}
-        </Subtitle>
-        {sameTagPosts && <PostsGrid posts={sameTagPosts} />}
+            </Subtitle>
+          </>
+        )}
+        {sameTagPosts?.length > 0 && <PostsGrid posts={sameTagPosts} />}
       </div>
     </Container>
   );

@@ -13,19 +13,23 @@ export default function Author({ author, authorPosts }) {
   return (
     <Container type="page" title={author.authorTitle}>
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
-        <PageTop
-          title={author.authorTitle}
-          subtitle=""
-          socials={author.authorSocials}
-          pictureUrl={author.authorPicture}
-          text={author.authorBio}
-        />
-        <SectionSeparator />
-        <Subtitle>
-          {t('author_related_articles')}
-          {author.authorTitle}
-        </Subtitle>
-        {authorPosts && <PostsGrid posts={authorPosts} />}
+        {author && (
+          <>
+            <PageTop
+              title={author.authorTitle}
+              subtitle=""
+              socials={author.authorSocials}
+              pictureUrl={author.authorPicture}
+              text={author.authorBio}
+            />
+            <SectionSeparator />
+            <Subtitle>
+              {t('author_related_articles')}
+              {author.authorTitle}
+            </Subtitle>
+          </>
+        )}
+        {authorPosts?.length > 0 && <PostsGrid posts={authorPosts} />}
       </div>
     </Container>
   );

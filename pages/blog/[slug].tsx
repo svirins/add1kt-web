@@ -14,6 +14,7 @@ import { getAllPostSlugs, getPostAndRelatedPosts } from '@/lib/api';
 
 export default function Post({ post, relatedPosts }) {
   const t = useTranslations('Titles');
+  if (!post || relatedPosts?.lenght ===0) return <p>no data</p>
   return (
     <Container
       title={post.postTitle}

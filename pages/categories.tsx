@@ -26,18 +26,18 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
             </h1>
           </div>
           <div className="flex max-w-lg flex-wrap">
-            {sortedAutors.length === 0 && 'No tags found.'}
-            {sortedAutors.map((author) => {
-              return (
-                <div key={author} className="mt-2 mb-2 mr-5">
-                  <Link href={`/author/${author.authorSlug}`}>
-                    <a className="mr-3 text-base font-medium text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
-                      {`${author.authorTitle} (${author.relatedPostsCount})`}
-                    </a>
-                  </Link>
-                </div>
-              );
-            })}
+            {sortedAutors?.length > 0 &&
+              sortedAutors.map((author) => {
+                return (
+                  <div key={author} className="mt-2 mb-2 mr-5">
+                    <Link href={`/author/${author.authorSlug}`}>
+                      <a className="mr-3 text-base font-medium text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
+                        {`${author.authorTitle} (${author.relatedPostsCount})`}
+                      </a>
+                    </Link>
+                  </div>
+                );
+              })}
           </div>
         </div>
         <div className="flex flex-col items-start justify-start divide-y divide-gray-300 dark:divide-gray-500 mb-6 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
@@ -47,18 +47,18 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
             </h1>
           </div>
           <div className="flex max-w-lg flex-wrap">
-            {sortedTags.length === 0 && 'No tags found.'}
-            {sortedTags.map((tag) => {
-              return (
-                <div key={tag} className="mt-2 mb-2 mr-5">
-                  <Link href={`/tag/${tag.tagSlug}`}>
-                    <a className="mr-3 text-base font-medium  text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
-                      {`#${tag.tagTitle} (${tag.relatedPostsCount})`}
-                    </a>
-                  </Link>
-                </div>
-              );
-            })}
+            {sortedTags?.length > 0 &&
+              sortedTags.map((tag) => {
+                return (
+                  <div key={tag} className="mt-2 mb-2 mr-5">
+                    <Link href={`/tag/${tag.tagSlug}`}>
+                      <a className="mr-3 text-base font-medium  text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
+                        {`#${tag.tagTitle} (${tag.relatedPostsCount})`}
+                      </a>
+                    </Link>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>

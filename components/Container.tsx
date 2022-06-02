@@ -8,7 +8,10 @@ export default function Container(props: ContainerProps) {
   return (
     <div className="flex flex-col justify-center">
       <HeadSeo customMeta={customMeta} contentType={type} />
-      <main id="skip" className="flex flex-col justify-center px-8 max-w-2xl mx-auto">
+      <main
+        id="skip"
+        className="flex flex-col justify-center px-8 max-w-2xl mx-auto"
+      >
         <Header />
         {children}
         <Footer />

@@ -30,7 +30,7 @@ function Header() {
           ))}
         </div>
         {mounted && (
-          <div className="inline-flex justify-center">
+          <div className="inline-flex items-center">
             <LocaleSwitcher />
             <ThemeSwitcher />
           </div>

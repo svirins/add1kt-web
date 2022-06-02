@@ -7,11 +7,12 @@ export default function About({ pageData }) {
   return (
     <Container title={pageData.pageTitle} type="page">
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
-        <PageTop
-          title={pageData.pageTitle}
-          subtitle=""
-          text={pageData.pageText}
-        />
+        {pageData && (
+          <PageTop
+            title={pageData.pageTitle}
+            subtitle=""
+            text={pageData.pageText}
+          />)}
       </div>
     </Container>
   );
