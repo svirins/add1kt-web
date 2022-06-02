@@ -11,16 +11,15 @@ const algolia = algoliasearch(
   process.env.ALGOLIA_SEARCH_ADMIN_KEY
 );
 
-const clientConfig =  {
+
+const sanity = sanityClient({
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'development',
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   apiVersion: '2021-03-25',
   useCdn: false
-}
+});
 
-const sanity = sanityClient(clientConfig);
-
-export default function handler(request: NextApiRequest, response: NextApiResponse) {
+export default function handler(request, response) {
   if (request.headers['content-type'] !== 'application/json') {
     response.status(400);
     response.json({ message: 'Bad request' });
@@ -43,7 +42,7 @@ export default function handler(request: NextApiRequest, response: NextApiRespon
   );
 
   return sanityAlgolia
-    .webhookSync(sanity, request.body as any)
+    .webhookSync(sanity, request.bodyy)
     .then(() => response.status(200).send('ok'))
     .catch((error) => {
       logger.error(
