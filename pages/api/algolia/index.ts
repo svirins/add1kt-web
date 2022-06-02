@@ -1,6 +1,6 @@
 import algoliasearch from 'algoliasearch';
 import sanityClient from '@sanity/client';
-import { VercelRequest, VercelResponse } from '@next/node'
+import { NextApiRequest, NextApiResponse } from 'next';
 import indexer from 'sanity-algolia';
 import { logger, formatObjectKeys } from './_logger';
 
@@ -20,40 +20,31 @@ const clientConfig =  {
 
 const sanity = sanityClient(clientConfig);
 
-export default function handler(request, _) {
-  const passphrase = request.query.get('passphrase');
-  if (passphrase !== process.env['ALGOLIA_SEARCH_ADMIN_KEY']) {
-    return {
-      status: 401
-    };
+export default function handler(request: NextApiRequest, response: NextApiResponse) {
+  if (request.headers['content-type'] !== 'application/json') {
+    response.status(400);
+    response.json({ message: 'Bad request' });
+    return;
   }
-  // if (req.headers['content-type'] !== 'application/json') {
-  //   res.status(400);
-  //   res.json({ message: 'Bad request' });
-  //   return;
-  // }
   const projection = `"objectID": _id,
                       "title": title.ru,
                       "slug": slug.current,
-                      "tags": tags[] -> title.ru`
+                      "tags": tags[] -> title.ru`;
 
-  const indexName ='addict-ru'
+  const indexName = 'addict-ru';
   const sanityAlgolia = indexer(
     {
       post: {
         index: algolia.initIndex(indexName),
         projection
-      },
+      }
     },
-    (document) =>  document
+    (document) => document
   );
 
   return sanityAlgolia
     .webhookSync(sanity, request.body as any)
-    .then(() => ({
-      status: 200,
-      body: 'Success!',
-    }))
+    .then(() => response.status(200).send('ok'))
     .catch((error) => {
       logger.error(
         {
@@ -68,5 +59,5 @@ export default function handler(request, _) {
         },
         error.message
       );
-    })
+    });
 }
