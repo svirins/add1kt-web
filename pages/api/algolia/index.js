@@ -18,12 +18,12 @@ const sanity = sanityClient({
   useCdn: false
 });
 
-export default function handler(request, response) {
-  if (request.headers['content-type'] !== 'application/json') {
-    response.status(400);
-    response.json({ message: 'Bad request' });
-    return;
-  }
+export default function handler(request, _) {
+  // if (request.headers['content-type'] !== 'application/json') {
+  //   response.status(400);
+  //   response.json({ message: 'Bad request' });
+  //   return;
+  // }
   const projection = `"objectID": _id,
                       "title": title.ru,
                       "slug": slug.current,
@@ -40,22 +40,25 @@ export default function handler(request, response) {
     (document) => document
   );
 
-  return sanityAlgolia
-    .webhookSync(sanity, request.bodyy)
-    .then(() => response.status(200).send('ok'))
-    .catch((error) => {
-      logger.error(
-        {
-          request: {
-            headers: formatObjectKeys(request.headers),
-            url: request.url,
-            method: request.method
+  return (
+    sanityAlgolia
+      .webhookSync(sanity, request.bodyy)
+      // .then(() => response.status(200).send('ok'))
+      .then(() => ({ status: 200, body: 'ok' }))
+      .catch((error) => {
+        logger.error(
+          {
+            request: {
+              headers: formatObjectKeys(request.headers),
+              url: request.url,
+              method: request.method
+            },
+            response: {
+              statusCode: request.statusCode
+            }
           },
-          response: {
-            statusCode: request.statusCode
-          }
-        },
-        error.message
-      );
-    });
+          error.message
+        );
+      })
+  )
 }
