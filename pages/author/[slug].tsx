@@ -56,7 +56,7 @@ export async function getStaticPaths({ locales }) {
 export async function getStaticProps({ params, locale }) {
   const { authorPosts, ...author } = await getAuthorAndRelatedPosts(
     locale,
-    params.slug
+    params.slug.replace(/\/$/, '').split('/').pop()
   );
   return {
     props: {
