@@ -15,7 +15,8 @@ import {
   getPaginatedPostsQuery,
   getTagsAndRelatedPostsCountQuery,
   getAuthorsAndRelatedPostsCountQuery,
-  getTotalPostsNumberQuery
+  getTotalPostsNumberQuery,
+  getTotalPostForAlgoliaQuery
 } from './queries';
 
 export async function getFeaturedPosts(locale) {
@@ -106,4 +107,9 @@ export async function getPaginatedPosts(locale, page) {
 export async function getTotalPostsNumber() {
   const totalPosts: number = await client.fetch(getTotalPostsNumberQuery);
   return totalPosts;
+}
+
+export async function getPostsForAlgolia(locale) {
+  const data = await client.fetch(getTotalPostForAlgoliaQuery, {locale});
+  return data;
 }
