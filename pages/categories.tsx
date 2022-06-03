@@ -18,7 +18,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
   );
   return (
     <Container title={t('categories')} type="page">
-      <div className="flex flex-col  justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="flex flex-col  justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16 min-h-screen">
         <div className="flex flex-col items-start justify-start divide-y divide-gray-300 dark:divide-gray-500 md:mb-6 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
           <div className="space-x-2 pt-2 pb-4 md:space-y-5">
             <h1 className="text-3xl md:text-5xl font-bold tracking-tight sm:leading-10 md:border-r-2 md:pr-6 md:leading-14">

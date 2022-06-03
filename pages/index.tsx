@@ -48,7 +48,7 @@ export async function getStaticProps({ locale }) {
     props: {
       pageData,
       featuredPosts,
-      total: total && 0,
+      total: total,
       messages: (await import(`../messages/${locale}.json`)).default
     }
   };

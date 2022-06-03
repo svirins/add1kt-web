@@ -106,7 +106,7 @@ export async function getPaginatedPosts(locale, page) {
 
 export async function getTotalPostsNumber() {
   const totalPosts: number = await client.fetch(getTotalPostsNumberQuery);
-  return totalPosts;
+  return Number(totalPosts);
 }
 
 export async function getPostsForAlgolia(locale) {
