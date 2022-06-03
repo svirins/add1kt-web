@@ -1,8 +1,9 @@
 import { Hit as AlgoliaHit } from '@algolia/client-search';
 import Link from 'next/link';
+// TODO: change name to title
 type HitProps = {
   hit: AlgoliaHit<{
-    title: string;
+    name: string;
     slug: string;
     tags?: string[];
   }>;
@@ -14,7 +15,7 @@ console.log('HIT FOUND:', hit);
   return (
     <article className="hit">
       <Link href={`/blog/${hit.slug}`}>
-        <a>{hit.title}</a>
+        <a>{hit.name}</a>
       </Link>
     </article>
   );
