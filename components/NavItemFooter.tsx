@@ -11,7 +11,7 @@ function NavItemFooter({ href, text }) {
       <a
         className={cn(
           isActive ? ' text-teal-600' : '',
-          'font-medium text-base  p-2 items-center transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400'
+          'font-medium p-2 text-sm md:text-base items-center transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400'
         )}
       >
         <span className="capsize">{text}</span>
