@@ -32,9 +32,10 @@ yarn-error.log*
 
 # vercel
 .vercel
+.vscode
 
-
-#contentful
+studio
+sconfig.tsbuildinfo
 /public/studio
 
 /scripts/
