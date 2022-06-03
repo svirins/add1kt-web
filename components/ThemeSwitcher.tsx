@@ -11,7 +11,7 @@ const ThemeSwitch = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="ml-1 mr-[-0.60rem] h-6 w-6 md:h-8 md:w-8 rounded p-1 "
+      className="ml-1 mr-[-0.60rem] h-8 w-8 rounded px-1 "
       onClick={() =>
         setTheme(
           theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark'
