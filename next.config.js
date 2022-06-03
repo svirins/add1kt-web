@@ -1,10 +1,3 @@
-const STUDIO_REWRITE = {
-  source: '/studio/:path*',
-  destination:
-    process.env.NODE_ENV === 'development'
-      ? 'http://localhost:3333/studio/:path*'
-      : '/studio/index.html'
-};
 const BEE_REWRITE = {
   source: '/bee.js',
   destination: 'https://cdn.splitbee.io/sb.js'
@@ -15,11 +8,11 @@ const HIVE_REWRITE = {
   destination: 'https://hive.splitbee.io/:slug'
 };
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
-});
+// const withBundleAnalyzer = require('@next/bundle-analyzer')({
+//   enabled: process.env.ANALYZE === 'true'
+// });
 
-module.exports = withBundleAnalyzer({
+module.exports = {
   swcMinify: true,
   reactStrictMode: true,
   i18n: {
@@ -32,7 +25,7 @@ module.exports = withBundleAnalyzer({
     }
   },
   async rewrites() {
-    return [STUDIO_REWRITE, BEE_REWRITE, HIVE_REWRITE];
+    return [BEE_REWRITE, HIVE_REWRITE];
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
@@ -45,4 +38,4 @@ module.exports = withBundleAnalyzer({
     }
     return config;
   }
-});
+};

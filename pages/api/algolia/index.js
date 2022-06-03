@@ -24,29 +24,24 @@ export default function handler(request, response) {
     response.json({ message: 'Bad request' });
     return;
   }
-  const projection = `"objectID": _id,
-                      "title": title.ru,
-                      "slug": slug.current,
-                      "tags": tags[] -> title.ru`;
+  // const projection = `"objectID": _id,
+  //                     "title": title.ru,
+  //                     "slug": slug.current,
+  //                     "tags": tags[] -> title.ru`;
 
   const indexName = 'addict-ru';
   const sanityAlgolia = indexer(
     {
       post: {
         index: algolia.initIndex(indexName),
-      }
+         projection: `{
+          "title": title.ru
+          "slug": slug.current,
+          "tags":  tags[] ->  title.ru
+        }`,
+      },
     },
-    (document) => {
-      switch (document._type) {
-        case 'post':
-          return {
-            title: document.title,
-            slug: document.slug.current,
-          }
-        default:
-          throw new Error('You didnt handle a type you declared interest in')
-      }
-    }
+    (document) => {document}
   )
 
   return (
