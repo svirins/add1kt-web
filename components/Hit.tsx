@@ -1,24 +1,26 @@
-import { Hit as AlgoliaHit } from '@algolia/client-search';
+import type { Hit as AlgoliaHit } from 'instantsearch.js/es/types';
 import Link from 'next/link';
-// TODO: change name to title
+
+import { Snippet } from 'react-instantsearch-hooks-web';
+
 type HitProps = {
   hit: AlgoliaHit<{
-    name: string;
-    slug: string;
-    tags?: string[];
+    title: string;
+    slug: string,
+    tags: string[];
   }>;
 };
 
-function Hit({ hit }: HitProps) {
-  console.log('HIT FOUND:', hit);
-
+export default function Hit({ hit }: HitProps) {
   return (
     <article className="hit">
-      <Link href={`/blog/${hit.slug}`}>
-        <a>{hit.name}</a>
-      </Link>
+      <div>
+        <p>
+          <Link href={`/blog/${hit.slug}`}>
+            <Snippet hit={hit} attribute="title" />
+          </Link>
+        </p>
+      </div>
     </article>
   );
 }
-
-export default Hit;

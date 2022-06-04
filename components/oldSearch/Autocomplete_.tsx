@@ -1,18 +1,16 @@
 import { createElement, Fragment, useEffect, useRef, useState } from 'react';
 
 import type { SearchClient } from 'algoliasearch/lite';
-import { autocomplete, AutocompleteOptions } from '@algolia/autocomplete-js';
+import { useSearchBox } from 'react-instantsearch-hooks';
+import { autocomplete, AutocompleteOptions, Render } from '@algolia/autocomplete-js';
 import { BaseItem } from '@algolia/autocomplete-core';
-import {
- useSearchBox
-} from 'react-instantsearch-hooks';
-import 'instantsearch.css/themes/satellite.css';
+
 import '@algolia/autocomplete-theme-classic';
-import { debounce } from '@algolia/autocomplete-shared';
 
 type AutocompleteProps = Partial<AutocompleteOptions<BaseItem>> & {
   searchClient: SearchClient;
   className?: string;
+  indexName: string;
 };
 
 type SetInstantSearchUiStateOptions = {
@@ -22,23 +20,19 @@ type SetInstantSearchUiStateOptions = {
 function Autocomplete({
   searchClient,
   className,
+  indexName,
   ...autocompleteProps
 }: AutocompleteProps) {
   const autocompleteContainer = useRef<HTMLDivElement>(null);
 
-  const { query, setQuery } = useSearchBox();
+  const { query, refine: setQuery } = useSearchBox();
 
   const [instantSearchUiState, setInstantSearchUiState] =
     useState<SetInstantSearchUiStateOptions>({ query });
-  const debouncedSetInstantSearchUiState = debounce(
-    setInstantSearchUiState,
-    500
-  );
 
   useEffect(() => {
     setQuery(instantSearchUiState.query);
   }, [instantSearchUiState]);
-
 
   useEffect(() => {
     if (!autocompleteContainer.current) {
@@ -57,18 +51,17 @@ function Autocomplete({
       },
       onStateChange({ prevState, state }) {
         if (prevState.query !== state.query) {
-          debouncedSetInstantSearchUiState({
-            query: state.query,
+          setInstantSearchUiState({
+            query: state.query
           });
         }
       },
-      renderer: { createElement, Fragment, render: () => { } },
+      renderer: { createElement, Fragment, render: () => {} }
     });
 
     return () => autocompleteInstance.destroy();
   }, []);
 
   return <div className={className} ref={autocompleteContainer} />;
-
-
 }
+export default Autocomplete;

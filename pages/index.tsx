@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-
 import {
   getFeaturedPosts,
   getPageContent,
@@ -27,7 +26,7 @@ export default function Index({ pageData, featuredPosts, total }) {
             text={pageData.pageText}
           />
         )}
-        <div id="autocomplete" className="relative w-full mb-4">
+        <div className="relative w-full mb-4">
           <Search />
         </div>
         <SectionSeparator />
