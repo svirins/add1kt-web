@@ -101,9 +101,16 @@ html {
   border: initial;
 }
 
+.prose strong {
+  @apply text-neutral-700 dark:text-neutral-300 font-semibold;
+}
+
+.prose em {
+  @apply text-neutral-700 dark:text-neutral-300;
+}
 .prose img {
   /* Don't apply styles to next/image */
-  @apply m-0;
+  @apply m-0 rounded-lg;
 }
 
 .prose > :first-child {

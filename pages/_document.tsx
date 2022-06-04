@@ -45,7 +45,7 @@ export default function Document(props) {
           name="google-site-verification"
         /> */}
       </Head>
-      <body className="bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100">
+      <body className="bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 ">
         <Main />
         <NextScript />
       </body>

@@ -10,7 +10,7 @@ export default function Container(props: ContainerProps) {
       <HeadSeo customMeta={customMeta} contentType={type} />
       <main
         id="skip"
-        className="flex flex-col justify-center px-6 md:px-8  min-w-fit max-w-2xl mx-auto  bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100"
+        className="flex flex-col justify-center px-6 md:px-8  min-w-fit max-w-2xl mx-auto text-gray-800 dark:text-neutral-400 text-lg"
       >
         <Header />
         {children}
