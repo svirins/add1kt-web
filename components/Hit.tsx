@@ -10,7 +10,7 @@ type HitProps = {
 };
 
 function Hit({ hit }: HitProps) {
-console.log('HIT FOUND:', hit);
+  console.log('HIT FOUND:', hit);
 
   return (
     <article className="hit">

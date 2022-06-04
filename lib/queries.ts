@@ -146,7 +146,6 @@ export const getAuthorsAndRelatedPostsCountQuery = groq`*[_type=="author"] {
 
 export const getTotalPostsNumberQuery = groq`count(*[_type == 'post'])`;
 
-
 export const getTotalPostForAlgoliaQuery = groq`[_type == 'post'] {
   "objectID": _id,
   "title": title[$locale],

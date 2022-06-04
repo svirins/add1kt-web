@@ -12,7 +12,8 @@ export default function About({ pageData }) {
             title={pageData.pageTitle}
             subtitle=""
             text={pageData.pageText}
-          />)}
+          />
+        )}
       </div>
     </Container>
   );

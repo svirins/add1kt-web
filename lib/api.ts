@@ -110,6 +110,6 @@ export async function getTotalPostsNumber() {
 }
 
 export async function getPostsForAlgolia(locale) {
-  const data = await client.fetch(getTotalPostForAlgoliaQuery, {locale});
+  const data = await client.fetch(getTotalPostForAlgoliaQuery, { locale });
   return data;
 }

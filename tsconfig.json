@@ -30,7 +30,9 @@
     "**/*.tsx",
     "messages/**.json",
     "scripts/sanity-algolia.js",
-    "pages/api/algolia/index.js"
-, "pages/api/algolia/_logger.js", "components/RoundImage.jsx"  ],
+    "pages/api/algolia/index.js",
+    "pages/api/algolia/_logger.js",
+    "components/RoundImage.jsx"
+  ],
   "exclude": ["node_modules"]
 }

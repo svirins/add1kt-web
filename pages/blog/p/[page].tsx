@@ -20,7 +20,7 @@ export default function BlogIndexPage({
   totalPages
 }) {
   const t = useTranslations('Titles');
-    if (!pageData || paginatedPosts?.lenght === 0) return <p>no data</p>;
+  if (!pageData || paginatedPosts?.lenght === 0) return <p>no data</p>;
 
   return (
     <Container title={`${t('blog_page')} ${page}/${totalPages}`} type="page">

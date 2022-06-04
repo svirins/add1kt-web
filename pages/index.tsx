@@ -19,7 +19,6 @@ export default function Index({ pageData, featuredPosts, total }) {
   return (
     <Container title={pageData.pageTitle} type="page">
       <div className="flex flex-col justify-center items-start max-w-2xl  mx-auto pb-16">
-
         {pageData && (
           <PageTop
             title={pageData.pageTitle}
