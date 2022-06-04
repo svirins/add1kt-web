@@ -7,11 +7,10 @@ import createImageUrlBuilder from '@sanity/image-url';
 
 import { sanityConfig } from '@/lib/config';
 
-export const imageBuilder = (source) =>
-  createImageUrlBuilder(sanityConfig).image(source);
+export const imageBuilder = (source) => createImageUrlBuilder(client).image(source);
 
 export const urlFor = (source) =>
-  createImageUrlBuilder(sanityConfig).image(source);
+  createImageUrlBuilder(client).image(source);
 
 export const usePreviewSubscription =
   createPreviewSubscriptionHook(sanityConfig);
