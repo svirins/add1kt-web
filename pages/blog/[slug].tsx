@@ -22,9 +22,9 @@ export default function Post({ post, relatedPosts }) {
       date={post.postDate}
       type="article"
     >
-      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto pb-16">
         <div className="flex flex-col">
-          <h1 className="font-bold text-3xl md:text-5xl tracking-tight">
+          <h1 className="font-bold text-3xl md:text-5xl tracking-tight  text-gray-800 dark:text-gray-200">
             {post.postTitle}
           </h1>
           <div className="flex flex-row text-sm justify-end mb-4">

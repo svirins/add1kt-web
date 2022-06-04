@@ -5,6 +5,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+
       colors: {
         primary: colors.teal,
         gray: {
@@ -23,10 +24,48 @@ module.exports = {
       fontFamily: {
         sans: ['IBM Plex Sans', ...fontFamily.sans]
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              color: theme('colors.teal.600'),
+              '&:hover': {
+                color: theme('colors.teal.800')
+              },
+            },
+          }
+        },
+        dark: {
+          css: {
+            a: {
+              color: theme('colors.teal.600'),
+              '&:hover': {
+                color: theme('colors.blue.400')
+              },
+            },
+            blockquote: {
+              borderLeftColor: theme('colors.gray.700'),
+              color: theme('colors.gray.300')
+            },
+            hr: { borderColor: theme('colors.gray.700') },
+            ol: {
+              li: {
+                '&:before': { color: theme('colors.gray.500') }
+              }
+            },
+            ul: {
+              li: {
+                '&:before': { backgroundColor: theme('colors.gray.500') }
+              }
+            },
+            strong: { color: theme('colors.gray.100') },
+          }
+        }
+      })
     },
     variants: {
       typography: ['dark']
     },
     plugins: [require('@tailwindcss/typography')]
   }
-};
+}

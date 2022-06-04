@@ -17,7 +17,7 @@ export default function PostCard({
   return (
     <div className="my-4 md:my-0">
       <ResponsiveImage alt={title} slug={slug} url={previewImage} />
-      <h4 className="w-full mt-4  font-medium  text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400 ">
+      <h4 className="w-full mt-4  font-medium  text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400  text-gray-800 dark:text-gray-200">
         <Link href={`/blog/${slug}`}>
           <a>{truncate(title)}</a>
         </Link>
