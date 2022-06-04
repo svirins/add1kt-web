@@ -8,12 +8,11 @@ const ptComponents = {
         return null;
       }
       return (
-        <div>
+        <div className="relative">
           <img
-            className="py-8 rounded-2xl"
+            className="py-8 rounded-lg"
             alt={value.alt || ' '}
-            loading="lazy"
-            src={urlFor(value).width(800).height(480).fit('max').auto('format')}
+            src={urlFor(value).width(800).height(480).url()}
           />
         </div>
       );
