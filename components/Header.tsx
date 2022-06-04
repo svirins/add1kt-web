@@ -20,7 +20,7 @@ function Header() {
         Skip to content
       </a>
       <div className="flex justify-between">
-        <div className="ml-[-0.60rem] inline-flex items-center">
+        <div className="inline-flex items-center">
           {globalConfig.menuLinks.map((link, index) => (
             <NavItemHeader
               href={link.href}
