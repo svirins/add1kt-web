@@ -1,21 +1,18 @@
 import { createElement, Fragment, useEffect, useRef, useState } from 'react';
 
-import type { SearchClient } from 'algoliasearch/lite';
-import { useSearchBox } from 'react-instantsearch-hooks';
-import {
-  autocomplete,
-  AutocompleteOptions,
-  Render
-} from '@algolia/autocomplete-js';
-import { BaseItem } from '@algolia/autocomplete-core';
-
 import 'instantsearch.css/themes/satellite.css';
 import '@algolia/autocomplete-theme-classic';
+
+import type { SearchClient } from 'algoliasearch/lite';
+import { autocomplete, AutocompleteOptions } from '@algolia/autocomplete-js';
+import { BaseItem } from '@algolia/autocomplete-core';
+import { useSearchBox } from 'react-instantsearch-hooks';
+
+import { useDebounce } from '@/lib/customHooks';
 
 type AutocompleteProps = Partial<AutocompleteOptions<BaseItem>> & {
   searchClient: SearchClient;
   className?: string;
-  indexName: string;
 };
 
 type SetInstantSearchUiStateOptions = {
@@ -25,7 +22,6 @@ type SetInstantSearchUiStateOptions = {
 function Autocomplete({
   searchClient,
   className,
-  indexName,
   ...autocompleteProps
 }: AutocompleteProps) {
   const autocompleteContainer = useRef<HTMLDivElement>(null);
@@ -35,9 +31,16 @@ function Autocomplete({
   const [instantSearchUiState, setInstantSearchUiState] =
     useState<SetInstantSearchUiStateOptions>({ query });
 
-  useEffect(() => {
-    setQuery(instantSearchUiState.query);
-  }, [instantSearchUiState]);
+  const debouncedSetInstantSearchUiState = useDebounce(
+    setInstantSearchUiState,
+    500
+  );
+  console.log('instantSearchUiState', instantSearchUiState);
+
+  // useEffect(() => {
+  //   const val = instantSearchUiState.query ? instantSearchUiState.query : ''
+  //   setQuery(instantSearchUiState.query);
+  // }, [instantSearchUiState]);
 
   useEffect(() => {
     if (!autocompleteContainer.current) {
@@ -56,7 +59,7 @@ function Autocomplete({
       },
       onStateChange({ prevState, state }) {
         if (prevState.query !== state.query) {
-          setInstantSearchUiState({
+          debouncedSetInstantSearchUiState({
             query: state.query
           });
         }
@@ -69,4 +72,5 @@ function Autocomplete({
 
   return <div className={className} ref={autocompleteContainer} />;
 }
+
 export default Autocomplete;

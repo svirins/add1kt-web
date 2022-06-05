@@ -2,12 +2,12 @@ import { useRouter } from 'next/router';
 
 import algoliasearch from 'algoliasearch/lite';
 import { useTranslations } from 'next-intl';
-import { Configure, InstantSearch } from 'react-instantsearch-hooks';
+import { Configure, InstantSearch, Hits } from 'react-instantsearch-hooks-web';
 
 import { localizedAlgoliaIndices } from '@/lib/config';
 
 import Autocomplete from '@/components/Autocomplete';
-import Hits from '@/components/Hits';
+import Hit from '@/components/Hit'
 
 function Search() {
   const { locale } = useRouter();
@@ -28,7 +28,6 @@ function Search() {
       >
         <Autocomplete
           searchClient={searchClient}
-          indexName={indexName}
           placeholder={t('inputPlaceholder')}
           detachedMediaQuery="none"
           openOnFocus
@@ -38,12 +37,10 @@ function Search() {
           analytics={false}
           hitsPerPage={8}
           typoTolerance={true}
-          attributesToSnippet={['title:7', 'description:15']}
+          attributesToSnippet={['title:7']}
           snippetEllipsisText="…"
         />
-        <div className="container wrapper">
-          <Hits hitComponent={Hit} />
-        </div>
+        <Hits hitComponent={Hit} />
       </InstantSearch>
     </div>
   );
