@@ -15,6 +15,7 @@ function Hit({ hit }: HitProps) {
   return (
     <article className="hit hover:cursor-pointer">
       <Snippet hit={hit} attribute="title" />
+      <span>{hit.tags[0]}</span>
     </article>
   );
 }
