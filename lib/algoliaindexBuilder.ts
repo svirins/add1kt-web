@@ -30,9 +30,8 @@ const generateIndexPerLocale = async (indexName, locale) => {
   const index = algoliaInstance.initIndex(indexName);
 
   try {
-    console.time(`Saving ${data.length} documents to index: ${indexName}`);
     await index.saveObjects(data);
-    console.timeEnd(`Saving ${data.length} documents to index:  ${indexName}`);
+    console.log(`Saving ${data.length} documents to index:  ${indexName}`);
     return {
       status: 200,
       body: 'Success!'
