@@ -20,7 +20,7 @@ function Search() {
     process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
   );
   function customSearchHook(helper) {
-    if (helper?.state?.query?.length < 2) {
+    if (! helper.state || helper?.state?.query?.length < 2) {
       return;
     }
     helper.search();

@@ -26,7 +26,7 @@ function Autocomplete({
 }: AutocompleteProps) {
   const autocompleteContainer = useRef<HTMLDivElement>(null);
 
-  const { query = '', refine } = useSearchBox();
+  const { query, refine } = useSearchBox();
 
   const [instantSearchUiState, setInstantSearchUiState] =
     useState<SetInstantSearchUiStateOptions>({ query });
@@ -35,7 +35,7 @@ function Autocomplete({
   //   instantSearchUiState,
   //   500
   // );
-
+  //TODO: make query state changes immutable
   useEffect(() => {
     const val = instantSearchUiState?.query ? instantSearchUiState.query : '';
     refine(instantSearchUiState?.query);
@@ -63,7 +63,7 @@ function Autocomplete({
           });
         }
       },
-      renderer: { createElement, Fragment, render: () => {} }
+      renderer: { createElement, Fragment, render: () => {} },
     });
 
     return () => autocompleteInstance.destroy();
