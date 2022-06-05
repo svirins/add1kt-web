@@ -36,6 +36,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-instantsearch-hooks-web": "^6.26.0",
+    "sanity-algolia": "^1.0.2",
     "use-delayed-render": "^0.0.7"
   },
   "devDependencies": {
