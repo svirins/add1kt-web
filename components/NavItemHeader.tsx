@@ -11,7 +11,7 @@ function NavItemHeader({ href, text }) {
       <a
         className={cn(
           isActive ? ' text-teal-600' : '',
-          'basic-link font-medium text-base md:text-xl  inline-block pr-4 lg:py-4 items-center'
+          'nav-link font-medium text-base md:text-xl  inline-block pr-4 lg:py-4 items-center'
         )}
       >
         <span className="capsize">{text}</span>
