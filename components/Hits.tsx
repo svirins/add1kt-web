@@ -18,9 +18,8 @@ function Hits<THit extends AlgoliaHit<Record<string, unknown>>>({
       <ol>
         {hits?.map((hit) => (
           <li key={hit.objectID}>
-                      <Link href={`/blog/${hit.slug}`}>
-
-            <Hit hit={hit as unknown as THit} />
+            <Link href={`/blog/${hit.slug}`}>
+              <Hit hit={hit as unknown as THit} />
             </Link>
           </li>
         ))}

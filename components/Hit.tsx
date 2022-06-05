@@ -14,12 +14,13 @@ type HitProps = {
 function Hit({ hit }: HitProps) {
   return (
     <article className="hit">
-      <Link href={`/blog/${hit.slug}`} className=" transition-all delay-100 text-gray-800 dark:text-gray-50 hover:text-teal-800 dark:hover:text-teal-400
-">
-        <Snippet hit={hit} attribute="title" />
-      </Link>
+      <Snippet hit={hit} attribute="title" />
     </article>
   );
 }
 
 export default Hit;
+
+/*<Link href={`/blog/${hit.slug}`}.*
+  className=" transition-all delay-100 text-gray-800 dark:text-gray-50 hover:text-teal-800 dark:hover:text-teal-400">
+     */

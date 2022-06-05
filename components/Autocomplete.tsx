@@ -26,21 +26,20 @@ function Autocomplete({
 }: AutocompleteProps) {
   const autocompleteContainer = useRef<HTMLDivElement>(null);
 
-  const { query, refine: setQuery } = useSearchBox();
+  const { query = '', refine } = useSearchBox();
 
   const [instantSearchUiState, setInstantSearchUiState] =
     useState<SetInstantSearchUiStateOptions>({ query });
 
-  const debouncedSetInstantSearchUiState = useDebounce(
-    setInstantSearchUiState,
-    500
-  );
-  console.log('instantSearchUiState', instantSearchUiState);
+  // const debouncedSetInstantSearchUiState = useDebounce(
+  //   instantSearchUiState,
+  //   500
+  // );
 
-  // useEffect(() => {
-  //   const val = instantSearchUiState.query ? instantSearchUiState.query : ''
-  //   setQuery(instantSearchUiState.query);
-  // }, [instantSearchUiState]);
+  useEffect(() => {
+    const val = instantSearchUiState?.query ? instantSearchUiState.query : '';
+    refine(instantSearchUiState?.query);
+  }, [instantSearchUiState]);
 
   useEffect(() => {
     if (!autocompleteContainer.current) {
@@ -59,7 +58,7 @@ function Autocomplete({
       },
       onStateChange({ prevState, state }) {
         if (prevState.query !== state.query) {
-          debouncedSetInstantSearchUiState({
+          setInstantSearchUiState({
             query: state.query
           });
         }
