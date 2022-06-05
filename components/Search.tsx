@@ -2,12 +2,12 @@ import { useRouter } from 'next/router';
 
 import algoliasearch from 'algoliasearch/lite';
 import { useTranslations } from 'next-intl';
-import { Configure, InstantSearch, Hits } from 'react-instantsearch-hooks-web';
+import { Configure, InstantSearch } from 'react-instantsearch-hooks';
 
 import { localizedAlgoliaIndices } from '@/lib/config';
 
 import Autocomplete from '@/components/Autocomplete';
-import Hit from '@/components/Hit';
+import Hits from '@/components/Hits';
 
 function Search() {
   const { locale } = useRouter();

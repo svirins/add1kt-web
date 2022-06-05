@@ -366,9 +366,9 @@
     strip-json-comments "^3.1.1"
 
 "@fontsource/ibm-plex-sans@^4.5.10":
-  version "4.5.10"
-  resolved "https://registry.yarnpkg.com/@fontsource/ibm-plex-sans/-/ibm-plex-sans-4.5.10.tgz#5df4040f791fb8bf1d9a6d6b0171eadec2d8a07a"
-  integrity sha512-iXTnQSCeLXFZz8LEkoSlYuGGXbM35l4GdXYr88rH9WYXkhw4X1TF1+wOiXWgPWqdMZK8HNSFZHcF8JCdGnqBBA==
+  version "4.5.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/ibm-plex-sans/-/ibm-plex-sans-4.5.11.tgz#b2fd7e65eb8c194b36fcc85b9af809cd0b497657"
+  integrity sha512-WOX1VjLbeum0ocHXrm5zdDHMbTXUKXnFG/Ba0hjoAz45/H2NQHgmc8MsugG6Q51DQTFlm/l5Xo04+QKj0i6umw==
 
 "@formatjs/ecma402-abstract@1.11.4":
   version "1.11.4"
