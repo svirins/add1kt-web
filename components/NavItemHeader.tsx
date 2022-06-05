@@ -11,7 +11,7 @@ function NavItemHeader({ href, text }) {
       <a
         className={cn(
           isActive ? ' text-teal-600' : '',
-          'font-medium text-base md:text-xl  inline-block pr-4 lg:py-4 items-center transition-all delay-100 text-gray-800 dark:text-gray-50 hover:text-teal-800 dark:hover:text-teal-400'
+          'basic-link font-medium text-base md:text-xl  inline-block pr-4 lg:py-4 items-center'
         )}
       >
         <span className="capsize">{text}</span>

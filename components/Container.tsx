@@ -6,11 +6,11 @@ import { ContainerProps } from 'extra-types';
 export default function Container(props: ContainerProps) {
   const { children, type = 'page', ...customMeta } = props;
   return (
-    <div className="flex flex-col justify-center bg-gray-50 dark:bg-gray-700 ">
+    <div className="flex flex-col justify-center text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 ">
       <HeadSeo customMeta={customMeta} contentType={type} />
       <main
         id="skip"
-        className="flex flex-col justify-center px-6 md:px-8  min-w-fit max-w-2xl mx-auto text-gray-800 dark:text-neutral-400 text-lg"
+        className="flex flex-col justify-center px-6 md:px-8  min-w-fit max-w-2xl mx-auto text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-lg"
       >
         <Header />
         {children}

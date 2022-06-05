@@ -19,12 +19,21 @@ function Search() {
     process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
     process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
   );
+  function customSearchHook(helper) {
+    if (helper?.state?.query?.length < 2) {
+      return;
+    }
+    helper.search();
+  }
+
+
   return (
     <div>
       <InstantSearch
         searchClient={searchClient}
         indexName={indexName}
         routing={false}
+        searchFunction={(helper) => customSearchHook(helper)}
       >
         <Autocomplete
           searchClient={searchClient}
