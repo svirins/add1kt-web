@@ -1,4 +1,4 @@
-import { globalConfig } from '@/config/global.config'
+import { globalConfig } from '@/config/global.config';
 import Script from 'next/script';
 
 export const Analytics: React.FC = () =>

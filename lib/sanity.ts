@@ -1,6 +1,8 @@
 import createImageUrlBuilder from '@sanity/image-url';
 import {
-  createClient, createCurrentUserHook, createPreviewSubscriptionHook
+  createClient,
+  createCurrentUserHook,
+  createPreviewSubscriptionHook
 } from 'next-sanity';
 
 import { sanityConfig } from '@/config/global.config';

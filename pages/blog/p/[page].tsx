@@ -2,7 +2,8 @@ import Container from '@/components/Container';
 import PostsGrid from '@/components/PostsGrid';
 import SectionSeparator from '@/components/SectionSeparator';
 import {
-  getPageContent, getPaginatedPosts,
+  getPageContent,
+  getPaginatedPosts,
   getTotalPostsNumber
 } from '@/lib/api';
 import { useTranslations } from 'next-intl';

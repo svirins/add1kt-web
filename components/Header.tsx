@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-import { globalConfig } from '@/config/global.config'
+import { globalConfig } from '@/config/global.config';
 
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import NavItemHeader from '@/components/NavItemHeader';
@@ -15,7 +15,7 @@ function Header() {
 
   const router = useRouter();
   return (
-    <nav className="py-8 sm:pb-16">
+    <nav className="pb-8 pt-4 sm:pb-16">
       <a href="#skip" className="skip-nav">
         Skip to content
       </a>

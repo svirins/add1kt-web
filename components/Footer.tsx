@@ -33,7 +33,7 @@ function Footer() {
           </ExternalLink>
         </div>
       </div>
-      <div className="flex justify-center pt-16 text-sm">
+      <div className="flex justify-center mt-8 text-sm">
         <a
           href="https://vercel.com/?utm_source=addictcf"
           target="_blank"

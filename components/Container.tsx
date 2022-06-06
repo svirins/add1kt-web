@@ -15,7 +15,6 @@ type ContainerProps = {
 
 export default function Container(props: ContainerProps) {
   const router = useRouter();
-
   const openGraph = {
     title: props.title ?? '',
     url: `https://www.addict.cf${router.asPath}` ?? 'https://www.addict.cf',
