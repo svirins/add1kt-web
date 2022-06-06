@@ -11,7 +11,7 @@ import PageTop from '@/components/PageTop';
 export default function Author({ author, authorPosts }) {
   const t = useTranslations('Titles');
   return (
-    <Container type="page" title={author.authorTitle}>
+    <Container title={author.authorTitle} ogImage={author.authorPicture}>
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         {author && (
           <>

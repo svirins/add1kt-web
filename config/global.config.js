@@ -35,5 +35,3 @@ export const sanityConfig = {
   apiVersion: '2021-10-21',
   useCdn: false
 };
-
-export const seoConfig = {};

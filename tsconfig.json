@@ -26,10 +26,9 @@
   },
   "include": [
     "next-env.d.ts",
-    "extra-types.ts",
     "**/*.ts",
     "**/*.tsx",
     "messages/**.json"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".vercel", ".next"]
 }

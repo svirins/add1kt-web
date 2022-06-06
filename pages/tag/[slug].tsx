@@ -11,7 +11,7 @@ import PageTop from '@/components/PageTop';
 export default function Tag({ tag, sameTagPosts }) {
   const t = useTranslations('Titles');
   return (
-    <Container type="page" title={tag.tagTitle}>
+    <Container title={tag.tagTitle} ogImage={tag.tagPicture}>
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto pb-16">
         {tag && (
           <>
@@ -24,7 +24,7 @@ export default function Tag({ tag, sameTagPosts }) {
             <SectionSeparator />
             <Subtitle>
               {`${t('tag_related_articles')}
-          "${tag.tagTitle.toLowerCase()}"`}
+              "${tag.tagTitle.toLowerCase()}"`}
             </Subtitle>
           </>
         )}

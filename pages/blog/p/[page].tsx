@@ -23,7 +23,7 @@ export default function BlogIndexPage({
   if (!pageData || paginatedPosts?.lenght === 0) return <p>no data</p>;
 
   return (
-    <Container title={`${t('blog_page')} ${page}/${totalPages}`} type="page">
+    <Container title={`${t('blog_page')} ${page}/${totalPages}`}>
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <PageTop
           title={`${pageData.pageTitle} (${page}/${totalPages})`}

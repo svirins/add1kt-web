@@ -16,7 +16,7 @@ import Subtitle from '@/components/Subtitle';
 export default function Index({ pageData, featuredPosts, total }) {
   const t = useTranslations('Titles');
   return (
-    <Container title={pageData.pageTitle} type="page">
+    <Container title={pageData.pageTitle}>
       <div className="flex flex-col justify-center items-start max-w-2xl  mx-auto pb-16">
         {pageData && (
           <PageTop

@@ -18,7 +18,7 @@ export default function Post({ post, relatedPosts }) {
   return (
     <Container
       title={post.postTitle}
-      imageUrl={post.postImageUrl}
+      ogImage={post.postImageUrl}
       date={post.postDate}
       type="article"
     >

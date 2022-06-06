@@ -1,13 +1,9 @@
 export default {
   openGraph: {
+    titleTemplate: 'Addict.cf | %s',
+    description: 'Blog about addiction',
     type: 'website',
-    locale: 'en_IE',
-    url: 'https://www.url.ie/',
-    site_name: 'SiteName'
-  },
-  twitter: {
-    handle: '@handle',
-    site: '@site',
-    cardType: 'summary_large_image'
+    url: 'https://www.addict.cf/',
+    site_name: 'Addict.cf - blog about addiction'
   }
 };
