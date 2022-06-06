@@ -1,14 +1,13 @@
 import Container from '@/components/Container';
-import SectionSeparator from '@/components/SectionSeparator';
 import PostsGrid from '@/components/PostsGrid';
+import SectionSeparator from '@/components/SectionSeparator';
 import {
-  getPaginatedPosts,
-  getTotalPostsNumber,
-  getPageContent
+  getPageContent, getPaginatedPosts,
+  getTotalPostsNumber
 } from '@/lib/api';
 import { useTranslations } from 'next-intl';
 
-import { globalConfig } from '@/lib/config';
+import { globalConfig } from '@/config/global.config';
 
 import PageTop from '@/components/PageTop';
 import PaginationControls from '@/components/PaginationContols';

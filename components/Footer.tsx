@@ -1,11 +1,12 @@
 import { useTranslations } from 'next-intl';
 
-import { globalConfig } from '@/lib/config';
+import { globalConfig } from '@/config/global.config'
+
+import ExternalLink from '@/components/ExternalLink';
 import NavItemFooter from '@/components/NavItemFooter';
 import SectionSeparator from '@/components/SectionSeparator';
-import ExternalLink from '@/components/ExternalLink';
 
-import { youtube, facebook, telegram, vercel } from '@/components/Icons';
+import { facebook, telegram, vercel } from '@/components/Icons';
 
 function Footer() {
   const t = useTranslations('Navigation');

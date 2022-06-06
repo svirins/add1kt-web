@@ -1,4 +1,3 @@
-import { createElement } from 'react';
 import { useRouter } from 'next/router';
 
 import { useTranslations } from 'next-intl';
@@ -8,10 +7,10 @@ import algoliasearch from 'algoliasearch';
 import Autocomplete from './Autocomplete';
 import SearchItem from './SearchItem';
 
-import 'instantsearch.css/themes/satellite.css';
 import '@algolia/autocomplete-theme-classic';
+import 'instantsearch.css/themes/satellite.css';
 
-import { localizedAlgoliaIndices } from '@/lib/config';
+import { localizedAlgoliaIndices } from '@/config/global.config';
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,

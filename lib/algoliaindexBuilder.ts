@@ -1,8 +1,8 @@
 import algoliasearch from 'algoliasearch';
-import { createClient } from 'next-sanity';
-import { groq } from 'next-sanity';
+import { createClient, groq } from 'next-sanity';
 
-import { localizedAlgoliaIndices } from '@/lib/config';
+import { localizedAlgoliaIndices } from '@/config/global.config'
+
 
 const sanityConfig = {
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,

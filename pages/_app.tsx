@@ -5,12 +5,13 @@ import '@fontsource/ibm-plex-sans/400.css';
 import '@fontsource/ibm-plex-sans/500.css';
 import '@fontsource/ibm-plex-sans/600.css';
 import '@fontsource/ibm-plex-sans/700.css';
+
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 import { DefaultSeo } from 'next-seo';
 import { NextIntlProvider } from 'next-intl';
 import { usePanelbear } from '@panelbear/panelbear-nextjs';
-import { seoConfig } from '@/lib/config';
+import SEO from '@/config/next-seo.config';
 
 import { Analytics } from '@/components/Analytics';
 
@@ -35,7 +36,7 @@ function App({ Component, pageProps }: AppProps) {
         {' '}
         <ThemeProvider attribute="class">
           <Analytics />
-          <DefaultSeo {...seoConfig} />
+          <DefaultSeo {...SEO} />
           <Component {...pageProps} />
         </ThemeProvider>
       </NextIntlProvider>

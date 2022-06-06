@@ -1,11 +1,9 @@
-import {
-  createClient,
-  createPreviewSubscriptionHook,
-  createCurrentUserHook
-} from 'next-sanity';
 import createImageUrlBuilder from '@sanity/image-url';
+import {
+  createClient, createCurrentUserHook, createPreviewSubscriptionHook
+} from 'next-sanity';
 
-import { sanityConfig } from '@/lib/config';
+import { sanityConfig } from '@/config/global.config';
 
 export const imageBuilder = (source) =>
   createImageUrlBuilder(client).image(source);

@@ -1,7 +1,7 @@
 import client from './sanity';
 
 import { getSkipValue } from './content-utils';
-import { globalConfig } from './config';
+import { globalConfig } from '@/config/global.config';
 
 import {
   getFeaturedPostsQuery,

@@ -20,7 +20,8 @@
       "@/pages/*": ["pages/*"],
       "@/lib/*": ["lib/*"],
       "@/styles/*": ["styles/*"],
-      "@/messages/*": ["messages/*"]
+      "@/messages/*": ["messages/*"],
+      "@/config/*": ["config/*"]
     }
   },
   "include": [
@@ -28,12 +29,7 @@
     "extra-types.ts",
     "**/*.ts",
     "**/*.tsx",
-    "messages/**.json",
-    "scripts/sanity-algolia.js",
-    "pages/api/algolia/index.js",
-    "pages/api/algolia/_logger.js",
-    "components/RoundImage.jsx",
-    "lib/config.js"
+    "messages/**.json"
   ],
   "exclude": ["node_modules"]
 }

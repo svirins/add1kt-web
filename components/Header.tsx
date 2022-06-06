@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-import { globalConfig } from '@/lib/config';
+import { globalConfig } from '@/config/global.config'
 
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import NavItemHeader from '@/components/NavItemHeader';

@@ -30,7 +30,12 @@
   },
   "404": {
     "title": "Niestety, nie udało nam się znaleźć tej strony.",
-    "body": "Ale nie martw się, na naszej stronie znajdziesz mnóstwo innych rzeczy.",
+    "body": "Ale nie martw się, na naszej stronie głównej znajdziesz wiele interesujących informacji.",
     "button": "Powrót do strony głównej"
+  },
+  "500": {
+    "title": "Niestety, wystąpił błąd serwera.",
+    "body": "Ale nie martw się, na naszej stronie głównej znajdziesz wiele interesujących informacji.",
+    "button": "Вернуться на главную страницу"
   }
 }
