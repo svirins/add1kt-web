@@ -7,8 +7,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 ::selection {
   background-color: #6ffcb8;
   color: #1e1919;
@@ -31,7 +29,7 @@ html {
 }
 
 .nav-link {
- @apply items-center transition-all delay-100 text-gray-800  dark:text-gray-50 hover:text-teal-800 dark:hover:text-teal-400;
+  @apply items-center transition-all delay-100  hover:text-teal-800 dark:hover:text-teal-400;
 }
 
 .skip-nav {

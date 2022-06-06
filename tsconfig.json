@@ -32,7 +32,8 @@
     "scripts/sanity-algolia.js",
     "pages/api/algolia/index.js",
     "pages/api/algolia/_logger.js",
-    "components/RoundImage.jsx"
-, "lib/config.js"  ],
+    "components/RoundImage.jsx",
+    "lib/config.js"
+  ],
   "exclude": ["node_modules"]
 }

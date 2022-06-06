@@ -12,6 +12,7 @@ import { globalConfig } from '@/lib/config';
 
 import PageTop from '@/components/PageTop';
 import PaginationControls from '@/components/PaginationContols';
+import Search from '@/components/Search';
 
 export default function BlogIndexPage({
   pageData,
@@ -31,6 +32,9 @@ export default function BlogIndexPage({
           pictureUrl={pageData.pagePicture}
           text={pageData.pageText}
         />
+        <div className="relative w-full mb-4">
+          <Search />
+        </div>
         <SectionSeparator />
         {paginatedPosts?.length > 0 && <PostsGrid posts={paginatedPosts} />}
         <PaginationControls

@@ -1,75 +1,35 @@
-import { createElement, Fragment, useEffect, useRef, useState } from 'react';
+import { autocomplete } from '@algolia/autocomplete-js';
+import React, { createElement, Fragment, useEffect, useRef } from 'react';
+import { createRoot } from 'react-dom/client';
 
-import 'instantsearch.css/themes/satellite.css';
-import '@algolia/autocomplete-theme-classic';
-
-import type { SearchClient } from 'algoliasearch/lite';
-import { autocomplete, AutocompleteOptions } from '@algolia/autocomplete-js';
-import { BaseItem } from '@algolia/autocomplete-core';
-import { useSearchBox } from 'react-instantsearch-hooks';
-
-import { useDebounce } from '@/lib/customHooks';
-
-type AutocompleteProps = Partial<AutocompleteOptions<BaseItem>> & {
-  searchClient: SearchClient;
-  className?: string;
-};
-
-type SetInstantSearchUiStateOptions = {
-  query: string;
-};
-
-function Autocomplete({
-  searchClient,
-  className,
-  ...autocompleteProps
-}: AutocompleteProps) {
-  const autocompleteContainer = useRef<HTMLDivElement>(null);
-
-  const { query, refine } = useSearchBox();
-
-  const [instantSearchUiState, setInstantSearchUiState] =
-    useState<SetInstantSearchUiStateOptions>({ query });
-
-  // const debouncedSetInstantSearchUiState = useDebounce(
-  //   instantSearchUiState,
-  //   500
-  // );
-  //TODO: make query state changes immutable
+export default function Autocomplete(props) {
+  const containerRef = useRef(null);
+  const panelRootRef = useRef(null);
+  const rootRef = useRef(null);
   useEffect(() => {
-    const val = instantSearchUiState?.query ? instantSearchUiState.query : '';
-    refine(instantSearchUiState?.query);
-  }, [instantSearchUiState, refine]);
-
-  useEffect(() => {
-    if (!autocompleteContainer.current) {
-      return;
+    if (!containerRef.current) {
+      return undefined;
     }
 
-    const autocompleteInstance = autocomplete({
-      ...autocompleteProps,
-      container: autocompleteContainer.current,
-      initialState: { query },
-      onReset() {
-        setInstantSearchUiState({ query: '' });
-      },
-      onSubmit({ state }) {
-        setInstantSearchUiState({ query: state.query });
-      },
-      onStateChange({ prevState, state }) {
-        if (prevState.query !== state.query) {
-          setInstantSearchUiState({
-            query: state.query
-          });
+    const search = autocomplete({
+      container: containerRef.current,
+      renderer: { createElement, Fragment },
+      render({ children }, root) {
+        if (!panelRootRef.current || rootRef.current !== root) {
+          rootRef.current = root;
+
+          panelRootRef.current?.unmount();
+          panelRootRef.current = createRoot(root);
         }
+
+        panelRootRef.current.render(children);
       },
-      renderer: { createElement, Fragment, render: () => {} },
+      ...props
     });
+    return () => {
+      search.destroy();
+    };
+  }, [props]);
 
-    return () => autocompleteInstance.destroy();
-  }, []);
-
-  return <div className={className} ref={autocompleteContainer} />;
+  return <div ref={containerRef} />;
 }
-
-export default Autocomplete;
