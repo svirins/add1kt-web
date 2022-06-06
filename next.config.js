@@ -8,10 +8,6 @@ const HIVE_REWRITE = {
   destination: 'https://hive.splitbee.io/:slug'
 };
 
-// const withBundleAnalyzer = require('@next/bundle-analyzer')({
-//   enabled: process.env.ANALYZE === 'true'
-// });
-
 module.exports = {
   swcMinify: true,
   reactStrictMode: true,

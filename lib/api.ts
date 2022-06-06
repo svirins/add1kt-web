@@ -1,6 +1,6 @@
 import client from './sanity';
 
-import { getSkipValue } from './content-utils';
+import { getSkipValue } from './contentUtils';
 import { globalConfig } from '@/config/global.config';
 
 import {

@@ -1,12 +1,13 @@
 import { useTranslations } from 'next-intl';
 
-import { globalConfig } from '@/config/global.config'
+import { globalConfig } from '@/config/global.config';
 
 import ExternalLink from '@/components/ExternalLink';
 import NavItemFooter from '@/components/NavItemFooter';
 import SectionSeparator from '@/components/SectionSeparator';
 
-import { facebook, telegram, vercel } from '@/components/Icons';
+import { facebook, telegram, github } from '@/components/Icons';
+import PoweredByVercel from 'powered-by-vercel';
 
 function Footer() {
   const t = useTranslations('Navigation');
@@ -34,13 +35,22 @@ function Footer() {
         </div>
       </div>
       <div className="flex justify-center mt-8 text-sm">
-        <a
-          href="https://vercel.com/?utm_source=addictcf"
+        <PoweredByVercel
+          utmSource="addict.cf"
           target="_blank"
-          rel="noreferrer noopener"
-          aria-label="Powered by Vercel"
+          rel="noopener noreferrer"
+          svgProps={{
+            width: 144
+          }}
+        />
+        <a
+          className="font-thin pl-4 text-xs md:text-sm items-center transition-all delay-100 text-gray-800 dark:text-gray-50 hover:text-teal-800 dark:hover:text-teal-400"
+          target="_blank"
+          rel="noopener noreferrer"
+          href={globalConfig.githubLink}
+          title="source code =&gt;"
         >
-          {vercel}
+          {github}
         </a>
       </div>
     </footer>

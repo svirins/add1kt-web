@@ -15,6 +15,7 @@ export const globalConfig = {
   youtubeLink: 'https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A/',
   facebookLink: 'https://www.facebook.com/doktorGrin/',
   telegramLink: 'https://tg.me',
+  githubLink: 'https://github.com/zvirinz/grean-app-2022',
   trimmedHeaderLength: 55
 };
 
@@ -33,5 +34,12 @@ export const sanityConfig = {
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   apiVersion: '2021-10-21',
+  useCdn: false
+};
+
+export const sanityConfigForAlgolia = {
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  apiVersion: '2021-03-25',
   useCdn: false
 };

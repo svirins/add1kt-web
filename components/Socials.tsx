@@ -1,4 +1,4 @@
-import { getSocialIconByLink } from '@/lib/content-utils';
+import { getSocialIconByLink } from '@/lib/contentUtils';
 import ExternalLink from '@/components/ExternalLink';
 
 export default function Socials({ socials }) {
