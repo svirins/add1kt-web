@@ -20,7 +20,13 @@ export default function Container(props: ContainerProps) {
     url: `https://www.addict.cf${router.asPath}` ?? 'https://www.addict.cf',
     type: props.type ?? 'page',
     image: props.ogImage ?? '/og.png',
-    description: props.description ?? ''
+    description: props.description ?? '',
+    images: [
+      {
+        url: props.ogImage ?? '/og.png',
+        alt: props.title ?? ''
+      }
+    ]
   };
   return (
     <div className="flex flex-col justify-center text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 ">
