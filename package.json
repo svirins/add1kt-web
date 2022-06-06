@@ -1,8 +1,6 @@
 {
   "private": true,
-  "license": "custom",
-  "author": "Dzmitry Sviryn",
-  "repository": "",
+  "license": "MIT",
   "scripts": {
     "dev": "next",
     "build": "next build",

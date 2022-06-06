@@ -41,3 +41,5 @@ sconfig.tsbuildinfo
 /scripts/
 
 .env
+.vscode.
+.code-workspace

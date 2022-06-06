@@ -1,4 +1,15 @@
-# Blog site,
+# addict.cf
+
+## Uses
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Content**: [Sanity](https://sanity.io)
+- **Search**: [Algolia](https://algolia.com/)
+- **Deployment**: [Vercel](https://vercel.com)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Analytics** [SplitBee](https://splitbee.io/)
+- **Metrics** [PanelBear](https://panelbear.com/)
+- **Logging** [LogFlare](https://logflare.aoo/)
 
 ## Features
 
@@ -6,47 +17,9 @@
 - SEO Ready
 - Internationalization
 - Responsive
-- UI Components
-- Theming
-- Standardized Data Hooks
 - Dark Mode Support
 
 
+## Thanks
 
-// TBD
-
-next.js - sanity - algolia
-
-Build with
-
-Typescript
-Next.js
-Tailwind CSS
-Sanity
-
-SplitBee
-Vercel
-
-thanks for insiration and ideas to Lee Robinson and Henrique Doro and guys from Sanity team Nick DiMatteo
-
-repo here
-
-
-
-// TBD
-
-next.js - sanity - algolia
-
-Build with
-
-Typescript
-Next.js
-Tailwind CSS
-Sanity
-
-SplitBee
-Vercel
-
-thanks for insiration and ideas to Lee Robinson and Henrique Doro and guys from Sanity team Nick DiMatteo
-
-repo here
+Thanks for insiration and ideas to [@leeerob](https://twitter.com/leeerob), [@hdorodev](https://twitter.com/hdorodev/) and devs from Sanity.io team.
