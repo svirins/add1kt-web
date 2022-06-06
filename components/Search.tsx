@@ -26,7 +26,6 @@ function Search() {
     helper.search();
   }
 
-
   return (
     <div>
       <InstantSearch

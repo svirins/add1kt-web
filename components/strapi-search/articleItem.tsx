@@ -2,14 +2,11 @@ import React from "react";
 
 function ArticleItem({ hit, components }) {
   return (
-    <a className="aa-ItemLink" href={`/article/${hit.slug}`}>
+    <a className="aa-ItemLink" href={`/blog/${hit.slug}`}>
       <div className="aa-ItemContent">
-        <div className="ItemCategory">{hit.tags[0]}</div>
-        <div className="aa-ItemContentBody">
-          <div className="aa-ItemContentTitle">
+        {/* <div className="ItemCategory">{hit.tags[0]}</div> */}
+          <div className="aa-ItemTitle">
             <components.Highlight hit={hit} attribute="title" />
-          </div>
-
         </div>
       </div>
     </a>

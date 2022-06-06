@@ -5,7 +5,7 @@ import {
   getTotalPostsNumber
 } from '@/lib/api';
 
-import Search from '@/components/Search';
+import Search from '@/components/strapi-search/search';
 import PostsGrid from '@/components/PostsGrid';
 import SectionSeparator from '@/components/SectionSeparator';
 import Container from '@/components/Container';

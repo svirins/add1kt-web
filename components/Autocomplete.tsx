@@ -39,7 +39,7 @@ function Autocomplete({
   useEffect(() => {
     const val = instantSearchUiState?.query ? instantSearchUiState.query : '';
     refine(instantSearchUiState?.query);
-  }, [instantSearchUiState]);
+  }, [instantSearchUiState, refine]);
 
   useEffect(() => {
     if (!autocompleteContainer.current) {
