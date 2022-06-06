@@ -20,7 +20,7 @@ function Header() {
         Skip to content
       </a>
       <div className="flex justify-between">
-        <div className="inline-flex items-center">
+        <div className="flex items-center">
           {globalConfig.menuLinks.map((link, index) => (
             <NavItemHeader
               href={link.href}
@@ -30,9 +30,9 @@ function Header() {
           ))}
         </div>
         {mounted && (
-          <div className="inline-flex items-center">
+          <div className="flex items-center align-middlle">
             <LocaleSwitcher />
-            {/* <ThemeSwitcher /> */}
+            <ThemeSwitcher />
           </div>
         )}
       </div>
