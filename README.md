@@ -1,5 +1,7 @@
 # addict.cf
 
+ Blog for my friend psychotherapist, built with Next.js, Tailwind, Sanity, and Vercel.
+
 ## Uses
 
 - **Framework**: [Next.js](https://nextjs.org/)
@@ -7,19 +9,22 @@
 - **Search**: [Algolia](https://algolia.com/)
 - **Deployment**: [Vercel](https://vercel.com)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Analytics** [SplitBee](https://splitbee.io/)
-- **Metrics** [PanelBear](https://panelbear.com/)
-- **Logging** [LogFlare](https://logflare.aoo/)
+- **Analytics**: [SplitBee](https://splitbee.io/)
+- **Metrics**: [PanelBear](https://panelbear.com/)
+- **Logging**: [LogFlare](https://logflare.aoo/)
 
 ## Features
 
 - Performant by default
-- SEO Ready
+- SEO
 - Internationalization
 - Responsive
 - Dark Mode Support
 
+##  🙏
 
-## Thanks
+Thanks for inspiration, code snippets and ideas to:
 
-Thanks for insiration and ideas to [@leeerob](https://twitter.com/leeerob), [@hdorodev](https://twitter.com/hdorodev/) and devs from Sanity.io team.
+- Lee Robinson [@leeerob](https://twitter.com/leeerob)
+- Henrique Doro [@hdorodev](https://twitter.com/hdorodev/)
+- devs from [Sanity.io](https://www.sanity.io/schemas)

@@ -14,7 +14,7 @@ export const globalConfig = {
   siteUrl: 'https://addict.cf',
   youtubeLink: 'https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A/',
   facebookLink: 'https://www.facebook.com/doktorGrin/',
-  telegramLink: 'https://tg.me',
+  telegramLink: 'https://t.me/vgrean',
   githubLink: 'https://github.com/zvirinz/grean-app-2022',
   trimmedHeaderLength: 55
 };
