@@ -1,12 +1,13 @@
 import algoliasearch from 'algoliasearch';
-import { createClient, groq } from 'next-sanity';
+import sanityClient from '@sanity/client';
+import groq from 'groq';
 
 import {
   localizedAlgoliaIndices,
   sanityConfigForAlgolia
 } from '@/config/global.config';
 
-const client = createClient(sanityConfigForAlgolia);
+const client = sanityClient(sanityConfigForAlgolia);
 
 const algoliaInstance = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
@@ -21,7 +22,9 @@ const getTotalPostForAlgoliaQuery = groq`*[_type == 'post'] {
 }`;
 
 const generateIndexPerLocale = async (indexName, locale) => {
-  const data = await client.fetch(getTotalPostForAlgoliaQuery, { locale });
+  const data = await client.fetch(getTotalPostForAlgoliaQuery, {
+    locale
+  });
   const index = algoliaInstance.initIndex(indexName);
 
   try {

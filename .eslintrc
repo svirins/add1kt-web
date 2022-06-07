@@ -1,8 +1,7 @@
 {
   "extends": [
     "next",
-    "next/core-web-vitals",
-    "plugin:@asbjorn/groq/recommended"
+    "next/core-web-vitals"
   ],
   "rules": {
     "react/prop-types": 0,

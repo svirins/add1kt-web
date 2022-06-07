@@ -1,6 +1,6 @@
 # addict.cf
 
- Blog for my friend psychotherapist, built with Next.js, Tailwind, Sanity, and Vercel.
+Blog for my friend psychotherapist, built with Next.js, Tailwind, Sanity, and Vercel.
 
 ## Uses
 
@@ -21,7 +21,7 @@
 - Responsive
 - Dark Mode Support
 
-##  🙏
+## 🙏
 
 Thanks for inspiration, code snippets and ideas to:
 
