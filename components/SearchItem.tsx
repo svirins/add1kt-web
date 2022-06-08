@@ -1,4 +1,5 @@
-function SearchItem({ hit, components }) {
+/* eslint-disable tailwindcss/no-custom-classname */
+export function SearchItem({ hit, components }) {
   return (
     <a className="aa-ItemLink" href={`/blog/${hit.slug}`}>
       <div className="aa-ItemContent">
@@ -10,5 +11,3 @@ function SearchItem({ hit, components }) {
     </a>
   );
 }
-
-export default SearchItem;

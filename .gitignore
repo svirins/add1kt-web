@@ -43,3 +43,4 @@ sconfig.tsbuildinfo
 .env
 .vscode.
 .code-workspace
+out

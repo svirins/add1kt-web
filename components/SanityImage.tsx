@@ -1,20 +1,19 @@
 import cn from 'classnames';
+import Img from 'next/image';
 import Link from 'next/link';
 
 import { urlFor } from '@/lib/sanity';
-import Img from 'next/image';
 
 export function SanityImage({
   url,
-  width,
-  height = width,
+  w,
+  h = w,
   alt = 'A placeholder for image',
   slug = '',
-  isRounded = false
+  isRounded = false,
 }) {
-
   const urlWithProps = urlFor(url)
-    .format('webp')
+    // .format('webp')
     // .fit('max')
     // .width(Number(width))
     // .height(height)
@@ -22,7 +21,7 @@ export function SanityImage({
     .url();
 
   const myLoader = ({ src, width, quality }) => {
-    return `${url}?w=${width}&q=${quality || 75}`;
+    return `${src}?w=${width}&q=${quality || 85}`;
   };
 
   const image = (
@@ -30,16 +29,19 @@ export function SanityImage({
       alt={alt}
       src={urlWithProps}
       loader={myLoader}
-      width={width}
-      height={height}
+      width={w}
+      height={h}
       className={cn(
-        { 'hover:opacity-75 transition-opacity': slug },
+        {
+          'hover:opacity-75 transition-opacity': slug,
+          'rounded-full': isRounded,
+        },
         'rounded-lg'
       )}
     />
   );
   return (
-    <div className="sm:mx-0 relative">
+    <div className="relative sm:mx-0">
       {slug ? (
         <Link href={`/blog/${slug}`}>
           <a aria-label={alt}>{image}</a>
@@ -50,5 +52,3 @@ export function SanityImage({
     </div>
   );
 }
-
-export default SanityImage;

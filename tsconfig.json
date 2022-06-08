@@ -1,19 +1,39 @@
 {
   "compilerOptions": {
-    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "incremental": true,
-    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "removeComments": true,
+    // "preserveConstEnums": true,
+    // "strict": true,
+    // "alwaysStrict": true,
+    // "strictNullChecks": true,
+    // "noUncheckedIndexedAccess": true,
+
+    // "noImplicitAny": true,
+    // "noImplicitReturns": true,
+    // "noImplicitThis": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "allowUnreachableCode": false,
+    // "noFallthroughCasesInSwitch": true,
+
+    "target": "es5",
+    "outDir": "out",
+    "declaration": true,
+    "sourceMap": true,
+
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
     "jsx": "preserve",
+    "noEmit": true,
+    "isolatedModules": true,
+    "incremental": true,
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["components/*"],
@@ -24,11 +44,6 @@
       "@/config/*": ["config/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "messages/**.json",
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "messages/**.json", "lib/algoliaIndexBuilder.mjs"],
   "exclude": ["node_modules", ".vercel", ".next"]
 }

@@ -63,7 +63,7 @@ html {
 
 .prose .anchor:after {
   @apply text-gray-300 dark:text-gray-700;
-  content: '#';
+  content: "#";
 }
 
 .prose *:hover > .anchor {

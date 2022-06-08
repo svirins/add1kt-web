@@ -2,7 +2,7 @@ import cn from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-function NavItemHeader({ href, text }) {
+export function NavItemHeader({ href, text }) {
   const router = useRouter();
   const isActive = router.asPath === href;
   return (
@@ -18,4 +18,3 @@ function NavItemHeader({ href, text }) {
     </Link>
   );
 }
-export default NavItemHeader;
