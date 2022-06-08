@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -10,7 +14,6 @@
     // "alwaysStrict": true,
     // "strictNullChecks": true,
     // "noUncheckedIndexedAccess": true,
-
     // "noImplicitAny": true,
     // "noImplicitReturns": true,
     // "noImplicitThis": true,
@@ -18,32 +21,52 @@
     // "noUnusedParameters": true,
     // "allowUnreachableCode": false,
     // "noFallthroughCasesInSwitch": true,
-
     "target": "es5",
     "outDir": "out",
     "declaration": true,
     "sourceMap": true,
-
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-
     "jsx": "preserve",
     "noEmit": true,
     "isolatedModules": true,
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/pages/*": ["pages/*"],
-      "@/lib/*": ["lib/*"],
-      "@/styles/*": ["styles/*"],
-      "@/messages/*": ["messages/*"],
-      "@/config/*": ["config/*"]
-    }
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/pages/*": [
+        "pages/*"
+      ],
+      "@/lib/*": [
+        "lib/*"
+      ],
+      "@/styles/*": [
+        "styles/*"
+      ],
+      "@/messages/*": [
+        "messages/*"
+      ],
+      "@/config/*": [
+        "config/*"
+      ]
+    },
+    "strict": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "messages/**.json", "lib/algoliaIndexBuilder.mjs"],
-  "exclude": ["node_modules", ".vercel", ".next"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "messages/**.json",
+    "lib/algoliaIndexBuilder.mjs"
+  ],
+  "exclude": [
+    "node_modules",
+    ".vercel",
+    ".next"
+  ]
 }
