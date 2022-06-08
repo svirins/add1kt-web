@@ -3,9 +3,14 @@ import sanityClient from '@sanity/client';
 
 import { sanityConfig } from '@/config/global.config';
 
-const client = sanityClient(sanityConfig);
+function getSanityClient({ useCdn = true }) {
+  return sanityClient({ useCdn, ...sanityConfig });
+}
 
-export const imageBuilder = (source) => createImageUrlBuilder(client).image(source);
+const client = getSanityClient({ useCdn: true });
+
+export const imageBuilder = (source) =>
+  createImageUrlBuilder(client).image(source);
 export const urlFor = (source) => createImageUrlBuilder(client).image(source);
 
-export default client;
+export default getSanityClient;

@@ -2,7 +2,8 @@ import { useTranslations } from 'next-intl';
 
 import Tags from '@/components/Tags';
 import PostMeta from '@/components/PostMeta';
-import ResponsiveImage from '@/components/ResponsiveImage';
+import SanityImage from '@/components/SanityImage';
+import { globalConfig } from '@/config/global.config';
 
 import Container from '@/components/Container';
 import PostBody from '@/components/PostBody';
@@ -30,7 +31,12 @@ export default function Post({ post, relatedPosts }) {
           <div className="flex flex-row text-sm justify-end mb-4">
             <Tags tags={post.tags} />
           </div>
-          <ResponsiveImage alt={post.postTitle} url={post.postImageUrl} />
+          <SanityImage
+            alt={post.postTitle}
+            url={post.postImageUrl}
+            width={globalConfig.images.defaultPostImageWidth}
+            height={globalConfig.images.defaultPostImageHeight}
+          />
 
           <div className="flex flex-row mt-4">
             <PostMeta

@@ -1,5 +1,4 @@
-import client from './sanity';
-
+import getSanityClient from './sanity';
 import { getSkipValue } from './contentUtils';
 import { globalConfig } from '@/config/global.config';
 
@@ -18,6 +17,8 @@ import {
   getTotalPostsNumberQuery,
   getTotalPostForAlgoliaQuery
 } from './queries';
+
+const client = getSanityClient({ useCdn: false });
 
 export async function getFeaturedPosts(locale) {
   const data = await client.fetch(getFeaturedPostsQuery, {

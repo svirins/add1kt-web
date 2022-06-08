@@ -1,4 +1,4 @@
-import  groq  from 'groq';
+import groq from 'groq';
 
 export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true] {
   "postTitle": title[$locale],

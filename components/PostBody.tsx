@@ -1,5 +1,7 @@
 import { PortableText } from '@portabletext/react';
-import { urlFor } from '@/lib/sanity';
+import SanityImage from '@/components/SanityImage';
+
+import { globalConfig } from '@/config/global.config';
 
 const ptComponents = {
   types: {
@@ -8,11 +10,12 @@ const ptComponents = {
         return null;
       }
       return (
-        <div className="relative">
-          <img
-            className="py-8 rounded-lg"
-            alt={value.alt || ' '}
-            src={urlFor(value).width(800).height(480).url()}
+        <div className="relative py-8">
+          <SanityImage
+            alt={value.alt ?? ''}
+            url={value}
+            width={globalConfig.images.defaultPostImageWidth}
+            height={globalConfig.images.defaultPostImageHeight}
           />
         </div>
       );

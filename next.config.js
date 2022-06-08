@@ -1,3 +1,5 @@
+const withImageLoader = require('next-image-loader');
+
 const BEE_REWRITE = {
   source: '/bee.js',
   destination: 'https://cdn.splitbee.io/sb.js'
@@ -17,7 +19,9 @@ module.exports = {
   },
   images: {
     images: {
-      domains: ['cdn.sanity.io']
+      domains: ['cdn.sanity.io'],
+      formats: ['image/webp'],
+      loader: 'custom'
     }
   },
   async rewrites() {

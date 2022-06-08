@@ -5,6 +5,15 @@ export const globalConfig = {
     featuredPostsSize: 6,
     allPostsSize: 50
   },
+  images: {
+    defaultPostImageWidth: 1024,
+    defaultPostImageHeight: 600,
+    defaultPostPreviewImageWidth: 640,
+    defaultPostImagePreviewHeight: 376,
+    defaultAvatarImageWidthHeight: 44,
+    defaultRoundImageWidthHeight: 256,
+    defaultQuality: 80
+  },
   menuLinks: [
     { href: '/', title: 'home' },
     { href: '/blog/p/1', title: 'blog' },
@@ -33,8 +42,7 @@ export const localizedAlgoliaIndices = [
 export const sanityConfig = {
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  apiVersion: '2021-10-21',
-  useCdn: false
+  apiVersion: '2021-10-21'
 };
 
 export const sanityConfigForAlgolia = {

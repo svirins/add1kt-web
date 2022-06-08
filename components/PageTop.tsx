@@ -1,6 +1,9 @@
-import RoundImage from '@/components/RoundImage';
+import SanityImage from '@/components/SanityImage';
 import PostBody from '@/components/PostBody';
 import Socials from '@/components/Socials';
+
+import { globalConfig } from '@/config/global.config';
+
 export default function PageTop({
   title,
   subtitle = '',
@@ -26,8 +29,13 @@ export default function PageTop({
       </div>
       {pictureUrl && (
         <div className="flex-col">
-          <div className="mb-4 md:mb-0   w-32 h-32 md:w-48 md:h-48">
-            <RoundImage alt={title} width={256} height={256} url={pictureUrl} />
+          <div className="mb-4 md:mb-0 w-32 h-32 md:w-48 md:h-48">
+            <SanityImage
+              alt={title}
+              width={globalConfig.images.defaultRoundImageWidthHeight}
+              isRounded={true}
+              url={pictureUrl}
+            />
           </div>
         </div>
       )}

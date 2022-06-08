@@ -3,7 +3,9 @@ import Link from 'next/link';
 import { truncate } from '@/lib/contentUtils';
 import Tags from '@/components/Tags';
 import PostMeta from '@/components/PostMeta';
-import ResponsiveImage from '@/components/ResponsiveImage';
+import SanityImage from '@/components/SanityImage';
+
+import { globalConfig } from '@/config/global.config';
 
 export default function PostCard({
   title,
@@ -16,8 +18,14 @@ export default function PostCard({
 }) {
   return (
     <div className="my-4 md:my-0">
-      <ResponsiveImage alt={title} slug={slug} url={previewImage} />
-      <h4 className="w-full mt-4  font-medium  text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400  text-gray-800 dark:text-gray-200">
+      <SanityImage
+        slug={slug}
+        alt={title}
+        url={previewImage}
+        width={globalConfig.images.defaultPostPreviewImageWidth}
+        height={globalConfig.images.defaultPostImagePreviewHeight}
+      />
+      <h4 className="w-full mt-4 font-medium  text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400  text-gray-800 dark:text-gray-200">
         <Link href={`/blog/${slug}`}>
           <a>{truncate(title)}</a>
         </Link>
