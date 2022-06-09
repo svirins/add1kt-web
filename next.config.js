@@ -1,4 +1,3 @@
-const withImageLoader = require('next-image-loader');
 
 const BEE_REWRITE = {
   source: '/bee.js',
