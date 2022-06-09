@@ -33,7 +33,7 @@ export function SanityImage({
       layout="responsive"
       objectFit="cover"
       placeholder="blur"
-      unoptimized={process.env.NODE_ENV === 'development' ? true : false}
+      unoptimized={true}
       blurDataURL={`data:image/svg+xml;base64,${toBase64(
         shimmer(width, height)
       )}`}

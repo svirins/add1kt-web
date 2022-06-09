@@ -1,4 +1,4 @@
-import getSanityClient from './sanity';
+import {getSanityClient} from './sanity';
 import { getSkipValue } from './contentUtils';
 import { globalConfig } from '@/config/global.config';
 
