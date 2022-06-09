@@ -1,4 +1,3 @@
-
 const BEE_REWRITE = {
   source: '/bee.js',
   destination: 'https://cdn.splitbee.io/sb.js'
@@ -9,7 +8,10 @@ const HIVE_REWRITE = {
   destination: 'https://hive.splitbee.io/:slug'
 };
 
-module.exports ={
+module.exports = {
+  eslint: {
+    dirs: ['.']
+  },
   swcMinify: true,
   reactStrictMode: true,
   i18n: {
