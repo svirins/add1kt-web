@@ -1,16 +1,15 @@
-import { useRouter } from 'next/router';
-
-import { useTranslations } from 'next-intl';
-
-import { getAlgoliaResults } from '@algolia/autocomplete-js';
-import algoliasearch from 'algoliasearch';
-import { Autocomplete } from './Autocomplete';
-import { SearchItem } from './SearchItem';
-
 import '@algolia/autocomplete-theme-classic';
 import 'instantsearch.css/themes/satellite.css';
 
+import { getAlgoliaResults } from '@algolia/autocomplete-js';
+import algoliasearch from 'algoliasearch';
+import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
+
 import { localizedAlgoliaIndices } from '@/config/global.config';
+
+import { Autocomplete } from './Autocomplete';
+import { SearchItem } from './SearchItem';
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,

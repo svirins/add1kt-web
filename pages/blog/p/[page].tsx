@@ -1,18 +1,17 @@
+import { useTranslations } from 'next-intl';
+
 import { Container } from '@/components/Container';
+import { PageTop } from '@/components/PageTop';
+import { PaginationControls } from '@/components/PaginationContols';
 import { PostsGrid } from '@/components/PostsGrid';
+import { Search } from '@/components/Search';
 import { SectionSeparator } from '@/components/SectionSeparator';
+import { globalConfig } from '@/config/global.config';
 import {
   getPageContent,
   getPaginatedPosts,
   getTotalPostsNumber
 } from '@/lib/api';
-import { useTranslations } from 'next-intl';
-
-import { globalConfig } from '@/config/global.config';
-
-import { PageTop } from '@/components/PageTop';
-import { PaginationControls } from '@/components/PaginationContols';
-import { Search } from '@/components/Search';
 
 export default function BlogIndexPage({
   pageData,
@@ -56,7 +55,7 @@ export async function getStaticPaths({ locales }) {
     .map((page) =>
       locales.map((locale) => ({
         params: { page: `/blog/p/${page}` },
-        locale: locale
+        locale
       }))
     )
     .flat();
@@ -74,9 +73,9 @@ export async function getStaticProps({ params, locale }) {
   return {
     props: {
       pageData,
-      paginatedPosts: paginatedPosts,
+      paginatedPosts,
       page: params.page,
-      totalPages: totalPages,
+      totalPages,
       messages: (await import(`../../../messages/${locale}.json`)).default
     }
   };

@@ -1,4 +1,6 @@
-import {getSanityClient} from './sanity';
+/* eslint-disable simple-import-sort/imports */
+/* eslint-disable import/order */
+import { getSanityClient } from './sanity';
 import { getSkipValue } from './contentUtils';
 import { globalConfig } from '@/config/global.config';
 

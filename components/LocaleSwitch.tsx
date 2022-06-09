@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router';
+
 export function LocaleSwitch() {
   const router = useRouter();
   const handleLocale = (locale) =>
-    router.push(router.asPath, router.asPath, { locale: locale });
+    router.push(router.asPath, router.asPath, { locale });
   return (
     <button
       aria-label="Toggle Site Language"

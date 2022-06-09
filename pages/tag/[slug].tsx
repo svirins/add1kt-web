@@ -1,12 +1,11 @@
 import { useTranslations } from 'next-intl';
 
-import { getAllTagSlugs, getTagAndRelatedPosts } from '@/lib/api';
-
 import { Container } from '@/components/Container';
+import { PageTop } from '@/components/PageTop';
+import { PostsGrid } from '@/components/PostsGrid';
 import { SectionSeparator } from '@/components/SectionSeparator';
 import { Subtitle } from '@/components/Subtitle';
-import { PostsGrid } from '@/components/PostsGrid';
-import { PageTop } from '@/components/PageTop';
+import { getAllTagSlugs, getTagAndRelatedPosts } from '@/lib/api';
 
 export default function Tag({ tag, sameTagPosts }) {
   const t = useTranslations('Titles');
@@ -42,7 +41,7 @@ export async function getStaticPaths({ locales }) {
         params: {
           slug: `/tag/${tag.slug}`
         },
-        locale: locale
+        locale
       }))
     )
     .flat();

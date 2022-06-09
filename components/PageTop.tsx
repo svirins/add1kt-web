@@ -1,7 +1,6 @@
-import { SanityImage } from '@/components/SanityImage';
 import { PostBody } from '@/components/PostBody';
+import { SanityImage } from '@/components/SanityImage';
 import { Socials } from '@/components/Socials';
-
 import { globalConfig } from '@/config/global.config';
 
 export function PageTop({

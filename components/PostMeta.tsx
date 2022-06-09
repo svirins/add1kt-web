@@ -1,7 +1,7 @@
-import Link from 'next/link';
-
-import { useTranslations, useIntl } from 'next-intl';
 import { parseISO } from 'date-fns';
+import Link from 'next/link';
+import { useIntl, useTranslations } from 'next-intl';
+
 import { AvatarImage } from '@/components/AvatarImage';
 
 export function PostMeta({ author, date, readingTime }) {

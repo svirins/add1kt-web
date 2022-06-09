@@ -1,11 +1,12 @@
 import { PortableText } from '@portabletext/react';
-import { SanityImage } from '@/components/SanityImage';
 
+import { SanityImage } from '@/components/SanityImage';
 import { globalConfig } from '@/config/global.config';
 
 const ptComponents = {
   types: {
     image: ({ value }) => {
+      // eslint-disable-next-line no-underscore-dangle
       if (!value?.asset?._ref) {
         return null;
       }

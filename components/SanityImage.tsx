@@ -1,8 +1,9 @@
 import cn from 'classnames';
+import Img from 'next/image';
 import Link from 'next/link';
+
 import { shimmer, toBase64 } from '@/lib/contentUtils';
 import { urlFor } from '@/lib/sanity';
-import Img from 'next/image';
 
 export function SanityImage({
   url,
@@ -19,9 +20,9 @@ export function SanityImage({
     // .height(height)
     .auto('format')
     .url();
-  const sanityImageLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
-  };
+  // const sanityImageLoader = ({ src, width: w, quality }) => {
+  //   return `${src}?w=${w}&q=${quality || 75}`;
+  // };
 
   const image = (
     <Img

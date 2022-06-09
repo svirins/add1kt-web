@@ -1,5 +1,5 @@
-import { globalConfig } from '@/config/global.config';
 import { facebook, telegram, youtube } from '@/components/Icons';
+import { globalConfig } from '@/config/global.config';
 
 export const shimmer = (w, h) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -43,12 +43,12 @@ export function getSocialIconByLink(url) {
 
 export function truncate(str) {
   let i;
-  let bits = str.split('');
+  const bits = str.split('');
   if (bits.length > globalConfig.trimmedHeaderLength) {
-    for (i = bits.length - 1; i > -1; --i) {
+    for (i = bits.length - 1; i > -1; i -= 1) {
       if (i > globalConfig.trimmedHeaderLength) {
         bits.length = i;
-      } else if (' ' === bits[i]) {
+      } else if (bits[i] === ' ') {
         bits.length = i;
         break;
       }

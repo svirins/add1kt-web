@@ -1,13 +1,11 @@
 import { useTranslations } from 'next-intl';
-
-import { globalConfig } from '@/config/global.config';
+import PoweredByVercel from 'powered-by-vercel';
 
 import { ExternalLink } from '@/components/ExternalLink';
+import { facebook, github, telegram } from '@/components/Icons';
 import { NavItemFooter } from '@/components/NavItemFooter';
 import { SectionSeparator } from '@/components/SectionSeparator';
-
-import { facebook, telegram, github } from '@/components/Icons';
-import PoweredByVercel from 'powered-by-vercel';
+import { globalConfig } from '@/config/global.config';
 
 export function Footer() {
   const t = useTranslations('Navigation');

@@ -3,8 +3,8 @@ import { useTranslations } from 'next-intl';
 
 export function PaginationControls({ currentPage, totalPages = 0 }) {
   const t = useTranslations('Post');
-  const isLeftDisabled = currentPage === 1 ? true : false;
-  const isRightDisabled = currentPage === totalPages ? true : false;
+  const isLeftDisabled = currentPage === 1;
+  const isRightDisabled = currentPage === totalPages;
 
   return (
     <div className="flex flex-row justify-between place-items-center  w-full flex-nowrap">

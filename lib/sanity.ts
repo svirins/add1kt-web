@@ -1,5 +1,5 @@
-import createImageUrlBuilder from '@sanity/image-url';
 import sanityClient from '@sanity/client';
+import createImageUrlBuilder from '@sanity/image-url';
 
 import { sanityConfig } from '@/config/global.config';
 

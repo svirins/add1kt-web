@@ -1,11 +1,10 @@
 import Link from 'next/link';
 
-import { truncate } from '@/lib/contentUtils';
-import { Tags } from '@/components/Tags';
 import { PostMeta } from '@/components/PostMeta';
 import { SanityImage } from '@/components/SanityImage';
-
+import { Tags } from '@/components/Tags';
 import { globalConfig } from '@/config/global.config';
+import { truncate } from '@/lib/contentUtils';
 
 export function PostCard({
   title,
@@ -36,7 +35,7 @@ export function PostCard({
       <div className="flex flex-row ">
         <PostMeta
           date={date}
-          readingTime={readingTime == 0 ? 1 : readingTime}
+          readingTime={readingTime === 0 ? 1 : readingTime}
           author={author}
         />
       </div>

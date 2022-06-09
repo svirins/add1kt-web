@@ -1,17 +1,17 @@
 import { useTranslations } from 'next-intl';
+
+import { Container } from '@/components/Container';
+import { MorepostsControls } from '@/components/MorePostsControls';
+import { PageTop } from '@/components/PageTop';
+import { PostsGrid } from '@/components/PostsGrid';
+import { Search } from '@/components/Search';
+import { SectionSeparator } from '@/components/SectionSeparator';
+import { Subtitle } from '@/components/Subtitle';
 import {
   getFeaturedPosts,
   getPageContent,
   getTotalPostsNumber
 } from '@/lib/api';
-
-import { Search } from '@/components/Search';
-import { PostsGrid } from '@/components/PostsGrid';
-import { SectionSeparator } from '@/components/SectionSeparator';
-import { Container } from '@/components/Container';
-import { MorepostsControls } from '@/components/MorePostsControls';
-import { PageTop } from '@/components/PageTop';
-import { Subtitle } from '@/components/Subtitle';
 
 export default function Index({ pageData, featuredPosts, total }) {
   const t = useTranslations('Titles');
@@ -46,7 +46,7 @@ export async function getStaticProps({ locale }) {
     props: {
       pageData,
       featuredPosts,
-      total: total,
+      total,
       messages: (await import(`../messages/${locale}.json`)).default
     }
   };
