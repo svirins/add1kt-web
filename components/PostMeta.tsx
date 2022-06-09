@@ -2,9 +2,8 @@ import Link from 'next/link';
 
 import { useTranslations, useIntl } from 'next-intl';
 import { parseISO } from 'date-fns';
-import { SanityImage } from '@/components/SanityImage';
+import { AvatarImage } from '@/components/AvatarImage';
 
-import { globalConfig } from '@/config/global.config';
 
 export function PostMeta({ author, date, readingTime }) {
   const intl = useIntl();
@@ -12,11 +11,9 @@ export function PostMeta({ author, date, readingTime }) {
   return (
     <>
       <div className="relative">
-        <SanityImage
+        <AvatarImage
           url={author.authorPicture}
           alt={author.authorName}
-          width={globalConfig.images.defaultAvatarImageWidthHeight}
-          isRounded={true}
         />
       </div>
       <div className="pl-2 flex-1">

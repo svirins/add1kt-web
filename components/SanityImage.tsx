@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { urlFor } from '@/lib/sanity';
 import Img from 'next/image';
-
+import { shimmer } from '@/lib/contentUtils';
 export function SanityImage({
   url,
   width,
@@ -13,32 +13,36 @@ export function SanityImage({
   isRounded = false
 }) {
   const urlWithProps = urlFor(url)
-    .format('webp')
+    // .format('webp')
     // .fit('max')
     // .width(Number(width))
     // .height(height)
     // .auto('format')
     .url();
 
-  const myLoader = ({ src, width, quality }) => {
-    return `${url}?w=${width}&q=${quality || 75}`;
+  const sanityImageLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`;
   };
 
   const image = (
     <Img
       alt={alt}
-      src={urlWithProps}
-      loader={myLoader}
+      src={url}
+      loader={sanityImageLoader}
       width={width}
       height={height}
+      layout="responsive"
+      objectFit="cover"
       className={cn(
-        { 'hover:opacity-75 transition-opacity': slug },
+        {
+          'hover:opacity-75 transition-opacity': slug,
+      'rounded-full': isRounded  },
         'rounded-lg'
       )}
     />
   );
   return (
-    <div className="sm:mx-0 relative">
+    <div className="sm:mx-0  relative">
       {slug ? (
         <Link href={`/blog/${slug}`}>
           <a aria-label={alt}>{image}</a>
