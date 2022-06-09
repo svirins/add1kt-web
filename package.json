@@ -2,13 +2,14 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
+    "build-stats": "cross-env ANALYZE=true npm run build",
     "start": "next start",
     "analyze": "ANALYZE=true next build",
-    "generate": "node --experimental-json-modules  ./scripts/search-index-builder.mjs",
-    "lint": "next lint --fix",
-    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "generate": "node --experimental-json-modules  ./scripts/indexBuilder.mjs",
+    "lint": "next lint",
+    "check-types": "tsc  --pretty --noEmit",
     "prettier": "prettier --write .",
     "prepare": "husky install"
   },
@@ -20,6 +21,7 @@
     "@portabletext/react": "^1.0.6",
     "@sanity/client": "^3.3.2",
     "@sanity/image-url": "^1.0.1",
+    "@tailwindcss/typography": "^0.5.2",
     "algoliasearch": "^4.13.1",
     "classnames": "2.3.1",
     "date-fns": "2.28.0",
@@ -37,34 +39,40 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-instantsearch-hooks-web": "^6.26.0",
-    "sanity-algolia": "^1.0.2"
+    "sanity-algolia": "^1.0.2",
+    "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^17.0.0",
     "@next/bundle-analyzer": "^12.1.6",
-    "@tailwindcss/typography": "^0.5.2",
     "@types/node": "^17.0.35",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
-    "@vercel/node": "^1.15.3",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "@vercel/node": "^2.1.0",
     "autoprefixer": "10.4.7",
+    "cssnano": "^5.1.11",
     "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-next": "^12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-tailwindcss": "^3.5.0",
+    "eslint-plugin-testing-library": "^5.5.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
     "postcss": "8.4.14",
     "prettier": "^2.6.2",
-    "stylelint-config-recommended": "^7.0.0",
-    "tailwindcss": "^3.0.15",
     "typescript": "^4.7.2"
   },
-  "volta": {
-    "node": "16.14.0"
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "none"
-  }
+  "author": "Zvirinz (https://github.com/zvirinz)"
 }

@@ -1,7 +1,7 @@
+import { ExternalLink } from '@/components/ExternalLink';
 import { getSocialIconByLink } from '@/lib/contentUtils';
-import ExternalLink from '@/components/ExternalLink';
 
-export default function Socials({ socials }) {
+export function Socials({ socials }) {
   const icons = socials.map((social, index) => {
     return (
       <ExternalLink key={index} href={social}>

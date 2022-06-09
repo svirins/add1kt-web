@@ -1,12 +1,11 @@
+import { Container } from '@/components/Container';
+import { PageTop } from '@/components/PageTop';
 import { getPageContent } from '@/lib/api';
-
-import PageTop from '@/components/PageTop';
-import Container from '@/components/Container';
 
 export default function About({ pageData }) {
   return (
     <Container title={pageData.pageTitle}>
-      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="mx-auto flex max-w-2xl flex-col items-start justify-center border-gray-200 pb-16 dark:border-gray-700">
         {pageData && (
           <PageTop
             title={pageData.pageTitle}
@@ -24,7 +23,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       pageData,
-      messages: (await import(`../messages/${locale}.json`)).default
-    }
+      messages: (await import(`../messages/${locale}.json`)).default,
+    },
   };
 }

@@ -1,6 +1,6 @@
 export const instagram = (
   <svg
-    className="w-4 h-4 md:w-5 md:h-5"
+    className="h-4 w-4 md:h-5 md:w-5"
     aria-hidden="true"
     fill="currentColor"
     viewBox="0 0 24 24"
@@ -16,7 +16,7 @@ export const instagram = (
 export const youtube = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="w-4 h-4 md:w-5 md:h-5"
+    className="h-4 w-4 md:h-5 md:w-5"
     fill="currentColor"
     viewBox="-35.20005 -41.33325 305.0671 247.9995"
   >
@@ -26,7 +26,7 @@ export const youtube = (
 
 export const facebook = (
   <svg
-    className="w-4 h-4 md:w-5 md:h-5"
+    className="h-4 w-4 md:h-5 md:w-5"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -37,7 +37,7 @@ export const facebook = (
 
 export const telegram = (
   <svg
-    className="w-4 h-4 md:w-5 md:h-5"
+    className="h-4 w-4 md:h-5 md:w-5"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 496 512"
     fill="currentColor"
@@ -48,7 +48,7 @@ export const telegram = (
 
 export const github = (
   <svg
-    className="w-7 h-7"
+    className="h-7 w-7"
     aria-hidden="true"
     fill="currentColor"
     viewBox="0 0 24 24"
@@ -64,7 +64,7 @@ export const github = (
 
 export const twitter = (
   <svg
-    className="w-4 h-4 md:w-5 md:h-5"
+    className="h-4 w-4 md:h-5 md:w-5"
     aria-hidden="true"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"

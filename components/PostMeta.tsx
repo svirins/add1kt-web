@@ -1,12 +1,11 @@
-import Link from 'next/link';
-
-import { useTranslations, useIntl } from 'next-intl';
 import { parseISO } from 'date-fns';
-import SanityImage from '@/components/SanityImage';
+import Link from 'next/link';
+import { useIntl, useTranslations } from 'next-intl';
 
+import { SanityImage } from '@/components/SanityImage';
 import { globalConfig } from '@/config/global.config';
 
-export default function PostMeta({ author, date, readingTime }) {
+export function PostMeta({ author, date, readingTime }) {
   const intl = useIntl();
   const t = useTranslations('Post');
   return (
@@ -15,13 +14,13 @@ export default function PostMeta({ author, date, readingTime }) {
         <SanityImage
           url={author.authorPicture}
           alt={author.authorName}
-          width={globalConfig.images.defaultAvatarImageWidthHeight}
+          w={globalConfig.images.defaultAvatarImageWidthHeight}
           isRounded={true}
         />
       </div>
-      <div className="pl-2 flex-1">
+      <div className="flex-1 pl-2">
         <Link href={`/author/${author.authorSlug}`}>
-          <a className="font-bold text-base hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400">
+          <a className="text-base font-bold transition-all  delay-100 hover:text-teal-600 dark:hover:text-teal-400">
             {author.authorName}
           </a>
         </Link>
@@ -30,7 +29,7 @@ export default function PostMeta({ author, date, readingTime }) {
             {intl.formatDateTime(parseISO(date), {
               year: 'numeric',
               month: 'long',
-              day: 'numeric'
+              day: 'numeric',
             })}
           </time>
           {` • `}

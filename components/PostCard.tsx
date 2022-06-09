@@ -1,20 +1,19 @@
 import Link from 'next/link';
 
-import { truncate } from '@/lib/contentUtils';
-import Tags from '@/components/Tags';
-import PostMeta from '@/components/PostMeta';
-import SanityImage from '@/components/SanityImage';
-
+import { PostMeta } from '@/components/PostMeta';
+import { SanityImage } from '@/components/SanityImage';
+import { Tags } from '@/components/Tags';
 import { globalConfig } from '@/config/global.config';
+import { truncate } from '@/lib/contentUtils';
 
-export default function PostCard({
+export function PostCard({
   title,
   previewImage,
   date,
   author,
   tags,
   slug,
-  readingTime
+  readingTime,
 }) {
   return (
     <div className="my-4 md:my-0">
@@ -22,21 +21,21 @@ export default function PostCard({
         slug={slug}
         alt={title}
         url={previewImage}
-        width={globalConfig.images.defaultPostPreviewImageWidth}
-        height={globalConfig.images.defaultPostImagePreviewHeight}
+        w={globalConfig.images.defaultPostPreviewImageWidth}
+        h={globalConfig.images.defaultPostImagePreviewHeight}
       />
-      <h4 className="w-full mt-4 font-medium  text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400  text-gray-800 dark:text-gray-200">
+      <h4 className="mt-4 w-full text-lg  font-medium text-gray-800  transition-all delay-100 hover:text-teal-600  dark:text-gray-200 dark:hover:text-teal-400">
         <Link href={`/blog/${slug}`}>
           <a>{truncate(title)}</a>
         </Link>
       </h4>
-      <div className="flex flex-row text-sm  justify-end">
+      <div className="flex flex-row justify-end  text-sm">
         <Tags tags={tags} />
       </div>
       <div className="flex flex-row ">
         <PostMeta
           date={date}
-          readingTime={readingTime == 0 ? 1 : readingTime}
+          readingTime={readingTime === 0 ? 1 : readingTime}
           author={author}
         />
       </div>

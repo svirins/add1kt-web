@@ -1,10 +1,9 @@
-import { useTranslations } from 'next-intl';
-
 import { autocomplete } from '@algolia/autocomplete-js';
+import { useTranslations } from 'next-intl';
 import React, { createElement, Fragment, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 
-export default function Autocomplete(props) {
+export function Autocomplete(props) {
   const t = useTranslations('Search');
   const containerRef = useRef(null);
   const panelRootRef = useRef(null);
@@ -19,7 +18,7 @@ export default function Autocomplete(props) {
       translations: {
         clearButtonTitle: t('clearButtonTitle'),
         detachedCancelButtonText: t('detachedCancelButtonText'),
-        submitButtonTitle: t('submitButtonTitle')
+        submitButtonTitle: t('submitButtonTitle'),
       },
       placeholder: t('inputPlaceholder'),
       renderer: { createElement, Fragment, render: () => {} },
@@ -33,7 +32,7 @@ export default function Autocomplete(props) {
 
         panelRootRef.current.render(children);
       },
-      ...props
+      ...props,
     });
     return () => {
       search.destroy();

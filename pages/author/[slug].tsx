@@ -1,18 +1,17 @@
 import { useTranslations } from 'next-intl';
 
+import { Container } from '@/components/Container';
+import { PageTop } from '@/components/PageTop';
+import { PostsGrid } from '@/components/PostsGrid';
+import { SectionSeparator } from '@/components/SectionSeparator';
+import { Subtitle } from '@/components/Subtitle';
 import { getAllAuthorSlugs, getAuthorAndRelatedPosts } from '@/lib/api';
-
-import Container from '@/components/Container';
-import SectionSeparator from '@/components/SectionSeparator';
-import Subtitle from '@/components/Subtitle';
-import PostsGrid from '@/components/PostsGrid';
-import PageTop from '@/components/PageTop';
 
 export default function Author({ author, authorPosts }) {
   const t = useTranslations('Titles');
   return (
     <Container title={author.authorTitle} ogImage={author.authorPicture}>
-      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="mx-auto flex max-w-2xl flex-col items-start justify-center border-gray-200 pb-16 dark:border-gray-700">
         {author && (
           <>
             <PageTop
@@ -41,15 +40,15 @@ export async function getStaticPaths({ locales }) {
     .map((author) =>
       locales.map((locale) => ({
         params: {
-          slug: `/author/${author.slug}`
+          slug: `/author/${author.slug}`,
         },
-        locale: locale
+        locale,
       }))
     )
     .flat();
   return {
     paths: allPathsWithLocales,
-    fallback: 'blocking'
+    fallback: 'blocking',
   };
 }
 
@@ -62,7 +61,7 @@ export async function getStaticProps({ params, locale }) {
     props: {
       author,
       authorPosts,
-      messages: (await import(`../../messages/${locale}.json`)).default
-    }
+      messages: (await import(`../../messages/${locale}.json`)).default,
+    },
   };
 }

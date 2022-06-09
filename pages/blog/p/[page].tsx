@@ -1,38 +1,37 @@
-import Container from '@/components/Container';
-import PostsGrid from '@/components/PostsGrid';
-import SectionSeparator from '@/components/SectionSeparator';
+import { useTranslations } from 'next-intl';
+
+import { Container } from '@/components/Container';
+import { PageTop } from '@/components/PageTop';
+import { PaginationControls } from '@/components/PaginationContols';
+import { PostsGrid } from '@/components/PostsGrid';
+import { Search } from '@/components/Search';
+import { SectionSeparator } from '@/components/SectionSeparator';
+import { globalConfig } from '@/config/global.config';
 import {
   getPageContent,
   getPaginatedPosts,
-  getTotalPostsNumber
+  getTotalPostsNumber,
 } from '@/lib/api';
-import { useTranslations } from 'next-intl';
-
-import { globalConfig } from '@/config/global.config';
-
-import PageTop from '@/components/PageTop';
-import PaginationControls from '@/components/PaginationContols';
-import Search from '@/components/Search';
 
 export default function BlogIndexPage({
   pageData,
   paginatedPosts,
   page,
-  totalPages
+  totalPages,
 }) {
   const t = useTranslations('Titles');
   if (!pageData || paginatedPosts?.lenght === 0) return <p>no data</p>;
 
   return (
     <Container title={`${t('blog_page')} ${page}/${totalPages}`}>
-      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="mx-auto flex max-w-2xl flex-col items-start justify-center border-gray-200 pb-16 dark:border-gray-700">
         <PageTop
           title={`${pageData.pageTitle} (${page}/${totalPages})`}
           subtitle=""
           pictureUrl={pageData.pagePicture}
           text={pageData.pageText}
         />
-        <div className="relative w-full mb-4">
+        <div className="relative mb-4 w-full">
           <Search />
         </div>
         <SectionSeparator />
@@ -56,13 +55,13 @@ export async function getStaticPaths({ locales }) {
     .map((page) =>
       locales.map((locale) => ({
         params: { page: `/blog/p/${page}` },
-        locale: locale
+        locale,
       }))
     )
     .flat();
   return {
     paths: allPathsWithLocales,
-    fallback: 'blocking'
+    fallback: 'blocking',
   };
 }
 
@@ -74,10 +73,10 @@ export async function getStaticProps({ params, locale }) {
   return {
     props: {
       pageData,
-      paginatedPosts: paginatedPosts,
+      paginatedPosts,
       page: params.page,
-      totalPages: totalPages,
-      messages: (await import(`../../../messages/${locale}.json`)).default
-    }
+      totalPages,
+      messages: (await import(`../../../messages/${locale}.json`)).default,
+    },
   };
 }

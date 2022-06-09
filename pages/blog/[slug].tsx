@@ -1,16 +1,14 @@
 import { useTranslations } from 'next-intl';
 
-import Tags from '@/components/Tags';
-import PostMeta from '@/components/PostMeta';
-import SanityImage from '@/components/SanityImage';
+import { Container } from '@/components/Container';
+import { PostBody } from '@/components/PostBody';
+import { PostMeta } from '@/components/PostMeta';
+import { PostsGrid } from '@/components/PostsGrid';
+import { SanityImage } from '@/components/SanityImage';
+import { SectionSeparator } from '@/components/SectionSeparator';
+import { Subtitle } from '@/components/Subtitle';
+import { Tags } from '@/components/Tags';
 import { globalConfig } from '@/config/global.config';
-
-import Container from '@/components/Container';
-import PostBody from '@/components/PostBody';
-import PostsGrid from '@/components/PostsGrid';
-import SectionSeparator from '@/components/SectionSeparator';
-import Subtitle from '@/components/Subtitle';
-
 import { getAllPostSlugs, getPostAndRelatedPosts } from '@/lib/api';
 
 export default function Post({ post, relatedPosts }) {
@@ -23,22 +21,22 @@ export default function Post({ post, relatedPosts }) {
       date={post.postDate}
       type="article"
     >
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto pb-16">
+      <div className="mx-auto flex max-w-2xl flex-col items-start justify-center pb-16">
         <div className="flex flex-col">
-          <h1 className="font-bold text-3xl md:text-5xl tracking-tight  text-gray-800 dark:text-gray-200">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-800  dark:text-gray-200 md:text-5xl">
             {post.postTitle}
           </h1>
-          <div className="flex flex-row text-sm justify-end mb-4">
+          <div className="mb-4 flex flex-row justify-end text-sm">
             <Tags tags={post.tags} />
           </div>
           <SanityImage
             alt={post.postTitle}
             url={post.postImageUrl}
-            width={globalConfig.images.defaultPostImageWidth}
-            height={globalConfig.images.defaultPostImageHeight}
+            w={globalConfig.images.defaultPostImageWidth}
+            h={globalConfig.images.defaultPostImageHeight}
           />
 
-          <div className="flex flex-row mt-4">
+          <div className="mt-4 flex flex-row">
             <PostMeta
               date={post.postDate}
               readingTime={post.readingTime}
@@ -61,13 +59,13 @@ export async function getStaticPaths({ locales }) {
     .map(({ slug }) =>
       locales.map((locale) => ({
         params: { slug: `/blog/${slug}` },
-        locale: locale
+        locale,
       }))
     )
     .flat();
   return {
     paths: allPathsWithLocales,
-    fallback: 'blocking'
+    fallback: 'blocking',
   };
 }
 
@@ -80,7 +78,7 @@ export async function getStaticProps({ params, locale }) {
     props: {
       post,
       relatedPosts,
-      messages: (await import(`../../messages/${locale}.json`)).default
-    }
+      messages: (await import(`../../messages/${locale}.json`)).default,
+    },
   };
 }

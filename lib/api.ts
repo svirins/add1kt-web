@@ -1,22 +1,22 @@
-import getSanityClient from './sanity';
-import { getSkipValue } from './contentUtils';
 import { globalConfig } from '@/config/global.config';
 
+import { getSkipValue } from './contentUtils';
 import {
+  getAllAuthorSlugsQuery,
+  getAllPostSlugsQuery,
+  getAllTagSlugsQuery,
+  getAuthorAndRelatedPostsQuery,
+  getAuthorsAndRelatedPostsCountQuery,
   getFeaturedPostsQuery,
   getPageContentQuery,
-  getAllPostSlugsQuery,
-  getAllAuthorSlugsQuery,
-  getAllTagSlugsQuery,
-  getPostAndRelatedPostsQuery,
-  getAuthorAndRelatedPostsQuery,
-  getTagAndRelatedPostsQuery,
   getPaginatedPostsQuery,
+  getPostAndRelatedPostsQuery,
+  getTagAndRelatedPostsQuery,
   getTagsAndRelatedPostsCountQuery,
-  getAuthorsAndRelatedPostsCountQuery,
+  getTotalPostForAlgoliaQuery,
   getTotalPostsNumberQuery,
-  getTotalPostForAlgoliaQuery
 } from './queries';
+import { getSanityClient } from './sanity';
 
 const client = getSanityClient({ useCdn: false });
 
@@ -24,7 +24,7 @@ export async function getFeaturedPosts(locale) {
   const data = await client.fetch(getFeaturedPostsQuery, {
     locale,
     skip: 0,
-    limit: globalConfig.pagination.pageSize
+    limit: globalConfig.pagination.pageSize,
   });
   return data;
 }
@@ -32,21 +32,21 @@ export async function getFeaturedPosts(locale) {
 export async function getPageContent(locale, slug) {
   const data = await client.fetch(getPageContentQuery, {
     locale,
-    slug
+    slug,
   });
   return data;
 }
 
 export async function getAuthorsAndRelatedPostsCount(locale) {
   const data = await client.fetch(getAuthorsAndRelatedPostsCountQuery, {
-    locale
+    locale,
   });
   return data;
 }
 
 export async function getTagsAndRelatedPostsCount(locale) {
   const data = await client.fetch(getTagsAndRelatedPostsCountQuery, {
-    locale
+    locale,
   });
   return data;
 }
@@ -61,7 +61,7 @@ export async function getTagAndRelatedPosts(locale, slug) {
     locale,
     slug,
     skip: 0,
-    limit: globalConfig.pagination.allPostsSize
+    limit: globalConfig.pagination.allPostsSize,
   });
   return data;
 }
@@ -76,7 +76,7 @@ export async function getAuthorAndRelatedPosts(locale, slug) {
     locale,
     slug,
     skip: 0,
-    limit: globalConfig.pagination.allPostsSize
+    limit: globalConfig.pagination.allPostsSize,
   });
   return data;
 }
@@ -91,7 +91,7 @@ export async function getPostAndRelatedPosts(locale, slug) {
     locale,
     slug,
     skip: 0,
-    limit: globalConfig.pagination.morePostsSize
+    limit: globalConfig.pagination.morePostsSize,
   });
   return data;
 }
@@ -100,7 +100,7 @@ export async function getPaginatedPosts(locale, page) {
   const data = await client.fetch(getPaginatedPostsQuery, {
     locale,
     skip: getSkipValue(page),
-    limit: globalConfig.pagination.pageSize + getSkipValue(page)
+    limit: globalConfig.pagination.pageSize + getSkipValue(page),
   });
   return data;
 }
