@@ -10,7 +10,8 @@
     "lint": "next lint --fix",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.6.3",
