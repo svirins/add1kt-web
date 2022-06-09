@@ -2,10 +2,7 @@ import { urlFor } from '@/lib/sanity';
 import Img from 'next/image';
 import { globalConfig } from '@/config/global.config';
 
-export function AvatarImage({
-  url,
-  alt = 'A placeholder for image',
-}) {
+export function AvatarImage({ url, alt = 'A placeholder for image' }) {
   // const urlWithProps = urlFor(url)
 
   //   .url();
@@ -13,7 +10,6 @@ export function AvatarImage({
   const sanityImageLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality}`;
   };
-
 
   return (
     <div className="sm:mx-0  relative">

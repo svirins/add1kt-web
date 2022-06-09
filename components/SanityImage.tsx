@@ -1,14 +1,14 @@
 import cn from 'classnames';
 import Link from 'next/link';
-
+import { shimmer, toBase64 } from '@/lib/contentUtils';
 import { urlFor } from '@/lib/sanity';
 import Img from 'next/image';
-import { shimmer } from '@/lib/contentUtils';
+
 export function SanityImage({
   url,
   width,
   height = width,
-  alt = 'A placeholder for image',
+  alt = 'A placeholder text for image',
   slug = '',
   isRounded = false
 }) {
@@ -17,9 +17,8 @@ export function SanityImage({
     // .fit('max')
     // .width(Number(width))
     // .height(height)
-    // .auto('format')
+    .auto('format')
     .url();
-
   const sanityImageLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`;
   };
@@ -27,16 +26,22 @@ export function SanityImage({
   const image = (
     <Img
       alt={alt}
-      src={url}
-      loader={sanityImageLoader}
+      src={urlWithProps}
+      // loader={sanityImageLoader}
       width={width}
       height={height}
       layout="responsive"
       objectFit="cover"
+      placeholder="blur"
+      unoptimized={process.env.NODE_ENV === 'development' ? true : false}
+      blurDataURL={`data:image/svg+xml;base64,${toBase64(
+        shimmer(width, height)
+      )}`}
       className={cn(
         {
           'hover:opacity-75 transition-opacity': slug,
-      'rounded-full': isRounded  },
+          'rounded-full': isRounded
+        },
         'rounded-lg'
       )}
     />
