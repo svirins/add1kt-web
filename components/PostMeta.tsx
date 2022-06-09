@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 import { useTranslations, useIntl } from 'next-intl';
 import { parseISO } from 'date-fns';
-import SanityImage from '@/components/SanityImage';
+import { SanityImage } from '@/components/SanityImage';
 
 import { globalConfig } from '@/config/global.config';
 
-export default function PostMeta({ author, date, readingTime }) {
+export function PostMeta({ author, date, readingTime }) {
   const intl = useIntl();
   const t = useTranslations('Post');
   return (

@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 import { truncate } from '@/lib/contentUtils';
-import Tags from '@/components/Tags';
-import PostMeta from '@/components/PostMeta';
-import SanityImage from '@/components/SanityImage';
+import { Tags } from '@/components/Tags';
+import { PostMeta } from '@/components/PostMeta';
+import { SanityImage } from '@/components/SanityImage';
 
 import { globalConfig } from '@/config/global.config';
 
-export default function PostCard({
+export function PostCard({
   title,
   previewImage,
   date,

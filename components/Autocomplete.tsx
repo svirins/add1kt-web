@@ -1,10 +1,10 @@
 import { useTranslations } from 'next-intl';
 
 import { autocomplete } from '@algolia/autocomplete-js';
-import React, { createElement, Fragment, useEffect, useRef } from 'react';
+import { createElement, Fragment, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 
-export default function Autocomplete(props) {
+export function Autocomplete(props) {
   const t = useTranslations('Search');
   const containerRef = useRef(null);
   const panelRootRef = useRef(null);

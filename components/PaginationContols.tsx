@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-export default function PaginationControls({ currentPage, totalPages = 0 }) {
+export function PaginationControls({ currentPage, totalPages = 0 }) {
   const t = useTranslations('Post');
   const isLeftDisabled = currentPage === 1 ? true : false;
   const isRightDisabled = currentPage === totalPages ? true : false;

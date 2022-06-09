@@ -1,5 +1,3 @@
-const withImageLoader = require('next-image-loader');
-
 const BEE_REWRITE = {
   source: '/bee.js',
   destination: 'https://cdn.splitbee.io/sb.js'

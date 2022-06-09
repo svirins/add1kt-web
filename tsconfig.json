@@ -24,11 +24,6 @@
       "@/config/*": ["config/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "messages/**.json",
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "messages/**.json"],
   "exclude": ["node_modules", ".vercel", ".next"]
 }

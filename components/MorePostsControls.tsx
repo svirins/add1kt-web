@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-export default function MorepostsControls({ isDisabled }) {
+export function MorepostsControls({ isDisabled }) {
   const t = useTranslations('Post');
   return (
     <div className="flex flex-row justify-center place-items-center  w-full flex-nowrap">

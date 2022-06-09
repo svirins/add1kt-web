@@ -4,8 +4,8 @@ import { useTranslations } from 'next-intl';
 
 import { getAlgoliaResults } from '@algolia/autocomplete-js';
 import algoliasearch from 'algoliasearch';
-import Autocomplete from './Autocomplete';
-import SearchItem from './SearchItem';
+import { Autocomplete } from './Autocomplete';
+import { SearchItem } from './SearchItem';
 
 import '@algolia/autocomplete-theme-classic';
 import 'instantsearch.css/themes/satellite.css';
@@ -17,7 +17,7 @@ const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
 );
 
-const Search = () => {
+export function Search() {
   const { locale } = useRouter();
   const t = useTranslations('Search');
   const { indexName } = localizedAlgoliaIndices.find(
@@ -56,6 +56,4 @@ const Search = () => {
       />
     </div>
   );
-};
-
-export default Search;
+}

@@ -12,7 +12,6 @@ export function SanityImage({
   slug = '',
   isRounded = false
 }) {
-
   const urlWithProps = urlFor(url)
     .format('webp')
     // .fit('max')
@@ -50,5 +49,3 @@ export function SanityImage({
     </div>
   );
 }
-
-export default SanityImage;

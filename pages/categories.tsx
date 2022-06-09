@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import Container from '@/components/Container';
+import { Container } from '@/components/Container';
 
 import {
   getAuthorsAndRelatedPostsCount,

@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 
 import { globalConfig } from '@/config/global.config';
 
-import LocaleSwitcher from '@/components/LocaleSwitcher';
-import NavItemHeader from '@/components/NavItemHeader';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
+import { LocaleSwitch } from '@/components/LocaleSwitch';
+import { NavItemHeader } from '@/components/NavItemHeader';
+import { ThemeSwitch } from '@/components/ThemeSwitch';
 
-function Header() {
+export function Header() {
   const [mounted, setMounted] = useState(false);
   const t = useTranslations('Navigation');
   useEffect(() => setMounted(true), []);
@@ -31,13 +31,11 @@ function Header() {
         </div>
         {mounted && (
           <div className="flex items-center align-middlle">
-            <LocaleSwitcher />
-            <ThemeSwitcher />
+            <LocaleSwitch />
+            <ThemeSwitch />
           </div>
         )}
       </div>
     </nav>
   );
 }
-
-export default Header;

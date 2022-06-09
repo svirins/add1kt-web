@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Tags({ tags }) {
+export function Tags({ tags }) {
   return (
     <>
       {tags &&

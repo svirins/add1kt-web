@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 type ContainerProps = {
   title?: string;
@@ -13,7 +13,7 @@ type ContainerProps = {
   children: React.ReactNode;
 };
 
-export default function Container(props: ContainerProps) {
+export function Container(props: ContainerProps) {
   const router = useRouter();
   const openGraph = {
     title: props.title ?? '',

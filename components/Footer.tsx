@@ -2,14 +2,14 @@ import { useTranslations } from 'next-intl';
 
 import { globalConfig } from '@/config/global.config';
 
-import ExternalLink from '@/components/ExternalLink';
-import NavItemFooter from '@/components/NavItemFooter';
-import SectionSeparator from '@/components/SectionSeparator';
+import { ExternalLink } from '@/components/ExternalLink';
+import { NavItemFooter } from '@/components/NavItemFooter';
+import { SectionSeparator } from '@/components/SectionSeparator';
 
 import { facebook, telegram, github } from '@/components/Icons';
 import PoweredByVercel from 'powered-by-vercel';
 
-function Footer() {
+export function Footer() {
   const t = useTranslations('Navigation');
 
   return (
@@ -56,5 +56,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;

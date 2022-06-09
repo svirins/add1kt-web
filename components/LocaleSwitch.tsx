@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-export default function LocaleSwitcher() {
+export function LocaleSwitch() {
   const router = useRouter();
   const handleLocale = (locale) =>
     router.push(router.asPath, router.asPath, { locale: locale });

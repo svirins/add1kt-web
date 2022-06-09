@@ -1,15 +1,15 @@
 import { useTranslations } from 'next-intl';
 
-import Tags from '@/components/Tags';
-import PostMeta from '@/components/PostMeta';
-import SanityImage from '@/components/SanityImage';
+import { Tags } from '@/components/Tags';
+import { PostMeta } from '@/components/PostMeta';
+import { SanityImage } from '@/components/SanityImage';
 import { globalConfig } from '@/config/global.config';
 
-import Container from '@/components/Container';
-import PostBody from '@/components/PostBody';
-import PostsGrid from '@/components/PostsGrid';
-import SectionSeparator from '@/components/SectionSeparator';
-import Subtitle from '@/components/Subtitle';
+import { Container } from '@/components/Container';
+import { PostBody } from '@/components/PostBody';
+import { PostsGrid } from '@/components/PostsGrid';
+import { SectionSeparator } from '@/components/SectionSeparator';
+import { Subtitle } from '@/components/Subtitle';
 
 import { getAllPostSlugs, getPostAndRelatedPosts } from '@/lib/api';
 

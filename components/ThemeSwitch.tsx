@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
-const ThemeSwitch = () => {
+export function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme, resolvedTheme } = useTheme();
 
@@ -36,6 +36,4 @@ const ThemeSwitch = () => {
       </svg>
     </button>
   );
-};
-
-export default ThemeSwitch;
+}

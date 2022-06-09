@@ -1,10 +1,10 @@
-import SanityImage from '@/components/SanityImage';
-import PostBody from '@/components/PostBody';
-import Socials from '@/components/Socials';
+import { SanityImage } from '@/components/SanityImage';
+import { PostBody } from '@/components/PostBody';
+import { Socials } from '@/components/Socials';
 
 import { globalConfig } from '@/config/global.config';
 
-export default function PageTop({
+export function PageTop({
   title,
   subtitle = '',
   socials = [],
