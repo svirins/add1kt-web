@@ -26,7 +26,7 @@ export default function Post({ post, relatedPosts }) {
           <h1 className="font-bold text-3xl md:text-5xl tracking-tight  text-gray-800 dark:text-gray-200">
             {post.postTitle}
           </h1>
-          <div className="flex flex-row text-sm justify-end mb-4">
+          <div className="flex flex-row text-sm justify-end mb-2 py-2">
             <Tags tags={post.tags} />
           </div>
           <SanityImage
@@ -36,7 +36,7 @@ export default function Post({ post, relatedPosts }) {
             height={globalConfig.images.defaultPostImageHeight}
           />
 
-          <div className="flex flex-row mt-4">
+          <div className="flex flex-row mt-4 pt-2">
             <PostMeta
               date={post.postDate}
               readingTime={post.readingTime}

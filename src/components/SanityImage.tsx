@@ -46,7 +46,7 @@ export function SanityImage({
     />
   );
   return (
-    <div className="sm:mx-0  relative">
+    <div className="sm:mx-0 relative">
       {slug ? (
         <Link href={`/blog/${slug}`}>
           <a aria-label={alt}>{image}</a>
