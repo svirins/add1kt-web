@@ -1,15 +1,18 @@
 {
+  "name": "add1kt",
+  "version": "0.9.0",
   "private": true,
-  "license": "MIT",
+  "license": "custom",
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "build-stats": "cross-env ANALYZE=true npm run build",
+    "build-prod": "run-s clean build export",
+    "clean": "rimraf .next out",
     "start": "next start",
     "generate": "node --experimental-json-modules  ./scripts/search-index-builder.mjs",
-    "clean": "rimraf .next out",
     "lint": "next lint",
     "check-types": "tsc --noEmit --pretty",
-    "prettier": "prettier --write .",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -43,15 +46,19 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^17.0.0",
+    "@next/bundle-analyzer": "^12.1.6",
     "@tailwindcss/typography": "^0.5.2",
-    "@types/node": "^17.0.35",
+    "@types/node": "17.0.42",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
     "@vercel/node": "^2.1.0",
     "autoprefixer": "10.4.7",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.11",
     "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-next": "^12.1.6",
     "eslint-config-prettier": "^8.5.0",
@@ -61,13 +68,15 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-tailwindcss": "^3.5.2",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.1",
+    "npm-run-all": "^4.1.5",
     "postcss": "8.4.14",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^3.1.0",
+    "tailwindcss": "3.1.2",
     "typescript": "^4.7.2"
   },
   "prettier": {
@@ -75,5 +84,6 @@
     "singleQuote": true,
     "tabWidth": 2,
     "trailingComma": "none"
-  }
+  },
+  "author": "Zvirinz (https://github.com/zvirinz)"
 }
