@@ -38,13 +38,11 @@ export function SanityImage({
       blurDataURL={`data:image/svg+xml;base64,${toBase64(
         shimmer(width, height)
       )}`}
-      className={cn(
-        {
-          'hover:opacity-75 transition-opacity': slug,
-          'rounded-full': isRounded
-        },
-        'rounded-lg'
-      )}
+      className={cn({
+        'hover:opacity-75 transition-opacity': slug,
+        'rounded-full': isRounded,
+        'rounded-lg': !isRounded
+      })}
     />
   );
   return (

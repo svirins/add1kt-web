@@ -1,20 +1,27 @@
 import groq from 'groq';
 
-export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true] {
-  "postTitle": title[$locale],
-  "postSlug": slug.current,
-  "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
-  "author": author -> {
+const authorData = `{
     "authorName": title[$locale],
     "authorSlug": slug.current,
     "authorPicture": picture.asset -> url,
-  },
-  "tags": tags[] -> {
+  }`;
+
+const tagsData = `{
     "tagName": title[$locale],
     "tagSlug": slug.current
-  },
+  }`;
+
+const postData = `
+  "postTitle": title[$locale],
+  "postSlug": slug.current,
+  "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
   "postImageUrl": coverImage.asset-> url,
-  "postDate": _createdAt
+  "postDate": _createdAt`;
+
+export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true] {
+  ${postData},
+  "author": author -> ${authorData},
+  "tags": tags[] -> ${tagsData},
 } [$skip...$limit] | order(_createdAt desc)`;
 
 export const getPageContentQuery = groq`*[_type == 'page' && slug.current == $slug]{
@@ -36,36 +43,14 @@ export const getAllTagSlugsQuery = groq`*[_type == 'tag'] {
 }`;
 
 export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.current == $slug] {
-  "postTitle": title[$locale],
-  "postSlug": slug.current,
-  "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
-  "postImageUrl": coverImage.asset-> url,
-  "postDate": _createdAt,
+  ${postData},
   "postText": text[$locale],
-  "author": author -> {
-    "authorName": title[$locale],
-    "authorSlug": slug.current,
-    "authorPicture": picture.asset -> url,
-  },
-  "tags": tags[] -> {
-    "tagName": title[$locale],
-    "tagSlug": slug.current
-  },
+  "author": author -> ${authorData},
+  "tags": tags[] -> ${tagsData},
   "relatedPosts": relatedPosts[] -> {
-      "postTitle": title[$locale],
-      "postSlug": slug.current,
-      "postDate": _createdAt,
-      "postImageUrl": coverImage.asset-> url,
-      "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
-      "author": author -> {
-        "authorName": title[$locale],
-        "authorSlug": slug.current,
-        "authorPicture": picture.asset -> url,
-      },
-      "tags": tags[] -> {
-        "tagName": title[$locale],
-        "tagSlug": slug.current
-      },
+      ${postData},
+      "author": author -> ${authorData},
+      "tags": tags[] -> ${tagsData},
   }
 }[0]`;
 
@@ -76,20 +61,9 @@ export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.cu
   "authorPicture": picture.asset -> url,
   "authorSocials": social,
   "authorPosts": *[_type == 'post' && references(^._id)] {
-    "postTitle": title[$locale],
-    "postSlug": slug.current,
-    "postDate": _createdAt,
-    "postImageUrl": coverImage.asset-> url,
-    "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
-    "author": author -> {
-      "authorName": title[$locale],
-      "authorSlug": slug.current,
-      "authorPicture": picture.asset -> url,
-    },
-    "tags": tags[] -> {
-      "tagName": title[$locale],
-      "tagSlug": slug.current
-    },
+    ${postData},
+    "author": author -> ${authorData},
+    "tags": tags[] -> ${tagsData},
   } [$skip...$limit] | order(_createdAt desc)
 }[0]`;
 
@@ -99,37 +73,15 @@ export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current
   "tagText": text[$locale],
   "tagPicture": picture.asset -> url,
   "sameTagPosts": *[_type == 'post' && references(^._id)] {
-    "postTitle": title[$locale],
-    "postSlug": slug.current,
-    "postDate": _createdAt,
-    "postImageUrl": coverImage.asset-> url,
-    "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
-    "author": author -> {
-      "authorName": title[$locale],
-      "authorSlug": slug.current,
-      "authorPicture": picture.asset -> url,
-    },
-    "tags": tags[] -> {
-      "tagName": title[$locale],
-      "tagSlug": slug.current
-    },
+    ${postData},
+    "author": author -> ${authorData},
+    "tags": tags[] -> ${tagsData},
   } [$skip...$limit] | order(_createdAt desc)
 }[0]`;
 export const getPaginatedPostsQuery = groq`*[_type == 'post'] {
-  "postTitle": title[$locale],
-  "postSlug": slug.current,
-  "postDate": _createdAt,
-  "postImageUrl": coverImage.asset-> url,
-  "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
-  "author": author -> {
-    "authorName": title[$locale],
-    "authorSlug": slug.current,
-    "authorPicture": picture.asset -> url,
-  },
-  "tags": tags[] -> {
-    "tagName": title[$locale],
-    "tagSlug": slug.current
-},
+  ${postData},
+  "author": author ->${authorData},
+  "tags": tags[] -> ${tagsData},
 } [$skip...$limit] | order(_createdAt desc)`;
 
 export const getTagsAndRelatedPostsCountQuery = groq`*[_type=="tag"] {
