@@ -37,7 +37,9 @@
           "error",
           {
             "singleQuote": true,
-            "endOfLine": "auto"
+            "endOfLine": "auto",
+            "bracketSpacing": true,
+            "trailingComma": "all"
           }
         ],
         "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable

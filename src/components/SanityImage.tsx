@@ -11,19 +11,9 @@ export function SanityImage({
   height = width,
   alt = 'A placeholder text for image',
   slug = '',
-  isRounded = false
+  isRounded = false,
 }) {
-  const urlWithProps = urlFor(url)
-    // .format('webp')
-    // .fit('max')
-    // .width(Number(width))
-    // .height(height)
-    .auto('format')
-    .url();
-  // const sanityImageLoader = ({ src, width: w, quality }) => {
-  //   return `${src}?w=${w}&q=${quality || 75}`;
-  // };
-
+  const urlWithProps = urlFor(url).auto('format').url();
   const image = (
     <Img
       alt={alt}
@@ -36,12 +26,12 @@ export function SanityImage({
       placeholder="blur"
       unoptimized={true}
       blurDataURL={`data:image/svg+xml;base64,${toBase64(
-        shimmer(width, height)
+        shimmer(width, height),
       )}`}
       className={cn({
         'hover:opacity-75 transition-opacity': slug,
         'rounded-full': isRounded,
-        'rounded-lg': !isRounded
+        'rounded-lg': !isRounded,
       })}
     />
   );

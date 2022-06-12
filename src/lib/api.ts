@@ -17,38 +17,38 @@ import {
   getTagsAndRelatedPostsCountQuery,
   getAuthorsAndRelatedPostsCountQuery,
   getTotalPostsNumberQuery,
-  getTotalPostForAlgoliaQuery
+  getTotalPostForAlgoliaQuery,
 } from './queries';
 
 const client = getSanityClient({ useCdn: false });
 
-export async function getFeaturedPosts(locale) {
+export async function getFeaturedPosts(locale: string) {
   const data = await client.fetch(getFeaturedPostsQuery, {
     locale,
     skip: 0,
-    limit: globalConfig.pagination.pageSize
+    limit: globalConfig.pagination.pageSize,
   });
   return data;
 }
 
-export async function getPageContent(locale, slug) {
+export async function getPageContent(locale: string, slug: string) {
   const data = await client.fetch(getPageContentQuery, {
     locale,
-    slug
+    slug,
   });
   return data;
 }
 
-export async function getAuthorsAndRelatedPostsCount(locale) {
+export async function getAuthorsAndRelatedPostsCount(locale: string) {
   const data = await client.fetch(getAuthorsAndRelatedPostsCountQuery, {
-    locale
+    locale,
   });
   return data;
 }
 
-export async function getTagsAndRelatedPostsCount(locale) {
+export async function getTagsAndRelatedPostsCount(locale: string) {
   const data = await client.fetch(getTagsAndRelatedPostsCountQuery, {
-    locale
+    locale,
   });
   return data;
 }
@@ -58,12 +58,12 @@ export async function getAllTagSlugs() {
   return data;
 }
 
-export async function getTagAndRelatedPosts(locale, slug) {
+export async function getTagAndRelatedPosts(locale: string, slug: string) {
   const data = await client.fetch(getTagAndRelatedPostsQuery, {
     locale,
     slug,
     skip: 0,
-    limit: globalConfig.pagination.allPostsSize
+    limit: globalConfig.pagination.allPostsSize,
   });
   return data;
 }
@@ -73,12 +73,12 @@ export async function getAllAuthorSlugs() {
   return data;
 }
 
-export async function getAuthorAndRelatedPosts(locale, slug) {
+export async function getAuthorAndRelatedPosts(locale: string, slug: string) {
   const data = await client.fetch(getAuthorAndRelatedPostsQuery, {
     locale,
     slug,
     skip: 0,
-    limit: globalConfig.pagination.allPostsSize
+    limit: globalConfig.pagination.allPostsSize,
   });
   return data;
 }
@@ -88,21 +88,21 @@ export async function getAllPostSlugs() {
   return data;
 }
 
-export async function getPostAndRelatedPosts(locale, slug) {
+export async function getPostAndRelatedPosts(locale: string, slug: string) {
   const data = await client.fetch(getPostAndRelatedPostsQuery, {
     locale,
     slug,
     skip: 0,
-    limit: globalConfig.pagination.morePostsSize
+    limit: globalConfig.pagination.morePostsSize,
   });
   return data;
 }
 
-export async function getPaginatedPosts(locale, page) {
+export async function getPaginatedPosts(locale: string, page: number) {
   const data = await client.fetch(getPaginatedPostsQuery, {
     locale,
     skip: getSkipValue(page),
-    limit: globalConfig.pagination.pageSize + getSkipValue(page)
+    limit: globalConfig.pagination.pageSize + getSkipValue(page),
   });
   return data;
 }
@@ -112,7 +112,7 @@ export async function getTotalPostsNumber() {
   return Number(totalPosts);
 }
 
-export async function getPostsForAlgolia(locale) {
+export async function getPostsForAlgolia(locale: string) {
   const data = await client.fetch(getTotalPostForAlgoliaQuery, { locale });
   return data;
 }
