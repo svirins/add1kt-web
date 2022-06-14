@@ -10,10 +10,13 @@ import { Subtitle } from '@/components/Subtitle';
 import {
   getFeaturedPosts,
   getPageContent,
-  getTotalPostsNumber
-} from '@/lib/api';
+  getTotalPostsNumber,
+} from '@/utils/api';
 
-export default function Index({ pageData, featuredPosts, total }) {
+type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
+type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>['props'];
+
+export default function Index({ pageData, featuredPosts, total }: Props) {
   const t = useTranslations('Titles');
   return (
     <Container title={pageData.pageTitle}>
@@ -38,7 +41,7 @@ export default function Index({ pageData, featuredPosts, total }) {
   );
 }
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps({ locale }: { locale: string }) {
   const featuredPosts = await getFeaturedPosts(locale);
   const pageData = await getPageContent(locale, '/');
   const total = await getTotalPostsNumber();
@@ -47,7 +50,7 @@ export async function getStaticProps({ locale }) {
       pageData,
       featuredPosts,
       total,
-      messages: (await import(`../messages/${locale}.json`)).default
-    }
+      messages: (await import(`../messages/${locale}.json`)).default,
+    },
   };
 }

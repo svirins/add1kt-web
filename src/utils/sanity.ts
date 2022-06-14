@@ -9,4 +9,4 @@ export function getSanityClient({ useCdn = true }) {
 
 const client = getSanityClient({ useCdn: true });
 
-export const urlFor = (source) => createImageUrlBuilder(client).image(source);
+export const urlFor = (source: string) => createImageUrlBuilder(client).image(source);

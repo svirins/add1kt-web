@@ -5,6 +5,6 @@ export default {
     description: 'Blog about addiction',
     type: 'website',
     url: 'https://www.addict.cf/',
-    site_name: 'Addict.cf - blog about addiction'
-  }
+    site_name: 'Addict.cf - blog about addiction',
+  },
 };

@@ -15,9 +15,12 @@ import { Analytics } from '@/components/Analytics';
 import SEO from '@/config/next-seo.config';
 
 function App({ Component, pageProps }: AppProps) {
-  usePanelbear(process.env.NEXT_PUBLIC_PANELBEAR_SITE_ID, {
-    debug: false
-  });
+  usePanelbear(
+    process.env.NEXT_PUBLIC_PANELBEAR_SITE_ID,
+    {
+      debug: false,
+    },
+  );
   return (
     <>
       <NextIntlProvider
@@ -27,9 +30,9 @@ function App({ Component, pageProps }: AppProps) {
             short: {
               day: 'numeric',
               month: 'short',
-              year: 'numeric'
-            }
-          }
+              year: 'numeric',
+            },
+          },
         }}
       >
         {' '}

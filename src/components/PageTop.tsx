@@ -2,14 +2,21 @@ import { PostBody } from '@/components/PostBody';
 import { SanityImage } from '@/components/SanityImage';
 import { Socials } from '@/components/Socials';
 import { globalConfig } from '@/config/global.config';
+import type { PortableText } from '@/typings/schema-types';
 
-export function PageTop({
-  title,
-  subtitle = '',
-  socials = [],
-  pictureUrl = '',
-  text
-}) {
+export type PageTopProps = {
+  title: string;
+  subtitle?: string;
+  socials?: string[];
+  pictureUrl?: string;
+  text: PortableText;
+};
+
+export function PageTop(
+  {
+    title, subtitle = '', socials = [], pictureUrl = '', text
+  }: PageTopProps,
+) {
   return (
     <div className="flex flex-col-reverse sm:flex-row items-start">
       <div className="flex flex-col pr-8">

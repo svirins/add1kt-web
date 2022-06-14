@@ -3,8 +3,15 @@ import Link from 'next/link';
 import { useIntl, useTranslations } from 'next-intl';
 
 import { AvatarImage } from '@/components/AvatarImage';
+import type { AuthorShort } from '@/typings/schema-types';
 
-export function PostMeta({ author, date, readingTime }) {
+export type PostMetaProps = {
+  date: string;
+  author: AuthorShort;
+  readingTime: number;
+};
+
+export function PostMeta({ author, date, readingTime }: PostMetaProps) {
   const intl = useIntl();
   const t = useTranslations('Post');
   return (
@@ -23,10 +30,10 @@ export function PostMeta({ author, date, readingTime }) {
             {intl.formatDateTime(parseISO(date), {
               year: 'numeric',
               month: 'long',
-              day: 'numeric'
+              day: 'numeric',
             })}
           </time>
-          {` • `}
+          {' • '}
           <span>{`${readingTime} ${t('reading_time')}`}</span>
         </p>
       </div>

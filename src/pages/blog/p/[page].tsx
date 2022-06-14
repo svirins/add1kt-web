@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import type { ParsedUrlQuery } from 'querystring';
 
 import { Container } from '@/components/Container';
 import { PageTop } from '@/components/PageTop';
@@ -10,17 +11,24 @@ import { globalConfig } from '@/config/global.config';
 import {
   getPageContent,
   getPaginatedPosts,
-  getTotalPostsNumber
-} from '@/lib/api';
+  getTotalPostsNumber,
+} from '@/utils/api';
 
-export default function BlogIndexPage({
-  pageData,
-  paginatedPosts,
-  page,
-  totalPages
-}) {
+interface IParams extends ParsedUrlQuery {
+  page: string;
+}
+type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
+type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>['props'];
+
+export default function BlogIndexPage(
+  {
+    pageData, paginatedPosts, page, totalPages
+  }: Props,
+) {
   const t = useTranslations('Titles');
-  if (!pageData || paginatedPosts?.lenght === 0) return <p>no data</p>;
+  if (!pageData || paginatedPosts?.length === 0) {
+    return <p>no data</p>;
+  }
 
   return (
     <Container title={`${t('blog_page')} ${page}/${totalPages}`}>
@@ -45,27 +53,34 @@ export default function BlogIndexPage({
   );
 }
 
-export async function getStaticPaths({ locales }) {
+export async function getStaticPaths({ locales }: { locales: string[] }) {
   const totalPosts = await getTotalPostsNumber();
   const totalPages = Math.ceil(totalPosts / globalConfig.pagination.pageSize);
   const allPathsWithLocales = Array.from(
     { length: totalPages - 1 },
-    (_, i) => i + 1
+    (_, i) => i + 1,
   )
-    .map((page) =>
-      locales.map((locale) => ({
-        params: { page: `/blog/p/${page}` },
-        locale
-      }))
+    .map(
+      (page) => locales.map(
+        (locale) => ({
+          params: { page: `/blog/p/${page}` },
+          locale,
+        }),
+      ),
     )
     .flat();
   return {
     paths: allPathsWithLocales,
-    fallback: 'blocking'
+    fallback: 'blocking',
   };
 }
 
-export async function getStaticProps({ params, locale }) {
+export async function getStaticProps(
+  { params, locale }: {
+    params: IParams;
+    locale: string;
+  },
+) {
   const paginatedPosts = await getPaginatedPosts(locale, Number(params.page));
   const pageData = await getPageContent(locale, '/');
   const totalPosts = await getTotalPostsNumber();
@@ -76,7 +91,7 @@ export async function getStaticProps({ params, locale }) {
       paginatedPosts,
       page: params.page,
       totalPages,
-      messages: (await import(`../../../messages/${locale}.json`)).default
-    }
+      messages: (await import(`../../../messages/${locale}.json`)).default,
+    },
   };
 }

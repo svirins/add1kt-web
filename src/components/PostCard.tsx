@@ -4,17 +4,24 @@ import { PostMeta } from '@/components/PostMeta';
 import { SanityImage } from '@/components/SanityImage';
 import { Tags } from '@/components/Tags';
 import { globalConfig } from '@/config/global.config';
-import { truncate } from '@/lib/contentUtils';
+import type { AuthorShort, TagShort } from '@/typings/schema-types';
+import { truncate } from '@/utils/contentUtils';
 
-export function PostCard({
-  title,
-  previewImage,
-  date,
-  author,
-  tags,
-  slug,
-  readingTime
-}) {
+export type PostCardProps = {
+  title: string;
+  previewImage: string;
+  date: string;
+  author: AuthorShort;
+  tags: TagShort[];
+  slug: string;
+  readingTime: number;
+};
+
+export function PostCard(
+  {
+    title, previewImage, date, author, tags, slug, readingTime
+  }: PostCardProps,
+) {
   return (
     <div className="my-4 md:my-0">
       <SanityImage
@@ -30,7 +37,7 @@ export function PostCard({
         </Link>
       </h4>
       <div className="flex flex-row text-sm  justify-end">
-        <Tags tags={tags} />
+        {<Tags tags={tags} />}
       </div>
       <div className="flex flex-row ">
         <PostMeta

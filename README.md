@@ -1,6 +1,6 @@
 # addict.cf
 
-Blog for my friend psychotherapist, built with Next.js, Tailwind, Sanity, and Vercel.
+Blog for my friend psychotherapist, built with Next.js, Tailwind, Sanity and Vercel.
 
 ## Uses
 
@@ -15,6 +15,7 @@ Blog for my friend psychotherapist, built with Next.js, Tailwind, Sanity, and Ve
 
 ## Features
 
+- 100% Typescript
 - Performant by default
 - SEO
 - Internationalization

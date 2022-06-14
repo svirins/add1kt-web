@@ -1,13 +1,11 @@
 import { ExternalLink } from '@/components/ExternalLink';
-import { getSocialIconByLink } from '@/lib/contentUtils';
+import { getSocialIconByLink } from '@/utils/contentUtils';
 
-export function Socials({ socials }) {
-  const icons = socials.map((social, index) => {
-    return (
+export function Socials({ socials }: { socials: string[] }) {
+  const icons = socials.map((social, index) => (
       <ExternalLink key={index} href={social}>
-        {getSocialIconByLink(social)}
+        {getSocialIconByLink(social)!}
       </ExternalLink>
-    );
-  });
+  ),);
   return <>{icons}</>;
 }

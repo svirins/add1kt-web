@@ -38,7 +38,7 @@ export function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           svgProps={{
-            width: 144
+            width: 144,
           }}
         />
         <a

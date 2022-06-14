@@ -1,4 +1,18 @@
-export function SearchItem({ hit, components }) {
+import type { AutocompleteComponents } from '@algolia/autocomplete-js';
+import type { Hit } from '@algolia/client-search';
+
+export type Item = Hit<
+{
+  slug: string;
+  title: string;
+}
+>;
+export type ItemProps = {
+  hit: Item;
+  components: AutocompleteComponents;
+};
+
+export function SearchItem({ hit, components }: ItemProps) {
   return (
     <a className="aa-ItemLink" href={`/blog/${hit.slug}`}>
       <div className="aa-ItemContent">

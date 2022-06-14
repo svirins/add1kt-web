@@ -55,7 +55,7 @@ export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.curre
 }[0]`;
 
 export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.current ==  $slug]{
-  "authorTitle": title[$locale],
+  "authorName": title[$locale],
   "authorSlug": slug.current,
   "authorBio": bio[$locale],
   "authorPicture": picture.asset -> url,
@@ -68,7 +68,7 @@ export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.cu
 }[0]`;
 
 export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current ==  $slug] {
-  "tagTitle": title[$locale],
+  "tagName": title[$locale],
   "tagSlug": slug.current,
   "tagText": text[$locale],
   "tagPicture": picture.asset -> url,
@@ -85,13 +85,13 @@ export const getPaginatedPostsQuery = groq`*[_type == 'post'] {
 } [$skip...$limit] | order(_createdAt desc)`;
 
 export const getTagsAndRelatedPostsCountQuery = groq`*[_type=="tag"] {
-  "tagTitle": title[$locale],
+  "tagName": title[$locale],
   "tagSlug": slug.current,
   "relatedPostsCount": count(*[_type=='post' && references(^._id)])
 }`;
 
 export const getAuthorsAndRelatedPostsCountQuery = groq`*[_type=="author"] {
-  "authorTitle": title[$locale],
+  "authorName": title[$locale],
   "authorSlug": slug.current,
   "relatedPostsCount": count(*[_type=='post' && references(^._id)])
 }`;

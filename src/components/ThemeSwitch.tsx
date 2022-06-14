@@ -12,10 +12,9 @@ export function ThemeSwitch() {
       aria-label="Toggle Dark Mode"
       type="button"
       className="pl-2  h-8 w-8 rounded p-1"
-      onClick={() =>
-        setTheme(
-          theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark'
-        )
+      onClick={() => setTheme(
+        theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark',
+      )
       }
     >
       <svg

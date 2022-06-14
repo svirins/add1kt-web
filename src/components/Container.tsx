@@ -24,9 +24,9 @@ export function Container(props: ContainerProps) {
     images: [
       {
         url: props.ogImage ?? '/og.png',
-        alt: props.title ?? ''
-      }
-    ]
+        alt: props.title ?? '',
+      },
+    ],
   };
   return (
     <div className="flex flex-col justify-center text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 ">

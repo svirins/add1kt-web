@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import type { ParsedUrlQuery } from 'querystring';
 
 import { Container } from '@/components/Container';
 import { PostBody } from '@/components/PostBody';
@@ -9,11 +10,19 @@ import { SectionSeparator } from '@/components/SectionSeparator';
 import { Subtitle } from '@/components/Subtitle';
 import { Tags } from '@/components/Tags';
 import { globalConfig } from '@/config/global.config';
-import { getAllPostSlugs, getPostAndRelatedPosts } from '@/lib/api';
+import { getAllPostSlugs, getPostAndRelatedPosts } from '@/utils/api';
 
-export default function Post({ post, relatedPosts }) {
+interface IParams extends ParsedUrlQuery {
+  slug: string;
+}
+type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
+type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>['props'];
+
+export default function Post({ post, relatedPosts }: Props) {
   const t = useTranslations('Titles');
-  if (!post || relatedPosts?.lenght === 0) return <p>no data</p>;
+  if (!post || relatedPosts?.length === 0) {
+    return <p>no data</p>;
+  }
   return (
     <Container
       title={post.postTitle}
@@ -53,32 +62,37 @@ export default function Post({ post, relatedPosts }) {
   );
 }
 
-export async function getStaticPaths({ locales }) {
+export async function getStaticPaths({ locales }: { locales: string[] }) {
   const allPosts = await getAllPostSlugs();
-  const allPathsWithLocales = allPosts
-    .map(({ slug }) =>
-      locales.map((locale) => ({
+  const allPathsWithLocales = allPosts.map(
+    ({ slug }) => locales.map(
+      (locale) => ({
         params: { slug: `/blog/${slug}` },
-        locale
-      }))
-    )
-    .flat();
+        locale,
+      }),
+    ),
+  ).flat();
   return {
     paths: allPathsWithLocales,
-    fallback: 'blocking'
+    fallback: 'blocking',
   };
 }
 
-export async function getStaticProps({ params, locale }) {
+export async function getStaticProps(
+  { params, locale }: {
+    params: IParams;
+    locale: string;
+  },
+) {
   const { relatedPosts, ...post } = await getPostAndRelatedPosts(
     locale,
-    params.slug.replace(/\/$/, '').split('/').pop()
+    params.slug.replace(/\/$/, '').split('/').pop() as string,
   );
   return {
     props: {
       post,
       relatedPosts,
-      messages: (await import(`../../messages/${locale}.json`)).default
-    }
+      messages: (await import(`../../messages/${locale}.json`)).default,
+    },
   };
 }

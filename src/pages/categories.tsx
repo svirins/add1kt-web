@@ -4,16 +4,19 @@ import { useTranslations } from 'next-intl';
 import { Container } from '@/components/Container';
 import {
   getAuthorsAndRelatedPostsCount,
-  getTagsAndRelatedPostsCount
-} from '@/lib/api';
+  getTagsAndRelatedPostsCount,
+} from '@/utils/api';
 
-export default function GetAllAuthorsAndTags({ authors, tags }) {
+type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
+type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>['props'];
+
+export default function GetAllAuthorsAndTags({ authors, tags }: Props) {
   const t = useTranslations('Titles');
   const sortedAutors = authors.sort(
-    (a, b) => b.relatedPostsCount - a.relatedPostsCount
+    (a, b) => b.relatedPostsCount - a.relatedPostsCount,
   );
   const sortedTags = tags.sort(
-    (a, b) => b.relatedPostsCount - a.relatedPostsCount
+    (a, b) => b.relatedPostsCount - a.relatedPostsCount,
   );
   return (
     <Container title={t('categories')}>
@@ -25,18 +28,17 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
             </h1>
           </div>
           <div className="flex max-w-lg flex-wrap">
-            {sortedAutors?.length > 0 &&
-              sortedAutors.map((author) => {
-                return (
-                  <div key={author} className="mt-2 mb-2 mr-5">
+            {sortedAutors
+              && sortedAutors.length > 0
+              && sortedAutors.map((author) => (
+                  <div key={author.authorSlug} className="mt-2 mb-2 mr-5">
                     <Link href={`/author/${author.authorSlug}`}>
                       <a className="mr-3 text-base font-medium text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
-                        {`${author.authorTitle} (${author.relatedPostsCount})`}
+                        {`${author.authorName} (${author.relatedPostsCount})`}
                       </a>
                     </Link>
                   </div>
-                );
-              })}
+              ))}
           </div>
         </div>
         <div className="flex flex-col items-start justify-start divide-y divide-gray-300 dark:divide-gray-500 mb-6 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
@@ -46,18 +48,17 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
             </h1>
           </div>
           <div className="flex max-w-lg flex-wrap">
-            {sortedTags?.length > 0 &&
-              sortedTags.map((tag) => {
-                return (
-                  <div key={tag} className="mt-2 mb-2 mr-5">
+            {sortedTags
+              && sortedTags.length > 0
+              && sortedTags.map((tag) => (
+                  <div key={tag.tagSlug} className="mt-2 mb-2 mr-5">
                     <Link href={`/tag/${tag.tagSlug}`}>
                       <a className="mr-3 text-base font-medium  text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
-                        {`#${tag.tagTitle} (${tag.relatedPostsCount})`}
+                        {`#${tag.tagName} (${tag.relatedPostsCount})`}
                       </a>
                     </Link>
                   </div>
-                );
-              })}
+              ))}
           </div>
         </div>
       </div>
@@ -65,7 +66,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }) {
   );
 }
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps({ locale }: { locale: string }) {
   const authors = await getAuthorsAndRelatedPostsCount(locale);
   const tags = await getTagsAndRelatedPostsCount(locale);
 
@@ -73,7 +74,7 @@ export async function getStaticProps({ locale }) {
     props: {
       authors,
       tags,
-      messages: (await import(`../messages/${locale}.json`)).default
-    }
+      messages: (await import(`../messages/${locale}.json`)).default,
+    },
   };
 }

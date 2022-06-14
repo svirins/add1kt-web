@@ -19,8 +19,8 @@ module.exports = {
           600: '#444444',
           700: '#333333',
           800: '#222222',
-          900: '#111111'
-        }
+          900: '#111111',
+        },
       },
       borderWidth: {
         DEFAULT: '1px',
@@ -30,10 +30,10 @@ module.exports = {
         3: '3px',
         4: '4px',
         6: '6px',
-        8: '8px'
+        8: '8px',
       },
       fontFamily: {
-        sans: ['IBM Plex Sans', ...fontFamily.sans]
+        sans: ['IBM Plex Sans', ...fontFamily.sans],
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -41,42 +41,42 @@ module.exports = {
             a: {
               color: theme('colors.teal.600'),
               '&:hover': {
-                color: theme('colors.teal.800')
-              }
-            }
-          }
+                color: theme('colors.teal.800'),
+              },
+            },
+          },
         },
         dark: {
           css: {
             a: {
               color: theme('colors.teal.600'),
               '&:hover': {
-                color: theme('colors.blue.400')
-              }
+                color: theme('colors.blue.400'),
+              },
             },
             blockquote: {
               borderLeftColor: theme('colors.gray.700'),
-              color: theme('colors.gray.300')
+              color: theme('colors.gray.300'),
             },
             hr: { borderColor: theme('colors.gray.700') },
             ol: {
               li: {
-                '&:before': { color: theme('colors.gray.500') }
-              }
+                '&:before': { color: theme('colors.gray.500') },
+              },
             },
             ul: {
               li: {
-                '&:before': { backgroundColor: theme('colors.gray.500') }
-              }
+                '&:before': { backgroundColor: theme('colors.gray.500') },
+              },
             },
-            strong: { color: theme('colors.gray.100') }
-          }
-        }
-      })
+            strong: { color: theme('colors.gray.100') },
+          },
+        },
+      }),
     },
     variants: {
-      typography: ['dark']
+      typography: ['dark'],
     },
-    plugins: [require('@tailwindcss/typography')]
-  }
+    plugins: [require('@tailwindcss/typography')],
+  },
 };
