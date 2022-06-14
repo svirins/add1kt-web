@@ -5,7 +5,7 @@
 	"license": "custom",
 	"scripts": {
 		"dev": "next",
-		"build": "next build",
+		"build": "next build && next-sitemap",
 		"build-stats": "cross-env ANALYZE=true npm run build",
 		"build-prod": "run-s clean build export",
 		"clean": "rimraf .next out",
@@ -14,7 +14,6 @@
 		"lint": "next lint",
 		"check-types": "tsc --noEmit --pretty",
 		"prepare": "husky install",
-		"postbuild": "next-sitemap",
 		"format": "rome format --indent-style space --indent-size 2  --line-width 80 --quote-style single --write "
 	},
 	"dependencies": {
