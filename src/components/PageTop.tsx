@@ -1,8 +1,8 @@
-import { PostBody } from '@/components/PostBody';
-import { SanityImage } from '@/components/SanityImage';
-import { Socials } from '@/components/Socials';
-import { globalConfig } from '@/config/global.config';
-import type { PortableText } from '@/typings/schema-types';
+import { PostBody } from "@/components/PostBody";
+import { SanityImage } from "@/components/SanityImage";
+import { Socials } from "@/components/Socials";
+import type { PortableText } from "@/typings/schema-types";
+import { globalConfig } from "@/utils/global.config";
 
 export type PageTopProps = {
   title: string;
@@ -12,11 +12,13 @@ export type PageTopProps = {
   text: PortableText;
 };
 
-export function PageTop(
-  {
-    title, subtitle = '', socials = [], pictureUrl = '', text
-  }: PageTopProps,
-) {
+export function PageTop({
+  title,
+  subtitle = "",
+  socials = [],
+  pictureUrl = "",
+  text,
+}: PageTopProps) {
   return (
     <div className="flex flex-col-reverse sm:flex-row items-start">
       <div className="flex flex-col pr-8">

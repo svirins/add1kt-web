@@ -1,3 +1,7 @@
 node_modules
 out
 .next
+.vscode
+commitlint.config.js
+pnpm-lock.yaml
+.github

@@ -1,13 +1,14 @@
-import Img from 'next/image';
+import Img from "next/image";
 
-import { globalConfig } from '@/config/global.config';
+import { globalConfig } from "@/utils/global.config";
 
-export function AvatarImage(
-  { url, alt = 'A placeholder for image' }: {
-    url: string;
-    alt?: string;
-  },
-) {
+export function AvatarImage({
+  url,
+  alt = "A placeholder for image",
+}: {
+  url: string;
+  alt?: string;
+}) {
   return (
     <div className="sm:mx-0  relative">
       <Img

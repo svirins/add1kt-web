@@ -1,6 +1,4 @@
-import {
-  useCallback, useEffect, useRef, useState
-} from 'react';
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface Options {
   enterDelay?: number;
@@ -9,27 +7,21 @@ interface Options {
 }
 export function useDebounce<T>(value: T, delay: number): T {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
-  useEffect(
-    () => {
-      const handler = setTimeout(
-        () => {
-          setDebouncedValue(value);
-        },
-        delay,
-      );
-      return () => {
-        clearTimeout(handler);
-      };
-    },
-    [value, delay],
-  );
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
 
   return debouncedValue;
 }
 
 export const useDelayedRender = (
   active: boolean = false,
-  options: Options = {},
+  options: Options = {}
 ) => {
   const [, force] = useState<any>();
   const mounted = useRef(active);
@@ -38,60 +30,51 @@ export const useDelayedRender = (
   const unmountTimer = useRef<any | null>(null);
   const prevActive = useRef(active);
 
-  const recalculate = useCallback(
-    () => {
-      const { enterDelay = 1, exitDelay = 0 } = options;
+  const recalculate = useCallback(() => {
+    const { enterDelay = 1, exitDelay = 0 } = options;
 
-      if (prevActive.current) {
-        // Mount immediately
-        mounted.current = true;
-        if (unmountTimer.current) {
-          clearTimeout(unmountTimer.current);
-        }
-
-        if (enterDelay <= 0) {
-          // Render immediately
-          rendered.current = true;
-        } else {
-          if (renderTimer.current) {
-            return;
-          }
-
-          // Render after a delay
-          renderTimer.current = setTimeout(
-            () => {
-              rendered.current = true;
-              renderTimer.current = null;
-              force({});
-            },
-            enterDelay,
-          );
-        }
-      } else {
-        // Immediately set to unrendered
-        rendered.current = false;
-
-        if (exitDelay <= 0) {
-          mounted.current = false;
-        } else {
-          if (unmountTimer.current) {
-            return;
-          }
-
-          // Unmount after a delay
-          unmountTimer.current = setTimeout(
-            () => {
-              mounted.current = false;
-              unmountTimer.current = null;
-              force({});
-            },
-            exitDelay,
-          );
-        }
+    if (prevActive.current) {
+      // Mount immediately
+      mounted.current = true;
+      if (unmountTimer.current) {
+        clearTimeout(unmountTimer.current);
       }
-    },
-    [options],
-  );
+
+      if (enterDelay <= 0) {
+        // Render immediately
+        rendered.current = true;
+      } else {
+        if (renderTimer.current) {
+          return;
+        }
+
+        // Render after a delay
+        renderTimer.current = setTimeout(() => {
+          rendered.current = true;
+          renderTimer.current = null;
+          force({});
+        }, enterDelay);
+      }
+    } else {
+      // Immediately set to unrendered
+      rendered.current = false;
+
+      if (exitDelay <= 0) {
+        mounted.current = false;
+      } else {
+        if (unmountTimer.current) {
+          return;
+        }
+
+        // Unmount after a delay
+        unmountTimer.current = setTimeout(() => {
+          mounted.current = false;
+          unmountTimer.current = null;
+          force({});
+        }, exitDelay);
+      }
+    }
+  }, [options]);
 
   // When the active prop changes, need to re-calculate
   if (active !== prevActive.current) {

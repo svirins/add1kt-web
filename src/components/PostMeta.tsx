@@ -1,19 +1,19 @@
-import { parseISO } from 'date-fns';
-import Link from 'next/link';
-import { useIntl, useTranslations } from 'next-intl';
+import { parseISO } from "date-fns";
+import Link from "next/link";
+import { useIntl, useTranslations } from "next-intl";
 
-import { AvatarImage } from '@/components/AvatarImage';
-import type { AuthorShort } from '@/typings/schema-types';
+import { AvatarImage } from "@/components/AvatarImage";
+import type { AuthorBase } from "@/typings/schema-types";
 
 export type PostMetaProps = {
   date: string;
-  author: AuthorShort;
+  author: AuthorBase;
   readingTime: number;
 };
 
 export function PostMeta({ author, date, readingTime }: PostMetaProps) {
   const intl = useIntl();
-  const t = useTranslations('Post');
+  const t = useTranslations("Post");
   return (
     <>
       <div className="relative">
@@ -28,13 +28,13 @@ export function PostMeta({ author, date, readingTime }: PostMetaProps) {
         <p className="text-sm text-gray-600 dark:text-gray-400">
           <time>
             {intl.formatDateTime(parseISO(date), {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
+              year: "numeric",
+              month: "long",
+              day: "numeric",
             })}
           </time>
-          {' • '}
-          <span>{`${readingTime} ${t('reading_time')}`}</span>
+          {" • "}
+          <span>{`${readingTime} ${t("reading_time")}`}</span>
         </p>
       </div>
     </>

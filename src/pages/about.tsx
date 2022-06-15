@@ -1,6 +1,6 @@
-import { Container } from '@/components/Container';
-import { PageTop } from '@/components/PageTop';
-import { getPageContent } from '@/utils/api';
+import { Container } from "@/components/Container";
+import { PageTop } from "@/components/PageTop";
+import { getPageContent } from "@/utils/api";
 
 export default function About({ pageData }: Props) {
   return (
@@ -19,10 +19,10 @@ export default function About({ pageData }: Props) {
 }
 
 type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
-type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>['props'];
+type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>["props"];
 
 export async function getStaticProps({ locale }: { locale: string }) {
-  const pageData = await getPageContent(locale, 'about');
+  const pageData = await getPageContent(locale, "about");
   return {
     props: {
       pageData,

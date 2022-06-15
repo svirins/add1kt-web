@@ -1,14 +1,14 @@
-import { useTranslations } from 'next-intl';
-import { useEffect, useState } from 'react';
+import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 
-import { LocaleSwitch } from '@/components/LocaleSwitch';
-import { NavItemHeader } from '@/components/NavItemHeader';
-import { ThemeSwitch } from '@/components/ThemeSwitch';
-import { globalConfig } from '@/config/global.config';
+import { LocaleSwitch } from "@/components/LocaleSwitch";
+import { NavItemHeader } from "@/components/NavItemHeader";
+import { ThemeSwitch } from "@/components/ThemeSwitch";
+import { globalConfig } from "@/utils/global.config";
 
 export function Header() {
   const [mounted, setMounted] = useState(false);
-  const t = useTranslations('Navigation');
+  const t = useTranslations("Navigation");
   useEffect(() => setMounted(true), []);
 
   return (
@@ -21,7 +21,7 @@ export function Header() {
           {globalConfig.menuLinks.map((link, index) => (
             <NavItemHeader
               href={link.href}
-              text={index === 0 ? '//' : t(link.title)}
+              text={index === 0 ? "//" : t(link.title)}
               key={link.title}
             />
           ))}

@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function FourZeroFour() {
-  const t = useTranslations('404');
+  const t = useTranslations("404");
 
   return (
     <div className="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
@@ -13,12 +13,12 @@ export default function FourZeroFour() {
       </div>
       <div className="max-w-md">
         <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-          {t('title')}
+          {t("title")}
         </p>
-        <p className="mb-8">{t('body')}</p>
+        <p className="mb-8">{t("body")}</p>
         <Link href="/">
           <button className="inline rounded-lg border border-transparent bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow transition-colors duration-150 hover:bg-teal-800 focus:outline-none dark:hover:bg-teal-400">
-            {t('button')}
+            {t("button")}
           </button>
         </Link>
       </div>

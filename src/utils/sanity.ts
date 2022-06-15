@@ -1,7 +1,7 @@
-import sanityClient from '@sanity/client';
-import createImageUrlBuilder from '@sanity/image-url';
+import sanityClient from "@sanity/client";
+import createImageUrlBuilder from "@sanity/image-url";
 
-import { sanityConfig } from '@/config/global.config';
+import { sanityConfig } from "./global.config";
 
 export function getSanityClient({ useCdn = true }) {
   return sanityClient({ useCdn, ...sanityConfig });
@@ -9,4 +9,5 @@ export function getSanityClient({ useCdn = true }) {
 
 const client = getSanityClient({ useCdn: true });
 
-export const urlFor = (source: string) => createImageUrlBuilder(client).image(source);
+export const urlFor = (source: string) =>
+  createImageUrlBuilder(client).image(source);

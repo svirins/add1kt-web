@@ -1,25 +1,25 @@
-import { useTranslations } from 'next-intl';
-import type { ParsedUrlQuery } from 'querystring';
+import { useTranslations } from "next-intl";
+import type { ParsedUrlQuery } from "querystring";
 
-import { Container } from '@/components/Container';
-import { PostBody } from '@/components/PostBody';
-import { PostMeta } from '@/components/PostMeta';
-import { PostsGrid } from '@/components/PostsGrid';
-import { SanityImage } from '@/components/SanityImage';
-import { SectionSeparator } from '@/components/SectionSeparator';
-import { Subtitle } from '@/components/Subtitle';
-import { Tags } from '@/components/Tags';
-import { globalConfig } from '@/config/global.config';
-import { getAllPostSlugs, getPostAndRelatedPosts } from '@/utils/api';
+import { Container } from "@/components/Container";
+import { PostBody } from "@/components/PostBody";
+import { PostMeta } from "@/components/PostMeta";
+import { PostsGrid } from "@/components/PostsGrid";
+import { SanityImage } from "@/components/SanityImage";
+import { SectionSeparator } from "@/components/SectionSeparator";
+import { Subtitle } from "@/components/Subtitle";
+import { Tags } from "@/components/Tags";
+import { getAllPostSlugs, getPostAndRelatedPosts } from "@/utils/api";
+import { globalConfig } from "@/utils/global.config";
 
 interface IParams extends ParsedUrlQuery {
   slug: string;
 }
 type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
-type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>['props'];
+type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>["props"];
 
 export default function Post({ post, relatedPosts }: Props) {
-  const t = useTranslations('Titles');
+  const t = useTranslations("Titles");
   if (!post || relatedPosts?.length === 0) {
     return <p>no data</p>;
   }
@@ -55,7 +55,7 @@ export default function Post({ post, relatedPosts }: Props) {
         </div>
         <PostBody text={post.postText} />
         <SectionSeparator />
-        <Subtitle>{t('related_posts')}</Subtitle>
+        <Subtitle>{t("related_posts")}</Subtitle>
         {relatedPosts && <PostsGrid posts={relatedPosts} />}
       </div>
     </Container>
@@ -64,29 +64,30 @@ export default function Post({ post, relatedPosts }: Props) {
 
 export async function getStaticPaths({ locales }: { locales: string[] }) {
   const allPosts = await getAllPostSlugs();
-  const allPathsWithLocales = allPosts.map(
-    ({ slug }) => locales.map(
-      (locale) => ({
+  const allPathsWithLocales = allPosts
+    .map(({ slug }) =>
+      locales.map((locale) => ({
         params: { slug: `/blog/${slug}` },
         locale,
-      }),
-    ),
-  ).flat();
+      }))
+    )
+    .flat();
   return {
     paths: allPathsWithLocales,
-    fallback: 'blocking',
+    fallback: "blocking",
   };
 }
 
-export async function getStaticProps(
-  { params, locale }: {
-    params: IParams;
-    locale: string;
-  },
-) {
+export async function getStaticProps({
+  params,
+  locale,
+}: {
+  params: IParams;
+  locale: string;
+}) {
   const { relatedPosts, ...post } = await getPostAndRelatedPosts(
     locale,
-    params.slug.replace(/\/$/, '').split('/').pop() as string,
+    params.slug.replace(/\/$/, "").split("/").pop() as string
   );
   return {
     props: {

@@ -1,27 +1,31 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import { PostMeta } from '@/components/PostMeta';
-import { SanityImage } from '@/components/SanityImage';
-import { Tags } from '@/components/Tags';
-import { globalConfig } from '@/config/global.config';
-import type { AuthorShort, TagShort } from '@/typings/schema-types';
-import { truncate } from '@/utils/contentUtils';
+import { PostMeta } from "@/components/PostMeta";
+import { SanityImage } from "@/components/SanityImage";
+import { Tags } from "@/components/Tags";
+import type { AuthorBase, TagBase } from "@/typings/schema-types";
+import { truncate } from "@/utils/contentUtils";
+import { globalConfig } from "@/utils/global.config";
 
 export type PostCardProps = {
   title: string;
   previewImage: string;
   date: string;
-  author: AuthorShort;
-  tags: TagShort[];
+  author: AuthorBase;
+  tags: TagBase[];
   slug: string;
   readingTime: number;
 };
 
-export function PostCard(
-  {
-    title, previewImage, date, author, tags, slug, readingTime
-  }: PostCardProps,
-) {
+export function PostCard({
+  title,
+  previewImage,
+  date,
+  author,
+  tags,
+  slug,
+  readingTime,
+}: PostCardProps) {
   return (
     <div className="my-4 md:my-0">
       <SanityImage

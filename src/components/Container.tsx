@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
+import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
 
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 
 type ContainerProps = {
   title?: string;
@@ -16,15 +16,15 @@ type ContainerProps = {
 export function Container(props: ContainerProps) {
   const router = useRouter();
   const openGraph = {
-    title: props.title ?? '',
-    url: `https://www.addict.cf${router.asPath}` ?? 'https://www.addict.cf',
-    type: props.type ?? 'page',
-    image: props.ogImage ?? '/og.png',
-    description: props.description ?? '',
+    title: props.title ?? "",
+    url: `https://www.addict.cf${router.asPath}` ?? "https://www.addict.cf",
+    type: props.type ?? "page",
+    image: props.ogImage ?? "/og.png",
+    description: props.description ?? "",
     images: [
       {
-        url: props.ogImage ?? '/og.png',
-        alt: props.title ?? '',
+        url: props.ogImage ?? "/og.png",
+        alt: props.title ?? "",
       },
     ],
   };

@@ -1,12 +1,10 @@
-import type { AutocompleteComponents } from '@algolia/autocomplete-js';
-import type { Hit } from '@algolia/client-search';
+import type { AutocompleteComponents } from "@algolia/autocomplete-js";
+import type { Hit } from "@algolia/client-search";
 
-export type Item = Hit<
-{
+export type Item = Hit<{
   slug: string;
   title: string;
-}
->;
+}>;
 export type ItemProps = {
   hit: Item;
   components: AutocompleteComponents;

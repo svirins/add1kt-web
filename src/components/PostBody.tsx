@@ -1,8 +1,8 @@
-import { PortableText } from '@portabletext/react';
+import { PortableText } from "@portabletext/react";
 
-import { SanityImage } from '@/components/SanityImage';
-import { globalConfig } from '@/config/global.config';
-import type { PortableText as PortableTextType } from '@/typings/schema-types';
+import { SanityImage } from "@/components/SanityImage";
+import type { PortableText as PortableTextType } from "@/typings/schema-types";
+import { globalConfig } from "@/utils/global.config";
 
 const ptComponents = {
   // TODO:  console log value here and determine its type
@@ -15,7 +15,7 @@ const ptComponents = {
       return (
         <div className="relative py-8">
           <SanityImage
-            alt={value.alt ?? ''}
+            alt={value.alt ?? ""}
             url={value}
             width={globalConfig.images.defaultPostImageWidth}
             height={globalConfig.images.defaultPostImageHeight}

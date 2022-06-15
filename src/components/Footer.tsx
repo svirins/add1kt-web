@@ -1,14 +1,14 @@
-import { useTranslations } from 'next-intl';
-import PoweredByVercel from 'powered-by-vercel';
+import { useTranslations } from "next-intl";
+import PoweredByVercel from "powered-by-vercel";
 
-import { ExternalLink } from '@/components/ExternalLink';
-import { facebook, github, telegram } from '@/components/Icons';
-import { NavItemFooter } from '@/components/NavItemFooter';
-import { SectionSeparator } from '@/components/SectionSeparator';
-import { globalConfig } from '@/config/global.config';
+import { ExternalLink } from "@/components/ExternalLink";
+import { facebook, github, telegram } from "@/components/Icons";
+import { NavItemFooter } from "@/components/NavItemFooter";
+import { SectionSeparator } from "@/components/SectionSeparator";
+import { globalConfig } from "@/utils/global.config";
 
 export function Footer() {
-  const t = useTranslations('Navigation');
+  const t = useTranslations("Navigation");
 
   return (
     <footer className="flex flex-col  max-w-2xl mx-auto w-full mb-8">
@@ -18,7 +18,7 @@ export function Footer() {
           {globalConfig.menuLinks.map((link, index) => (
             <NavItemFooter
               href={link.href}
-              text={index === 0 ? '//' : t(link.title)}
+              text={index === 0 ? "//" : t(link.title)}
               key={link.title}
             />
           ))}

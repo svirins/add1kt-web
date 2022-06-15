@@ -2,53 +2,47 @@ import type {
   SanityBlock,
   SanityImageAsset,
   SanityKeyed,
-} from 'sanity-codegen';
+} from "sanity-codegen";
 
 export type { SanityBlock, SanityImageAsset, SanityKeyed };
 
-export type PostShort = {
+export type PostBase = {
   postTitle: string;
   postSlug: string;
   readingTime: number;
   postImageUrl: string;
   postDate: string;
-  author: AuthorShort;
-  tags: TagShort[];
+  author: AuthorBase;
+  tags: TagBase[];
 };
 
-export type PostExtra = {
+export type Post = PostBase & {
   postText: PortableText;
-  relatedPosts?: PostShort[];
+  relatedPosts?: PostBase[];
 };
 
-export type Post = PostShort & PostExtra;
-
-export type AuthorShort = {
+export type AuthorBase = {
   authorName: string;
   authorSlug: string;
   authorPicture: string;
 };
 
-export type AuthorExtra = {
+export type Author = AuthorBase & {
   authorBio: PortableText;
   authorSocials?: string[];
-  authorPosts?: PostShort[];
+  authorPosts?: PostBase[];
 };
 
-export type Author = AuthorShort & AuthorExtra;
-
-export type TagShort = {
+export type TagBase = {
   tagName: string;
   tagSlug: string;
 };
 
-export type TagExtra = {
+export type Tag = TagBase & {
   tagText: PortableText;
   tagPicture: string;
-  sameTagPosts?: PostShort[];
+  sameTagPosts?: PostBase[];
 };
-
-export type Tag = TagShort & TagExtra;
 
 export type Page = {
   pageTitle: string;
@@ -57,13 +51,11 @@ export type Page = {
 };
 
 export type PortableText = Array<
-| SanityKeyed<SanityBlock>
-| SanityKeyed<
-{
-  _type: 'image';
-  asset: SanityReference<SanityImageAsset>;
-}
->
+  | SanityKeyed<SanityBlock>
+  | SanityKeyed<{
+      _type: "image";
+      asset: SanityReference<SanityImageAsset>;
+    }>
 >;
 
 export type PostsByAuthor = {
