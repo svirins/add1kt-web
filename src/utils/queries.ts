@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import groq from "groq";
 
 const authorData = `{
@@ -55,10 +56,8 @@ export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.curre
 }[0]`;
 
 export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.current ==  $slug]{
-  "authorName": title[$locale],
-  "authorSlug": slug.current,
+  ${authorData},
   "authorBio": bio[$locale],
-  "authorPicture": picture.asset -> url,
   "authorSocials": social,
   "authorPosts": *[_type == 'post' && references(^._id)] {
     ${postData},
@@ -68,8 +67,7 @@ export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.cu
 }[0]`;
 
 export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current ==  $slug] {
-  "tagName": title[$locale],
-  "tagSlug": slug.current,
+   ${tagsData},
   "tagText": text[$locale],
   "tagPicture": picture.asset -> url,
   "sameTagPosts": *[_type == 'post' && references(^._id)] {
