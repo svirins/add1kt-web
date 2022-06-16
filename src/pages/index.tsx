@@ -20,7 +20,7 @@ export default function Index({ pageData, featuredPosts, total }: Props) {
   const t = useTranslations("Titles");
   return (
     <Container title={pageData.pageTitle}>
-      <div className="flex flex-col justify-center items-start max-w-2xl  mx-auto pb-16">
+      <div className="mx-auto flex max-w-2xl flex-col items-start  justify-center pb-16">
         {pageData && (
           <PageTop
             title={pageData.pageTitle}
@@ -29,7 +29,7 @@ export default function Index({ pageData, featuredPosts, total }: Props) {
             text={pageData.pageText}
           />
         )}
-        <div className="relative w-full mb-4">
+        <div className="relative mb-4 w-full">
           <Search />
         </div>
         <SectionSeparator />

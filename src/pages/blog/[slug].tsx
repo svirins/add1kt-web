@@ -30,12 +30,12 @@ export default function Post({ post, relatedPosts }: Props) {
       date={post.postDate}
       type="article"
     >
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto pb-16">
+      <div className="mx-auto flex max-w-2xl flex-col items-start justify-center pb-16">
         <div className="flex flex-col">
-          <h1 className="font-bold text-3xl md:text-5xl tracking-tight  text-gray-800 dark:text-gray-200">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-800  dark:text-gray-200 md:text-5xl">
             {post.postTitle}
           </h1>
-          <div className="flex flex-row text-sm justify-end mb-2 py-2">
+          <div className="mb-2 flex flex-row justify-end py-2 text-sm">
             <Tags tags={post.tags} />
           </div>
           <SanityImage
@@ -45,7 +45,7 @@ export default function Post({ post, relatedPosts }: Props) {
             height={globalConfig.images.defaultPostImageHeight}
           />
 
-          <div className="flex flex-row mt-4 pt-2">
+          <div className="mt-4 flex flex-row pt-2">
             <PostMeta
               date={post.postDate}
               readingTime={post.readingTime}

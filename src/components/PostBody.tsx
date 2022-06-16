@@ -28,7 +28,7 @@ const ptComponents = {
 
 export function PostBody({ text }: { text: PortableTextType }) {
   return (
-    <div className="selection:bg-fuchsia-300 selection:text-fuchsia-900 max-w-2xl mx-auto w-full prose-p:py-4 prose  dark:prose-dark lg:prose-xl">
+    <div className="prose-p:py-4 prose dark:prose-dark lg:prose-xl mx-auto w-full max-w-2xl  selection:bg-fuchsia-300 selection:text-fuchsia-900">
       <PortableText value={text} components={ptComponents} />
     </div>
   );

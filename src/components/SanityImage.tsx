@@ -38,14 +38,14 @@ export function SanityImage({
         shimmer(width, height)
       )}`}
       className={cn({
-        "hover:opacity-75 transition-opacity": slug,
+        "transition-opacity hover:opacity-75": slug,
         "rounded-full": isRounded,
         "rounded-lg": !isRounded,
       })}
     />
   );
   return (
-    <div className="sm:mx-0 relative">
+    <div className="relative sm:mx-0">
       {slug ? (
         <Link href={`/blog/${slug}`}>
           <a aria-label={alt}>{image}</a>

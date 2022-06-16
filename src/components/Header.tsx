@@ -27,7 +27,7 @@ export function Header() {
           ))}
         </div>
         {mounted && (
-          <div className="flex items-center align-middlle">
+          <div className="align-middlle flex items-center">
             <LocaleSwitch />
             <ThemeSwitch />
           </div>

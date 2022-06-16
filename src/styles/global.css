@@ -21,7 +21,7 @@ html {
 }
 
 .autocomplete {
-  @apply block w-full text-gray-800 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100;
+  @apply block w-full rounded-md border border-gray-200 bg-white text-gray-800 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100;
 }
 
 .nav-link {
@@ -29,7 +29,7 @@ html {
 }
 
 .skip-nav {
-  @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8;
+  @apply absolute -left-1/4 -top-8 -translate-y-12 transform px-4 py-3 transition-transform duration-200 focus:top-4 focus:translate-y-3;
 }
 
 #skip {
@@ -44,7 +44,7 @@ html {
 }
 
 .prose .anchor {
-  @apply absolute invisible no-underline;
+  @apply invisible absolute no-underline;
 
   margin-left: -1em;
   padding-right: 0.5em;
@@ -74,7 +74,7 @@ html {
   @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
 }
 .prose strong {
-  @apply text-neutral-700 dark:text-neutral-300 font-semibold;
+  @apply font-semibold text-neutral-700 dark:text-neutral-300;
 }
 
 .prose em {

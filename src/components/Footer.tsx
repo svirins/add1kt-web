@@ -11,7 +11,7 @@ export function Footer() {
   const t = useTranslations("Navigation");
 
   return (
-    <footer className="flex flex-col  max-w-2xl mx-auto w-full mb-8">
+    <footer className="mx-auto mb-8  flex w-full max-w-2xl flex-col">
       <SectionSeparator />
       <div className="flex justify-between">
         <div className="inline-flex items-center">
@@ -32,7 +32,7 @@ export function Footer() {
           </ExternalLink>
         </div>
       </div>
-      <div className="flex justify-center mt-8 text-sm">
+      <div className="mt-8 flex justify-center text-sm">
         <PoweredByVercel
           utmSource="addict.cf"
           target="_blank"
@@ -42,7 +42,7 @@ export function Footer() {
           }}
         />
         <a
-          className="font-thin pl-4 text-xs md:text-sm items-center transition-all delay-100 text-gray-800 dark:text-gray-50 hover:text-teal-800 dark:hover:text-teal-400"
+          className="items-center pl-4 text-xs font-thin text-gray-800 transition-all delay-100 hover:text-teal-800 dark:text-gray-50 dark:hover:text-teal-400 md:text-sm"
           target="_blank"
           rel="noopener noreferrer"
           href={globalConfig.githubLink}

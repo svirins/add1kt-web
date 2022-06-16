@@ -18,7 +18,7 @@ export default function Tag({ tag, sameTagPosts }: Props) {
   const t = useTranslations("Titles");
   return (
     <Container title={tag.tagName} ogImage={tag.tagPicture}>
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto pb-16">
+      <div className="mx-auto flex max-w-2xl flex-col items-start justify-center pb-16">
         {tag && (
           <>
             <PageTop

@@ -3,7 +3,7 @@ import type { PostBase } from "@/typings/schema-types";
 
 export function PostsGrid({ posts }: { posts: PostBase[] }) {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-12 gap-y-10 mb-16">
+    <section className="mb-16 grid grid-cols-1 gap-x-0 gap-y-10 md:grid-cols-2 md:gap-x-12">
       {posts.map((post) => (
         <PostCard
           key={post.postSlug}

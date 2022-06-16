@@ -19,9 +19,9 @@ export function PostMeta({ author, date, readingTime }: PostMetaProps) {
       <div className="relative">
         <AvatarImage url={author.authorPicture} alt={author.authorName} />
       </div>
-      <div className="pl-2 flex-1">
+      <div className="flex-1 pl-2">
         <Link href={`/author/${author.authorSlug}`}>
-          <a className="font-bold text-base hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400">
+          <a className="text-base font-bold transition-all  delay-100 hover:text-teal-600 dark:hover:text-teal-400">
             {author.authorName}
           </a>
         </Link>

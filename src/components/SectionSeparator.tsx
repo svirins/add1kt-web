@@ -1,5 +1,5 @@
 export function SectionSeparator() {
   return (
-    <hr className="border-gray-300 dark:border-gray-500 my-4 border-solid w-full" />
+    <hr className="my-4 w-full border-solid border-gray-300 dark:border-gray-500" />
   );
 }

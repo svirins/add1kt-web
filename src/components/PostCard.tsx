@@ -35,12 +35,12 @@ export function PostCard({
         width={globalConfig.images.defaultPostPreviewImageWidth}
         height={globalConfig.images.defaultPostImagePreviewHeight}
       />
-      <h4 className="w-full mt-4 font-medium  text-lg hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400  text-gray-800 dark:text-gray-200">
+      <h4 className="mt-4 w-full text-lg  font-medium text-gray-800  transition-all delay-100 hover:text-teal-600  dark:text-gray-200 dark:hover:text-teal-400">
         <Link href={`/blog/${slug}`}>
           <a>{truncate(title)}</a>
         </Link>
       </h4>
-      <div className="flex flex-row text-sm  justify-end">
+      <div className="flex flex-row justify-end  text-sm">
         {<Tags tags={tags} />}
       </div>
       <div className="flex flex-row ">

@@ -10,7 +10,7 @@ export function AvatarImage({
   alt?: string;
 }) {
   return (
-    <div className="sm:mx-0  relative">
+    <div className="relative  sm:mx-0">
       <Img
         alt={alt}
         src={url}

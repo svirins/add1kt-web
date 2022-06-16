@@ -33,14 +33,14 @@ export default function BlogIndexPage({
 
   return (
     <Container title={`${t("blog_page")} ${page}/${totalPages}`}>
-      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="mx-auto flex max-w-2xl flex-col items-start justify-center border-gray-200 pb-16 dark:border-gray-700">
         <PageTop
           title={`${pageData.pageTitle} (${page}/${totalPages})`}
           subtitle=""
           pictureUrl={pageData.pagePicture}
           text={pageData.pageText}
         />
-        <div className="relative w-full mb-4">
+        <div className="relative mb-4 w-full">
           <Search />
         </div>
         <SectionSeparator />

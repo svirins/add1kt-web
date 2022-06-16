@@ -13,25 +13,25 @@ export function PaginationControls({
   const isRightDisabled = currentPage === totalPages;
 
   return (
-    <div className="flex flex-row justify-between place-items-center  w-full flex-nowrap">
+    <div className="flex w-full flex-row flex-nowrap  place-items-center justify-between">
       {isLeftDisabled ? (
-        <p className="group  inline-flex items-center font-medium  text-base text-gray-500">
+        <p className="group  inline-flex items-center text-base  font-medium text-gray-500">
           <span>{` ← ${t("previous_page")}`}</span>
         </p>
       ) : (
         <Link href={`/blog/p/${Number(currentPage - 1)}`}>
-          <a className="group  inline-flex items-center font-medium hover:text-teal-600 text-base  transition-all delay-100 dark:hover:text-teal-400">
+          <a className="group  inline-flex items-center text-base font-medium transition-all  delay-100 hover:text-teal-600 dark:hover:text-teal-400">
             <span>{`← ${t("previous_page")}`}</span>
           </a>
         </Link>
       )}
       {isRightDisabled ? (
-        <p className="group  inline-flex items-center font-medium  text-base text-gray-500">
+        <p className="group  inline-flex items-center text-base  font-medium text-gray-500">
           <span>{`${t("next_page")} →`}</span>
         </p>
       ) : (
         <Link href={`/blog/p/${Number(currentPage + 1)}`}>
-          <a className="group  inline-flex items-center font-medium  hover:text-teal-600  transition-all delay-100 dark:hover:text-teal-400">
+          <a className="group  inline-flex items-center font-medium  transition-all  delay-100 hover:text-teal-600 dark:hover:text-teal-400">
             <span>{`${t("next_page")} →`}</span>
           </a>
         </Link>
