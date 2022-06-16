@@ -7,7 +7,7 @@ import groq from "groq";
 
 import { globalConfig, localizedAlgoliaIndices } from "./global.config";
 
-type PostExtended = {
+type TPostExtended = {
   objectID: string;
   updatedAt: string;
   title: string;
@@ -42,7 +42,7 @@ const client = sanityClient({
   useCdn: false,
 });
 
-async function getPostsIndex(locale: string): Promise<PostExtended[]> {
+async function getPostsIndex(locale: string): Promise<TPostExtended[]> {
   const data = await client.fetch(getPostsIndexQuery, {
     locale,
     skip: 0,

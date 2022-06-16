@@ -1,7 +1,7 @@
 import { PortableText } from "@portabletext/react";
 
 import { SanityImage } from "@/components/SanityImage";
-import type { PortableText as PortableTextType } from "@/typings/schema-types";
+import type { TPortableText as TPortableTextType } from "@/typings/schema-types";
 import { globalConfig } from "@/utils/global.config";
 
 const ptComponents = {
@@ -26,7 +26,7 @@ const ptComponents = {
   },
 };
 
-export function PostBody({ text }: { text: PortableTextType }) {
+export function PostBody({ text }: { text: TPortableTextType }) {
   return (
     <div className="prose-p:py-4 prose dark:prose-dark lg:prose-xl mx-auto w-full max-w-2xl  selection:bg-fuchsia-300 selection:text-fuchsia-900">
       <PortableText value={text} components={ptComponents} />

@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import type { TagBase } from "@/typings/schema-types";
+import type { TTagBase } from "@/typings/schema-types";
 
-export function Tags({ tags }: { tags: TagBase[] }) {
+export function Tags({ tags }: { tags: TTagBase[] }) {
   return (
     <>
       {tags &&

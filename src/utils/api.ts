@@ -1,14 +1,14 @@
 /* eslint-disable simple-import-sort/imports */
 /* eslint-disable import/order */
 import type {
-  Author,
-  Page,
-  Post,
-  PostBase,
-  PostsByAuthor,
-  PostsByTag,
-  Slug,
-  Tag,
+  TAuthor,
+  TPage,
+  TPost,
+  TPostBase,
+  TPostsByAuthor,
+  TPostsByTag,
+  TSlug,
+  TTag,
 } from "@/typings/schema-types";
 import { globalConfig } from "./global.config";
 import { getSkipValue } from "./contentUtils";
@@ -31,7 +31,7 @@ import {
 
 const client = getSanityClient({ useCdn: false });
 
-export async function getFeaturedPosts(locale: string): Promise<PostBase[]> {
+export async function getFeaturedPosts(locale: string): Promise<TPostBase[]> {
   const data = await client.fetch(getFeaturedPostsQuery, {
     locale,
     skip: 0,
@@ -43,7 +43,7 @@ export async function getFeaturedPosts(locale: string): Promise<PostBase[]> {
 export async function getPageContent(
   locale: string,
   slug: string
-): Promise<Page> {
+): Promise<TPage> {
   const data = await client.fetch(getPageContentQuery, {
     locale,
     slug,
@@ -53,7 +53,7 @@ export async function getPageContent(
 
 export async function getAuthorsAndRelatedPostsCount(
   locale: string
-): Promise<PostsByAuthor[]> {
+): Promise<TPostsByAuthor[]> {
   const data = await client.fetch(getAuthorsAndRelatedPostsCountQuery, {
     locale,
   });
@@ -62,14 +62,14 @@ export async function getAuthorsAndRelatedPostsCount(
 
 export async function getTagsAndRelatedPostsCount(
   locale: string
-): Promise<PostsByTag[]> {
+): Promise<TPostsByTag[]> {
   const data = await client.fetch(getTagsAndRelatedPostsCountQuery, {
     locale,
   });
   return data;
 }
 
-export async function getAllTagSlugs(): Promise<Slug[]> {
+export async function getAllTagSlugs(): Promise<TSlug[]> {
   const data = await client.fetch(getAllTagSlugsQuery);
   return data;
 }
@@ -77,7 +77,7 @@ export async function getAllTagSlugs(): Promise<Slug[]> {
 export async function getTagAndRelatedPosts(
   locale: string,
   slug: string
-): Promise<Tag> {
+): Promise<TTag> {
   const data = await client.fetch(getTagAndRelatedPostsQuery, {
     locale,
     slug,
@@ -87,7 +87,7 @@ export async function getTagAndRelatedPosts(
   return data;
 }
 
-export async function getAllAuthorSlugs(): Promise<Slug[]> {
+export async function getAllAuthorSlugs(): Promise<TSlug[]> {
   const data = await client.fetch(getAllAuthorSlugsQuery);
   return data;
 }
@@ -95,7 +95,7 @@ export async function getAllAuthorSlugs(): Promise<Slug[]> {
 export async function getAuthorAndRelatedPosts(
   locale: string,
   slug: string
-): Promise<Author> {
+): Promise<TAuthor> {
   const data = await client.fetch(getAuthorAndRelatedPostsQuery, {
     locale,
     slug,
@@ -105,7 +105,7 @@ export async function getAuthorAndRelatedPosts(
   return data;
 }
 
-export async function getAllPostSlugs(): Promise<Slug[]> {
+export async function getAllPostSlugs(): Promise<TSlug[]> {
   const data = await client.fetch(getAllPostSlugsQuery);
   return data;
 }
@@ -113,7 +113,7 @@ export async function getAllPostSlugs(): Promise<Slug[]> {
 export async function getPostAndRelatedPosts(
   locale: string,
   slug: string
-): Promise<Post> {
+): Promise<TPost> {
   const data = await client.fetch(getPostAndRelatedPostsQuery, {
     locale,
     slug,
@@ -126,7 +126,7 @@ export async function getPostAndRelatedPosts(
 export async function getPaginatedPosts(
   locale: string,
   page: number
-): Promise<PostBase[]> {
+): Promise<TPostBase[]> {
   const data = await client.fetch(getPaginatedPostsQuery, {
     locale,
     skip: getSkipValue(page),

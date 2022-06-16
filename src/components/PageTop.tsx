@@ -1,7 +1,7 @@
 import { PostBody } from "@/components/PostBody";
 import { SanityImage } from "@/components/SanityImage";
 import { Socials } from "@/components/Socials";
-import type { PortableText } from "@/typings/schema-types";
+import type { TPortableText } from "@/typings/schema-types";
 import { globalConfig } from "@/utils/global.config";
 
 export type PageTopProps = {
@@ -9,7 +9,7 @@ export type PageTopProps = {
   subtitle?: string;
   socials?: string[];
   pictureUrl?: string;
-  text: PortableText;
+  text: TPortableText;
 };
 
 export function PageTop({

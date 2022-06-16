@@ -3,11 +3,11 @@ import Link from "next/link";
 import { useIntl, useTranslations } from "next-intl";
 
 import { AvatarImage } from "@/components/AvatarImage";
-import type { AuthorBase } from "@/typings/schema-types";
+import type { TAuthorBase } from "@/typings/schema-types";
 
 export type PostMetaProps = {
   date: string;
-  author: AuthorBase;
+  author: TAuthorBase;
   readingTime: number;
 };
 

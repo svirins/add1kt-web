@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PostMeta } from "@/components/PostMeta";
 import { SanityImage } from "@/components/SanityImage";
 import { Tags } from "@/components/Tags";
-import type { AuthorBase, TagBase } from "@/typings/schema-types";
+import type { TAuthorBase, TTagBase } from "@/typings/schema-types";
 import { truncate } from "@/utils/contentUtils";
 import { globalConfig } from "@/utils/global.config";
 
@@ -11,8 +11,8 @@ export type PostCardProps = {
   title: string;
   previewImage: string;
   date: string;
-  author: AuthorBase;
-  tags: TagBase[];
+  author: TAuthorBase;
+  tags: TTagBase[];
   slug: string;
   readingTime: number;
 };

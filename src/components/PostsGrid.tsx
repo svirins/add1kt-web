@@ -1,7 +1,7 @@
 import { PostCard } from "@/components/PostCard";
-import type { PostBase } from "@/typings/schema-types";
+import type { TPostBase } from "@/typings/schema-types";
 
-export function PostsGrid({ posts }: { posts: PostBase[] }) {
+export function PostsGrid({ posts }: { posts: TPostBase[] }) {
   return (
     <section className="mb-16 grid grid-cols-1 gap-x-0 gap-y-10 md:grid-cols-2 md:gap-x-12">
       {posts.map((post) => (

@@ -6,51 +6,51 @@ import type {
 
 export type { SanityBlock, SanityImageAsset, SanityKeyed };
 
-export type PostBase = {
+export type TPostBase = {
   postTitle: string;
   postSlug: string;
   readingTime: number;
   postImageUrl: string;
   postDate: string;
-  author: AuthorBase;
-  tags: TagBase[];
+  author: TAuthorBase;
+  tags: TTagBase[];
 };
 
-export type Post = PostBase & {
-  postText: PortableText;
-  relatedPosts?: PostBase[];
+export type TPost = TPostBase & {
+  postText: TPortableText;
+  relatedPosts?: TPostBase[];
 };
 
-export type AuthorBase = {
+export type TAuthorBase = {
   authorName: string;
   authorSlug: string;
   authorPicture: string;
 };
 
-export type Author = AuthorBase & {
-  authorBio: PortableText;
+export type TAuthor = TAuthorBase & {
+  authorBio: TPortableText;
   authorSocials?: string[];
-  authorPosts?: PostBase[];
+  authorPosts?: TPostBase[];
 };
 
-export type TagBase = {
+export type TTagBase = {
   tagName: string;
   tagSlug: string;
 };
 
-export type Tag = TagBase & {
-  tagText: PortableText;
+export type TTag = TTagBase & {
+  tagText: TPortableText;
   tagPicture: string;
-  sameTagPosts?: PostBase[];
+  sameTagPosts?: TPostBase[];
 };
 
-export type Page = {
+export type TPage = {
   pageTitle: string;
   pagePicture: string;
-  pageText: PortableText;
+  pageText: TPortableText;
 };
 
-export type PortableText = Array<
+export type TPortableText = Array<
   | SanityKeyed<SanityBlock>
   | SanityKeyed<{
       _type: "image";
@@ -58,18 +58,18 @@ export type PortableText = Array<
     }>
 >;
 
-export type PostsByAuthor = {
+export type TPostsByAuthor = {
   authorName: string;
   authorSlug: string;
   relatedPostsCount: number;
 };
 
-export type PostsByTag = {
+export type TPostsByTag = {
   tagName: string;
   tagSlug: string;
   relatedPostsCount: number;
 };
 
-export type Slug = {
+export type TSlug = {
   slug: string;
 };

@@ -1,6 +1,6 @@
-export type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
+export type TUnwrapPromise<T> = T extends Promise<infer U> ? U : T;
 
-export type PageProps = UnwrapPromise<
+export type TPageProps = UnwrapPromise<
   ReturnType<typeof getStaticProps>
 >["props"];
 
