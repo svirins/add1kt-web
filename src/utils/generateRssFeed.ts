@@ -42,15 +42,25 @@ const generateRssFeed = async (locale: string) => {
     author,
   });
   posts.forEach((post) => {
-    const summary = truncate(post.summary.replace(/[\r\n]/gm, ""), 256);
+    const summary = truncate(post.text.replace(/[\r\n]/gm, ""), 256);
     const url = `${siteURL}/blog/${post.slug}`;
+    const categories = post.tags.map((tag) => {
+      return {
+        name: tag,
+        domain: url,
+        scheme: "???",
+        term: tag,
+      };
+    });
     feed.addItem({
       title: post.title,
       id: url,
       link: url,
+      image: post.image,
       description: summary,
-      content: post.summary,
-      author: [author],
+      category: categories,
+      content: post.text,
+      author: [post.author],
       date: new Date(post.publishedAt),
     });
   });

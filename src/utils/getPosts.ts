@@ -6,14 +6,20 @@ import groq from "groq";
 
 import { globalConfig } from "./global.config";
 
+type TAuthorData = {
+  name: string;
+  email: string;
+  twitter: string;
+};
+
 type TPostData = {
   objectID: string;
   publishedAt: string;
   title: string;
   slug: string;
-  summary: string;
+  text: string;
   image: string;
-  author: string;
+  author: TAuthorData;
   tags: string[];
 };
 
@@ -23,10 +29,14 @@ const getPostsIndexQuery = groq`*[_type == 'post'] {
   "publishedAt": _updatedAt,
   "title": title[$locale],
   "image":  coverImage.asset-> url,
-  "summary": pt::text(text[$locale]),
+  "text": pt::text(text[$locale]),
   "slug": slug.current,
   "tags": tags[] -> title[$locale],
-  "author": author -> title[$locale]
+  "author": author -> {
+    "name": title[$locale],
+    "email": email,
+    "link": twitter
+    }
 }[$skip...$limit] | order(_updatedAt desc)`;
 
 const client = sanityClient({

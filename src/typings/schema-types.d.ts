@@ -31,6 +31,8 @@ export type TAuthor = TAuthorBase & {
   authorBio: TPortableText;
   authorSocials?: string[];
   authorPosts?: TPostBase[];
+  authorTwitter: string;
+  authorEmail: string;
 };
 
 export type TTagBase = {

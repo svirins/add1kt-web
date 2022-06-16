@@ -60,6 +60,8 @@ export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.cu
   "authorSlug": slug.current,
   "authorPicture": picture.asset -> url,
   "authorBio": bio[$locale],
+  "authorEmail": email,
+  "authorTwitter": twitter,
   "authorSocials": social,
   "authorPosts": *[_type == 'post' && references(^._id)] {
     ${postData},
