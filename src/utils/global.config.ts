@@ -51,3 +51,16 @@ export const sanityConfigForAlgolia = {
   apiVersion: "2021-03-25",
   useCdn: false,
 };
+
+export const localizedRSSData = [
+  {
+    siteName: "addict-ru",
+    siteDescription: "addict-ru",
+    locale: "ru",
+  },
+  {
+    siteName: "addict-pl",
+    siteDescription: "addict-pl",
+    locale: "pl",
+  },
+];

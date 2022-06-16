@@ -26,12 +26,15 @@ export function getSkipValue(page: number) {
     : 0;
 }
 
-export function truncate(str: string) {
+export function truncate(
+  str: string,
+  length = globalConfig.trimmedHeaderLength
+) {
   let i;
   const bits = str.split("");
-  if (bits.length > globalConfig.trimmedHeaderLength) {
+  if (bits.length > length) {
     for (i = bits.length - 1; i > -1; i -= 1) {
-      if (i > globalConfig.trimmedHeaderLength) {
+      if (i > length) {
         bits.length = i;
       } else if (bits[i] === " ") {
         bits.length = i;

@@ -3,31 +3,37 @@ import dotenv from "dotenv";
 import { Feed } from "feed";
 import fs from "fs";
 
+import { truncate } from "./contentUtils";
 import { getPosts } from "./getPosts";
+import { localizedRSSData } from "./global.config";
 
 dotenv.config();
 
 const generateRssFeed = async (locale: string) => {
   const posts = await getPosts(locale);
-  const siteURL = process.env.SITE_URL;
+  const siteURL =
+    locale === "ru" ? process.env.SITE_URL : process.env.SITE_ALT_URL;
   const date = new Date();
-  // TODO: add email and link fields to Author datatodel, then implement post=>post.author in rss
+  // TODO: add email and link fields to Author datatodel, then implement post=>post.author in rss + add cqategory field
   const author = {
     name: "Valeriy Grean",
     email: "vgrean@gmail.com",
     link: "https://twitter.com/_SreetamDas",
   };
-
+  const { siteName, siteDescription } = localizedRSSData.find(
+    (i) => i.locale === locale
+  );
   const feed = new Feed({
-    title: "Valeriy Grean",
-    description: "",
+    title: siteName,
+    description: siteDescription,
     id: siteURL,
     link: siteURL,
-    image: `${siteURL}/logo.svg`,
-    favicon: `${siteURL}/favicon.png`,
+    image: `${siteURL}/logo.webp`,
+    language: locale,
+    favicon: `${siteURL}/favicon.ico`,
     copyright: `All rights reserved ${date.getFullYear()}, Valeriy Grean`,
     updated: date,
-    generator: "Feed for Node.js",
+    generator: "Feed for Node.js with some fancy extras",
     feedLinks: {
       rss2: `${siteURL}/rss/feed.xml`,
       json: `${siteURL}/rss/feed.json`,
@@ -35,17 +41,16 @@ const generateRssFeed = async (locale: string) => {
     },
     author,
   });
-
   posts.forEach((post) => {
+    const summary = truncate(post.summary.replace(/[\r\n]/gm, ""), 256);
     const url = `${siteURL}/blog/${post.slug}`;
     feed.addItem({
       title: post.title,
       id: url,
       link: url,
-      description: post.summary,
+      description: summary,
       content: post.summary,
       author: [author],
-      contributor: [author],
       date: new Date(post.publishedAt),
     });
   });

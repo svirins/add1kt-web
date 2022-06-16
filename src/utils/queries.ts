@@ -56,7 +56,9 @@ export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.curre
 }[0]`;
 
 export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.current ==  $slug]{
-  ${authorData},
+  "authorName": title[$locale],
+  "authorSlug": slug.current,
+  "authorPicture": picture.asset -> url,
   "authorBio": bio[$locale],
   "authorSocials": social,
   "authorPosts": *[_type == 'post' && references(^._id)] {
@@ -67,7 +69,8 @@ export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.cu
 }[0]`;
 
 export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current ==  $slug] {
-   ${tagsData},
+  "tagName": title[$locale],
+  "tagSlug": slug.current,
   "tagText": text[$locale],
   "tagPicture": picture.asset -> url,
   "sameTagPosts": *[_type == 'post' && references(^._id)] {

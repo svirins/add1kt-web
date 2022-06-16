@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://addict.cf</id>
+    <title>Valeriy Grean</title>
+    <updated>2022-06-16T17:21:51.180Z</updated>
+    <generator>Feed for Node.js</generator>
+    <author>
+        <name>Valeriy Grean</name>
+        <email>vgrean@gmail.com</email>
+        <uri>https://twitter.com/_SreetamDas</uri>
+    </author>
+    <link rel="alternate" href="https://addict.cf"/>
+    <link rel="self" href="https://addict.cf/rss/atom.xml"/>
+    <logo>https://addict.cf/logo.svg</logo>
+    <icon>https://addict.cf/favicon.png</icon>
+    <rights>All rights reserved 2022, Valeriy Grean</rights>
+    <entry>
+        <title type="html"><![CDATA[Вина. Алгоритм избавления]]></title>
+        <id>https://addict.cf/blog/blame</id>
+        <link href="https://addict.cf/blog/blame"/>
+        <updated>2022-05-31T10:19:05.000Z</updated>
+        <summary type="html"><![CDATA[Вина — это сложный комплекс, включающий в себя переживания. образы эмоции, мысли, воспоминания, фантазии. С одной стороны, вина, также как и стыд выполняют важную социальную функцию. Вина сигнализирует человеку, что что-то пошло не так. Она помогает...]]></summary>
+        <content type="html"><![CDATA[Вина — это сложный комплекс, включающий в себя переживания. образы эмоции, мысли, воспоминания, фантазии. С одной стороны, вина, также как и стыд выполняют важную социальную функцию. Вина сигнализирует человеку, что что-то пошло не так. Она помогает...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Психическая травма как основа развития аддикции. Механизм ее возникновения]]></title>
+        <id>https://addict.cf/blog/psytrauma</id>
+        <link href="https://addict.cf/blog/psytrauma"/>
+        <updated>2022-05-31T09:55:50.000Z</updated>
+        <summary type="html"><![CDATA[__Психическая травма__ обозначается часто в бытовом понимании как какое-то шоковое событие, которое произошло в детстве («собака испугала») *с выраженным последующим влиянием на жизнь взрослого человека.* Она и определяет нередко дальнейшее формирование...]]></summary>
+        <content type="html"><![CDATA[__Психическая травма__ обозначается часто в бытовом понимании как какое-то шоковое событие, которое произошло в детстве («собака испугала») *с выраженным последующим влиянием на жизнь взрослого человека.* Она и определяет нередко дальнейшее формирование...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Реабилитация лиц с алкогольной зависимостью]]></title>
+        <id>https://addict.cf/blog/reabilitaciya</id>
+        <link href="https://addict.cf/blog/reabilitaciya"/>
+        <updated>2022-05-31T09:56:26.000Z</updated>
+        <summary type="html"><![CDATA[*Комплексная* программа медико-психологической и социальной реабилитации лиц с химической зависимостью__Цель программы__: Комплексная программа медико-психологической и социальной реабилитации лиц с химической зависимостью__Целевая группа__:...]]></summary>
+        <content type="html"><![CDATA[*Комплексная* программа медико-психологической и социальной реабилитации лиц с химической зависимостью__Цель программы__: Комплексная программа медико-психологической и социальной реабилитации лиц с химической зависимостью__Целевая группа__:...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Аддикция - семейное заболевание]]></title>
+        <id>https://addict.cf/blog/addikciyaasfamilydisease</id>
+        <link href="https://addict.cf/blog/addikciyaasfamilydisease"/>
+        <updated>2022-05-31T09:54:36.000Z</updated>
+        <summary type="html"><![CDATA[Аддикция является трансгенерационным семейным заболеванием, включающим несколько поколений и расстройством с большими психологическими «выгодами». «Дивиденды» пациента ясны. Неявны, но настолько же велики «коррупционные доходы» созависимого окружения....]]></summary>
+        <content type="html"><![CDATA[Аддикция является трансгенерационным семейным заболеванием, включающим несколько поколений и расстройством с большими психологическими «выгодами». «Дивиденды» пациента ясны. Неявны, но настолько же велики «коррупционные доходы» созависимого окружения....]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Авторская программа "7 шагов от пропасти"]]></title>
+        <id>https://addict.cf/blog/7stepsprogram</id>
+        <link href="https://addict.cf/blog/7stepsprogram"/>
+        <updated>2022-06-02T14:44:10.000Z</updated>
+        <summary type="html"><![CDATA[Все знают, насколько разрушительным и болезненным для окружающих бывает поведение больных алкоголизмом. Поведение пьющих людей вызывает у родственников чувство тревоги и опасения за их жизнь и здоровье. Нередко возникают гнев и отчаяние в связи с их...]]></summary>
+        <content type="html"><![CDATA[Все знают, насколько разрушительным и болезненным для окружающих бывает поведение больных алкоголизмом. Поведение пьющих людей вызывает у родственников чувство тревоги и опасения за их жизнь и здоровье. Нередко возникают гнев и отчаяние в связи с их...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Употребление алкоголя и наркотиков. Мотивы и помощь]]></title>
+        <id>https://addict.cf/blog/druguserhelp</id>
+        <link href="https://addict.cf/blog/druguserhelp"/>
+        <updated>2022-05-31T09:53:29.000Z</updated>
+        <summary type="html"><![CDATA[Иногда уходит время, а странник все еще блуждает где-то там… А вернувшись узнает, что, думая,что пробыл у эльфов всего семь дней, потерял здесь семь лет.Жена давно его оплакала, а дети выросли..Опыт показывает, что отношение к __спиртному__ и...]]></summary>
+        <content type="html"><![CDATA[Иногда уходит время, а странник все еще блуждает где-то там… А вернувшись узнает, что, думая,что пробыл у эльфов всего семь дней, потерял здесь семь лет.Жена давно его оплакала, а дети выросли..Опыт показывает, что отношение к __спиртному__ и...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Терапия и зрелость]]></title>
+        <id>https://addict.cf/blog/therapyandmaturity</id>
+        <link href="https://addict.cf/blog/therapyandmaturity"/>
+        <updated>2022-05-31T09:52:07.000Z</updated>
+        <summary type="html"><![CDATA[Согласны ли мы отказаться от права на взрослую жизнь лишь по той причине, что сохранили архаическое детское видение себя и мира, которое нужно оберегать изо всех сил? О чем речь – давайте, оберегайте этого внутреннего ребенка, как и положено, только не...]]></summary>
+        <content type="html"><![CDATA[Согласны ли мы отказаться от права на взрослую жизнь лишь по той причине, что сохранили архаическое детское видение себя и мира, которое нужно оберегать изо всех сил? О чем речь – давайте, оберегайте этого внутреннего ребенка, как и положено, только не...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Зависимости и сфера чувств]]></title>
+        <id>https://addict.cf/blog/addictionandfeelings</id>
+        <link href="https://addict.cf/blog/addictionandfeelings"/>
+        <updated>2022-05-30T17:53:44.000Z</updated>
+        <summary type="html"><![CDATA[Такие заболевания как *зависимости* в обязательном порядке связаны с травмированной, «замороженной» сферой чувств человека.Подавленность, блок в отреагировании чувств и переживаний вносят свой вклад в формирование симптоматики аддикций: быстро нарастает...]]></summary>
+        <content type="html"><![CDATA[Такие заболевания как *зависимости* в обязательном порядке связаны с травмированной, «замороженной» сферой чувств человека.Подавленность, блок в отреагировании чувств и переживаний вносят свой вклад в формирование симптоматики аддикций: быстро нарастает...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Терапия стрессовых, аддиктивных и фобических расстройств с помощью НЛП]]></title>
+        <id>https://addict.cf/blog/therapyaddiction</id>
+        <link href="https://addict.cf/blog/therapyaddiction"/>
+        <updated>2022-05-31T12:31:25.000Z</updated>
+        <summary type="html"><![CDATA[Для лечения различного типа стрессовых расстройств с успехом применяется нейролингвистическое программирование (НЛП). Применение этого метода позволяет быстро и эффективно улучшить психоэмоциональное и психосоматическое состояния пациента. Методы НЛП...]]></summary>
+        <content type="html"><![CDATA[Для лечения различного типа стрессовых расстройств с успехом применяется нейролингвистическое программирование (НЛП). Применение этого метода позволяет быстро и эффективно улучшить психоэмоциональное и психосоматическое состояния пациента. Методы НЛП...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Страхи аддикта при становлении трезвости]]></title>
+        <id>https://addict.cf/blog/addictsfears</id>
+        <link href="https://addict.cf/blog/addictsfears"/>
+        <updated>2022-05-31T10:00:58.000Z</updated>
+        <summary type="html"><![CDATA[Различного рода *страхи* являются постоянными спутниками жизни аддикта. Можно утверждать, что его жизнь и в потреблении, и на отмене, а также при становлении трезвости насыщена тревожными переживаниями и ожиданиями. *Совокупность страхов*  дезорганизует...]]></summary>
+        <content type="html"><![CDATA[Различного рода *страхи* являются постоянными спутниками жизни аддикта. Можно утверждать, что его жизнь и в потреблении, и на отмене, а также при становлении трезвости насыщена тревожными переживаниями и ожиданиями. *Совокупность страхов*  дезорганизует...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Что превращает людей в пьяниц и алкоголиков]]></title>
+        <id>https://addict.cf/blog/chtoprevrashaetlyudeivpyanicialkogolikov</id>
+        <link href="https://addict.cf/blog/chtoprevrashaetlyudeivpyanicialkogolikov"/>
+        <updated>2022-05-31T09:51:13.000Z</updated>
+        <summary type="html"><![CDATA[Авторы одной из работ обнаружили, что в определенных частях мозга *ген DRD3* по-разному работает у алкоголиков и людей без зависимости. Правда, к удивлению исследователей, отличия обнаружились не в системе поощрения, а в гипоталамусе.Основная гипотеза,...]]></summary>
+        <content type="html"><![CDATA[Авторы одной из работ обнаружили, что в определенных частях мозга *ген DRD3* по-разному работает у алкоголиков и людей без зависимости. Правда, к удивлению исследователей, отличия обнаружились не в системе поощрения, а в гипоталамусе.Основная гипотеза,...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Виды любовных аддиктов]]></title>
+        <id>https://addict.cf/blog/loveaddict</id>
+        <link href="https://addict.cf/blog/loveaddict"/>
+        <updated>2022-06-05T17:59:26.000Z</updated>
+        <summary type="html"><![CDATA[В эмоциональной зависимости выделяется динамическая пара собственно любовного аддикта и аддикта избегания.   Для любовного характерны следующие признаки:- сверхценное отношение к значимому другому и  фиксация на нем;- черты непреодолимой (компульсивной)...]]></summary>
+        <content type="html"><![CDATA[В эмоциональной зависимости выделяется динамическая пара собственно любовного аддикта и аддикта избегания.   Для любовного характерны следующие признаки:- сверхценное отношение к значимому другому и  фиксация на нем;- черты непреодолимой (компульсивной)...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Взрослые дети алкоголиков. Страдание и исцеление.]]></title>
+        <id>https://addict.cf/blog/alcochild</id>
+        <link href="https://addict.cf/blog/alcochild"/>
+        <updated>2022-05-28T10:54:34.000Z</updated>
+        <summary type="html"><![CDATA[Взрослые дети алкоголиков (ВДА) – это люди, которые являются выходцами из семей, где минимум один из родителей являлся зависимым от алкоголя. В связи с этим они были вынуждены выработать  определенные адаптационные  качества и систему ценостей, помогающие...]]></summary>
+        <content type="html"><![CDATA[Взрослые дети алкоголиков (ВДА) – это люди, которые являются выходцами из семей, где минимум один из родителей являлся зависимым от алкоголя. В связи с этим они были вынуждены выработать  определенные адаптационные  качества и систему ценостей, помогающие...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Любовная зависимость. Возможности терапии]]></title>
+        <id>https://addict.cf/blog/loveaddiction</id>
+        <link href="https://addict.cf/blog/loveaddiction"/>
+        <updated>2022-06-06T18:26:33.000Z</updated>
+        <summary type="html"><![CDATA[Возникают естественные вопросы:  чем отличается эмоциональная зависимость от здоровой влюбленности, воспетой поэтами, и что можно сделать при нездоровых вариантах развития отношений.Хорошо известно, что любовная зависимость развивается на пиковых,...]]></summary>
+        <content type="html"><![CDATA[Возникают естественные вопросы:  чем отличается эмоциональная зависимость от здоровой влюбленности, воспетой поэтами, и что можно сделать при нездоровых вариантах развития отношений.Хорошо известно, что любовная зависимость развивается на пиковых,...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Социофобия - ее источник и опасность]]></title>
+        <id>https://addict.cf/blog/sociophobia</id>
+        <link href="https://addict.cf/blog/sociophobia"/>
+        <updated>2022-05-31T10:01:54.000Z</updated>
+        <summary type="html"><![CDATA[Социофобия - страх новых знакомств, контактов, публичности, выступлений, необычных, новых условий. И кажется, что эта *форма страхов* целиком зависит по определению от внешних условий. Но на самом деле их основа находится в самом человеке- в его ранимости,...]]></summary>
+        <content type="html"><![CDATA[Социофобия - страх новых знакомств, контактов, публичности, выступлений, необычных, новых условий. И кажется, что эта *форма страхов* целиком зависит по определению от внешних условий. Но на самом деле их основа находится в самом человеке- в его ранимости,...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Созависимые отношения как социальный конструкт]]></title>
+        <id>https://addict.cf/blog/sozavisimyeotnosheniya</id>
+        <link href="https://addict.cf/blog/sozavisimyeotnosheniya"/>
+        <updated>2022-05-31T10:02:32.000Z</updated>
+        <summary type="html"><![CDATA[> Работая в реабилитационном отделении, приходится ежедневно наблюдать сцены, когда женщины, загруженные авоськами, бредут к пациентам, страдающим алкоголизмом.Глядя со стороны на их взаимоотношения можно сделать вывод о том, что не здоровый психофизически...]]></summary>
+        <content type="html"><![CDATA[> Работая в реабилитационном отделении, приходится ежедневно наблюдать сцены, когда женщины, загруженные авоськами, бредут к пациентам, страдающим алкоголизмом.Глядя со стороны на их взаимоотношения можно сделать вывод о том, что не здоровый психофизически...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Симбиоз-необходимость и разрушительность]]></title>
+        <id>https://addict.cf/blog/confluensy</id>
+        <link href="https://addict.cf/blog/confluensy"/>
+        <updated>2022-05-31T10:03:12.000Z</updated>
+        <summary type="html"><![CDATA["Самое тяжкое бремя, которое ложится на плечи ребенка, — это непрожитая жизнь его родителей" (К.-Г. Юнг)Симбиоз - естественная ситуация в развитии ребенка. Его основными симбиотическими потребностями служат:- питание;- тепло;-телесный контакт;-контакт...]]></summary>
+        <content type="html"><![CDATA["Самое тяжкое бремя, которое ложится на плечи ребенка, — это непрожитая жизнь его родителей" (К.-Г. Юнг)Симбиоз - естественная ситуация в развитии ребенка. Его основными симбиотическими потребностями служат:- питание;- тепло;-телесный контакт;-контакт...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Симбиоз и созависимость]]></title>
+        <id>https://addict.cf/blog/codependens</id>
+        <link href="https://addict.cf/blog/codependens"/>
+        <updated>2022-06-03T07:44:50.000Z</updated>
+        <summary type="html"><![CDATA[Существенным моментом для дальнейшей судьбы человека  служит наличие фазы соматопсихического симбиоза -слияния, которая начинается с возраста 2-х месяцев ребенка. В этой фазе:*-переживается состояние недифференцированного слияния с матерью с отсутствием...]]></summary>
+        <content type="html"><![CDATA[Существенным моментом для дальнейшей судьбы человека  служит наличие фазы соматопсихического симбиоза -слияния, которая начинается с возраста 2-х месяцев ребенка. В этой фазе:*-переживается состояние недифференцированного слияния с матерью с отсутствием...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Психологические защиты от чувств]]></title>
+        <id>https://addict.cf/blog/psikhologicheskiezashityotchuvstv</id>
+        <link href="https://addict.cf/blog/psikhologicheskiezashityotchuvstv"/>
+        <updated>2022-05-31T10:04:06.000Z</updated>
+        <summary type="html"><![CDATA[*Чувства* помогают  человеку понять, что идет не так в его жизни и отношениях. Они помогают осознать тот или иной дефицит, часто тотальный. Некоторые из чувств и переживаний пугают человека (ревность, зависть, гнев, ненависть), а какие-то (привязанность,...]]></summary>
+        <content type="html"><![CDATA[*Чувства* помогают  человеку понять, что идет не так в его жизни и отношениях. Они помогают осознать тот или иной дефицит, часто тотальный. Некоторые из чувств и переживаний пугают человека (ревность, зависть, гнев, ненависть), а какие-то (привязанность,...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Аддикты. Кто они?]]></title>
+        <id>https://addict.cf/blog/addiktyktooni</id>
+        <link href="https://addict.cf/blog/addiktyktooni"/>
+        <updated>2022-05-31T10:04:42.000Z</updated>
+        <summary type="html"><![CDATA[__Химический аддикт__ при внешней очевидности поведения не является примитивным аморальным гедонистом. Большинство из них неплохо адаптировано, чему помогают  заместительные психологические защиты. Например, лишь 5-7% алкоголиков демонстрируют «игру»...]]></summary>
+        <content type="html"><![CDATA[__Химический аддикт__ при внешней очевидности поведения не является примитивным аморальным гедонистом. Большинство из них неплохо адаптировано, чему помогают  заместительные психологические защиты. Например, лишь 5-7% алкоголиков демонстрируют «игру»...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Страхи и работа с ними. Стыд и вина]]></title>
+        <id>https://addict.cf/blog/fearandblame</id>
+        <link href="https://addict.cf/blog/fearandblame"/>
+        <updated>2022-05-31T10:05:18.000Z</updated>
+        <summary type="html"><![CDATA[Lęki i praca z nimi. Wstyd i poczucie winy]]></summary>
+        <content type="html"><![CDATA[Lęki i praca z nimi. Wstyd i poczucie winy]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Алекситимия]]></title>
+        <id>https://addict.cf/blog/aleksitimiya</id>
+        <link href="https://addict.cf/blog/aleksitimiya"/>
+        <updated>2022-05-31T10:06:00.000Z</updated>
+        <summary type="html"><![CDATA[Для зависимых и психосоматических пациентов весьма характерен такой феномен как *алекситимия*. Под ней понимается специфическая психологическая характеристика личности, включающая следующие особенности:- Затруднение и сложности в определении и словесном...]]></summary>
+        <content type="html"><![CDATA[Для зависимых и психосоматических пациентов весьма характерен такой феномен как *алекситимия*. Под ней понимается специфическая психологическая характеристика личности, включающая следующие особенности:- Затруднение и сложности в определении и словесном...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[О чувстве стыда и самоуважении]]></title>
+        <id>https://addict.cf/blog/shame</id>
+        <link href="https://addict.cf/blog/shame"/>
+        <updated>2022-05-31T10:06:39.000Z</updated>
+        <summary type="html"><![CDATA[Когда нас игнорируют, отвергают и не воспринимают всерьез, то   мы начинаем переживать чувство стыда. Оно основано на убеждении в нашей глубокой и фундаментальной неполноценности. Жизнь с чувством стыда – это постоянное  ощущение отчуждения и чувства...]]></summary>
+        <content type="html"><![CDATA[Когда нас игнорируют, отвергают и не воспринимают всерьез, то   мы начинаем переживать чувство стыда. Оно основано на убеждении в нашей глубокой и фундаментальной неполноценности. Жизнь с чувством стыда – это постоянное  ощущение отчуждения и чувства...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Клиническое понимание аддикции]]></title>
+        <id>https://addict.cf/blog/klinicheskoeponimanieaddikci</id>
+        <link href="https://addict.cf/blog/klinicheskoeponimanieaddikci"/>
+        <updated>2022-06-05T19:10:46.000Z</updated>
+        <summary type="html"><![CDATA[Понимание собственно химической аддикции может быть неоднозначно. С одной стороны, она представляет собой самостоятельное пограничное нервно-психическое заболевание. Действительно, наркологический пациент имеет  специфическую совокупность представлений,...]]></summary>
+        <content type="html"><![CDATA[Понимание собственно химической аддикции может быть неоднозначно. С одной стороны, она представляет собой самостоятельное пограничное нервно-психическое заболевание. Действительно, наркологический пациент имеет  специфическую совокупность представлений,...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Аддикция. Как лечить?]]></title>
+        <id>https://addict.cf/blog/addikciyakaklechit</id>
+        <link href="https://addict.cf/blog/addikciyakaklechit"/>
+        <updated>2022-06-02T19:08:51.000Z</updated>
+        <summary type="html"><![CDATA[Из особенностей психодинамики аддиктов следуют как методы лечения, так и оценка их перспективности. Так, можно критически оценить популярную ныне эмоционально-стрессовую терапию, лечение зависимостей «страхом». Его у аддикта и так в избытке. Он обладает...]]></summary>
+        <content type="html"><![CDATA[Из особенностей психодинамики аддиктов следуют как методы лечения, так и оценка их перспективности. Так, можно критически оценить популярную ныне эмоционально-стрессовую терапию, лечение зависимостей «страхом». Его у аддикта и так в избытке. Он обладает...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Метафора о жизненном пути]]></title>
+        <id>https://addict.cf/blog/metaforaozhiznennomputi</id>
+        <link href="https://addict.cf/blog/metaforaozhiznennomputi"/>
+        <updated>2022-05-28T10:50:06.000Z</updated>
+        <summary type="html"><![CDATA[Рассказывают о страннике, который устало брел по казавшейся бесконечной дороге. ##### Он тащил на себе разные вещи: - со спины у него свисал тяжелый мешок с песком;- толстый бурдюк с водой обвивал его тело.- в правой руке у него был камень какой-то...]]></summary>
+        <content type="html"><![CDATA[Рассказывают о страннике, который устало брел по казавшейся бесконечной дороге. ##### Он тащил на себе разные вещи: - со спины у него свисал тяжелый мешок с песком;- толстый бурдюк с водой обвивал его тело.- в правой руке у него был камень какой-то...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Электроэнцефалография в диагностике органических поражений ЦНСy]]></title>
+        <id>https://addict.cf/blog/electroencephalogram</id>
+        <link href="https://addict.cf/blog/electroencephalogram"/>
+        <updated>2022-06-03T07:14:44.000Z</updated>
+        <summary type="html"><![CDATA[Бесспорным признаком зависимостей служит нарушение аналитико-синтетической функции ЦНС. Оба полушария мозга, как известно, определяют когнитивное взаимодействие субъекта и мира, отражая связи между предметами и явлениями. *Именно ассоциативные связи во...]]></summary>
+        <content type="html"><![CDATA[Бесспорным признаком зависимостей служит нарушение аналитико-синтетической функции ЦНС. Оба полушария мозга, как известно, определяют когнитивное взаимодействие субъекта и мира, отражая связи между предметами и явлениями. *Именно ассоциативные связи во...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Травматический стресс. Его признаки и способы разрешения]]></title>
+        <id>https://addict.cf/blog/traumastress</id>
+        <link href="https://addict.cf/blog/traumastress"/>
+        <updated>2022-06-14T15:35:02.000Z</updated>
+        <summary type="html"><![CDATA[Стресс бывает острым (травматическим) и хроническим. В свою очередь он приводит к ** дисстрессу *** как нездоровому неблагоприятному чрезмерному напряжению, снижает способность человеческого организма к адекватному реагированию на угрожающие факторы...]]></summary>
+        <content type="html"><![CDATA[Стресс бывает острым (травматическим) и хроническим. В свою очередь он приводит к ** дисстрессу *** как нездоровому неблагоприятному чрезмерному напряжению, снижает способность человеческого организма к адекватному реагированию на угрожающие факторы...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Импринтинг как основа неприемлемого шаблона поведения]]></title>
+        <id>https://addict.cf/blog/imprintig</id>
+        <link href="https://addict.cf/blog/imprintig"/>
+        <updated>2022-05-31T09:49:39.000Z</updated>
+        <summary type="html"><![CDATA[Серьезные поведенческие нарушения и асоциальность часто являются следствием жизни и развития ребенка в аморальной и криминогенной семьях. Одновременно, это яркий пример запечатления(импринтинга) открытого поведения родителей. В таких семьях «обычными»...]]></summary>
+        <content type="html"><![CDATA[Серьезные поведенческие нарушения и асоциальность часто являются следствием жизни и развития ребенка в аморальной и криминогенной семьях. Одновременно, это яркий пример запечатления(импринтинга) открытого поведения родителей. В таких семьях «обычными»...]]></content>
+        <author>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </author>
+        <contributor>
+            <name>Valeriy Grean</name>
+            <email>vgrean@gmail.com</email>
+            <uri>https://twitter.com/_SreetamDas</uri>
+        </contributor>
+    </entry>
+</feed>
