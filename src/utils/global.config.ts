@@ -56,12 +56,12 @@ export const LOCALIZED_RSS_DATA = [
   {
     siteName: "addict-ru",
     siteDescription: "addict-ru",
-    locale: "ru-RU",
+    locale: "ru",
   },
   {
     siteName: "addict-pl",
     siteDescription: "addict-pl",
-    locale: "pl-PL",
+    locale: "pl",
   },
 ];
 

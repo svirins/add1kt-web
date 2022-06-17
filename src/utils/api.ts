@@ -1,5 +1,3 @@
-/* eslint-disable simple-import-sort/imports */
-/* eslint-disable import/order */
 import type {
   TAuthor,
   TPage,
@@ -10,10 +8,9 @@ import type {
   TSlug,
   TTag,
 } from "@/typings/schema-types";
+
 import { getSkipValue } from "./contentUtils";
 import { GLOBAL_CONFIG } from "./global.config";
-import { getSanityClient } from "./sanity";
-
 import {
   getAllAuthorSlugsQuery,
   getAllPostSlugsQuery,
@@ -28,6 +25,7 @@ import {
   getTagsAndRelatedPostsCountQuery,
   getTotalPostsNumberQuery,
 } from "./queries";
+import { getSanityClient } from "./sanity";
 
 const client = getSanityClient({ useCdn: false });
 
