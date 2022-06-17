@@ -4,7 +4,7 @@ import algoliasearch from "algoliasearch";
 import dotenv from "dotenv";
 
 import { getPosts } from "./getPosts";
-import { localizedAlgoliaIndices } from "./global.config";
+import { LOCALIZED_ALGOLIA_INDICES } from "./global.config";
 
 dotenv.config();
 
@@ -46,7 +46,7 @@ const generateIndexPerLocale = async (indexName: string, locale: string) => {
 
 export default async function generateAlgoliaIndex() {
   // eslint-disable-next-line no-restricted-syntax
-  for await (const i of localizedAlgoliaIndices) {
+  for await (const i of LOCALIZED_ALGOLIA_INDICES) {
     generateIndexPerLocale(i.indexName, i.locale);
   }
 }

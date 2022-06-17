@@ -12,7 +12,7 @@ import { DefaultSeo } from "next-seo";
 import { ThemeProvider } from "next-themes";
 
 import { Analytics } from "@/components/Analytics";
-import SEO from "@/utils/next-seo.config";
+import { SEO } from "@/utils/global.config";
 
 function App({ Component, pageProps }: AppProps) {
   usePanelbear(process.env.NEXT_PUBLIC_PANELBEAR_SITE_ID, {

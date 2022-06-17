@@ -10,8 +10,8 @@ import type {
   TSlug,
   TTag,
 } from "@/typings/schema-types";
-import { globalConfig } from "./global.config";
 import { getSkipValue } from "./contentUtils";
+import { GLOBAL_CONFIG } from "./global.config";
 import { getSanityClient } from "./sanity";
 
 import {
@@ -35,7 +35,7 @@ export async function getFeaturedPosts(locale: string): Promise<TPostBase[]> {
   const data = await client.fetch(getFeaturedPostsQuery, {
     locale,
     skip: 0,
-    limit: globalConfig.pagination.pageSize,
+    limit: GLOBAL_CONFIG.pagination.pageSize,
   });
   return data;
 }
@@ -82,7 +82,7 @@ export async function getTagAndRelatedPosts(
     locale,
     slug,
     skip: 0,
-    limit: globalConfig.pagination.allPostsSize,
+    limit: GLOBAL_CONFIG.pagination.allPostsSize,
   });
   return data;
 }
@@ -100,7 +100,7 @@ export async function getAuthorAndRelatedPosts(
     locale,
     slug,
     skip: 0,
-    limit: globalConfig.pagination.allPostsSize,
+    limit: GLOBAL_CONFIG.pagination.allPostsSize,
   });
   return data;
 }
@@ -118,7 +118,7 @@ export async function getPostAndRelatedPosts(
     locale,
     slug,
     skip: 0,
-    limit: globalConfig.pagination.morePostsSize,
+    limit: GLOBAL_CONFIG.pagination.morePostsSize,
   });
   return data;
 }
@@ -130,7 +130,7 @@ export async function getPaginatedPosts(
   const data = await client.fetch(getPaginatedPostsQuery, {
     locale,
     skip: getSkipValue(page),
-    limit: globalConfig.pagination.pageSize + getSkipValue(page),
+    limit: GLOBAL_CONFIG.pagination.pageSize + getSkipValue(page),
   });
   return data;
 }

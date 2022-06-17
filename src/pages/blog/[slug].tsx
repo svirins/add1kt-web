@@ -10,7 +10,7 @@ import { SectionSeparator } from "@/components/SectionSeparator";
 import { Subtitle } from "@/components/Subtitle";
 import { Tags } from "@/components/Tags";
 import { getAllPostSlugs, getPostAndRelatedPosts } from "@/utils/api";
-import { globalConfig } from "@/utils/global.config";
+import { GLOBAL_CONFIG } from "@/utils/global.config";
 
 interface IParams extends ParsedUrlQuery {
   slug: string;
@@ -41,8 +41,8 @@ export default function Post({ post, relatedPosts }: Props) {
           <SanityImage
             alt={post.postTitle}
             url={post.postImageUrl}
-            width={globalConfig.images.defaultPostImageWidth}
-            height={globalConfig.images.defaultPostImageHeight}
+            width={GLOBAL_CONFIG.images.defaultPostImageWidth}
+            height={GLOBAL_CONFIG.images.defaultPostImageHeight}
           />
 
           <div className="mt-4 flex flex-row pt-2">

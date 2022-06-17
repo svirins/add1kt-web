@@ -5,7 +5,7 @@ import { SanityImage } from "@/components/SanityImage";
 import { Tags } from "@/components/Tags";
 import type { TAuthorBase, TTagBase } from "@/typings/schema-types";
 import { truncate } from "@/utils/contentUtils";
-import { globalConfig } from "@/utils/global.config";
+import { GLOBAL_CONFIG } from "@/utils/global.config";
 
 export type PostCardProps = {
   title: string;
@@ -32,8 +32,8 @@ export function PostCard({
         slug={slug}
         alt={title}
         url={previewImage}
-        width={globalConfig.images.defaultPostPreviewImageWidth}
-        height={globalConfig.images.defaultPostImagePreviewHeight}
+        width={GLOBAL_CONFIG.images.defaultPostPreviewImageWidth}
+        height={GLOBAL_CONFIG.images.defaultPostImagePreviewHeight}
       />
       <h4 className="mt-4 w-full text-lg  font-medium text-gray-800  transition-all delay-100 hover:text-teal-600  dark:text-gray-200 dark:hover:text-teal-400">
         <Link href={`/blog/${slug}`}>

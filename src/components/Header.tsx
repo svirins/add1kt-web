@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { LocaleSwitch } from "@/components/LocaleSwitch";
 import { NavItemHeader } from "@/components/NavItemHeader";
 import { ThemeSwitch } from "@/components/ThemeSwitch";
-import { globalConfig } from "@/utils/global.config";
+import { GLOBAL_CONFIG } from "@/utils/global.config";
 
 export function Header() {
   const [mounted, setMounted] = useState(false);
@@ -18,7 +18,7 @@ export function Header() {
       </a>
       <div className="flex justify-between">
         <div className="flex items-center">
-          {globalConfig.menuLinks.map((link, index) => (
+          {GLOBAL_CONFIG.menuLinks.map((link, index) => (
             <NavItemHeader
               href={link.href}
               text={index === 0 ? "//" : t(link.title)}

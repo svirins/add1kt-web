@@ -1,4 +1,4 @@
-export const globalConfig = {
+export const GLOBAL_CONFIG = {
   pagination: {
     pageSize: 6,
     morePostsSize: 6,
@@ -28,7 +28,7 @@ export const globalConfig = {
   trimmedHeaderLength: 55,
 };
 
-export const localizedAlgoliaIndices = [
+export const LOCALIZED_ALGOLIA_INDICES = [
   {
     indexName: "addict-ru",
     locale: "ru",
@@ -39,28 +39,44 @@ export const localizedAlgoliaIndices = [
   },
 ];
 
-export const sanityConfig = {
+export const SANITY_CONFIG = {
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   apiVersion: "2021-10-21",
 };
 
-export const sanityConfigForAlgolia = {
+export const SANITY_CONFIG_ALGOLIA = {
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   apiVersion: "2021-03-25",
   useCdn: false,
 };
 
-export const localizedRSSData = [
+export const LOCALIZED_RSS_DATA = [
   {
     siteName: "addict-ru",
     siteDescription: "addict-ru",
-    locale: "ru",
+    locale: "ru-RU",
   },
   {
     siteName: "addict-pl",
     siteDescription: "addict-pl",
-    locale: "pl",
+    locale: "pl-PL",
   },
 ];
+
+export const AUTHOR = {
+  name: "Valeriy Grean",
+  email: "vgrean@gmail.com",
+  link: "https://twitter.com",
+};
+
+export const SEO = {
+  openGraph: {
+    titleTemplate: "Addict.cf | %s",
+    description: "Blog about addiction",
+    type: "website",
+    url: "https://www.addict.cf/",
+    site_name: "Addict.cf - blog about addiction",
+  },
+};

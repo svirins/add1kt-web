@@ -1,6 +1,6 @@
 import Img from "next/image";
 
-import { globalConfig } from "@/utils/global.config";
+import { GLOBAL_CONFIG } from "@/utils/global.config";
 
 export function AvatarImage({
   url,
@@ -15,9 +15,9 @@ export function AvatarImage({
         alt={alt}
         src={url}
         loader={({ src, width, quality }) => `${src}?w=${width}&q=${quality}`}
-        width={globalConfig.images.defaultAvatarImageWidthHeight}
-        height={globalConfig.images.defaultAvatarImageWidthHeight}
-        quality={globalConfig.images.defaultQuality}
+        width={GLOBAL_CONFIG.images.defaultAvatarImageWidthHeight}
+        height={GLOBAL_CONFIG.images.defaultAvatarImageWidthHeight}
+        quality={GLOBAL_CONFIG.images.defaultQuality}
         className="rounded-full"
       />
     </div>

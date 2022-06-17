@@ -2,7 +2,7 @@ import { PostBody } from "@/components/PostBody";
 import { SanityImage } from "@/components/SanityImage";
 import { Socials } from "@/components/Socials";
 import type { TPortableText } from "@/typings/schema-types";
-import { globalConfig } from "@/utils/global.config";
+import { GLOBAL_CONFIG } from "@/utils/global.config";
 
 export type PageTopProps = {
   title: string;
@@ -40,7 +40,7 @@ export function PageTop({
           <div className="mb-4 h-32 w-32 md:mb-0 md:h-48 md:w-48">
             <SanityImage
               alt={title}
-              width={globalConfig.images.defaultRoundImageWidthHeight}
+              width={GLOBAL_CONFIG.images.defaultRoundImageWidthHeight}
               isRounded={true}
               url={pictureUrl}
             />

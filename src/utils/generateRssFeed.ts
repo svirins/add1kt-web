@@ -5,22 +5,16 @@ import fs from "fs";
 
 import { truncate } from "./contentUtils";
 import { getPosts } from "./getPosts";
-import { localizedRSSData } from "./global.config";
+import { AUTHOR, LOCALIZED_RSS_DATA } from "./global.config";
 
 dotenv.config();
 
 const generateRssFeed = async (locale: string) => {
   const posts = await getPosts(locale);
   const siteURL =
-    locale === "ru" ? process.env.SITE_URL : process.env.SITE_ALT_URL;
+    locale === "ru-RU" ? process.env.SITE_URL : process.env.SITE_ALT_URL;
   const date = new Date();
-  // TODO: add email and link fields to Author datatodel, then implement post=>post.author in rss + add cqategory field
-  const author = {
-    name: "Valeriy Grean",
-    email: "vgrean@gmail.com",
-    link: "https://twitter.com/_SreetamDas",
-  };
-  const { siteName, siteDescription } = localizedRSSData.find(
+  const { siteName, siteDescription } = LOCALIZED_RSS_DATA.find(
     (i) => i.locale === locale
   );
   const feed = new Feed({
@@ -39,27 +33,16 @@ const generateRssFeed = async (locale: string) => {
       json: `${siteURL}/rss/feed.json`,
       atom: `${siteURL}/rss/atom.xml`,
     },
-    author,
+    author: AUTHOR,
   });
   posts.forEach((post) => {
-    const summary = truncate(post.text.replace(/[\r\n]/gm, ""), 256);
-    const url = `${siteURL}/blog/${post.slug}`;
-    const categories = post.tags.map((tag) => {
-      return {
-        name: tag,
-        domain: url,
-        scheme: "???",
-        term: tag,
-      };
-    });
+    const link = `${siteURL}/blog/${post.slug}`;
     feed.addItem({
       title: post.title,
-      id: url,
-      link: url,
+      id: post.objectID,
+      link,
       image: post.image,
-      description: summary,
-      category: categories,
-      content: post.text,
+      description: truncate(post.text.replace(/[\r\n]/gm, ""), 256),
       author: [post.author],
       date: new Date(post.publishedAt),
     });
@@ -72,4 +55,4 @@ const generateRssFeed = async (locale: string) => {
   fs.writeFileSync("./public/rss/feed.json", feed.json1());
 };
 
-generateRssFeed("ru");
+generateRssFeed("ru-RU");

@@ -4,7 +4,7 @@ import sanityClient from "@sanity/client";
 import dotenv from "dotenv";
 import groq from "groq";
 
-import { globalConfig } from "./global.config";
+import { GLOBAL_CONFIG } from "./global.config";
 
 type TAuthorData = {
   name: string;
@@ -50,7 +50,7 @@ export async function getPosts(locale: string): Promise<TPostData[]> {
   const data = await client.fetch(getPostsIndexQuery, {
     locale,
     skip: 0,
-    limit: globalConfig.pagination.allPostsSize,
+    limit: GLOBAL_CONFIG.pagination.allPostsSize,
   });
   return data;
 }

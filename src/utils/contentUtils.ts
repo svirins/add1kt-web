@@ -1,4 +1,4 @@
-import { globalConfig, localizedAlgoliaIndices } from "./global.config";
+import { GLOBAL_CONFIG, LOCALIZED_ALGOLIA_INDICES } from "./global.config";
 
 export const shimmer = (w: number, h: number) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -22,13 +22,13 @@ export const toBase64 = (str: string) =>
 export function getSkipValue(page: number) {
   const skipMultiplier = page === 1 ? 0 : page - 1;
   return skipMultiplier > 0
-    ? globalConfig.pagination.pageSize * skipMultiplier
+    ? GLOBAL_CONFIG.pagination.pageSize * skipMultiplier
     : 0;
 }
 
 export function truncate(
   str: string,
-  length = globalConfig.trimmedHeaderLength
+  length = GLOBAL_CONFIG.trimmedHeaderLength
 ) {
   let i;
   const bits = str.split("");
@@ -47,6 +47,6 @@ export function truncate(
 }
 
 export function getIndexNameByLocale(locale: string): string {
-  return localizedAlgoliaIndices.find((index) => index.locale === locale)!
+  return LOCALIZED_ALGOLIA_INDICES.find((index) => index.locale === locale)!
     .indexName;
 }

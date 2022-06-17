@@ -2,7 +2,7 @@ import { PortableText } from "@portabletext/react";
 
 import { SanityImage } from "@/components/SanityImage";
 import type { TPortableText as TPortableTextType } from "@/typings/schema-types";
-import { globalConfig } from "@/utils/global.config";
+import { GLOBAL_CONFIG } from "@/utils/global.config";
 
 const ptComponents = {
   // TODO:  console log value here and determine its type
@@ -17,8 +17,8 @@ const ptComponents = {
           <SanityImage
             alt={value.alt ?? ""}
             url={value}
-            width={globalConfig.images.defaultPostImageWidth}
-            height={globalConfig.images.defaultPostImageHeight}
+            width={GLOBAL_CONFIG.images.defaultPostImageWidth}
+            height={GLOBAL_CONFIG.images.defaultPostImageHeight}
           />
         </div>
       );
