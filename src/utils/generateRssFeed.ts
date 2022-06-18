@@ -11,16 +11,13 @@ dotenv.config();
 
 const generateRssFeed = async (locale: string) => {
   const posts = await getPosts(locale);
-  const siteURL =
-    locale === "ru" ? process.env.SITE_URL : process.env.SITE_ALT_URL;
+  const siteURL = locale === "ru" ? process.env.SITE_URL : process.env.SITE_ALT_URL;
   const date = new Date();
-  const { siteName, siteDescription } = LOCALIZED_RSS_DATA.find(
-    (i) => i.locale === locale
-  );
+  const { siteName, siteDescription } = LOCALIZED_RSS_DATA.find((i) => i.locale === locale)!;
   const feed = new Feed({
     title: siteName,
     description: siteDescription,
-    id: siteURL,
+    id: siteURL!,
     link: siteURL,
     image: `${siteURL}/logo.webp`,
     language: locale,

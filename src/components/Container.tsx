@@ -29,11 +29,11 @@ export function Container(props: ContainerProps) {
     ],
   };
   return (
-    <div className="flex flex-col justify-center bg-white text-slate-500 dark:bg-slate-900 dark:text-slate-400 ">
+    <div className="flex flex-col justify-center bg-white text-slate-600 dark:bg-slate-900 dark:text-slate-300 ">
       <NextSeo openGraph={openGraph} />
       <main
         id="skip"
-        className="mx-auto flex min-w-fit max-w-2xl flex-col  justify-center bg-white px-6 text-lg text-slate-500 dark:bg-slate-900 dark:text-slate-400 md:px-8"
+        className="mx-auto flex min-w-fit max-w-2xl flex-col  justify-center bg-white px-6 text-lg text-slate-600 dark:bg-slate-900 dark:text-slate-300 md:px-8"
       >
         <Header />
         {props.children}

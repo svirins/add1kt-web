@@ -4,6 +4,7 @@ overrides:
   postcss@<7.0.36: '>=7.0.36'
 
 specifiers:
+  '@algolia/autocomplete-core': ^1.6.3
   '@algolia/autocomplete-js': ^1.6.3
   '@algolia/autocomplete-theme-classic': ^1.6.3
   '@algolia/client-search': '>=4.9.1 <5.0.0'
@@ -72,6 +73,7 @@ specifiers:
   typescript: ^4.7.2
 
 dependencies:
+  '@algolia/autocomplete-core': 1.6.3
   '@algolia/autocomplete-js': 1.6.3_jr4xm7x4v4vd7iifhnoo3rb33u
   '@algolia/autocomplete-theme-classic': 1.6.3
   '@algolia/client-search': 4.13.1

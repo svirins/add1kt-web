@@ -27,12 +27,10 @@ export function Autocomplete(props: AutocompleteProps) {
         detachedCancelButtonText: t("detachedCancelButtonText"),
         submitButtonTitle: t("submitButtonTitle"),
       },
-      placeholder: t("inputPlaceholder"),
       renderer: { createElement, Fragment, render: () => {} },
       render({ children }, root) {
         if (!panelRootRef.current || rootRef.current !== root) {
           rootRef.current = root;
-
           panelRootRef.current.unmount();
           panelRootRef.current = createRoot(root);
         }
