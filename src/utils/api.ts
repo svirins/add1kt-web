@@ -38,10 +38,7 @@ export async function getFeaturedPosts(locale: string): Promise<TPostBase[]> {
   return data;
 }
 
-export async function getPageContent(
-  locale: string,
-  slug: string
-): Promise<TPage> {
+export async function getPageContent(locale: string, slug: string): Promise<TPage> {
   const data = await client.fetch(getPageContentQuery, {
     locale,
     slug,
@@ -49,18 +46,14 @@ export async function getPageContent(
   return data;
 }
 
-export async function getAuthorsAndRelatedPostsCount(
-  locale: string
-): Promise<TPostsByAuthor[]> {
+export async function getAuthorsAndRelatedPostsCount(locale: string): Promise<TPostsByAuthor[]> {
   const data = await client.fetch(getAuthorsAndRelatedPostsCountQuery, {
     locale,
   });
   return data;
 }
 
-export async function getTagsAndRelatedPostsCount(
-  locale: string
-): Promise<TPostsByTag[]> {
+export async function getTagsAndRelatedPostsCount(locale: string): Promise<TPostsByTag[]> {
   const data = await client.fetch(getTagsAndRelatedPostsCountQuery, {
     locale,
   });
@@ -72,10 +65,7 @@ export async function getAllTagSlugs(): Promise<TSlug[]> {
   return data;
 }
 
-export async function getTagAndRelatedPosts(
-  locale: string,
-  slug: string
-): Promise<TTag> {
+export async function getTagAndRelatedPosts(locale: string, slug: string): Promise<TTag> {
   const data = await client.fetch(getTagAndRelatedPostsQuery, {
     locale,
     slug,
@@ -90,10 +80,7 @@ export async function getAllAuthorSlugs(): Promise<TSlug[]> {
   return data;
 }
 
-export async function getAuthorAndRelatedPosts(
-  locale: string,
-  slug: string
-): Promise<TAuthor> {
+export async function getAuthorAndRelatedPosts(locale: string, slug: string): Promise<TAuthor> {
   const data = await client.fetch(getAuthorAndRelatedPostsQuery, {
     locale,
     slug,
@@ -108,10 +95,7 @@ export async function getAllPostSlugs(): Promise<TSlug[]> {
   return data;
 }
 
-export async function getPostAndRelatedPosts(
-  locale: string,
-  slug: string
-): Promise<TPost> {
+export async function getPostAndRelatedPosts(locale: string, slug: string): Promise<TPost> {
   const data = await client.fetch(getPostAndRelatedPostsQuery, {
     locale,
     slug,
@@ -121,10 +105,7 @@ export async function getPostAndRelatedPosts(
   return data;
 }
 
-export async function getPaginatedPosts(
-  locale: string,
-  page: number
-): Promise<TPostBase[]> {
+export async function getPaginatedPosts(locale: string, page: number): Promise<TPostBase[]> {
   const data = await client.fetch(getPaginatedPostsQuery, {
     locale,
     skip: getSkipValue(page),

@@ -7,11 +7,7 @@ import { PostsGrid } from "@/components/PostsGrid";
 import { Search } from "@/components/Search";
 import { SectionSeparator } from "@/components/SectionSeparator";
 import { Subtitle } from "@/components/Subtitle";
-import {
-  getFeaturedPosts,
-  getPageContent,
-  getTotalPostsNumber,
-} from "@/utils/api";
+import { getFeaturedPosts, getPageContent, getTotalPostsNumber } from "@/utils/api";
 
 type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
 type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>["props"];

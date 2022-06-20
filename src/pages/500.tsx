@@ -12,9 +12,7 @@ export default function FiveHundred() {
         </h1>
       </div>
       <div className="max-w-md">
-        <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-          {t("title")}
-        </p>
+        <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">{t("title")}</p>
         <p className="mb-8">{t("body")}</p>
         <Link href="/">
           <button className="inline rounded-lg border border-transparent bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow transition-colors duration-150 hover:bg-teal-800 focus:outline-none dark:hover:bg-teal-400">

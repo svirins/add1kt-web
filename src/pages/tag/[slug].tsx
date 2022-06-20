@@ -34,9 +34,7 @@ export default function Tag({ tag, sameTagPosts }: Props) {
             </Subtitle>
           </>
         )}
-        {sameTagPosts && sameTagPosts?.length > 0 && (
-          <PostsGrid posts={sameTagPosts} />
-        )}
+        {sameTagPosts && sameTagPosts?.length > 0 && <PostsGrid posts={sameTagPosts} />}
       </div>
     </Container>
   );
@@ -60,13 +58,7 @@ export async function getStaticPaths({ locales }: { locales: string[] }) {
   };
 }
 
-export async function getStaticProps({
-  params,
-  locale,
-}: {
-  params: IParams;
-  locale: string;
-}) {
+export async function getStaticProps({ params, locale }: { params: IParams; locale: string }) {
   const { sameTagPosts, ...tag } = await getTagAndRelatedPosts(
     locale,
     params.slug.replace(/\/$/, "").split("/").pop() as string

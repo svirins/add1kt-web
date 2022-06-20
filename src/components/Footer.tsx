@@ -24,12 +24,8 @@ export function Footer() {
           ))}
         </div>
         <div className="inline-flex items-center">
-          <ExternalLink href={GLOBAL_CONFIG.telegramLink}>
-            {telegram}
-          </ExternalLink>
-          <ExternalLink href={GLOBAL_CONFIG.facebookLink}>
-            {facebook}
-          </ExternalLink>
+          <ExternalLink href={GLOBAL_CONFIG.telegramLink}>{telegram}</ExternalLink>
+          <ExternalLink href={GLOBAL_CONFIG.facebookLink}>{facebook}</ExternalLink>
         </div>
       </div>
       <div className="mt-8 flex justify-center text-sm">

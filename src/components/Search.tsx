@@ -47,13 +47,7 @@ export function Search() {
               });
             },
             templates: {
-              item({
-                item,
-                components,
-              }: {
-                item: Item;
-                components: AutocompleteComponents;
-              }) {
+              item({ item, components }: { item: Item; components: AutocompleteComponents }) {
                 return <SearchItem hit={item} components={components} />;
               },
             },

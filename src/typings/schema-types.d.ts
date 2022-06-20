@@ -1,8 +1,4 @@
-import type {
-  SanityBlock,
-  SanityImageAsset,
-  SanityKeyed,
-} from "sanity-codegen";
+import type { SanityBlock, SanityImageAsset, SanityKeyed } from "sanity-codegen";
 
 export type { SanityBlock, SanityImageAsset, SanityKeyed };
 

@@ -19,10 +19,7 @@ export function useDebounce<T>(value: T, delay: number): T {
   return debouncedValue;
 }
 
-export const useDelayedRender = (
-  active: boolean = false,
-  options: Options = {}
-) => {
+export const useDelayedRender = (active: boolean = false, options: Options = {}) => {
   const [, force] = useState<any>();
   const mounted = useRef(active);
   const rendered = useRef(false);

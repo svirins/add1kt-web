@@ -28,9 +28,7 @@ const generateIndexPerLocale = async (indexName: string, locale: string) => {
 
   try {
     await index.saveObjects(mappedData);
-    console.log(
-      `Saving ${mappedData.length} documents to index:  ${indexName}`
-    );
+    console.log(`Saving ${mappedData.length} documents to index:  ${indexName}`);
     return {
       status: 200,
       body: "Success!",

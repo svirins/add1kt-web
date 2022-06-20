@@ -40,15 +40,9 @@ export function PostCard({
           <a>{truncate(title)}</a>
         </Link>
       </h4>
-      <div className="flex flex-row justify-end  text-sm">
-        {<Tags tags={tags} />}
-      </div>
+      <div className="flex flex-row justify-end  text-sm">{<Tags tags={tags} />}</div>
       <div className="flex flex-row ">
-        <PostMeta
-          date={date}
-          readingTime={readingTime === 0 ? 1 : readingTime}
-          author={author}
-        />
+        <PostMeta date={date} readingTime={readingTime === 0 ? 1 : readingTime} author={author} />
       </div>
     </div>
   );

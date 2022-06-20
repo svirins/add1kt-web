@@ -34,9 +34,7 @@ export function SanityImage({
       objectFit="cover"
       placeholder="blur"
       unoptimized={true}
-      blurDataURL={`data:image/svg+xml;base64,${toBase64(
-        shimmer(width, height)
-      )}`}
+      blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(width, height))}`}
       className={cn({
         "transition-opacity hover:opacity-75": slug,
         "rounded-full": isRounded,

@@ -29,14 +29,10 @@ export default function Author({ author, authorPosts }: Props) {
               text={author.authorBio}
             />
             <SectionSeparator />
-            <Subtitle>
-              {`${t("author_related_articles")}${author.authorName}`}
-            </Subtitle>
+            <Subtitle>{`${t("author_related_articles")}${author.authorName}`}</Subtitle>
           </>
         )}
-        {authorPosts && authorPosts.length > 0 && (
-          <PostsGrid posts={authorPosts} />
-        )}
+        {authorPosts && authorPosts.length > 0 && <PostsGrid posts={authorPosts} />}
       </div>
     </Container>
   );
@@ -60,13 +56,7 @@ export async function getStaticPaths({ locales }: { locales: string[] }) {
   };
 }
 
-export async function getStaticProps({
-  params,
-  locale,
-}: {
-  params: IParams;
-  locale: string;
-}) {
+export async function getStaticProps({ params, locale }: { params: IParams; locale: string }) {
   const { authorPosts, ...author } = await getAuthorAndRelatedPosts(
     locale,
     params.slug.replace(/\/$/, "").split("/").pop() as string
