@@ -45,7 +45,7 @@ const generateRssFeed = async (locale: string) => {
     });
   });
   // eslint-disable-next-line no-console
-  console.log("feed reporting", feed);
+  // console.log("feed reporting", feed);
   fs.mkdirSync("./public/rss", { recursive: true });
   fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
   fs.writeFileSync("./public/rss/atom.xml", feed.atom1());

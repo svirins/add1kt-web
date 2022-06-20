@@ -36,6 +36,14 @@ html {
   @apply bg-gradient-to-r from-yellow-600 to-red-600 bg-clip-text tracking-tight text-transparent dark:bg-gradient-to-l dark:from-emerald-500 dark:to-lime-600;
 }
 
+.animated {
+  @apply transition-all delay-100;
+}
+
+.link {
+  @apply text-gray-800 hover:text-teal-600  dark:text-gray-200 dark:hover:text-teal-400;
+}
+
 #skip {
   scroll-margin-top: 1.125rem;
 }
