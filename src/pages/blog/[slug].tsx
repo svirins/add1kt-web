@@ -32,7 +32,7 @@ export default function Post({ post, relatedPosts }: Props) {
     >
       <div className="mx-auto flex max-w-2xl flex-col items-start justify-center pb-16">
         <div className="flex flex-col">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-800  dark:text-gray-200 md:text-5xl">
+          <h1 className="gradient-header text-3xl font-bold tracking-tight md:text-5xl">
             {post.postTitle}
           </h1>
           <div className="mb-2 flex flex-row justify-end py-2 text-sm">
@@ -46,11 +46,7 @@ export default function Post({ post, relatedPosts }: Props) {
           />
 
           <div className="mt-4 flex flex-row pt-2">
-            <PostMeta
-              date={post.postDate}
-              readingTime={post.readingTime}
-              author={post.author}
-            />
+            <PostMeta date={post.postDate} readingTime={post.readingTime} author={post.author} />
           </div>
         </div>
         <PostBody text={post.postText} />
@@ -78,13 +74,7 @@ export async function getStaticPaths({ locales }: { locales: string[] }) {
   };
 }
 
-export async function getStaticProps({
-  params,
-  locale,
-}: {
-  params: IParams;
-  locale: string;
-}) {
+export async function getStaticProps({ params, locale }: { params: IParams; locale: string }) {
   const { relatedPosts, ...post } = await getPostAndRelatedPosts(
     locale,
     params.slug.replace(/\/$/, "").split("/").pop() as string

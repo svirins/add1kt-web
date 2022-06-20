@@ -32,6 +32,10 @@ html {
   @apply absolute -left-1/4 -top-8 -translate-y-12 transform px-4 py-3 transition-transform duration-200 focus:top-4 focus:translate-y-3;
 }
 
+.gradient-header {
+  @apply bg-gradient-to-r from-yellow-600 to-red-600 bg-clip-text tracking-tight text-transparent dark:bg-gradient-to-l dark:from-emerald-500 dark:to-lime-600;
+}
+
 #skip {
   scroll-margin-top: 1.125rem;
 }

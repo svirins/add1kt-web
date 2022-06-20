@@ -2,28 +2,21 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/Container";
-import {
-  getAuthorsAndRelatedPostsCount,
-  getTagsAndRelatedPostsCount,
-} from "@/utils/api";
+import { getAuthorsAndRelatedPostsCount, getTagsAndRelatedPostsCount } from "@/utils/api";
 
 type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
 type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>["props"];
 
 export default function GetAllAuthorsAndTags({ authors, tags }: Props) {
   const t = useTranslations("Titles");
-  const sortedAutors = authors.sort(
-    (a, b) => b.relatedPostsCount - a.relatedPostsCount
-  );
-  const sortedTags = tags.sort(
-    (a, b) => b.relatedPostsCount - a.relatedPostsCount
-  );
+  const sortedAutors = authors.sort((a, b) => b.relatedPostsCount - a.relatedPostsCount);
+  const sortedTags = tags.sort((a, b) => b.relatedPostsCount - a.relatedPostsCount);
   return (
     <Container title={t("categories")}>
       <div className="mx-auto flex  min-h-screen max-w-2xl flex-col items-start justify-center border-gray-200 pb-16 dark:border-gray-700">
         <div className="flex flex-col items-start justify-start divide-y divide-gray-300 dark:divide-gray-500 md:mb-6 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
           <div className="space-x-2 pt-2 pb-4 md:space-y-5">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:leading-10 md:border-r-2   md:pr-6 md:text-5xl">
+            <h1 className="gradient-header text-3xl font-bold tracking-tight sm:leading-10 md:border-r-2   md:pr-6 md:text-5xl">
               {t("authors")}
             </h1>
           </div>
@@ -43,7 +36,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }: Props) {
         </div>
         <div className="mb-6 flex flex-col items-start justify-start divide-y divide-gray-300 dark:divide-gray-500 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
           <div className="space-x-2 pt-2 pb-4 md:space-y-5">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:leading-10 md:border-r-2   md:pr-6 md:text-5xl">
+            <h1 className="gradient-header text-3xl font-bold tracking-tight sm:leading-10 md:border-r-2   md:pr-6 md:text-5xl">
               {t("tags")}
             </h1>
           </div>

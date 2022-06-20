@@ -24,8 +24,12 @@ Blog for my friend psychotherapist, built with Next.js, Tailwind, Sanity and Ver
 
 ## 🙏
 
-Thanks for inspiration, code snippets and ideas to:
+A huge thanks for inspiration, code snippets and ideas to:
 
 - Lee Robinson [@leeerob](https://twitter.com/leeerob)
 - Henrique Doro [@hdorodev](https://twitter.com/hdorodev/)
 - devs from [Sanity.io](https://www.sanity.io/schemas)
+
+## Images
+
+All images in this blog are from Unsplash and Pexels - Thanks for the free resources!
