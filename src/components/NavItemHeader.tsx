@@ -2,9 +2,11 @@ import cn from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+import { getActiveStatus } from "@/utils/contentUtils";
+
 export function NavItemHeader({ href, text }: { href: string; text: string }) {
   const router = useRouter();
-  const isActive = router.asPath === href;
+  const isActive = getActiveStatus(href, router.asPath);
   return (
     <Link href={href}>
       <a

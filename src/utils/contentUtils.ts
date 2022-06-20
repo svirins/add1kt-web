@@ -15,21 +15,14 @@ export const shimmer = (w: number, h: number) => `
 </svg>`;
 
 export const toBase64 = (str: string) =>
-  typeof window === "undefined"
-    ? Buffer.from(str).toString("base64")
-    : window.btoa(str);
+  typeof window === "undefined" ? Buffer.from(str).toString("base64") : window.btoa(str);
 
 export function getSkipValue(page: number) {
   const skipMultiplier = page === 1 ? 0 : page - 1;
-  return skipMultiplier > 0
-    ? GLOBAL_CONFIG.pagination.pageSize * skipMultiplier
-    : 0;
+  return skipMultiplier > 0 ? GLOBAL_CONFIG.pagination.pageSize * skipMultiplier : 0;
 }
 
-export function truncate(
-  str: string,
-  length = GLOBAL_CONFIG.trimmedHeaderLength
-) {
+export function truncate(str: string, length = GLOBAL_CONFIG.trimmedHeaderLength) {
   let i;
   const bits = str.split("");
   if (bits.length > length) {
@@ -47,6 +40,22 @@ export function truncate(
 }
 
 export function getIndexNameByLocale(locale: string): string {
-  return LOCALIZED_ALGOLIA_INDICES.find((index) => index.locale === locale)!
-    .indexName;
+  return LOCALIZED_ALGOLIA_INDICES.find((index) => index.locale === locale)!.indexName;
+}
+
+export function getActiveStatus(href: string, currentPath: string): boolean {
+  if (href === currentPath) {
+    return true;
+  }
+  if (
+    href.search("categories") > 0 &&
+    (currentPath.search("author") > 0 || currentPath.search("tag") > 0)
+  ) {
+    return true;
+  }
+  if (href.search("blog") > 0 && currentPath.search("blog") > 0) {
+    return true;
+  }
+
+  return false;
 }
