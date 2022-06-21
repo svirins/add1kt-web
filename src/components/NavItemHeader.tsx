@@ -11,7 +11,7 @@ export function NavItemHeader({ href, text }: { href: string; text: string }) {
       <a
         className={cn(
           getActiveStatus(href, router.asPath)
-            ? "text-orange-600 dark:text-emerald-600"
+            ? "text-orange-600 dark:text-green-400"
             : "text-gray-800  dark:text-gray-50",
           "nav-link inline-block py-2 pr-4  text-base font-medium md:text-xl lg:py-4"
         )}

@@ -38,7 +38,7 @@ export function Footer() {
           }}
         />
         <a
-          className="items-center pl-4 text-xs font-thin text-gray-800 transition-all delay-100 hover:text-orange-600 dark:text-gray-50 dark:hover:text-emerald-400 md:text-sm"
+          className="items-center pl-4 text-xs font-thin text-gray-800 transition-all delay-100 hover:text-orange-600 dark:text-gray-50 dark:hover:text-green-400 md:text-sm"
           target="_blank"
           rel="noopener noreferrer"
           href={GLOBAL_CONFIG.githubLink}

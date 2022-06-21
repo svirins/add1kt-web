@@ -1,3 +1,5 @@
+import type { TPortableText } from "@/typings/schema-types";
+
 import { GLOBAL_CONFIG, LOCALIZED_ALGOLIA_INDICES } from "./global.config";
 
 export const shimmer = (w: number, h: number) => `
@@ -58,4 +60,28 @@ export function getActiveStatus(href: string, currentPath: string): boolean {
   }
 
   return false;
+}
+
+export function toPlainText(blocks: TPortableText) {
+  return (
+    blocks
+      // loop through each block
+      .map((block) => {
+        // if it's not a text block with children,
+        // return nothing
+        // eslint-disable-next-line no-underscore-dangle
+        if (block._type !== "block" || !block.children) {
+          return "";
+        }
+        // loop through the children spans, and join the
+        // text strings
+        return block.children.map((child: any) => child.text).join("");
+      })
+      // join the paragraphs leaving split by two linebreaks
+      .join("\n\n")
+  );
+}
+
+export function getDescription(pt: TPortableText): string {
+  return truncate(toPlainText(pt), 256);
 }

@@ -21,7 +21,7 @@
     "@algolia/autocomplete-js": "^1.6.3",
     "@algolia/autocomplete-theme-classic": "^1.6.3",
     "@algolia/client-search": ">=4.9.1 <5.0.0",
-    "@fontsource/ibm-plex-sans": "^4.5.10",
+    "@fontsource/inter": "^4.5.11",
     "@panelbear/panelbear-nextjs": "^1.0.3",
     "@portabletext/react": "^1.0.6",
     "@sanity/client": "^3.3.2",
@@ -41,7 +41,7 @@
     "preact": "^10.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-instantsearch-hooks-web": "^6.27.0"
+    "react-instantsearch-hooks-web": "^6.29.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
@@ -58,6 +58,7 @@
     "@typescript-eslint/parser": "^5.28.0",
     "@vercel/node": "^2.1.0",
     "autoprefixer": "10.4.7",
+    "cross-env": "^7.0.3",
     "cssnano": "^5.1.11",
     "dotenv": "^16.0.1",
     "eslint": "^8.16.0",

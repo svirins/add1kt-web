@@ -72,11 +72,20 @@ export const AUTHOR = {
 };
 
 export const SEO = {
+  title: "Addict.cf. Блог об аддикциях",
+  description:
+    "Аддикция — это навязчивая привычка, которая может спровоцировать психологические заболевания.",
   openGraph: {
-    titleTemplate: "Addict.cf | %s",
-    description: "Blog about addiction",
+    titleTemplate: "Addict.cf. Блог об аддикциях",
+    description:
+      "Аддикция — это навязчивая привычка, которая может спровоцировать психологические заболевания.",
     type: "website",
     url: "https://www.addict.cf/",
-    site_name: "Addict.cf - blog about addiction",
+    site_name: "Addict.cf. Блог об аддикциях",
+  },
+  twitter: {
+    handle: "@handle",
+    site: "@site",
+    cardType: "summary_large_image",
   },
 };

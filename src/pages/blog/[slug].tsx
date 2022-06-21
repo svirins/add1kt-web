@@ -29,6 +29,9 @@ export default function Post({ post, relatedPosts }: Props) {
       ogImage={post.postImageUrl}
       date={post.postDate}
       type="article"
+      description={post.postText}
+      tags={post.tags}
+      author={post.author}
     >
       <div className="mx-auto flex max-w-2xl flex-col items-start justify-center pb-16">
         <div className="flex flex-col">

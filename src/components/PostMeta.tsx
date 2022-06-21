@@ -21,7 +21,7 @@ export function PostMeta({ author, date, readingTime }: PostMetaProps) {
       </div>
       <div className="flex-1 pl-2">
         <Link href={`/author/${author.authorSlug}`}>
-          <a className="text-base font-bold transition-all  delay-100 hover:text-orange-600 dark:hover:text-emerald-400">
+          <a className="text-base font-bold transition-all  delay-100 hover:text-orange-600 dark:hover:text-green-400">
             {author.authorName}
           </a>
         </Link>

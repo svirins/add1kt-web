@@ -8,7 +8,12 @@ const HIVE_REWRITE = {
   destination: "https://hive.splitbee.io/:slug",
 };
 
-module.exports = {
+// eslint-disable-next-line import/no-extraneous-dependencies
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+
+module.exports = withBundleAnalyzer({
   eslint: {
     dirs: ["."],
   },
@@ -40,4 +45,4 @@ module.exports = {
 
     return config;
   },
-};
+});

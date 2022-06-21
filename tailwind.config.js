@@ -35,7 +35,7 @@ module.exports = {
         8: "8px",
       },
       fontFamily: {
-        sans: ["IBM Plex Sans", ...fontFamily.sans],
+        sans: ["Inter", ...fontFamily.sans],
       },
       typography: (theme) => ({
         DEFAULT: {

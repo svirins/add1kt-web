@@ -10,7 +10,7 @@ specifiers:
   '@algolia/client-search': '>=4.9.1 <5.0.0'
   '@commitlint/cli': ^17.0.1
   '@commitlint/config-conventional': ^17.0.0
-  '@fontsource/ibm-plex-sans': ^4.5.10
+  '@fontsource/inter': ^4.5.11
   '@next/bundle-analyzer': ^12.1.6
   '@panelbear/panelbear-nextjs': ^1.0.3
   '@portabletext/react': ^1.0.6
@@ -29,6 +29,7 @@ specifiers:
   algoliasearch: ^4.13.1
   autoprefixer: 10.4.7
   classnames: 2.3.1
+  cross-env: ^7.0.3
   cssnano: ^5.1.11
   date-fns: 2.28.0
   dotenv: ^16.0.1
@@ -68,7 +69,7 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.1.11
   react: ^18.1.0
   react-dom: ^18.1.0
-  react-instantsearch-hooks-web: ^6.27.0
+  react-instantsearch-hooks-web: ^6.29.0
   tailwindcss: 3.1.3
   ts-node: ^10.8.1
   typescript: ^4.7.2
@@ -78,7 +79,7 @@ dependencies:
   '@algolia/autocomplete-js': 1.6.3_jr4xm7x4v4vd7iifhnoo3rb33u
   '@algolia/autocomplete-theme-classic': 1.6.3
   '@algolia/client-search': 4.13.1
-  '@fontsource/ibm-plex-sans': 4.5.11
+  '@fontsource/inter': 4.5.11
   '@panelbear/panelbear-nextjs': 1.0.3_next@12.1.6+react@18.2.0
   '@portabletext/react': 1.0.6_react@18.2.0
   '@sanity/client': 3.3.2
@@ -98,7 +99,7 @@ dependencies:
   preact: 10.8.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-instantsearch-hooks-web: 6.28.0_3d5redehl2jjvbpdn3mne6usq4
+  react-instantsearch-hooks-web: 6.29.0_3d5redehl2jjvbpdn3mne6usq4
 
 devDependencies:
   '@commitlint/cli': 17.0.2
@@ -107,7 +108,7 @@ devDependencies:
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.3
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
-  '@types/jest': 28.1.2
+  '@types/jest': 28.1.3
   '@types/node': 18.0.0
   '@types/react': 18.0.14
   '@types/react-dom': 18.0.5
@@ -115,6 +116,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.29.0_b5e7v2qnwxfo6hmiq56u52mz3e
   '@vercel/node': 2.2.0
   autoprefixer: 10.4.7_postcss@8.4.14
+  cross-env: 7.0.3
   cssnano: 5.1.12_postcss@8.4.14
   dotenv: 16.0.1
   eslint: 8.18.0
@@ -337,7 +339,7 @@ packages:
       '@babel/compat-data': 7.18.5
       '@babel/core': 7.18.5
       '@babel/helper-validator-option': 7.16.7
-      browserslist: 4.20.4
+      browserslist: 4.21.0
       semver: 6.3.0
 
   /@babel/helper-environment-visitor/7.18.2:
@@ -799,8 +801,8 @@ packages:
       - supports-color
     dev: true
 
-  /@fontsource/ibm-plex-sans/4.5.11:
-    resolution: {integrity: sha512-WOX1VjLbeum0ocHXrm5zdDHMbTXUKXnFG/Ba0hjoAz45/H2NQHgmc8MsugG6Q51DQTFlm/l5Xo04+QKj0i6umw==}
+  /@fontsource/inter/4.5.11:
+    resolution: {integrity: sha512-toizzQkfXL8YJcG/f8j3EYXYGQe4OxiDEItThSigvHU+cYNDw8HPp3wLYQX745hddsnHqOGCM4exitFSBOU8+w==}
     dev: false
 
   /@formatjs/ecma402-abstract/1.11.4:
@@ -1394,7 +1396,7 @@ packages:
     engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
     dependencies:
       '@babel/runtime': 7.18.3
-      '@types/testing-library__jest-dom': 5.14.4
+      '@types/testing-library__jest-dom': 5.14.5
       aria-query: 5.0.0
       chalk: 3.0.0
       css: 3.0.0
@@ -1511,8 +1513,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/28.1.2:
-    resolution: {integrity: sha512-5dNM7mMuIrCtNJsFfvUO/5xCrG8swuT2c7ND+sl3XwlwxJf3k7e7o+PRvcFN/iIm8XhCqHqxLOj9yutDDOJoRg==}
+  /@types/jest/28.1.3:
+    resolution: {integrity: sha512-Tsbjk8Y2hkBaY/gJsataeb4q9Mubw9EOz7+4RjPkzD5KjTvHHs7cpws22InaoXxAVAhF5HfFbzJjo6oKWqSZLw==}
     dependencies:
       jest-matcher-utils: 28.1.1
       pretty-format: 28.1.1
@@ -1580,10 +1582,10 @@ packages:
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
     dev: true
 
-  /@types/testing-library__jest-dom/5.14.4:
-    resolution: {integrity: sha512-EUCs9PTBOEyfRtLKkKd31YrRCx/9Wxjy2Uqb6IH/KAOr7/vP0i8iClOyxQqjm/UxMGU5r5s2vOBM7vSPQVmabg==}
+  /@types/testing-library__jest-dom/5.14.5:
+    resolution: {integrity: sha512-SBwbxYoyPIvxHbeHxTZX2Pe/74F/tX2/D3mMvzabdeJ25bBojfW0TyB8BHrbq/9zaaKICJZjLP+8r6AeZMFCuQ==}
     dependencies:
-      '@types/jest': 28.1.2
+      '@types/jest': 28.1.3
     dev: true
 
   /@types/yargs-parser/21.0.0:
@@ -2013,7 +2015,7 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: 4.20.4
+      browserslist: 4.21.0
       caniuse-lite: 1.0.30001358
       fraction.js: 4.2.0
       normalize-range: 0.1.2
@@ -2154,16 +2156,15 @@ packages:
       fill-range: 7.0.1
     dev: true
 
-  /browserslist/4.20.4:
-    resolution: {integrity: sha512-ok1d+1WpnU24XYN7oC3QWgTyMhY/avPJ/r9T00xxvUOIparA/gc+UPUMaod3i+G6s+nI2nUb9xZ5k794uIwShw==}
+  /browserslist/4.21.0:
+    resolution: {integrity: sha512-UQxE0DIhRB5z/zDz9iA03BOfxaN2+GQdBYH/2WrSIWEUrnpzTPJbhqt+umq6r3acaPRTW1FNTkrcp0PXgtFkvA==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001358
       electron-to-chromium: 1.4.164
-      escalade: 3.1.1
       node-releases: 2.0.5
-      picocolors: 1.0.0
+      update-browserslist-db: 1.0.3_browserslist@4.21.0
 
   /bser/2.1.1:
     resolution: {integrity: sha512-gQxTNE/GAfIIrmHLUE3oJyp5FO6HRBfhjnw4/wMmA63ZGDJnWBmgY/lyQBpnDUkGmAhbSe39tx2d/iTOAfglwQ==}
@@ -2214,7 +2215,7 @@ packages:
   /caniuse-api/3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
-      browserslist: 4.20.4
+      browserslist: 4.21.0
       caniuse-lite: 1.0.30001358
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
@@ -2480,6 +2481,14 @@ packages:
 
   /create-require/1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
+    dev: true
+
+  /cross-env/7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
     dev: true
 
   /cross-spawn/7.0.3:
@@ -5533,7 +5542,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.20.4
+      browserslist: 4.21.0
       caniuse-api: 3.0.0
       colord: 2.9.2
       postcss: 8.4.14
@@ -5546,7 +5555,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.20.4
+      browserslist: 4.21.0
       postcss: 8.4.14
       postcss-value-parser: 4.2.0
     dev: true
@@ -5644,7 +5653,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.20.4
+      browserslist: 4.21.0
       caniuse-api: 3.0.0
       cssnano-utils: 3.1.0_postcss@8.4.14
       postcss: 8.4.14
@@ -5679,7 +5688,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.20.4
+      browserslist: 4.21.0
       cssnano-utils: 3.1.0_postcss@8.4.14
       postcss: 8.4.14
       postcss-value-parser: 4.2.0
@@ -5770,7 +5779,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.20.4
+      browserslist: 4.21.0
       postcss: 8.4.14
       postcss-value-parser: 4.2.0
     dev: true
@@ -5813,7 +5822,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.20.4
+      browserslist: 4.21.0
       caniuse-api: 3.0.0
       postcss: 8.4.14
     dev: true
@@ -6045,8 +6054,8 @@ packages:
       react: 18.2.0
       scheduler: 0.23.0
 
-  /react-instantsearch-hooks-web/6.28.0_3d5redehl2jjvbpdn3mne6usq4:
-    resolution: {integrity: sha512-ye7TpcNotK/uslFd6jdEGZb3URpyoZfH95EgDRb238uvZZAt2YIy/IC2AwxnFD6L2HMBKbtOW9CPZLd3S/1viA==}
+  /react-instantsearch-hooks-web/6.29.0_3d5redehl2jjvbpdn3mne6usq4:
+    resolution: {integrity: sha512-k9ch9hdmF7Pn9ZclQTUMhtGeKqrBZKpbKK7HXvQYAM3JiqZhB9OZY4r8oaz8WJ1uITJEgNzID7j6osuJbJmMVg==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 5'
       react: '>= 16.8.0 < 19'
@@ -6057,11 +6066,11 @@ packages:
       instantsearch.js: 4.42.0_algoliasearch@4.13.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      react-instantsearch-hooks: 6.28.0_wccoi2hm3lxcwz3rqgfrqrl2pe
+      react-instantsearch-hooks: 6.29.0_wccoi2hm3lxcwz3rqgfrqrl2pe
     dev: false
 
-  /react-instantsearch-hooks/6.28.0_wccoi2hm3lxcwz3rqgfrqrl2pe:
-    resolution: {integrity: sha512-CfrAWnhXj6+TtFdUviBiz9r4U9Hwcq3ARstvq98R0X23kMoY8+VzAdTGmfPchxLaadraV8L2XdpclH2bUIYNiQ==}
+  /react-instantsearch-hooks/6.29.0_wccoi2hm3lxcwz3rqgfrqrl2pe:
+    resolution: {integrity: sha512-F4kLBkhELffrT7vaYW5gpja2R6b3v7rreDpod9nQmyyRW0ww9nIkzx01ST/6lRcNatHOgvm+mjR+/Zc7/QIbcQ==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 5'
       react: '>= 16.8.0 < 19'
@@ -6647,7 +6656,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.20.4
+      browserslist: 4.21.0
       postcss: 8.4.14
       postcss-selector-parser: 6.0.10
     dev: true
@@ -6972,6 +6981,16 @@ packages:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
     dev: true
+
+  /update-browserslist-db/1.0.3_browserslist@4.21.0:
+    resolution: {integrity: sha512-ufSazemeh9Gty0qiWtoRpJ9F5Q5W3xdIPm1UZQqYQv/q0Nyb9EMHUB2lu+O9x1re9WsorpMAUu4Y6Lxcs5n+XQ==}
+    hasBin: true
+    peerDependencies:
+      browserslist: '>= 4.21.0'
+    dependencies:
+      browserslist: 4.21.0
+      escalade: 3.1.1
+      picocolors: 1.0.0
 
   /uri-js/4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}

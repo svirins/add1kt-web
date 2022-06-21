@@ -18,7 +18,7 @@ export function ThemeSwitch() {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        className="text-gray-800 hover:text-orange-600 dark:text-gray-50 dark:hover:text-emerald-400"
+        className="text-gray-800 hover:text-orange-600 dark:text-gray-50 dark:hover:text-green-400"
       >
         {mounted && (theme === "dark" || resolvedTheme === "dark") ? (
           <path

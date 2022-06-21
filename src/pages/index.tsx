@@ -15,7 +15,11 @@ type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>["props"];
 export default function Index({ pageData, featuredPosts, total }: Props) {
   const t = useTranslations("Titles");
   return (
-    <Container title={pageData.pageTitle}>
+    <Container
+      title={pageData.pageTitle}
+      ogImage={pageData.pagePicture}
+      description={pageData.pageText}
+    >
       <div className="mx-auto flex max-w-2xl flex-col items-start  justify-center pb-16">
         {pageData && (
           <PageTop

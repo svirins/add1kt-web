@@ -11,7 +11,7 @@ export function MorepostsControls({ isDisabled }: { isDisabled: boolean }) {
         </p>
       ) : (
         <Link href={"/blog/p/1"}>
-          <a className="group inline-flex items-center text-base  font-medium text-gray-800  transition-all delay-100 hover:text-orange-600 dark:text-gray-200 dark:hover:text-emerald-400">
+          <a className="group inline-flex items-center text-base  font-medium text-gray-800  transition-all delay-100 hover:text-orange-600 dark:text-gray-200 dark:hover:text-green-400">
             <span>{`${t("more_posts")} →`}</span>
           </a>
         </Link>
