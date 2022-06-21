@@ -26,7 +26,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }: Props) {
               sortedAutors.map((author) => (
                 <div key={author.authorSlug} className="mt-2 mb-2 mr-5">
                   <Link href={`/author/${author.authorSlug}`}>
-                    <a className="mr-3 text-base font-medium text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
+                    <a className="mr-3 text-base font-medium text-emerald-600 transition-all delay-100 hover:text-emerald-800 dark:hover:text-emerald-400">
                       {`${author.authorName} (${author.relatedPostsCount})`}
                     </a>
                   </Link>
@@ -46,7 +46,7 @@ export default function GetAllAuthorsAndTags({ authors, tags }: Props) {
               sortedTags.map((tag) => (
                 <div key={tag.tagSlug} className="mt-2 mb-2 mr-5">
                   <Link href={`/tag/${tag.tagSlug}`}>
-                    <a className="mr-3 text-base font-medium  text-teal-600 transition-all delay-100 hover:text-teal-800 dark:hover:text-teal-400">
+                    <a className="mr-3 text-base font-medium  text-emerald-600 transition-all delay-100 hover:text-emerald-800 dark:hover:text-emerald-400">
                       {`#${tag.tagName} (${tag.relatedPostsCount})`}
                     </a>
                   </Link>

@@ -35,12 +35,12 @@ export function PostCard({
         width={GLOBAL_CONFIG.images.defaultPostPreviewImageWidth}
         height={GLOBAL_CONFIG.images.defaultPostImagePreviewHeight}
       />
-      <h4 className="header-link mt-4  w-full text-lg  font-medium">
+      <h4 className="post-header-link mt-4 mb-2 w-full text-lg  font-medium">
         <Link href={`/blog/${slug}`}>
           <a>{truncate(title)}</a>
         </Link>
       </h4>
-      <div className="flex flex-row justify-end  text-sm">{<Tags tags={tags} />}</div>
+      <div className="mb-2 flex flex-row justify-end text-sm">{<Tags tags={tags} />}</div>
       <div className="flex flex-row ">
         <PostMeta date={date} readingTime={readingTime === 0 ? 1 : readingTime} author={author} />
       </div>

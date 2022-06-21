@@ -15,7 +15,7 @@ export default function FourZeroFour() {
         <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">{t("title")}</p>
         <p className="mb-8">{t("body")}</p>
         <Link href="/">
-          <button className="inline rounded-lg border border-transparent bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow transition-colors duration-150 hover:bg-teal-800 focus:outline-none dark:hover:bg-teal-400">
+          <button className="inline rounded-lg border border-transparent bg-emerald-600 px-4 py-2 text-sm font-medium text-white shadow transition-colors duration-150 hover:bg-emerald-800 focus:outline-none dark:hover:bg-emerald-400">
             {t("button")}
           </button>
         </Link>
