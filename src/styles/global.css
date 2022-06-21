@@ -40,8 +40,8 @@ html {
   @apply transition-all delay-100;
 }
 
-.link {
-  @apply text-gray-800 hover:text-teal-600  dark:text-gray-200 dark:hover:text-teal-400;
+.post-header-link {
+  @apply text-gray-800 transition-all  delay-100 hover:text-teal-600 dark:text-gray-200 dark:hover:text-teal-400;
 }
 
 #skip {
@@ -54,6 +54,8 @@ html {
     @apply bg-opacity-100;
   }
 }
+
+/*Post styling comes here */
 
 .prose .anchor {
   @apply invisible absolute no-underline;
@@ -95,6 +97,16 @@ html {
 .prose img {
   /* Don't apply styles to next/image */
   @apply rounded-lg;
+}
+
+.prose h4,
+h5,
+h6 {
+  @apply my-4  text-xl font-medium text-neutral-700 dark:text-neutral-300;
+}
+
+.prose p {
+  @apply my-2;
 }
 
 .prose > :first-child {

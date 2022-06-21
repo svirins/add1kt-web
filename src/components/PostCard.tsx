@@ -35,7 +35,7 @@ export function PostCard({
         width={GLOBAL_CONFIG.images.defaultPostPreviewImageWidth}
         height={GLOBAL_CONFIG.images.defaultPostImagePreviewHeight}
       />
-      <h4 className="animated link mt-4  w-full text-lg  font-medium">
+      <h4 className="header-link mt-4  w-full text-lg  font-medium">
         <Link href={`/blog/${slug}`}>
           <a>{truncate(title)}</a>
         </Link>
