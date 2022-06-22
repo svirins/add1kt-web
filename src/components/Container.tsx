@@ -21,17 +21,14 @@ export function Container(props: ContainerProps) {
   const router = useRouter();
   const { locale } = router;
   const description = getDescription(props.description ?? []);
-  // TODO: implement authors and tags
   const articleData =
     props.type === "article"
       ? {
           publishedTime: props.date,
-          authors: [
-            "https://www.example.com/authors/@firstnameA-lastnameA",
-            "https://www.example.com/authors/@firstnameB-lastnameB",
-          ],
           tags: props.tags.map((tag) => tag.tagName),
-          author: `https://${locale}/addict.cf/author/{props.author.authorSlug}`,
+          authors: [
+            `https://${locale === "ru" ? "" : "pl."}addict.cf/author/${props.author.authorSlug}`,
+          ],
           description,
         }
       : {};
