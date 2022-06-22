@@ -64,7 +64,7 @@ specifiers:
   pino-logflare: ^0.3.12
   postcss: ^8.4.14
   powered-by-vercel: ^1.1.0
-  preact: ^10.8.1
+  preact: 10.8.2
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.11
   react: ^18.2.0
@@ -96,7 +96,7 @@ dependencies:
   pino: 8.1.0
   pino-logflare: 0.3.12
   powered-by-vercel: 1.1.0_react@18.2.0
-  preact: 10.8.1
+  preact: 10.8.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-instantsearch-hooks-web: 6.29.0_3d5redehl2jjvbpdn3mne6usq4
@@ -165,7 +165,7 @@ packages:
       '@algolia/autocomplete-shared': 1.7.0
       '@algolia/client-search': 4.13.1
       htm: 3.1.1
-      preact: 10.8.1
+      preact: 10.8.2
     transitivePeerDependencies:
       - algoliasearch
     dev: false
@@ -3990,7 +3990,7 @@ packages:
       algoliasearch-helper: 3.9.0_algoliasearch@4.13.1
       classnames: 2.3.1
       hogan.js: 3.0.2
-      preact: 10.8.1
+      preact: 10.8.2
       qs: 6.9.7
       search-insights: 2.2.1
     dev: false
@@ -5908,8 +5908,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /preact/10.8.1:
-    resolution: {integrity: sha512-p5CKQ0MCEXTGKGOHiFaNE2V2nDq2hvDHykXvIlz+4lbfJ9umLZr8JS/fa1bXUwRcHXK+Ljk8zqmDhr25n0LtVg==}
+  /preact/10.8.2:
+    resolution: {integrity: sha512-AKGt0BsDSiAYzVS78jZ9qRwuorY2CoSZtf1iOC6gLb/3QyZt+fLT09aYJBjRc/BEcRc4j+j3ggERMdNE43i1LQ==}
     dev: false
 
   /prelude-ls/1.2.1:
