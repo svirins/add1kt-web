@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable import/no-extraneous-dependencies */
 import dotenv from "dotenv";
 import { Feed } from "feed";
@@ -14,6 +15,7 @@ const generateRssFeedPerLocale = async (locale: string) => {
   const date = new Date();
   const isPl = locale === "pl" ? "/pl" : "";
   const { siteName, siteDescription, url } = LOCALIZED_RSS_DATA.find((i) => i.locale === locale)!;
+
   const feed = new Feed({
     title: siteName,
     description: siteDescription,
@@ -32,6 +34,11 @@ const generateRssFeedPerLocale = async (locale: string) => {
     },
     author: AUTHOR,
   });
+
+  console.log("locale is:", locale);
+  console.log("siteName is:", siteName);
+  console.log("url is:", url);
+
   posts.forEach((post) => {
     const link = `${url}/blog/${post.slug}`;
     feed.addItem({
@@ -44,6 +51,8 @@ const generateRssFeedPerLocale = async (locale: string) => {
       date: new Date(post.publishedAt),
     });
   });
+  console.log("feed is:", feed);
+
   // eslint-disable-next-line no-console
   // console.log("feed reporting", feed);
   fs.mkdirSync(`./public${isPl}/rss/`, { recursive: true });
