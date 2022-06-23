@@ -1,15 +1,15 @@
 import { ExternalLink } from "@/components/ExternalLink";
-import { facebook, telegram, youtube } from "@/components/Icons";
+import { Facebook, Telegram, Youtube } from "@/components/Icons";
 
 function getSocialIconByLink(url: string) {
   if (url.search(/youtube/i) !== -1) {
-    return youtube;
+    return Youtube;
   }
   if (url.search(/facebook/i) !== -1) {
-    return facebook;
+    return Facebook;
   }
   if (url.search(/t.me/i) !== -1) {
-    return telegram;
+    return Telegram;
   }
   return null;
 }

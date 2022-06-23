@@ -1,4 +1,4 @@
-export const instagram = (
+export const Instagram = (
   <svg className="h-4 w-4 md:h-5 md:w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
     <path
       fillRule="evenodd"
@@ -8,7 +8,7 @@ export const instagram = (
   </svg>
 );
 
-export const youtube = (
+export const Youtube = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="h-4 w-4 md:h-5 md:w-5"
@@ -19,18 +19,20 @@ export const youtube = (
   </svg>
 );
 
-export const facebook = (
+export const Facebook = (
   <svg
     className="h-4 w-4 md:h-5 md:w-5"
     fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
   >
+    <title>Facebook icon</title>
     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
   </svg>
 );
 
-export const telegram = (
+export const Telegram = (
   <svg
     className="h-4 w-4 md:h-5 md:w-5"
     xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +43,7 @@ export const telegram = (
   </svg>
 );
 
-export const github = (
+export const Github = (
   <svg className="h-7 w-7" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
     <path
       fillRule="evenodd"
@@ -52,7 +54,7 @@ export const github = (
   </svg>
 );
 
-export const twitter = (
+export const Twitter = (
   <svg
     className="h-4 w-4 md:h-5 md:w-5"
     aria-hidden="true"
@@ -61,5 +63,32 @@ export const twitter = (
     viewBox="0 0 171.5 139.4"
   >
     <path d="M171.5 16.5c-6.3 2.8-13 4.7-20.2 5.5a35.3 35.3 0 0 0 15.5-19.4c-6.8 4-14.4 7-22.4 8.5a35.1 35.1 0 0 0-60 32.1A99.9 99.9 0 0 1 12 6.4a35 35 0 0 0 11 47 35 35 0 0 1-16-4.4v.5C6.9 66.5 19 80.7 35 84a35.2 35.2 0 0 1-15.9.6A35.2 35.2 0 0 0 52.1 109 70.6 70.6 0 0 1 0 123.6c15.6 10 34 15.8 54 15.8 64.7 0 100-53.6 100-100.1v-4.6c6.8-5 12.8-11.1 17.5-18.2z" />
+  </svg>
+);
+
+export const Rss = (
+  <svg
+    className="h-4 w-4 md:h-5 md:w-5"
+    aria-hidden="true"
+    fill="currentColor"
+    role="img"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>RSS</title>
+    <path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z" />
+  </svg>
+);
+
+export const Mail = (
+  <svg
+    className="h-4 w-4 md:h-5 md:w-5"
+    aria-hidden="true"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+  >
+    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
   </svg>
 );

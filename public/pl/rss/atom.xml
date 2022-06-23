@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://addict.cf/pl</id>
+    <title>Addict.cf. Blog o uzależnieniach</title>
+    <updated>2022-06-23T16:17:33.262Z</updated>
+    <generator>Feed for Node.js with some fancy extras</generator>
+    <author>
+        <name>Valeriy Grean</name>
+        <email>vgrean@gmail.com</email>
+        <uri>https://twitter.com</uri>
+    </author>
+    <link rel="alternate" href="https://addict.cf/pl"/>
+    <link rel="self" href="https://addict.cf/pl/rss/atom.xml"/>
+    <subtitle>Uzależnienie to wzorzec zachowania polegający na nadużywaniu substancji psychoaktywnych lub niebezpiecznych oraz na stosowaniu pewnych praktyk uzależniających.</subtitle>
+    <logo>https://addict.cf/pl/logo.webp</logo>
+    <icon>https://addict.cf/pl/favicon.ico</icon>
+    <rights>All rights reserved 2022, Valeriy Grean</rights>
+    <entry>
+        <title type="html"><![CDATA[Poczucie winy. Algorytm pozbywania się go]]></title>
+        <id>1DGgzutbhzhLdoLvruSBGm</id>
+        <link href="https://addict.cf/pl/blog/blame"/>
+        <updated>2022-06-21T14:30:41.000Z</updated>
+        <summary type="html"><![CDATA[Poczucie winy. Algorytm pozbywania się go]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Trauma psychiczna jako podstawa rozwoju uzależnienia. Mechanizm jej powstawania]]></title>
+        <id>1Wfpgw6bTCaBcaRxdVI0oX</id>
+        <link href="https://addict.cf/pl/blog/psytrauma"/>
+        <updated>2022-06-21T14:34:40.000Z</updated>
+        <summary type="html"><![CDATA[Trauma psychiczna jako podstawa rozwoju uzależnienia. Mechanizm jej powstawania]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rehabilitacja osób uzależnionych od alkoholu]]></title>
+        <id>2PlQVCshGo8XLDwwxFGCf5</id>
+        <link href="https://addict.cf/pl/blog/reabilitaciya"/>
+        <updated>2022-06-21T17:16:04.000Z</updated>
+        <summary type="html"><![CDATA[Rehabilitacja osób uzależnionych od alkoholu]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Uzależnienie jest chorobą rodzinną]]></title>
+        <id>2Z9murnne4wOE5fAI1r5fh</id>
+        <link href="https://addict.cf/pl/blog/addikciyaasfamilydisease"/>
+        <updated>2022-06-21T13:53:13.000Z</updated>
+        <summary type="html"><![CDATA[Uzależnienie jest chorobą rodzinną]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Autorski program "7 kroków z otchłani"]]></title>
+        <id>2fuMEQxQeEDrRWI4agugR4</id>
+        <link href="https://addict.cf/pl/blog/7stepsprogram"/>
+        <updated>2022-06-22T17:22:56.000Z</updated>
+        <summary type="html"><![CDATA[Autorski program "7 kroków z otchłani]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Używanie alkoholu i narkotyków. Motywy i pomoc]]></title>
+        <id>36IBwtmOVx0LZOPSkXHJqd</id>
+        <link href="https://addict.cf/pl/blog/druguserhelp"/>
+        <updated>2022-06-22T13:06:45.000Z</updated>
+        <summary type="html"><![CDATA[Używanie alkoholu i narkotyków. Motywy i pomoc]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Terapia i dojrzałość]]></title>
+        <id>39mAX63BhYODy6UmbUy2Bx</id>
+        <link href="https://addict.cf/pl/blog/therapyandmaturity"/>
+        <updated>2022-06-22T13:15:55.000Z</updated>
+        <summary type="html"><![CDATA[Terapia i dojrzałość]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Zależności i sfera zmysłów]]></title>
+        <id>3VwLocCwg66Cluey3tD5bY</id>
+        <link href="https://addict.cf/pl/blog/addictionandfeelings"/>
+        <updated>2022-06-22T18:08:28.000Z</updated>
+        <summary type="html"><![CDATA[Zależności i sfera zmysłów]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Terapia stresu, uzależnień i zaburzeń fobicznych z wykorzystaniem NLP]]></title>
+        <id>3qyw6ts398zZ3gS2Xk8fG8</id>
+        <link href="https://addict.cf/pl/blog/therapyaddiction"/>
+        <updated>2022-06-22T18:14:22.000Z</updated>
+        <summary type="html"><![CDATA[Terapia stresu, uzależnień i zaburzeń fobicznych z wykorzystaniem NLP]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Obawy osoby uzależnionej przed wytrzeźwieniem]]></title>
+        <id>443TBD9ShZEflouD5KKJw</id>
+        <link href="https://addict.cf/pl/blog/addictsfears"/>
+        <updated>2022-06-23T06:52:44.000Z</updated>
+        <summary type="html"><![CDATA[Obawy osoby uzależnionej przed wytrzeźwieniem]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Co sprawia, że ludzie stają się pijakami i alkoholikami]]></title>
+        <id>45oFjrO6fgHzY9hVJBMVl</id>
+        <link href="https://addict.cf/pl/blog/chtoprevrashaetlyudeivpyanicialkogolikov"/>
+        <updated>2022-06-23T06:54:14.000Z</updated>
+        <summary type="html"><![CDATA[Co sprawia, że ludzie stają się pijakami i alkoholikami]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rodzaje uzależnienia od miłości]]></title>
+        <id>4JWt30IUO1Z1LVtju0kLfd</id>
+        <link href="https://addict.cf/pl/blog/loveaddict"/>
+        <updated>2022-06-23T07:00:50.000Z</updated>
+        <summary type="html"><![CDATA[Rodzaje uzależnienia od miłości. ]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dorosłe dzieci alkoholików. Cierpienie i uzdrowienie.]]></title>
+        <id>4TEJvM5G4vleCEhWY0HeQU</id>
+        <link href="https://addict.cf/pl/blog/alcochild"/>
+        <updated>2022-06-23T09:25:42.000Z</updated>
+        <summary type="html"><![CDATA[Dorosłe dzieci alkoholików. Cierpienie i uzdrowienie.]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Uzależnienie od miłości. Opcje terapeutyczne]]></title>
+        <id>4fXbMzLjXUuTZmTRekR825</id>
+        <link href="https://addict.cf/pl/blog/loveaddiction"/>
+        <updated>2022-06-23T09:32:43.000Z</updated>
+        <summary type="html"><![CDATA[Uzależnienie od miłości. Opcje terapeutyczne]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Socjofobia - jej źródła i zagrożenia]]></title>
+        <id>4nnB1s7DbRz673OsLzGD6P</id>
+        <link href="https://addict.cf/pl/blog/sociophobia"/>
+        <updated>2022-06-19T13:38:00.000Z</updated>
+        <summary type="html"><![CDATA[Socjofobia - jej źródła i zagrożenia]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Związki współuzależnienia jako konstrukt społeczny]]></title>
+        <id>4rpRfg9EyU3vZk2tfMDmjU</id>
+        <link href="https://addict.cf/pl/blog/sozavisimyeotnosheniya"/>
+        <updated>2022-06-21T14:08:55.000Z</updated>
+        <summary type="html"><![CDATA[Związki współuzależnienia jako konstrukt społeczny]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Symbioza - konieczność i destrukcyjność]]></title>
+        <id>57tkXfwT28U8A7yAgkV48R</id>
+        <link href="https://addict.cf/pl/blog/confluensy"/>
+        <updated>2022-06-21T14:01:29.000Z</updated>
+        <summary type="html"><![CDATA[Symbioza - konieczność i destrukcyjność]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Symbioza i współzależność]]></title>
+        <id>5F1a4iguLievAz73JE7CfW</id>
+        <link href="https://addict.cf/pl/blog/codependens"/>
+        <updated>2022-06-21T14:27:26.000Z</updated>
+        <summary type="html"><![CDATA[Symbioza i współzależność ]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Psychologiczna obrona przed uczuciami]]></title>
+        <id>5eXGXLaJOUMlIsgKu9wFkS</id>
+        <link href="https://addict.cf/pl/blog/psikhologicheskiezashityotchuvstv"/>
+        <updated>2022-06-19T13:38:00.000Z</updated>
+        <summary type="html"><![CDATA[Psychologiczna obrona przed uczuciami]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ Uzależnieni. Kim oni są?]]></title>
+        <id>6ZY6Avnwkzg7p8PofC1OTP</id>
+        <link href="https://addict.cf/pl/blog/addiktyktooni"/>
+        <updated>2022-06-19T13:38:00.000Z</updated>
+        <summary type="html"><![CDATA[Uzależnieni. Kim oni są?]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lęki i praca z nimi. Wstyd i poczucie winy]]></title>
+        <id>6a12UwqFRHE5Qma3uhqu4S</id>
+        <link href="https://addict.cf/pl/blog/fearandblame"/>
+        <updated>2022-06-19T13:38:00.000Z</updated>
+        <summary type="html"><![CDATA[Lęki i praca z nimi. Wstyd i poczucie winy]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Aleksytymia]]></title>
+        <id>6iqc5K8L9g8OWtpmBAacYM</id>
+        <link href="https://addict.cf/pl/blog/aleksitimiya"/>
+        <updated>2022-06-19T13:38:00.000Z</updated>
+        <summary type="html"><![CDATA[Aleksytymia]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[O wstydzie i szacunku do samego siebie]]></title>
+        <id>6jDV1a9MuAeTDC9oCrRBII</id>
+        <link href="https://addict.cf/pl/blog/shame"/>
+        <updated>2022-06-19T13:38:00.000Z</updated>
+        <summary type="html"><![CDATA[O wstydzie i szacunku do samego siebie]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kliniczna wiedza na temat uzależnień]]></title>
+        <id>6vr5zkbw1ZinDe2iLXsa0N</id>
+        <link href="https://addict.cf/pl/blog/klinicheskoeponimanieaddikci"/>
+        <updated>2022-06-19T13:38:00.000Z</updated>
+        <summary type="html"><![CDATA[ Kliniczna wiedza na temat uzależnień1 .. 2 .. 3 .. FIRE! !!]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[  Uzależnienie. Jak ją leczyć?]]></title>
+        <id>7mOX4OjZnEV7FMkh6l0KLM</id>
+        <link href="https://addict.cf/pl/blog/addikciyakaklechit"/>
+        <updated>2022-06-19T13:38:00.000Z</updated>
+        <summary type="html"><![CDATA[Uzależnienie. Jak ją leczyć?]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Metafora o podróży przez życie]]></title>
+        <id>7v084QydLDLITWeydXd1n1</id>
+        <link href="https://addict.cf/pl/blog/metaforaozhiznennomputi"/>
+        <updated>2022-06-19T13:38:00.000Z</updated>
+        <summary type="html"><![CDATA[Metafora o podróży przez życie]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elektroencefalografia w diagnostyce organicznych zmian w OUN]]></title>
+        <id>f5FMxbqzNuPBJtvoO5zgY</id>
+        <link href="https://addict.cf/pl/blog/electroencephalogram"/>
+        <updated>2022-06-21T14:06:18.000Z</updated>
+        <summary type="html"><![CDATA[Elektroencefalografia w diagnostyce organicznych zmian w OUN]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stres traumatyczny. Jego objawy i sposoby radzenia sobie z nim]]></title>
+        <id>gBth6xDi7iCg8uGqUYdDq</id>
+        <link href="https://addict.cf/pl/blog/traumastress"/>
+        <updated>2022-06-21T14:09:51.000Z</updated>
+        <summary type="html"><![CDATA[Stres traumatyczny. Jego objawy i sposoby radzenia sobie z nim]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Imprinting jako podstawa nieakceptowalnych wzorców zachowań]]></title>
+        <id>mFL0jiGWS1Oz9pTGjWavH</id>
+        <link href="https://addict.cf/pl/blog/imprintig"/>
+        <updated>2022-06-19T13:38:00.000Z</updated>
+        <summary type="html"><![CDATA[Imprinting jako podstawa nieakceptowalnych wzorców zachowań]]></summary>
+        <author>
+            <name>Walerij Grin</name>
+        </author>
+    </entry>
+</feed>

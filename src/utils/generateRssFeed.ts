@@ -35,10 +35,6 @@ const generateRssFeedPerLocale = async (locale: string) => {
     author: AUTHOR,
   });
 
-  console.log("locale is:", locale);
-  console.log("siteName is:", siteName);
-  console.log("url is:", url);
-
   posts.forEach((post) => {
     const link = `${url}/blog/${post.slug}`;
     feed.addItem({
@@ -51,10 +47,6 @@ const generateRssFeedPerLocale = async (locale: string) => {
       date: new Date(post.publishedAt),
     });
   });
-  console.log("feed is:", feed);
-
-  // eslint-disable-next-line no-console
-  // console.log("feed reporting", feed);
   fs.mkdirSync(`./public${isPl}/rss/`, { recursive: true });
   fs.writeFileSync(`./public${isPl}/rss/feed.xml`, feed.rss2());
   fs.writeFileSync(`./public${isPl}/rss/atom.xml`, feed.atom1());

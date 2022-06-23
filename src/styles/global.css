@@ -76,10 +76,16 @@ html {
   @apply rounded-lg;
 }
 
-.prose h4,
-h5,
-h6 {
-  @apply text-2xl font-semibold text-orange-600 dark:text-green-400;
+.prose h3 {
+  @apply py-4 text-3xl font-semibold text-orange-600 dark:text-green-400;
+}
+
+.prose h4 {
+  @apply py-3 text-2xl font-medium text-orange-600 dark:text-green-400;
+}
+
+.prose h5 {
+  @apply py-2 text-lg font-medium text-orange-600 dark:text-green-400;
 }
 
 .prose p {
@@ -107,5 +113,13 @@ h6 {
 }
 
 .prose > ul > li {
-  @apply list-inside list-disc pl-4 leading-8 text-stone-800 dark:text-stone-200;
+  @apply list-inside list-disc py-2 pl-4 leading-8 text-stone-800 dark:text-stone-200;
+}
+
+.prose > ol {
+  @apply py-6;
+}
+
+.prose > ol > li {
+  @apply list-inside list-decimal py-2 pl-4 leading-8 text-stone-800 dark:text-stone-200;
 }

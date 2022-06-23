@@ -1,0 +1,333 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Addict.cf. Blog o uzależnieniach",
+  "home_page_url": "https://addict.cf/pl",
+  "feed_url": "https://addict.cf/pl/rss/feed.json",
+  "description": "Uzależnienie to wzorzec zachowania polegający na nadużywaniu substancji psychoaktywnych lub niebezpiecznych oraz na stosowaniu pewnych praktyk uzależniających.",
+  "icon": "https://addict.cf/pl/logo.webp",
+  "author": {
+    "name": "Valeriy Grean",
+    "url": "https://twitter.com"
+  },
+  "items": [
+    {
+      "id": "1DGgzutbhzhLdoLvruSBGm",
+      "url": "https://addict.cf/pl/blog/blame",
+      "title": "Poczucie winy. Algorytm pozbywania się go",
+      "summary": "Poczucie winy. Algorytm pozbywania się go",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/f8cd550858b7c30d021197f488da56ba40abee5b-2012x2012.jpg",
+      "date_modified": "2022-06-21T14:30:41.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "1Wfpgw6bTCaBcaRxdVI0oX",
+      "url": "https://addict.cf/pl/blog/psytrauma",
+      "title": "Trauma psychiczna jako podstawa rozwoju uzależnienia. Mechanizm jej powstawania",
+      "summary": "Trauma psychiczna jako podstawa rozwoju uzależnienia. Mechanizm jej powstawania",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/bb834c172aecddd62e1bc1472c67c01541449b7c-860x573.jpg",
+      "date_modified": "2022-06-21T14:34:40.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "2PlQVCshGo8XLDwwxFGCf5",
+      "url": "https://addict.cf/pl/blog/reabilitaciya",
+      "title": "Rehabilitacja osób uzależnionych od alkoholu",
+      "summary": "Rehabilitacja osób uzależnionych od alkoholu",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/7ce6035ffdf95911e01701c552b523d242bd022e-810x294.jpg",
+      "date_modified": "2022-06-21T17:16:04.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "2Z9murnne4wOE5fAI1r5fh",
+      "url": "https://addict.cf/pl/blog/addikciyaasfamilydisease",
+      "title": "Uzależnienie jest chorobą rodzinną",
+      "summary": "Uzależnienie jest chorobą rodzinną",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/cdbc02831f2b84f7f0828d2bc050a14bf2ecf328-6005x4003.jpg",
+      "date_modified": "2022-06-21T13:53:13.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "2fuMEQxQeEDrRWI4agugR4",
+      "url": "https://addict.cf/pl/blog/7stepsprogram",
+      "title": "Autorski program \"7 kroków z otchłani\"",
+      "summary": "Autorski program \"7 kroków z otchłani",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/199e6b16df8312ef2c83e0772e74d0672ba6d970-700x462.jpg",
+      "date_modified": "2022-06-22T17:22:56.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "36IBwtmOVx0LZOPSkXHJqd",
+      "url": "https://addict.cf/pl/blog/druguserhelp",
+      "title": "Używanie alkoholu i narkotyków. Motywy i pomoc",
+      "summary": "Używanie alkoholu i narkotyków. Motywy i pomoc",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/7014c2397642fd637aeb2a355076e4bf2d865415-4966x3020.jpg",
+      "date_modified": "2022-06-22T13:06:45.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "39mAX63BhYODy6UmbUy2Bx",
+      "url": "https://addict.cf/pl/blog/therapyandmaturity",
+      "title": "Terapia i dojrzałość",
+      "summary": "Terapia i dojrzałość",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/94f18987e15457f8ed824138e2f8af7698c714b8-3600x2400.jpg",
+      "date_modified": "2022-06-22T13:15:55.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "3VwLocCwg66Cluey3tD5bY",
+      "url": "https://addict.cf/pl/blog/addictionandfeelings",
+      "title": "Zależności i sfera zmysłów",
+      "summary": "Zależności i sfera zmysłów",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/46fc150e1ce29bae3d1caf0994aac4eec1ad7f25-800x554.webp",
+      "date_modified": "2022-06-22T18:08:28.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "3qyw6ts398zZ3gS2Xk8fG8",
+      "url": "https://addict.cf/pl/blog/therapyaddiction",
+      "title": "Terapia stresu, uzależnień i zaburzeń fobicznych z wykorzystaniem NLP",
+      "summary": "Terapia stresu, uzależnień i zaburzeń fobicznych z wykorzystaniem NLP",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/7648250010abfb1ed80845a4cfeed7464dcd5c48-2048x3072.jpg",
+      "date_modified": "2022-06-22T18:14:22.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "443TBD9ShZEflouD5KKJw",
+      "url": "https://addict.cf/pl/blog/addictsfears",
+      "title": "Obawy osoby uzależnionej przed wytrzeźwieniem",
+      "summary": "Obawy osoby uzależnionej przed wytrzeźwieniem",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/1143f79b232b1d375faf92cb24d17e28005cbc5b-3888x2592.jpg",
+      "date_modified": "2022-06-23T06:52:44.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "45oFjrO6fgHzY9hVJBMVl",
+      "url": "https://addict.cf/pl/blog/chtoprevrashaetlyudeivpyanicialkogolikov",
+      "title": "Co sprawia, że ludzie stają się pijakami i alkoholikami",
+      "summary": "Co sprawia, że ludzie stają się pijakami i alkoholikami",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/0c1718b222754ee9feb9f941d6022924d21e7278-1280x720.jpg",
+      "date_modified": "2022-06-23T06:54:14.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "4JWt30IUO1Z1LVtju0kLfd",
+      "url": "https://addict.cf/pl/blog/loveaddict",
+      "title": "Rodzaje uzależnienia od miłości",
+      "summary": "Rodzaje uzależnienia od miłości. ",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/2c643b0523e5faea850f26a4a4caca323ee53bc8-3887x3887.jpg",
+      "date_modified": "2022-06-23T07:00:50.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "4TEJvM5G4vleCEhWY0HeQU",
+      "url": "https://addict.cf/pl/blog/alcochild",
+      "title": "Dorosłe dzieci alkoholików. Cierpienie i uzdrowienie.",
+      "summary": "Dorosłe dzieci alkoholików. Cierpienie i uzdrowienie.",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/a789ef1c7117df99cdcdf668c374e780cec9cb64-600x400.jpg",
+      "date_modified": "2022-06-23T09:25:42.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "4fXbMzLjXUuTZmTRekR825",
+      "url": "https://addict.cf/pl/blog/loveaddiction",
+      "title": "Uzależnienie od miłości. Opcje terapeutyczne",
+      "summary": "Uzależnienie od miłości. Opcje terapeutyczne",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/a39459400e7d0b041c891373ddf363726ac889f2-1000x666.jpg",
+      "date_modified": "2022-06-23T09:32:43.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "4nnB1s7DbRz673OsLzGD6P",
+      "url": "https://addict.cf/pl/blog/sociophobia",
+      "title": "Socjofobia - jej źródła i zagrożenia",
+      "summary": "Socjofobia - jej źródła i zagrożenia",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/546079a0edb67ec2fa073fed47d635213737cd71-770x695.jpg",
+      "date_modified": "2022-06-19T13:38:00.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "4rpRfg9EyU3vZk2tfMDmjU",
+      "url": "https://addict.cf/pl/blog/sozavisimyeotnosheniya",
+      "title": "Związki współuzależnienia jako konstrukt społeczny",
+      "summary": "Związki współuzależnienia jako konstrukt społeczny",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/56703092e6c73b11d2532838645b0c99384df5ce-620x250.jpg",
+      "date_modified": "2022-06-21T14:08:55.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "57tkXfwT28U8A7yAgkV48R",
+      "url": "https://addict.cf/pl/blog/confluensy",
+      "title": "Symbioza - konieczność i destrukcyjność",
+      "summary": "Symbioza - konieczność i destrukcyjność",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/de7f3b42eb1c13c8aa3c3b5ab67a62d7b0ef2c32-768x768.jpg",
+      "date_modified": "2022-06-21T14:01:29.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "5F1a4iguLievAz73JE7CfW",
+      "url": "https://addict.cf/pl/blog/codependens",
+      "title": "Symbioza i współzależność",
+      "summary": "Symbioza i współzależność ",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/7f97a094e23929fc9acb650d3b989b93f3aea728-1280x866.jpg",
+      "date_modified": "2022-06-21T14:27:26.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "5eXGXLaJOUMlIsgKu9wFkS",
+      "url": "https://addict.cf/pl/blog/psikhologicheskiezashityotchuvstv",
+      "title": "Psychologiczna obrona przed uczuciami",
+      "summary": "Psychologiczna obrona przed uczuciami",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/284e7ee46ad734eb5e061225060cfa0c624edbb7-650x430.jpg",
+      "date_modified": "2022-06-19T13:38:00.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "6ZY6Avnwkzg7p8PofC1OTP",
+      "url": "https://addict.cf/pl/blog/addiktyktooni",
+      "title": " Uzależnieni. Kim oni są?",
+      "summary": "Uzależnieni. Kim oni są?",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/eb357955765d4ea637c42d89e434db13270574aa-640x427.jpg",
+      "date_modified": "2022-06-19T13:38:00.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "6a12UwqFRHE5Qma3uhqu4S",
+      "url": "https://addict.cf/pl/blog/fearandblame",
+      "title": "Lęki i praca z nimi. Wstyd i poczucie winy",
+      "summary": "Lęki i praca z nimi. Wstyd i poczucie winy",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/bb834c172aecddd62e1bc1472c67c01541449b7c-860x573.jpg",
+      "date_modified": "2022-06-19T13:38:00.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "6iqc5K8L9g8OWtpmBAacYM",
+      "url": "https://addict.cf/pl/blog/aleksitimiya",
+      "title": "Aleksytymia",
+      "summary": "Aleksytymia",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/5917fab70f5883e61f44d3df8b89c89bf392a010-638x338.jpg",
+      "date_modified": "2022-06-19T13:38:00.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "6jDV1a9MuAeTDC9oCrRBII",
+      "url": "https://addict.cf/pl/blog/shame",
+      "title": "O wstydzie i szacunku do samego siebie",
+      "summary": "O wstydzie i szacunku do samego siebie",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/66e886f19a3e9b3ee19bb83958fe4d39ec02cacf-736x958.jpg",
+      "date_modified": "2022-06-19T13:38:00.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "6vr5zkbw1ZinDe2iLXsa0N",
+      "url": "https://addict.cf/pl/blog/klinicheskoeponimanieaddikci",
+      "title": "Kliniczna wiedza na temat uzależnień",
+      "summary": " Kliniczna wiedza na temat uzależnień1 .. 2 .. 3 .. FIRE! !!",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/8015e7b5b9483fba1b5aa4e14750b4dc1a080920-1500x1000.jpg",
+      "date_modified": "2022-06-19T13:38:00.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "7mOX4OjZnEV7FMkh6l0KLM",
+      "url": "https://addict.cf/pl/blog/addikciyakaklechit",
+      "title": "  Uzależnienie. Jak ją leczyć?",
+      "summary": "Uzależnienie. Jak ją leczyć?",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/bf227a5fd95b3e8a4a8ed739862308e1d2a787a6-1200x1200.png",
+      "date_modified": "2022-06-19T13:38:00.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "7v084QydLDLITWeydXd1n1",
+      "url": "https://addict.cf/pl/blog/metaforaozhiznennomputi",
+      "title": "Metafora o podróży przez życie",
+      "summary": "Metafora o podróży przez życie",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/ef20da9cddfb30c261293a41d7d84dce3c598a09-1200x675.jpg",
+      "date_modified": "2022-06-19T13:38:00.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "f5FMxbqzNuPBJtvoO5zgY",
+      "url": "https://addict.cf/pl/blog/electroencephalogram",
+      "title": "Elektroencefalografia w diagnostyce organicznych zmian w OUN",
+      "summary": "Elektroencefalografia w diagnostyce organicznych zmian w OUN",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/ebd9d317150607edc200b4b3367e366e792169f0-5964x3976.jpg",
+      "date_modified": "2022-06-21T14:06:18.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "gBth6xDi7iCg8uGqUYdDq",
+      "url": "https://addict.cf/pl/blog/traumastress",
+      "title": "Stres traumatyczny. Jego objawy i sposoby radzenia sobie z nim",
+      "summary": "Stres traumatyczny. Jego objawy i sposoby radzenia sobie z nim",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/21ec30ecaf27d430ad77af5630650bc87a6e90a7-6000x4000.jpg",
+      "date_modified": "2022-06-21T14:09:51.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    },
+    {
+      "id": "mFL0jiGWS1Oz9pTGjWavH",
+      "url": "https://addict.cf/pl/blog/imprintig",
+      "title": "Imprinting jako podstawa nieakceptowalnych wzorców zachowań",
+      "summary": "Imprinting jako podstawa nieakceptowalnych wzorców zachowań",
+      "image": "https://cdn.sanity.io/images/ro6en9ct/development/cbc287284c70b7bab2ed841098c041fa91a47b69-1024x725.jpg",
+      "date_modified": "2022-06-19T13:38:00.000Z",
+      "author": {
+        "name": "Walerij Grin"
+      }
+    }
+  ]
+}

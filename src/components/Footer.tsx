@@ -1,14 +1,17 @@
+import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 import PoweredByVercel from "powered-by-vercel";
 
 import { ExternalLink } from "@/components/ExternalLink";
-import { facebook, github, telegram } from "@/components/Icons";
+import { Facebook, Github, Rss, Telegram } from "@/components/Icons";
 import { NavItemFooter } from "@/components/NavItemFooter";
 import { SectionSeparator } from "@/components/SectionSeparator";
 import { GLOBAL_CONFIG } from "@/utils/global.config";
 
 export function Footer() {
   const t = useTranslations("Navigation");
+  const { locale } = useRouter();
+  const isPl = locale === "pl" ? "/pl" : "";
 
   return (
     <footer className="mx-auto mb-8  flex w-full max-w-2xl flex-col">
@@ -24,8 +27,9 @@ export function Footer() {
           ))}
         </div>
         <div className="inline-flex items-center">
-          <ExternalLink href={GLOBAL_CONFIG.telegramLink}>{telegram}</ExternalLink>
-          <ExternalLink href={GLOBAL_CONFIG.facebookLink}>{facebook}</ExternalLink>
+          <ExternalLink href={`./${isPl}/rss/feed.xml`}>{Rss}</ExternalLink>
+          <ExternalLink href={GLOBAL_CONFIG.telegramLink}>{Telegram}</ExternalLink>
+          <ExternalLink href={GLOBAL_CONFIG.facebookLink}>{Facebook}</ExternalLink>
         </div>
       </div>
       <div className="mt-8 flex justify-center text-sm">
@@ -44,7 +48,7 @@ export function Footer() {
           href={GLOBAL_CONFIG.githubLink}
           title="source code =&gt;"
         >
-          {github}
+          {Github}
         </a>
       </div>
     </footer>

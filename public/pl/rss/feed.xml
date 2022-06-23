@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Addict.cf. Blog o uzależnieniach</title>
+        <link>https://addict.cf/pl</link>
+        <description>Uzależnienie to wzorzec zachowania polegający na nadużywaniu substancji psychoaktywnych lub niebezpiecznych oraz na stosowaniu pewnych praktyk uzależniających.</description>
+        <lastBuildDate>Thu, 23 Jun 2022 16:17:33 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Feed for Node.js with some fancy extras</generator>
+        <language>pl</language>
+        <image>
+            <title>Addict.cf. Blog o uzależnieniach</title>
+            <url>https://addict.cf/pl/logo.webp</url>
+            <link>https://addict.cf/pl</link>
+        </image>
+        <copyright>All rights reserved 2022, Valeriy Grean</copyright>
+        <item>
+            <title><![CDATA[Poczucie winy. Algorytm pozbywania się go]]></title>
+            <link>https://addict.cf/pl/blog/blame</link>
+            <guid>1DGgzutbhzhLdoLvruSBGm</guid>
+            <pubDate>Tue, 21 Jun 2022 14:30:41 GMT</pubDate>
+            <description><![CDATA[Poczucie winy. Algorytm pozbywania się go]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/f8cd550858b7c30d021197f488da56ba40abee5b-2012x2012.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Trauma psychiczna jako podstawa rozwoju uzależnienia. Mechanizm jej powstawania]]></title>
+            <link>https://addict.cf/pl/blog/psytrauma</link>
+            <guid>1Wfpgw6bTCaBcaRxdVI0oX</guid>
+            <pubDate>Tue, 21 Jun 2022 14:34:40 GMT</pubDate>
+            <description><![CDATA[Trauma psychiczna jako podstawa rozwoju uzależnienia. Mechanizm jej powstawania]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/bb834c172aecddd62e1bc1472c67c01541449b7c-860x573.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Rehabilitacja osób uzależnionych od alkoholu]]></title>
+            <link>https://addict.cf/pl/blog/reabilitaciya</link>
+            <guid>2PlQVCshGo8XLDwwxFGCf5</guid>
+            <pubDate>Tue, 21 Jun 2022 17:16:04 GMT</pubDate>
+            <description><![CDATA[Rehabilitacja osób uzależnionych od alkoholu]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/7ce6035ffdf95911e01701c552b523d242bd022e-810x294.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Uzależnienie jest chorobą rodzinną]]></title>
+            <link>https://addict.cf/pl/blog/addikciyaasfamilydisease</link>
+            <guid>2Z9murnne4wOE5fAI1r5fh</guid>
+            <pubDate>Tue, 21 Jun 2022 13:53:13 GMT</pubDate>
+            <description><![CDATA[Uzależnienie jest chorobą rodzinną]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/cdbc02831f2b84f7f0828d2bc050a14bf2ecf328-6005x4003.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Autorski program "7 kroków z otchłani"]]></title>
+            <link>https://addict.cf/pl/blog/7stepsprogram</link>
+            <guid>2fuMEQxQeEDrRWI4agugR4</guid>
+            <pubDate>Wed, 22 Jun 2022 17:22:56 GMT</pubDate>
+            <description><![CDATA[Autorski program "7 kroków z otchłani]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/199e6b16df8312ef2c83e0772e74d0672ba6d970-700x462.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Używanie alkoholu i narkotyków. Motywy i pomoc]]></title>
+            <link>https://addict.cf/pl/blog/druguserhelp</link>
+            <guid>36IBwtmOVx0LZOPSkXHJqd</guid>
+            <pubDate>Wed, 22 Jun 2022 13:06:45 GMT</pubDate>
+            <description><![CDATA[Używanie alkoholu i narkotyków. Motywy i pomoc]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/7014c2397642fd637aeb2a355076e4bf2d865415-4966x3020.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Terapia i dojrzałość]]></title>
+            <link>https://addict.cf/pl/blog/therapyandmaturity</link>
+            <guid>39mAX63BhYODy6UmbUy2Bx</guid>
+            <pubDate>Wed, 22 Jun 2022 13:15:55 GMT</pubDate>
+            <description><![CDATA[Terapia i dojrzałość]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/94f18987e15457f8ed824138e2f8af7698c714b8-3600x2400.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Zależności i sfera zmysłów]]></title>
+            <link>https://addict.cf/pl/blog/addictionandfeelings</link>
+            <guid>3VwLocCwg66Cluey3tD5bY</guid>
+            <pubDate>Wed, 22 Jun 2022 18:08:28 GMT</pubDate>
+            <description><![CDATA[Zależności i sfera zmysłów]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/46fc150e1ce29bae3d1caf0994aac4eec1ad7f25-800x554.webp" length="0" type="image/webp"/>
+        </item>
+        <item>
+            <title><![CDATA[Terapia stresu, uzależnień i zaburzeń fobicznych z wykorzystaniem NLP]]></title>
+            <link>https://addict.cf/pl/blog/therapyaddiction</link>
+            <guid>3qyw6ts398zZ3gS2Xk8fG8</guid>
+            <pubDate>Wed, 22 Jun 2022 18:14:22 GMT</pubDate>
+            <description><![CDATA[Terapia stresu, uzależnień i zaburzeń fobicznych z wykorzystaniem NLP]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/7648250010abfb1ed80845a4cfeed7464dcd5c48-2048x3072.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Obawy osoby uzależnionej przed wytrzeźwieniem]]></title>
+            <link>https://addict.cf/pl/blog/addictsfears</link>
+            <guid>443TBD9ShZEflouD5KKJw</guid>
+            <pubDate>Thu, 23 Jun 2022 06:52:44 GMT</pubDate>
+            <description><![CDATA[Obawy osoby uzależnionej przed wytrzeźwieniem]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/1143f79b232b1d375faf92cb24d17e28005cbc5b-3888x2592.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Co sprawia, że ludzie stają się pijakami i alkoholikami]]></title>
+            <link>https://addict.cf/pl/blog/chtoprevrashaetlyudeivpyanicialkogolikov</link>
+            <guid>45oFjrO6fgHzY9hVJBMVl</guid>
+            <pubDate>Thu, 23 Jun 2022 06:54:14 GMT</pubDate>
+            <description><![CDATA[Co sprawia, że ludzie stają się pijakami i alkoholikami]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/0c1718b222754ee9feb9f941d6022924d21e7278-1280x720.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Rodzaje uzależnienia od miłości]]></title>
+            <link>https://addict.cf/pl/blog/loveaddict</link>
+            <guid>4JWt30IUO1Z1LVtju0kLfd</guid>
+            <pubDate>Thu, 23 Jun 2022 07:00:50 GMT</pubDate>
+            <description><![CDATA[Rodzaje uzależnienia od miłości. ]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/2c643b0523e5faea850f26a4a4caca323ee53bc8-3887x3887.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Dorosłe dzieci alkoholików. Cierpienie i uzdrowienie.]]></title>
+            <link>https://addict.cf/pl/blog/alcochild</link>
+            <guid>4TEJvM5G4vleCEhWY0HeQU</guid>
+            <pubDate>Thu, 23 Jun 2022 09:25:42 GMT</pubDate>
+            <description><![CDATA[Dorosłe dzieci alkoholików. Cierpienie i uzdrowienie.]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/a789ef1c7117df99cdcdf668c374e780cec9cb64-600x400.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Uzależnienie od miłości. Opcje terapeutyczne]]></title>
+            <link>https://addict.cf/pl/blog/loveaddiction</link>
+            <guid>4fXbMzLjXUuTZmTRekR825</guid>
+            <pubDate>Thu, 23 Jun 2022 09:32:43 GMT</pubDate>
+            <description><![CDATA[Uzależnienie od miłości. Opcje terapeutyczne]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/a39459400e7d0b041c891373ddf363726ac889f2-1000x666.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Socjofobia - jej źródła i zagrożenia]]></title>
+            <link>https://addict.cf/pl/blog/sociophobia</link>
+            <guid>4nnB1s7DbRz673OsLzGD6P</guid>
+            <pubDate>Sun, 19 Jun 2022 13:38:00 GMT</pubDate>
+            <description><![CDATA[Socjofobia - jej źródła i zagrożenia]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/546079a0edb67ec2fa073fed47d635213737cd71-770x695.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Związki współuzależnienia jako konstrukt społeczny]]></title>
+            <link>https://addict.cf/pl/blog/sozavisimyeotnosheniya</link>
+            <guid>4rpRfg9EyU3vZk2tfMDmjU</guid>
+            <pubDate>Tue, 21 Jun 2022 14:08:55 GMT</pubDate>
+            <description><![CDATA[Związki współuzależnienia jako konstrukt społeczny]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/56703092e6c73b11d2532838645b0c99384df5ce-620x250.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Symbioza - konieczność i destrukcyjność]]></title>
+            <link>https://addict.cf/pl/blog/confluensy</link>
+            <guid>57tkXfwT28U8A7yAgkV48R</guid>
+            <pubDate>Tue, 21 Jun 2022 14:01:29 GMT</pubDate>
+            <description><![CDATA[Symbioza - konieczność i destrukcyjność]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/de7f3b42eb1c13c8aa3c3b5ab67a62d7b0ef2c32-768x768.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Symbioza i współzależność]]></title>
+            <link>https://addict.cf/pl/blog/codependens</link>
+            <guid>5F1a4iguLievAz73JE7CfW</guid>
+            <pubDate>Tue, 21 Jun 2022 14:27:26 GMT</pubDate>
+            <description><![CDATA[Symbioza i współzależność ]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/7f97a094e23929fc9acb650d3b989b93f3aea728-1280x866.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Psychologiczna obrona przed uczuciami]]></title>
+            <link>https://addict.cf/pl/blog/psikhologicheskiezashityotchuvstv</link>
+            <guid>5eXGXLaJOUMlIsgKu9wFkS</guid>
+            <pubDate>Sun, 19 Jun 2022 13:38:00 GMT</pubDate>
+            <description><![CDATA[Psychologiczna obrona przed uczuciami]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/284e7ee46ad734eb5e061225060cfa0c624edbb7-650x430.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[ Uzależnieni. Kim oni są?]]></title>
+            <link>https://addict.cf/pl/blog/addiktyktooni</link>
+            <guid>6ZY6Avnwkzg7p8PofC1OTP</guid>
+            <pubDate>Sun, 19 Jun 2022 13:38:00 GMT</pubDate>
+            <description><![CDATA[Uzależnieni. Kim oni są?]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/eb357955765d4ea637c42d89e434db13270574aa-640x427.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Lęki i praca z nimi. Wstyd i poczucie winy]]></title>
+            <link>https://addict.cf/pl/blog/fearandblame</link>
+            <guid>6a12UwqFRHE5Qma3uhqu4S</guid>
+            <pubDate>Sun, 19 Jun 2022 13:38:00 GMT</pubDate>
+            <description><![CDATA[Lęki i praca z nimi. Wstyd i poczucie winy]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/bb834c172aecddd62e1bc1472c67c01541449b7c-860x573.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Aleksytymia]]></title>
+            <link>https://addict.cf/pl/blog/aleksitimiya</link>
+            <guid>6iqc5K8L9g8OWtpmBAacYM</guid>
+            <pubDate>Sun, 19 Jun 2022 13:38:00 GMT</pubDate>
+            <description><![CDATA[Aleksytymia]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/5917fab70f5883e61f44d3df8b89c89bf392a010-638x338.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[O wstydzie i szacunku do samego siebie]]></title>
+            <link>https://addict.cf/pl/blog/shame</link>
+            <guid>6jDV1a9MuAeTDC9oCrRBII</guid>
+            <pubDate>Sun, 19 Jun 2022 13:38:00 GMT</pubDate>
+            <description><![CDATA[O wstydzie i szacunku do samego siebie]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/66e886f19a3e9b3ee19bb83958fe4d39ec02cacf-736x958.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Kliniczna wiedza na temat uzależnień]]></title>
+            <link>https://addict.cf/pl/blog/klinicheskoeponimanieaddikci</link>
+            <guid>6vr5zkbw1ZinDe2iLXsa0N</guid>
+            <pubDate>Sun, 19 Jun 2022 13:38:00 GMT</pubDate>
+            <description><![CDATA[ Kliniczna wiedza na temat uzależnień1 .. 2 .. 3 .. FIRE! !!]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/8015e7b5b9483fba1b5aa4e14750b4dc1a080920-1500x1000.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[  Uzależnienie. Jak ją leczyć?]]></title>
+            <link>https://addict.cf/pl/blog/addikciyakaklechit</link>
+            <guid>7mOX4OjZnEV7FMkh6l0KLM</guid>
+            <pubDate>Sun, 19 Jun 2022 13:38:00 GMT</pubDate>
+            <description><![CDATA[Uzależnienie. Jak ją leczyć?]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/bf227a5fd95b3e8a4a8ed739862308e1d2a787a6-1200x1200.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Metafora o podróży przez życie]]></title>
+            <link>https://addict.cf/pl/blog/metaforaozhiznennomputi</link>
+            <guid>7v084QydLDLITWeydXd1n1</guid>
+            <pubDate>Sun, 19 Jun 2022 13:38:00 GMT</pubDate>
+            <description><![CDATA[Metafora o podróży przez życie]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/ef20da9cddfb30c261293a41d7d84dce3c598a09-1200x675.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Elektroencefalografia w diagnostyce organicznych zmian w OUN]]></title>
+            <link>https://addict.cf/pl/blog/electroencephalogram</link>
+            <guid>f5FMxbqzNuPBJtvoO5zgY</guid>
+            <pubDate>Tue, 21 Jun 2022 14:06:18 GMT</pubDate>
+            <description><![CDATA[Elektroencefalografia w diagnostyce organicznych zmian w OUN]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/ebd9d317150607edc200b4b3367e366e792169f0-5964x3976.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Stres traumatyczny. Jego objawy i sposoby radzenia sobie z nim]]></title>
+            <link>https://addict.cf/pl/blog/traumastress</link>
+            <guid>gBth6xDi7iCg8uGqUYdDq</guid>
+            <pubDate>Tue, 21 Jun 2022 14:09:51 GMT</pubDate>
+            <description><![CDATA[Stres traumatyczny. Jego objawy i sposoby radzenia sobie z nim]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/21ec30ecaf27d430ad77af5630650bc87a6e90a7-6000x4000.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Imprinting jako podstawa nieakceptowalnych wzorców zachowań]]></title>
+            <link>https://addict.cf/pl/blog/imprintig</link>
+            <guid>mFL0jiGWS1Oz9pTGjWavH</guid>
+            <pubDate>Sun, 19 Jun 2022 13:38:00 GMT</pubDate>
+            <description><![CDATA[Imprinting jako podstawa nieakceptowalnych wzorców zachowań]]></description>
+            <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/cbc287284c70b7bab2ed841098c041fa91a47b69-1024x725.jpg" length="0" type="image/jpg"/>
+        </item>
+    </channel>
+</rss>

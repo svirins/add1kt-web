@@ -24,7 +24,8 @@ export const GLOBAL_CONFIG = {
   youtubeLink: "https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A/",
   facebookLink: "https://www.facebook.com/doktorGrin/",
   telegramLink: "https://t.me/vgrean",
-  githubLink: "https://github.com/zvirinz/grean-app-2022",
+  githubLink: "https://github.com/zvirinz/add1kt-web",
+  rssLink: "/rss/feed.xml",
   trimmedHeaderLength: 55,
 };
 
@@ -54,16 +55,18 @@ export const SANITY_CONFIG_ALGOLIA = {
 
 export const LOCALIZED_RSS_DATA = [
   {
-    siteName: "addict-ru",
-    siteDescription: "addict-ru",
+    siteName: "Addict.cf. Блог об аддикциях",
+    siteDescription:
+      "Аддикция — это поведенческий паттерн, включающий в себя злоупотребление психоактивными или опасными веществами, а также определенными практиками, которые вызывают привыкание.",
     locale: "ru",
     url: "https://addict.cf",
   },
   {
-    siteName: "addict-pl",
-    siteDescription: "addict-pl",
+    siteName: "Addict.cf. Blog o uzależnieniach",
+    siteDescription:
+      "Uzależnienie to wzorzec zachowania polegający na nadużywaniu substancji psychoaktywnych lub niebezpiecznych oraz na stosowaniu pewnych praktyk uzależniających.",
     locale: "pl",
-    url: "https://pl.addict.cf",
+    url: "https://addict.cf/pl",
   },
 ];
 
@@ -76,11 +79,11 @@ export const AUTHOR = {
 export const SEO = {
   title: "Addict.cf. Блог об аддикциях",
   description:
-    "Аддикция — это навязчивая привычка, которая может спровоцировать психологические заболевания.",
+    "Аддикция — это поведенческий паттерн, включающий в себя злоупотребление психоактивными или опасными веществами, а также определенными практиками, которые вызывают привыкание.",
   openGraph: {
     titleTemplate: "Addict.cf. Блог об аддикциях",
     description:
-      "Аддикция — это навязчивая привычка, которая может спровоцировать психологические заболевания.",
+      "Аддикция — это поведенческий паттерн, включающий в себя злоупотребление психоактивными или опасными веществами, а также определенными практиками, которые вызывают привыкание.",
     type: "website",
     url: "https://www.addict.cf/",
     site_name: "Addict.cf. Блог об аддикциях",
