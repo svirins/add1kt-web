@@ -9,32 +9,31 @@ import { AUTHOR, LOCALIZED_RSS_DATA } from "./global.config";
 
 dotenv.config();
 
-const generateRssFeed = async (locale: string) => {
+const generateRssFeedPerLocale = async (locale: string) => {
   const posts = await getPosts(locale);
-  const siteURL =
-    locale === "ru" ? process.env.NEXT_PUBLIC_SITE_URL : process.env.NEXT_PUBLIC_SITE_ALT_URL;
   const date = new Date();
-  const { siteName, siteDescription } = LOCALIZED_RSS_DATA.find((i) => i.locale === locale)!;
+  const isPl = locale === "pl" ? "/pl" : "";
+  const { siteName, siteDescription, url } = LOCALIZED_RSS_DATA.find((i) => i.locale === locale)!;
   const feed = new Feed({
     title: siteName,
     description: siteDescription,
-    id: siteURL!,
-    link: siteURL,
-    image: `${siteURL}/logo.webp`,
+    id: url!,
+    link: url,
+    image: `${url}/logo.webp`,
     language: locale,
-    favicon: `${siteURL}/favicon.ico`,
+    favicon: `${url}/favicon.ico`,
     copyright: `All rights reserved ${date.getFullYear()}, Valeriy Grean`,
     updated: date,
     generator: "Feed for Node.js with some fancy extras",
     feedLinks: {
-      rss2: `${siteURL}/rss/feed.xml`,
-      json: `${siteURL}/rss/feed.json`,
-      atom: `${siteURL}/rss/atom.xml`,
+      rss2: `${url}/rss/feed.xml`,
+      json: `${url}/rss/feed.json`,
+      atom: `${url}/rss/atom.xml`,
     },
     author: AUTHOR,
   });
   posts.forEach((post) => {
-    const link = `${siteURL}/blog/${post.slug}`;
+    const link = `${url}/blog/${post.slug}`;
     feed.addItem({
       title: post.title,
       id: post.objectID,
@@ -47,10 +46,17 @@ const generateRssFeed = async (locale: string) => {
   });
   // eslint-disable-next-line no-console
   // console.log("feed reporting", feed);
-  fs.mkdirSync("./public/rss/", { recursive: true });
-  fs.writeFileSync("./public/rss/feed.xml", feed.rss2());
-  fs.writeFileSync("./public/rss/atom.xml", feed.atom1());
-  fs.writeFileSync("./public/rss/feed.json", feed.json1());
+  fs.mkdirSync(`./public${isPl}/rss/`, { recursive: true });
+  fs.writeFileSync(`./public${isPl}/rss/feed.xml`, feed.rss2());
+  fs.writeFileSync(`./public${isPl}/rss/atom.xml`, feed.atom1());
+  fs.writeFileSync(`./public${isPl}/rss/feed.json`, feed.json1());
 };
 
-generateRssFeed("ru");
+export default async function generateRSSFeed() {
+  // eslint-disable-next-line no-restricted-syntax
+  for await (const i of LOCALIZED_RSS_DATA) {
+    generateRssFeedPerLocale(i.locale);
+  }
+}
+
+generateRSSFeed();

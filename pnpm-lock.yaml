@@ -58,7 +58,7 @@ specifiers:
   next: ^12.1.6
   next-intl: ^2.7.4
   next-seo: ^5.4.0
-  next-sitemap: ^3.1.5
+  next-sitemap: 3.1.6
   next-themes: ^0.2.0
   pino: ^8.1.0
   pino-logflare: ^0.3.12
@@ -139,7 +139,7 @@ devDependencies:
   husky: 8.0.1
   jest: 28.1.1_jbmz3vlfopghb5mdasddsdxfzq
   lint-staged: 13.0.2
-  next-sitemap: 3.1.5_nlwwphh5s5ggdfer3ji4ymvzrq
+  next-sitemap: 3.1.6_nlwwphh5s5ggdfer3ji4ymvzrq
   postcss: 8.4.14
   prettier: 2.7.1
   prettier-plugin-tailwindcss: 0.1.11_prettier@2.7.1
@@ -5072,8 +5072,8 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next-sitemap/3.1.5_nlwwphh5s5ggdfer3ji4ymvzrq:
-    resolution: {integrity: sha512-sV8xkiErDmlvW9/vKJCxM5cdhQl9gxahv+og/eqDdf6gvG9eDak1bHn5aRSMTQhSNCA/cGjLIDzRaqc5N1HEXA==}
+  /next-sitemap/3.1.6_nlwwphh5s5ggdfer3ji4ymvzrq:
+    resolution: {integrity: sha512-XQ1WQuW5/tkgkqxKhW898nvnuGghLK/raCsP0CkBTuB/Zyl3abF06jzkWQ0747ubWSCyDHdB9nP3SZdyMW0uIw==}
     engines: {node: '>=14.18'}
     hasBin: true
     peerDependencies:
