@@ -24,11 +24,9 @@ module.exports = withBundleAnalyzer({
     locales: ["ru", "pl"],
   },
   images: {
-    images: {
-      domains: ["cdn.sanity.io"],
-      formats: ["image/webp"],
-      loader: "custom",
-    },
+    domains: ["cdn.sanity.io"],
+    formats: ["image/webp"],
+    loader: "custom",
   },
   async rewrites() {
     return [BEE_REWRITE, HIVE_REWRITE];
