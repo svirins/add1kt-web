@@ -48,7 +48,7 @@ export default function Post({ post, relatedPosts }: Props) {
             height={GLOBAL_CONFIG.images.defaultPostImageHeight}
           />
 
-          <div className="mt-4 flex flex-row pt-2">
+          <div className="mt-4 mb-6 flex flex-row">
             <PostMeta date={post.postDate} readingTime={post.readingTime} author={post.author} />
           </div>
         </div>

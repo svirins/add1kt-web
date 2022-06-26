@@ -61,8 +61,14 @@ html {
   @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
 }
 
+.prose blockquote p {
+  margin: 16px 0px;
+}
+
 .prose blockquote {
-  @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
+  border-left: 4px solid #ebebeb;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .prose strong {
