@@ -1,5 +1,5 @@
 import cn from "classnames";
-import Img from "next/future/image";
+import Img from "next/image";
 import Link from "next/link";
 
 import { shimmer, toBase64 } from "@/utils/contentUtils";
@@ -24,7 +24,7 @@ export function SanityImage({
       src={urlWithProps}
       loader={({ src, width, quality }) => `${src}?w=${width}&q=${quality}`}
       width={GLOBAL_CONFIG.images.defaultPostImageWidth}
-      height={GLOBAL_CONFIG.images.defaultPostImageWidth}
+      height={GLOBAL_CONFIG.images.defaultPostImageHeight}
       placeholder="blur"
       unoptimized={true}
       blurDataURL={`data:image/svg+xml;base64,${toBase64(
@@ -35,12 +35,12 @@ export function SanityImage({
       )}`}
       className={cn({
         "transition-opacity hover:opacity-75": slug,
-        "rounded-lg": true,
+        "rounded-lg object-cover": true,
       })}
     />
   );
   return (
-    <div className="relative sm:mx-0">
+    <div className="relative  sm:mx-0">
       {slug ? (
         <Link href={`/blog/${slug}`}>
           <a aria-label={alt}>{image}</a>

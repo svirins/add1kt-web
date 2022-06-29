@@ -16,16 +16,14 @@ export function PostMeta({ author, date, readingTime }: PostMetaProps) {
   const t = useTranslations("Post");
   return (
     <>
-      <div className="relative">
-        <AvatarImage url={author.authorPicture} alt={author.authorName} />
-      </div>
+      <AvatarImage url={author.authorPicture} alt={author.authorName} />
       <div className="flex-1 pl-2">
         <Link href={`/author/${author.authorSlug}`}>
-          <a className="text-base font-bold transition-all  delay-100 hover:text-orange-600 dark:hover:text-green-400">
+          <a className="text-sm font-bold text-stone-800 transition-all delay-100 hover:text-orange-600 dark:text-stone-200 dark:hover:text-green-400">
             {author.authorName}
           </a>
         </Link>
-        <p className="text-sm text-gray-600 dark:text-gray-400">
+        <p className="text-sm text-stone-800 dark:text-stone-200">
           <time>
             {intl.formatDateTime(parseISO(date), {
               year: "numeric",
