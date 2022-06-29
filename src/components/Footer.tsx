@@ -27,7 +27,7 @@ export function Footer() {
           ))}
         </div>
         <div className="inline-flex items-center">
-          <ExternalLink href={`./${isPl}/rss/feed.xml`}>{Rss}</ExternalLink>
+          <ExternalLink href={`https://addict.cf${isPl}/rss/feed.xml`}>{Rss}</ExternalLink>
           <ExternalLink href={GLOBAL_CONFIG.telegramLink}>{Telegram}</ExternalLink>
           <ExternalLink href={GLOBAL_CONFIG.facebookLink}>{Facebook}</ExternalLink>
         </div>

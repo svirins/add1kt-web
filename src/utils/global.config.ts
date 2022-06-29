@@ -17,7 +17,6 @@ export const GLOBAL_CONFIG = {
   menuLinks: [
     { href: "/", title: "home" },
     { href: "/blog/p/1", title: "blog" },
-    { href: "/categories", title: "categories" },
     { href: "/about", title: "about" },
   ],
   siteUrl: "https://addict.cf",

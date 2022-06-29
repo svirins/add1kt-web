@@ -24,7 +24,7 @@ export default function Author({ author, authorPosts }: Props) {
             <PageTop
               title={author.authorName}
               subtitle=""
-              socials={author.authorSocials}
+              // socials={author.authorSocials}
               pictureUrl={author.authorPicture}
               text={author.authorBio}
             />

@@ -1,4 +1,4 @@
-import Img from "next/future/image";
+import Img from "next/image";
 
 import { shimmer, toBase64 } from "@/utils/contentUtils";
 import { GLOBAL_CONFIG } from "@/utils/global.config";
