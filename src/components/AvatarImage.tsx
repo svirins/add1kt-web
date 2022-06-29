@@ -1,4 +1,4 @@
-import Img from "next/image";
+import Img from "next/future/image";
 
 import { GLOBAL_CONFIG } from "@/utils/global.config";
 

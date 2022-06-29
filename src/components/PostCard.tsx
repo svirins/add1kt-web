@@ -5,7 +5,6 @@ import { SanityImage } from "@/components/SanityImage";
 import { Tags } from "@/components/Tags";
 import type { TAuthorBase, TTagBase } from "@/typings/schema-types";
 import { truncate } from "@/utils/contentUtils";
-import { GLOBAL_CONFIG } from "@/utils/global.config";
 
 export type PostCardProps = {
   title: string;
@@ -28,13 +27,7 @@ export function PostCard({
 }: PostCardProps) {
   return (
     <div className="my-4 md:my-0">
-      <SanityImage
-        slug={slug}
-        alt={title}
-        url={previewImage}
-        width={GLOBAL_CONFIG.images.defaultPostPreviewImageWidth}
-        height={GLOBAL_CONFIG.images.defaultPostImagePreviewHeight}
-      />
+      <SanityImage slug={slug} alt={title} url={previewImage} />
       <h4 className="post-header-link mt-4 mb-2 w-full text-lg  font-medium">
         <Link href={`/blog/${slug}`}>
           <a>{truncate(title)}</a>
