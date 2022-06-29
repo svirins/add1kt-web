@@ -22,9 +22,11 @@ export const GLOBAL_CONFIG = {
   siteUrl: "https://addict.cf",
   youtubeLink: "https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A/",
   facebookLink: "https://www.facebook.com/doktorGrin/",
+  emailLink: "mailto:vgrean@gmail.com",
   telegramLink: "https://t.me/vgrean",
   githubLink: "https://github.com/zvirinz/add1kt-web",
   rssLink: "/rss/feed.xml",
+  instagramLink: "https://www.instagram.com/valeriigrin/?hl=en",
   trimmedHeaderLength: 55,
 };
 

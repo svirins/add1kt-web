@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import PoweredByVercel from "powered-by-vercel";
 
 import { ExternalLink } from "@/components/ExternalLink";
-import { Facebook, Github, Rss, Telegram } from "@/components/Icons";
+import { Email, Facebook, Github, Rss, Telegram, Youtube } from "@/components/Icons";
 import { NavItemFooter } from "@/components/NavItemFooter";
 import { SectionSeparator } from "@/components/SectionSeparator";
 import { GLOBAL_CONFIG } from "@/utils/global.config";
@@ -28,6 +28,8 @@ export function Footer() {
         </div>
         <div className="inline-flex items-center">
           <ExternalLink href={`https://addict.cf${isPl}/rss/feed.xml`}>{Rss}</ExternalLink>
+          <ExternalLink href={GLOBAL_CONFIG.emailLink}>{Email}</ExternalLink>
+          <ExternalLink href={GLOBAL_CONFIG.youtubeLink}>{Youtube}</ExternalLink>
           <ExternalLink href={GLOBAL_CONFIG.telegramLink}>{Telegram}</ExternalLink>
           <ExternalLink href={GLOBAL_CONFIG.facebookLink}>{Facebook}</ExternalLink>
         </div>

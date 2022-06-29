@@ -11,7 +11,7 @@ export const Instagram = (
 export const Youtube = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-4 w-4 md:h-5 md:w-5"
+    className="h-5 w-5 md:h-7 md:w-7"
     fill="currentColor"
     viewBox="-35.20005 -41.33325 305.0671 247.9995"
   >
@@ -68,7 +68,7 @@ export const Twitter = (
 
 export const Rss = (
   <svg
-    className="h-4 w-4 md:h-5 md:w-5"
+    className="h-3 w-3 md:h-4 md:w-4"
     aria-hidden="true"
     fill="currentColor"
     role="img"
@@ -80,9 +80,9 @@ export const Rss = (
   </svg>
 );
 
-export const Mail = (
+export const Email = (
   <svg
-    className="h-4 w-4 md:h-5 md:w-5"
+    className="h-5 w-5 md:h-6 md:w-6"
     aria-hidden="true"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
