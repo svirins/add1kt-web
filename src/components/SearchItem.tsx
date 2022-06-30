@@ -11,6 +11,7 @@ export type ItemProps = {
 };
 
 export function SearchItem({ hit, components }: ItemProps) {
+  console.log("hit", hit, "components", components);
   return (
     <a className="aa-ItemLink" href={`/blog/${hit.slug}`}>
       <div className="aa-ItemContent">

@@ -31,6 +31,7 @@ export function Autocomplete(props: AutocompleteProps) {
       render({ children }, root) {
         if (!panelRootRef.current || rootRef.current !== root) {
           rootRef.current = root;
+
           panelRootRef.current.unmount();
           panelRootRef.current = createRoot(root);
         }

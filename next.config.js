@@ -8,12 +8,7 @@ const HIVE_REWRITE = {
   destination: "https://hive.splitbee.io/:slug",
 };
 
-// eslint-disable-next-line import/no-extraneous-dependencies
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
-
-module.exports = withBundleAnalyzer({
+module.exports = {
   eslint: {
     dirs: ["."],
   },
@@ -28,12 +23,7 @@ module.exports = withBundleAnalyzer({
     formats: ["image/webp"],
     loader: "custom",
   },
-  experimental: {
-    legacyBrowsers: false,
-    browsersListForSwc: true,
-    images: { allowFutureImage: true },
-  },
   async rewrites() {
     return [BEE_REWRITE, HIVE_REWRITE];
   },
-});
+};

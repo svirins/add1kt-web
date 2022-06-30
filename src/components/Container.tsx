@@ -7,7 +7,7 @@ import type { TAuthorBase, TPortableText, TTagBase } from "@/typings/schema-type
 import { getDescription } from "@/utils/contentUtils";
 
 type ContainerProps = {
-  title?: string;
+  title: string;
   description?: TPortableText;
   ogImage?: string;
   type?: string;
@@ -25,10 +25,10 @@ export function Container(props: ContainerProps) {
     props.type === "article"
       ? {
           publishedTime: props.date,
-          tags: props.tags.map((tag) => tag.tagName),
-          authors: [
-            `https://${locale === "ru" ? "" : "pl."}addict.cf/author/${props.author.authorSlug}`,
-          ],
+          tags: props.tags ? props.tags.map((tag) => tag.tagName) : [],
+          authors: props.author
+            ? [`https://${locale === "ru" ? "" : "pl."}addict.cf/author/${props.author.authorSlug}`]
+            : [""],
           description,
         }
       : {};

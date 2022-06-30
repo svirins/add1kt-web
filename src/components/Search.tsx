@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import "@algolia/autocomplete-theme-classic";
 import "instantsearch.css/themes/satellite.css";
 
@@ -23,6 +24,7 @@ export function Search() {
   const { locale = "ru" } = useRouter();
   const t = useTranslations("Search");
   const indexName = getIndexNameByLocale(locale);
+  console.log("indexName", indexName);
   return (
     <div>
       <Autocomplete
