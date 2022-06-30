@@ -20,11 +20,10 @@ const searchClient = algoliasearch(
 );
 
 export function Search() {
-  // TODO: remove nasty hack of setting default valye
+  // TODO: remove nasty hack of setting default value
   const { locale = "ru" } = useRouter();
   const t = useTranslations("Search");
   const indexName = getIndexNameByLocale(locale);
-  console.log("indexName", indexName);
   return (
     <div>
       <Autocomplete
@@ -50,7 +49,7 @@ export function Search() {
             },
             templates: {
               item({ item, components }: { item: Item; components: AutocompleteComponents }) {
-                return <SearchItem hit={item} components={components} />;
+                return <SearchItem hit={item} components={components} locale={locale} />;
               },
             },
           },

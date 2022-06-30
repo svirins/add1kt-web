@@ -3,14 +3,7 @@ import { useTranslations } from "next-intl";
 import { createElement, Fragment, useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
 
-interface AutocompleteProps {
-  openOnFocus: boolean;
-  detachedMediaQuery?: string;
-  placeholder: string;
-  getSources: any;
-}
-
-export function Autocomplete(props: AutocompleteProps) {
+export function Autocomplete(props) {
   const t = useTranslations("Search");
   const containerRef = useRef(null);
   const panelRootRef = useRef(null);
@@ -32,7 +25,7 @@ export function Autocomplete(props: AutocompleteProps) {
         if (!panelRootRef.current || rootRef.current !== root) {
           rootRef.current = root;
 
-          panelRootRef.current.unmount();
+          panelRootRef.current?.unmount();
           panelRootRef.current = createRoot(root);
         }
 

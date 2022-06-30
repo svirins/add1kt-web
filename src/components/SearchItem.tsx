@@ -8,12 +8,13 @@ export type Item = Hit<{
 export type ItemProps = {
   hit: Item;
   components: AutocompleteComponents;
+  locale: string;
 };
 
-export function SearchItem({ hit, components }: ItemProps) {
-  console.log("hit", hit, "components", components);
+export function SearchItem({ hit, components, locale }: ItemProps) {
+  const isPl = locale === "pl" ? "/pl" : "";
   return (
-    <a className="aa-ItemLink" href={`/blog/${hit.slug}`}>
+    <a className="aa-ItemLink" href={`${isPl}/blog/${hit.slug}`}>
       <div className="aa-ItemContent">
         {/* <div className="ItemCategory">{hit.tags[0]}</div> */}
         <div className="aa-ItemTitle">

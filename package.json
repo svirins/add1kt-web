@@ -17,10 +17,10 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@algolia/autocomplete-core": "^1.7.1",
-    "@algolia/autocomplete-js": "^1.7.1",
-    "@algolia/autocomplete-theme-classic": "^1.7.1",
-    "@algolia/client-search": "^4.13.1",
+    "@algolia/autocomplete-core": "1.6.3",
+    "@algolia/autocomplete-js": "1.6.3",
+    "@algolia/autocomplete-theme-classic": "1.6.3",
+    "@algolia/client-search": ">=4.9.1 <5.0.0",
     "@fontsource/inter": "^4.5.11",
     "@panelbear/panelbear-nextjs": "^1.0.3",
     "@portabletext/react": "^1.0.6",
@@ -31,7 +31,7 @@
     "date-fns": "2.28.0",
     "feed": "^4.2.2",
     "instantsearch.css": "^7.4.5",
-    "next": "^12.2.0",
+    "next": "12.1.6",
     "next-intl": "^2.7.4",
     "next-seo": "^5.4.0",
     "next-themes": "^0.2.0",
@@ -40,7 +40,7 @@
     "powered-by-vercel": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-instantsearch-hooks-web": "^6.29.0"
+    "react-instantsearch-hooks-web": "6.26.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
