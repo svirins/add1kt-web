@@ -1,15 +1,15 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
+  siteUrl: "https://addict.cf",
   changefreq: "weekly",
   priority: 0.7,
   alternateRefs: [
     {
-      href: process.env.NEXT_PUBLIC_SITE_URL,
+      href: "https://addict.cf",
       hreflang: "ru",
     },
     {
-      href: process.env.NEXT_PUBLIC_SITE_ALT_URL,
+      href: "https://addict.cf/pl",
       hreflang: "pl",
     },
   ],
