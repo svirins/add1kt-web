@@ -63,7 +63,7 @@ export async function getStaticProps({ params, locale }: { params: IParams; loca
   const data = await getPaginatedPosts(locale, Number(params.page));
   const paginatedPosts = data
     // eslint-disable-next-line no-underscore-dangle
-    .sort((a, b) => b._updatedAt - a._updatedAt);
+    .sort((a, b) => b._createdAt - a._createdAt);
 
   const pageData = await getPageContent(locale, "/");
   const totalPosts = await getTotalPostsNumber();
