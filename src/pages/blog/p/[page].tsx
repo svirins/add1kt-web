@@ -60,7 +60,11 @@ export async function getStaticPaths({ locales }: { locales: string[] }) {
 }
 
 export async function getStaticProps({ params, locale }: { params: IParams; locale: string }) {
-  const paginatedPosts = await getPaginatedPosts(locale, Number(params.page));
+  const data = await getPaginatedPosts(locale, Number(params.page));
+  const paginatedPosts = data
+    // eslint-disable-next-line no-underscore-dangle
+    .sort((a, b) => b._updatedAt - a._updatedAt);
+
   const pageData = await getPageContent(locale, "/");
   const totalPosts = await getTotalPostsNumber();
   const totalPages = Math.ceil(totalPosts / GLOBAL_CONFIG.pagination.pageSize);

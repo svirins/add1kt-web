@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/Container";
@@ -7,7 +8,11 @@ import { PostsGrid } from "@/components/PostsGrid";
 import { Search } from "@/components/Search";
 import { SectionSeparator } from "@/components/SectionSeparator";
 import { Subtitle } from "@/components/Subtitle";
-import { getFeaturedPosts, getPageContent, getTotalPostsNumber } from "@/utils/api";
+import {
+  getFeaturedPosts,
+  getPageContent,
+  getTotalPostsNumber,
+} from "@/utils/api";
 
 type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
 type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>["props"];
@@ -42,7 +47,11 @@ export default function Index({ pageData, featuredPosts, total }: Props) {
 }
 
 export async function getStaticProps({ locale }: { locale: string }) {
-  const featuredPosts = await getFeaturedPosts(locale);
+  const data = await getFeaturedPosts(locale);
+  const featuredPosts = data
+    // eslint-disable-next-line no-underscore-dangle
+    .sort((a, b) => b._updatedAt - a._updatedAt)
+    .slice(0, 6);
   const pageData = await getPageContent(locale, "/");
   const total = await getTotalPostsNumber();
   return {

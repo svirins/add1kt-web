@@ -10,6 +10,8 @@ export type TPostBase = {
   postDate: string;
   author: TAuthorBase;
   tags: TTagBase[];
+  _updatedAt;
+  _createdAt;
 };
 
 export type TPost = TPostBase & {
