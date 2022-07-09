@@ -26,7 +26,7 @@ export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true]
   "author": author -> ${authorData},
   "tags": tags[] -> ${tagsData},
   _updatedAt
-} [0...15] | order(_updatedAt desc)`;
+} [0...6] | order(_updatedAt desc)`;
 
 export const getPageContentQuery = groq`*[_type == 'page' && slug.current == $slug]{
   "pageTitle": title[$locale],
@@ -88,8 +88,7 @@ export const getPaginatedPostsQuery = groq`*[_type == 'post'] {
   ${postData},
   "author": author ->${authorData},
   "tags": tags[] -> ${tagsData},
-  _updatedAt,
-} [$skip...$limit] | order(_createdAt desc)`;
+} [0...200] | order(_createdAt desc)`;
 
 export const getTagsAndRelatedPostsCountQuery = groq`*[_type=="tag"] {
   "tagName": title[$locale],

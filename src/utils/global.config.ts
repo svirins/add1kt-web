@@ -48,8 +48,8 @@ export const SANITY_CONFIG = {
 };
 
 export const SANITY_CONFIG_ALGOLIA = {
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: "production",
+  projectId: "ro6en9ct",
   apiVersion: "2021-03-25",
   useCdn: false,
 };

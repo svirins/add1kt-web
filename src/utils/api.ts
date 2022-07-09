@@ -9,7 +9,6 @@ import type {
   TTag,
 } from "@/typings/schema-types";
 
-import { getSkipValue } from "./contentUtils";
 import { GLOBAL_CONFIG } from "./global.config";
 import {
   getAllAuthorSlugsQuery,
@@ -105,11 +104,9 @@ export async function getPostAndRelatedPosts(locale: string, slug: string): Prom
   return data;
 }
 
-export async function getPaginatedPosts(locale: string, page: number): Promise<TPostBase[]> {
+export async function getPaginatedPosts(locale: string): Promise<TPostBase[]> {
   const data = await client.fetch(getPaginatedPostsQuery, {
     locale,
-    skip: getSkipValue(page),
-    limit: GLOBAL_CONFIG.pagination.pageSize + getSkipValue(page),
   });
   return data;
 }

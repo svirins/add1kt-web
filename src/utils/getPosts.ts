@@ -40,8 +40,8 @@ const getPostsIndexQuery = groq`*[_type == 'post'] {
 }[$skip...$limit] | order(_updatedAt desc)`;
 
 const client = sanityClient({
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: "development",
+  projectId: "ro6en9ct",
   apiVersion: "2021-03-25",
   useCdn: false,
 });

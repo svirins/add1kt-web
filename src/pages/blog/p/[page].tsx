@@ -8,6 +8,7 @@ import { PostsGrid } from "@/components/PostsGrid";
 import { Search } from "@/components/Search";
 import { SectionSeparator } from "@/components/SectionSeparator";
 import { getPageContent, getPaginatedPosts, getTotalPostsNumber } from "@/utils/api";
+import { getSkipValue } from "@/utils/contentUtils";
 import { GLOBAL_CONFIG } from "@/utils/global.config";
 
 interface IParams extends ParsedUrlQuery {
@@ -60,10 +61,14 @@ export async function getStaticPaths({ locales }: { locales: string[] }) {
 }
 
 export async function getStaticProps({ params, locale }: { params: IParams; locale: string }) {
-  const data = await getPaginatedPosts(locale, Number(params.page));
+  const data = await getPaginatedPosts(locale);
   const paginatedPosts = data
     // eslint-disable-next-line no-underscore-dangle
-    .sort((a, b) => b._createdAt - a._createdAt);
+    .sort((a, b) => b._createdAt - a._createdAt)
+    .slice(
+      getSkipValue(Number(params.page)),
+      GLOBAL_CONFIG.pagination.pageSize + getSkipValue(Number(params.page))
+    );
 
   const pageData = await getPageContent(locale, "/");
   const totalPosts = await getTotalPostsNumber();
