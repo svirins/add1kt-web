@@ -1,14 +1,11 @@
 /* eslint-disable no-console */
 /* eslint-disable import/no-extraneous-dependencies */
-import dotenv from "dotenv";
 import { Feed } from "feed";
 import fs from "fs";
 
 import { truncate } from "./contentUtils";
 import { getPosts } from "./getPosts";
 import { AUTHOR, LOCALIZED_RSS_DATA } from "./global.config";
-
-dotenv.config();
 
 const generateRssFeedPerLocale = async (locale: string) => {
   const posts = await getPosts(locale);

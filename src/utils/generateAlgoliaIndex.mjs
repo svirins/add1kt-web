@@ -1,12 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 import algoliasearch from "algoliasearch";
-import dotenv from "dotenv";
 
 import { getPosts } from "./getPosts";
 import { LOCALIZED_ALGOLIA_INDICES } from "./global.config";
 
-dotenv.config();
 
 const algoliaInstance = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
