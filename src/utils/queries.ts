@@ -17,13 +17,14 @@ const postData = `
   "postSlug": slug.current,
   "readingTime": round(length(pt::text(text[$locale])) / 5 / 180 ),
   "postImageUrl": coverImage.asset-> url,
-  "postDate": _createdAt`;
-
+  "postDate": _createdAt,
+`;
 export const getFeaturedPostsQuery = groq`*[_type == 'post' && featured == true] {
   ${postData},
   "author": author -> ${authorData},
   "tags": tags[] -> ${tagsData},
-} [$skip...$limit] | order(_createdAt desc)`;
+  _updatedAt
+} [$skip...$limit] | order(_updatedAt desc)`;
 
 export const getPageContentQuery = groq`*[_type == 'page' && slug.current == $slug]{
   "pageTitle": title[$locale],
@@ -33,7 +34,8 @@ export const getPageContentQuery = groq`*[_type == 'page' && slug.current == $sl
 
 export const getAllPostSlugsQuery = groq`*[_type == 'post'] {
   "slug": slug.current,
-}`;
+  _createdAt
+} [0...100] | order(_createdAt desc)`;
 
 export const getAllAuthorSlugsQuery = groq`*[_type == 'author'] {
   "slug": slug.current,
@@ -42,7 +44,6 @@ export const getAllAuthorSlugsQuery = groq`*[_type == 'author'] {
 export const getAllTagSlugsQuery = groq`*[_type == 'tag'] {
   "slug": slug.current,
 }`;
-
 export const getPostAndRelatedPostsQuery = groq`*[_type == 'post'  && slug.current == $slug] {
   ${postData},
   "postText": text[$locale],
@@ -67,6 +68,7 @@ export const getAuthorAndRelatedPostsQuery = groq`*[_type == 'author' && slug.cu
     ${postData},
     "author": author -> ${authorData},
     "tags": tags[] -> ${tagsData},
+    _createdAt 
   } [$skip...$limit] | order(_createdAt desc)
 }[0]`;
 
@@ -79,12 +81,14 @@ export const getTagAndRelatedPostsQuery = groq`*[_type == 'tag' &&  slug.current
     ${postData},
     "author": author -> ${authorData},
     "tags": tags[] -> ${tagsData},
+    _createdAt 
   } [$skip...$limit] | order(_createdAt desc)
 }[0]`;
 export const getPaginatedPostsQuery = groq`*[_type == 'post'] {
   ${postData},
   "author": author ->${authorData},
   "tags": tags[] -> ${tagsData},
+  _createdAt 
 } [$skip...$limit] | order(_createdAt desc)`;
 
 export const getTagsAndRelatedPostsCountQuery = groq`*[_type=="tag"] {
