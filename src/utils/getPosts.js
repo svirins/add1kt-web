@@ -6,23 +6,6 @@ import groq from "groq";
 
 import { GLOBAL_CONFIG } from "./global.config";
 
-type TAuthorData = {
-  name: string;
-  email: string;
-  twitter: string;
-};
-
-type TPostData = {
-  objectID: string;
-  publishedAt: string;
-  title: string;
-  slug: string;
-  text: string;
-  image: string;
-  author: TAuthorData;
-  tags: string[];
-};
-
 dotenv.config();
 const getPostsIndexQuery = groq`*[_type == 'post'] {
   "objectID": _id,
@@ -46,7 +29,8 @@ const client = sanityClient({
   useCdn: false,
 });
 
-export async function getPosts(locale: string): Promise<TPostData[]> {
+// eslint-disable-next-line import/prefer-default-export
+export async function getPosts(locale) {
   const data = await client.fetch(getPostsIndexQuery, {
     locale,
     skip: 0,

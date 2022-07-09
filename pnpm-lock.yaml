@@ -85,6 +85,7 @@ dependencies:
   algoliasearch: 4.13.1
   classnames: 2.3.1
   date-fns: 2.28.0
+  dotenv: 16.0.1
   feed: 4.2.2
   instantsearch.css: 7.4.5
   next: 12.1.6_beenoklgwfttvph5dgxj7na7aq
@@ -114,7 +115,6 @@ devDependencies:
   autoprefixer: 10.4.7_postcss@8.4.14
   cross-env: 7.0.3
   cssnano: 5.1.12_postcss@8.4.14
-  dotenv: 16.0.1
   eslint: 8.18.0
   eslint-config-airbnb-base: 15.0.0_srrmf5la5dmnsfe2mpg6sboreu
   eslint-config-airbnb-typescript: 17.0.0_4noxlgnutiwvpn5ctj3fwykqra
@@ -2808,7 +2808,7 @@ packages:
   /dotenv/16.0.1:
     resolution: {integrity: sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ==}
     engines: {node: '>=12'}
-    dev: true
+    dev: false
 
   /duplexify/4.1.2:
     resolution: {integrity: sha512-fz3OjcNCHmRP12MJoZMPglx8m4rrFP8rovnk4vT8Fs+aonZoCwGg10dSsQsfP/E62eZcPTMSMP6686fu9Qlqtw==}

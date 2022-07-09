@@ -13,7 +13,7 @@ const algoliaInstance = algoliasearch(
   process.env.ALGOLIA_SEARCH_ADMIN_KEY
 );
 
-const generateIndexPerLocale = async (indexName: string, locale: string) => {
+const generateIndexPerLocale = async (indexName, locale) => {
   const data = await getPosts(locale);
   const mappedData = data.map((post) => {
     return {

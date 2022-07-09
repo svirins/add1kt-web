@@ -47,5 +47,12 @@
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*", "**/*.test.ts"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/utils/generateAlgoliaIndex.mjs",
+    "src/utils/global.config.js",
+    "src/utils/getPosts.js"
+  ]
 }
