@@ -1,12 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 import sanityClient from "@sanity/client";
-import dotenv from "dotenv";
 import groq from "groq";
 
 import { GLOBAL_CONFIG } from "./global.config";
 
-dotenv.config();
 const getPostsIndexQuery = groq`*[_type == 'post'] {
   "objectID": _id,
   "publishedAt": _updatedAt,
