@@ -1,16 +1,19 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 import algoliasearch from "algoliasearch";
+import dotenv from "dotenv";
 
 import { getPosts } from "./getPosts";
 import { LOCALIZED_ALGOLIA_INDICES } from "./global.config";
+
+dotenv.config();
 
 const algoliaInstance = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
   process.env.ALGOLIA_SEARCH_ADMIN_KEY
 );
 
-const generateIndexPerLocale = async (indexName, locale) => {
+const generateIndexPerLocale = async (indexName: string, locale: string) => {
   const data = await getPosts(locale);
   const mappedData = data.map((post) => {
     return {

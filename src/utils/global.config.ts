@@ -17,16 +17,15 @@ export const GLOBAL_CONFIG = {
   menuLinks: [
     { href: "/", title: "home" },
     { href: "/blog/p/1", title: "blog" },
+    { href: "/categories", title: "categories" },
     { href: "/about", title: "about" },
   ],
   siteUrl: "https://addict.cf",
   youtubeLink: "https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A/",
   facebookLink: "https://www.facebook.com/doktorGrin/",
-  emailLink: "mailto:vgrean@gmail.com",
   telegramLink: "https://t.me/vgrean",
-  githubLink: "https://github.com/zvirinz/add1kt-web",
-  rssLink: "/rss/feed.xml",
-  instagramLink: "https://www.instagram.com/valeriigrin/?hl=en",
+  emailLink: "mailto:vgreanGgmail.com",
+  githubLink: "https://github.com/zvirinz/grean-app-2022",
   trimmedHeaderLength: 55,
 };
 
@@ -48,26 +47,24 @@ export const SANITY_CONFIG = {
 };
 
 export const SANITY_CONFIG_ALGOLIA = {
-  dataset: "production",
-  projectId: "ro6en9ct",
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   apiVersion: "2021-03-25",
   useCdn: false,
 };
 
 export const LOCALIZED_RSS_DATA = [
   {
-    siteName: "Addict.cf. Блог об аддикциях",
-    siteDescription:
-      "Аддикция — это поведенческий паттерн, включающий в себя злоупотребление психоактивными или опасными веществами, а также определенными практиками, которые вызывают привыкание.",
+    siteName: "addict-ru",
+    siteDescription: "addict-ru",
     locale: "ru",
     url: "https://addict.cf",
   },
   {
-    siteName: "Addict.cf. Blog o uzależnieniach",
-    siteDescription:
-      "Uzależnienie to wzorzec zachowania polegający na nadużywaniu substancji psychoaktywnych lub niebezpiecznych oraz na stosowaniu pewnych praktyk uzależniających.",
+    siteName: "addict-pl",
+    siteDescription: "addict-pl",
     locale: "pl",
-    url: "https://addict.cf/pl",
+    url: "https://pl.addict.cf",
   },
 ];
 
@@ -80,11 +77,11 @@ export const AUTHOR = {
 export const SEO = {
   title: "Addict.cf. Блог об аддикциях",
   description:
-    "Аддикция — это поведенческий паттерн, включающий в себя злоупотребление психоактивными или опасными веществами, а также определенными практиками, которые вызывают привыкание.",
+    "Аддикция — это навязчивая привычка, которая может спровоцировать психологические заболевания.",
   openGraph: {
     titleTemplate: "Addict.cf. Блог об аддикциях",
     description:
-      "Аддикция — это поведенческий паттерн, включающий в себя злоупотребление психоактивными или опасными веществами, а также определенными практиками, которые вызывают привыкание.",
+      "Аддикция — это навязчивая привычка, которая может спровоцировать психологические заболевания.",
     type: "website",
     url: "https://www.addict.cf/",
     site_name: "Addict.cf. Блог об аддикциях",
