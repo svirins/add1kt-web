@@ -5,7 +5,7 @@
   "license": "custom",
   "scripts": {
     "dev": "next",
-    "build": "pnpm next-sitemap && pnpm generate-feed && pnpm generate-index",
+    "build": "pnpm build && pnpm generate-feed && pnpm generate-index",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "clean": "rimraf .next out",
     "start": "next start",
