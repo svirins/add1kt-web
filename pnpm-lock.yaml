@@ -11,6 +11,7 @@ specifiers:
   '@commitlint/cli': ^17.0.3
   '@commitlint/config-conventional': ^17.0.3
   '@fontsource/inter': ^4.5.11
+  '@next/env': ^12.2.2
   '@panelbear/panelbear-nextjs': ^1.0.3
   '@portabletext/react': ^1.0.6
   '@sanity/client': ^3.3.2
@@ -77,6 +78,7 @@ dependencies:
   '@algolia/autocomplete-theme-classic': 1.6.3
   '@algolia/client-search': 4.13.1
   '@fontsource/inter': 4.5.11
+  '@next/env': 12.2.2
   '@panelbear/panelbear-nextjs': 1.0.3_next@12.1.6+react@18.2.0
   '@portabletext/react': 1.0.6_react@18.2.0
   '@sanity/client': 3.3.2
@@ -133,7 +135,7 @@ devDependencies:
   husky: 8.0.1
   jest: 28.1.2_jbmz3vlfopghb5mdasddsdxfzq
   lint-staged: 13.0.3
-  next-sitemap: 3.0.5_qrpr57ui5ktfex3mx2i7w34jta
+  next-sitemap: 3.0.5_cqfwsqfpvr4aecwb6weqzmehim
   postcss: 8.4.14
   prettier: 2.7.1
   prettier-plugin-tailwindcss: 0.1.11_prettier@2.7.1
@@ -1133,9 +1135,8 @@ packages:
   /@next/env/12.1.6:
     resolution: {integrity: sha512-Te/OBDXFSodPU6jlXYPAXpmZr/AkG6DCATAxttQxqOWaq6eDFX25Db3dK0120GZrSZmv4QCe9KsZmJKDbWs4OA==}
 
-  /@next/env/12.2.0:
-    resolution: {integrity: sha512-/FCkDpL/8SodJEXvx/DYNlOD5ijTtkozf4PPulYPtkPOJaMPpBSOkzmsta4fnrnbdH6eZjbwbiXFdr6gSQCV4w==}
-    dev: true
+  /@next/env/12.2.2:
+    resolution: {integrity: sha512-BqDwE4gDl1F608TpnNxZqrCn6g48MBjvmWFEmeX5wEXDXh3IkAOw6ASKUgjT8H4OUePYFqghDFUss5ZhnbOUjw==}
 
   /@next/eslint-plugin-next/12.2.0:
     resolution: {integrity: sha512-nIj5xV/z3dOfeBnE7qFAjUQZAi4pTlIMuusRM6s/T6lOz8x7mjY5s1ZkTUBmcjPVCb2VIv3CrMH0WZL6xfjZZg==}
@@ -5239,7 +5240,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next-sitemap/3.0.5_qrpr57ui5ktfex3mx2i7w34jta:
+  /next-sitemap/3.0.5_cqfwsqfpvr4aecwb6weqzmehim:
     resolution: {integrity: sha512-YdiW5wYNruyZCvhGGOMAdTylCQuxQkZKbSFV9Fjuf/U7aAt8lJwc3HG/WvR0n3Q1Y8c1ZiW/24UDZLQPfoKsYg==}
     engines: {node: '>=14.18'}
     hasBin: true
@@ -5248,7 +5249,7 @@ packages:
       next: '*'
     dependencies:
       '@corex/deepmerge': 4.0.29
-      '@next/env': 12.2.0
+      '@next/env': 12.2.2
       minimist: 1.2.6
       next: 12.1.6_beenoklgwfttvph5dgxj7na7aq
     dev: true

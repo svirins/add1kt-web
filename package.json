@@ -22,6 +22,7 @@
     "@algolia/autocomplete-theme-classic": "1.6.3",
     "@algolia/client-search": ">=4.9.1 <5.0.0",
     "@fontsource/inter": "^4.5.11",
+    "@next/env": "^12.2.2",
     "@panelbear/panelbear-nextjs": "^1.0.3",
     "@portabletext/react": "^1.0.6",
     "@sanity/client": "^3.3.2",
