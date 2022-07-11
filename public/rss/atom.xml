@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://addict.cf</id>
-    <title>Addict.cf. Блог об аддикциях</title>
-    <updated>2022-07-09T12:06:44.309Z</updated>
+    <title>addict-ru</title>
+    <updated>2022-07-11T15:19:46.458Z</updated>
     <generator>Feed for Node.js with some fancy extras</generator>
     <author>
         <name>Valeriy Grean</name>
@@ -11,7 +11,7 @@
     </author>
     <link rel="alternate" href="https://addict.cf"/>
     <link rel="self" href="https://addict.cf/rss/atom.xml"/>
-    <subtitle>Аддикция — это поведенческий паттерн, включающий в себя злоупотребление психоактивными или опасными веществами, а также определенными практиками, которые вызывают привыкание.</subtitle>
+    <subtitle>addict-ru</subtitle>
     <logo>https://addict.cf/logo.webp</logo>
     <icon>https://addict.cf/favicon.ico</icon>
     <rights>All rights reserved 2022, Valeriy Grean</rights>
@@ -79,8 +79,8 @@
         <title type="html"><![CDATA[Употребление алкоголя и наркотиков. Мотивы и помощь]]></title>
         <id>36IBwtmOVx0LZOPSkXHJqd</id>
         <link href="https://addict.cf/blog/druguserhelp"/>
-        <updated>2022-07-09T11:29:08.000Z</updated>
-        <summary type="html"><![CDATA[Иногда уходит время, а странник все еще блуждает где-то там… А вернувшись узнает, что, думая,что пробыл у эльфов всего семь дней, потерял здесь семь лет. Жена давно его оплакала, а дети выросли..Опыт показывает, что отношение к спиртному и наркотикам, их...]]></summary>
+        <updated>2022-07-11T11:55:41.000Z</updated>
+        <summary type="html"><![CDATA[Иногда уходит время, а странник все еще блуждает где-то там… А вернувшись узнает, что, думая,что пробыл у эльфов всего семь дней, потерял здесь семь лет. Жена давно его оплакала, а дети выросли...Опыт показывает, что отношение к спиртному и наркотикам, их...]]></summary>
         <author>
             <name>Валерий Гринь</name>
             <email>vgrean@gmail.com</email>
@@ -102,9 +102,9 @@
     <entry>
         <title type="html"><![CDATA[Зависимости и сфера чувств]]></title>
         <id>3VwLocCwg66Cluey3tD5bY</id>
-        <link href="https://addict.cf/blog/addictionandfeelings"/>
-        <updated>2022-07-09T11:30:44.000Z</updated>
-        <summary type="html"><![CDATA[Такие заболевания как зависимости в обязательном порядке связаны с травмированной, «замороженной» сферой чувств человека.Подавленность, блок в отреагировании чувств и переживаний вносят свой вклад в формирование симптоматики аддикций: быстро нарастает...]]></summary>
+        <link href="https://addict.cf/blog/addictemotion"/>
+        <updated>2022-07-11T11:29:45.000Z</updated>
+        <summary type="html"><![CDATA[Такие заболевания как зависимости в обязательном порядке связаны с травмированной, «замороженной» сферой чувств человека.Подавленность, блок в экспрессии чувств и переживаний вносят свой вклад в формирование симптоматики аддикций: -быстро нарастает...]]></summary>
         <author>
             <name>Валерий Гринь</name>
             <email>vgrean@gmail.com</email>
@@ -186,8 +186,8 @@
     <entry>
         <title type="html"><![CDATA[Социофобия - ее источник и опасность]]></title>
         <id>4nnB1s7DbRz673OsLzGD6P</id>
-        <link href="https://addict.cf/blog/sociophobia"/>
-        <updated>2022-07-09T11:34:34.000Z</updated>
+        <link href="https://addict.cf/blog/sociofobia"/>
+        <updated>2022-07-10T22:05:32.000Z</updated>
         <summary type="html"><![CDATA[Социофобия - страх новых знакомств, контактов, публичности, выступлений, необычных, новых условий. И, кажется, что эта форма страхов целиком зависит по определению от внешних условий. Но на самом деле их основа находится в самом человеке - в его ранимости,...]]></summary>
         <author>
             <name>Валерий Гринь</name>
@@ -259,7 +259,7 @@
         <title type="html"><![CDATA[Алекситимия]]></title>
         <id>6iqc5K8L9g8OWtpmBAacYM</id>
         <link href="https://addict.cf/blog/aleksitimiya"/>
-        <updated>2022-07-09T11:29:40.000Z</updated>
+        <updated>2022-07-11T11:41:33.000Z</updated>
         <summary type="html"><![CDATA[Для зависимых и психосоматических пациентов весьма характерен такой феномен как алекситимия. Под ней понимается специфическая психологическая характеристика личности, включающая следующие особенности:Затруднение и сложности в определении и словесном...]]></summary>
         <author>
             <name>Валерий Гринь</name>
@@ -379,8 +379,8 @@
         <title type="html"><![CDATA[Травматический стресс. Его признаки и способы разрешения]]></title>
         <id>gBth6xDi7iCg8uGqUYdDq</id>
         <link href="https://addict.cf/blog/traumastress"/>
-        <updated>2022-07-09T11:28:24.000Z</updated>
-        <summary type="html"><![CDATA[Стресс бывает острым (травматическим) и хроническим. В свою очередь он приводит к дисстрессу, как нездоровому неблагоприятному чрезмерному напряжению, снижает способность человеческого организма к адекватному реагированию на угрожающие факторы среды.Острый...]]></summary>
+        <updated>2022-07-11T12:14:25.000Z</updated>
+        <summary type="html"><![CDATA[Стресс бывает острым (травматическим) и хроническим. В свою очередь он приводит к дисстрессу, как нездоровому неблагоприятному чрезмерному напряжению и снижает способность человеческого организма к адекватному реагированию на угрожающие факторы...]]></summary>
         <author>
             <name>Валерий Гринь</name>
             <email>vgrean@gmail.com</email>

@@ -1,10 +1,10 @@
 {
   "version": "https://jsonfeed.org/version/1",
-  "title": "Addict.cf. Blog o uzależnieniach",
-  "home_page_url": "https://addict.cf/pl",
-  "feed_url": "https://addict.cf/pl/rss/feed.json",
-  "description": "Uzależnienie to wzorzec zachowania polegający na nadużywaniu substancji psychoaktywnych lub niebezpiecznych oraz na stosowaniu pewnych praktyk uzależniających.",
-  "icon": "https://addict.cf/pl/logo.webp",
+  "title": "addict-pl",
+  "home_page_url": "https://pl.addict.cf",
+  "feed_url": "https://pl.addict.cf/rss/feed.json",
+  "description": "addict-pl",
+  "icon": "https://pl.addict.cf/logo.webp",
   "author": {
     "name": "Valeriy Grean",
     "url": "https://twitter.com"
@@ -12,7 +12,7 @@
   "items": [
     {
       "id": "1DGgzutbhzhLdoLvruSBGm",
-      "url": "https://addict.cf/pl/blog/blame",
+      "url": "https://pl.addict.cf/blog/blame",
       "title": "Poczucie winy. Algorytm pozbywania się go",
       "summary": "Poczucie winy jest złożonym kompleksem, na który składają się doświadczenia, obrazy emocji, myśli, wspomnienia i fantazje.Z jednej strony poczucie winy, podobnie jak wstyd, pełni ważną funkcję społeczną. Poczucie winy sygnalizuje człowiekowi, że coś poszło...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/f8cd550858b7c30d021197f488da56ba40abee5b-2012x2012.jpg",
@@ -24,7 +24,7 @@
     },
     {
       "id": "1Wfpgw6bTCaBcaRxdVI0oX",
-      "url": "https://addict.cf/pl/blog/psytrauma",
+      "url": "https://pl.addict.cf/blog/psytrauma",
       "title": "Trauma psychiczna jako podstawa rozwoju uzależnienia. Mechanizm jej powstawania",
       "summary": "Trauma psychiczna jest często opisywana w języku potocznym jako wstrząsające wydarzenie, które miało miejsce w dzieciństwie (\"pies cię przestraszył\") i które ma wyraźne następstwa w życiu dorosłym. Często warunkuje ona późniejsze powstawanie uzależnień,...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/bb834c172aecddd62e1bc1472c67c01541449b7c-860x573.jpg",
@@ -36,7 +36,7 @@
     },
     {
       "id": "2PlQVCshGo8XLDwwxFGCf5",
-      "url": "https://addict.cf/pl/blog/reabilitaciya",
+      "url": "https://pl.addict.cf/blog/reabilitaciya",
       "title": "Rehabilitacja osób uzależnionych od alkoholu",
       "summary": "Kompleksowy program rehabilitacji medycznej, psychologicznej i społecznej osób z uzależnieniem chemicznymGrupa docelowa:Dorośli z zaburzeniami psychicznymi i behawioralnymi związanymi z używaniem substancji:Alkoholicy (uzależnienie od alkoholu)nadużywanie...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/7ce6035ffdf95911e01701c552b523d242bd022e-810x294.jpg",
@@ -48,7 +48,7 @@
     },
     {
       "id": "2Z9murnne4wOE5fAI1r5fh",
-      "url": "https://addict.cf/pl/blog/addikciyaasfamilydisease",
+      "url": "https://pl.addict.cf/blog/addikciyaasfamilydisease",
       "title": "Uzależnienie jest chorobą rodzinną",
       "summary": "Uzależnienie jest transgeneracyjną, wielopokoleniową chorobą rodzinną i zaburzeniem o dużych korzyściach psychologicznych. Dywidendy\" pacjenta są jasne. Ukryte, ale równie duże są \"korupcyjne zyski\" współzależnego środowiska.Bliscy konfliktują się, ratują,...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/cdbc02831f2b84f7f0828d2bc050a14bf2ecf328-6005x4003.jpg",
@@ -60,7 +60,7 @@
     },
     {
       "id": "2fuMEQxQeEDrRWI4agugR4",
-      "url": "https://addict.cf/pl/blog/7stepsprogram",
+      "url": "https://pl.addict.cf/blog/7stepsprogram",
       "title": "Autorski program \"7 kroków z otchłani\"",
       "summary": "Wszyscy wiedzą, jak destrukcyjne i bolesne dla innych mogą być zachowania alkoholików. Zachowanie osób pijących wywołuje u ich bliskich niepokój i obawy o własne życie i zdrowie. Często pojawia się złość i rozpacz z powodu ich niegodnego zachowania w...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/199e6b16df8312ef2c83e0772e74d0672ba6d970-700x462.jpg",
@@ -72,11 +72,11 @@
     },
     {
       "id": "36IBwtmOVx0LZOPSkXHJqd",
-      "url": "https://addict.cf/pl/blog/druguserhelp",
+      "url": "https://pl.addict.cf/blog/druguserhelp",
       "title": "Używanie alkoholu i narkotyków. Motywy i pomoc",
       "summary": "Czasem czas mija, a wędrowiec wciąż gdzieś błądzi... A kiedy wraca, dowiaduje się, że myślał, iż był u elfów tylko siedem dni, a stracił tu siedem lat. Jego żona od dawna go opłakuje, a dzieci dorosły.Doświadczenie pokazuje, że postawy wobec alkoholu i...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/7014c2397642fd637aeb2a355076e4bf2d865415-4966x3020.jpg",
-      "date_modified": "2022-07-09T11:29:08.000Z",
+      "date_modified": "2022-07-11T11:55:41.000Z",
       "author": {
         "name": "Walerij Grin",
         "url": "https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A"
@@ -84,7 +84,7 @@
     },
     {
       "id": "39mAX63BhYODy6UmbUy2Bx",
-      "url": "https://addict.cf/pl/blog/therapyandmaturity",
+      "url": "https://pl.addict.cf/blog/therapyandmaturity",
       "title": "Terapia i dojrzałość",
       "summary": "Czy zgadzamy się zrezygnować z prawa do dorosłości tylko dlatego, że zachowaliśmy archaiczną, dziecięcą wizję siebie i świata, którą musimy chronić najlepiej, jak potrafimy? O to właśnie chodzi - chroń to wewnętrzne dziecko, tak jak powinieneś, ale nie...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/94f18987e15457f8ed824138e2f8af7698c714b8-3600x2400.jpg",
@@ -96,11 +96,11 @@
     },
     {
       "id": "3VwLocCwg66Cluey3tD5bY",
-      "url": "https://addict.cf/pl/blog/addictionandfeelings",
+      "url": "https://pl.addict.cf/blog/addictemotion",
       "title": "Zależności i sfera zmysłów",
       "summary": "Takie choroby, jak uzależnienia, są z konieczności związane z traumatyczną, \"zamrożoną\" sferą zmysłów danej osoby.Tłumienie, blokowanie reagowania na uczucia i doświadczenia przyczynia się do powstawania objawów uzależnienia: szybko narasta tolerancja na...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/46fc150e1ce29bae3d1caf0994aac4eec1ad7f25-800x554.webp",
-      "date_modified": "2022-07-09T11:30:44.000Z",
+      "date_modified": "2022-07-11T11:29:45.000Z",
       "author": {
         "name": "Walerij Grin",
         "url": "https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A"
@@ -108,7 +108,7 @@
     },
     {
       "id": "3qyw6ts398zZ3gS2Xk8fG8",
-      "url": "https://addict.cf/pl/blog/therapyaddiction",
+      "url": "https://pl.addict.cf/blog/therapyaddiction",
       "title": "Terapia stresu, uzależnień i zaburzeń fobicznych z wykorzystaniem NLP",
       "summary": "Programowanie neurolingwistyczne (NLP) jest z powodzeniem stosowane w leczeniu różnych rodzajów zaburzeń stresowych. Zastosowanie tej metody pozwala na szybką i skuteczną poprawę stanu psycho-emocjonalnego i psychosomatycznego pacjenta.Techniki NLP to...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/7648250010abfb1ed80845a4cfeed7464dcd5c48-2048x3072.jpg",
@@ -120,7 +120,7 @@
     },
     {
       "id": "443TBD9ShZEflouD5KKJw",
-      "url": "https://addict.cf/pl/blog/addictsfears",
+      "url": "https://pl.addict.cf/blog/addictsfears",
       "title": "Obawy osoby uzależnionej przed wytrzeźwieniem",
       "summary": "Różnego rodzaju lęki są stałymi towarzyszami życia osoby uzależnionej. Można twierdzić, że jego życie, zarówno w okresie konsumpcji, jak i abstynencji oraz trzeźwienia, jest nasycone lękowymi doświadczeniami i oczekiwaniami. Połączenie lęków dezorganizuje...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/1143f79b232b1d375faf92cb24d17e28005cbc5b-3888x2592.jpg",
@@ -132,7 +132,7 @@
     },
     {
       "id": "45oFjrO6fgHzY9hVJBMVl",
-      "url": "https://addict.cf/pl/blog/chtoprevrashaetlyudeivpyanicialkogolikov",
+      "url": "https://pl.addict.cf/blog/chtoprevrashaetlyudeivpyanicialkogolikov",
       "title": "Co sprawia, że ludzie stają się pijakami i alkoholikami",
       "summary": "Autorzy jednego z badań stwierdzili, że gen DRD3 działa inaczej w pewnych częściach mózgu u alkoholików i osób bez uzależnienia. Jednak, ku zaskoczeniu badaczy, różnice stwierdzono nie w układzie nagrody, ale w podwzgórzu.Podstawowa hipoteza wyjaśniająca,...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/0c1718b222754ee9feb9f941d6022924d21e7278-1280x720.jpg",
@@ -144,7 +144,7 @@
     },
     {
       "id": "4JWt30IUO1Z1LVtju0kLfd",
-      "url": "https://addict.cf/pl/blog/loveaddict",
+      "url": "https://pl.addict.cf/blog/loveaddict",
       "title": "Rodzaje uzależnienia od miłości",
       "summary": "W uzależnieniu emocjonalnym mamy do czynienia z dynamicznym połączeniem osoby uzależnionej od miłości i osoby uzależnionej od unikania.Osoba uzależniona od miłości charakteryzuje się następującymi cechami:Nadmiernie wartościujące postawy wobec drugiej...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/2c643b0523e5faea850f26a4a4caca323ee53bc8-3887x3887.jpg",
@@ -156,7 +156,7 @@
     },
     {
       "id": "4TEJvM5G4vleCEhWY0HeQU",
-      "url": "https://addict.cf/pl/blog/alcochild",
+      "url": "https://pl.addict.cf/blog/alcochild",
       "title": "Dorosłe dzieci alkoholików. Cierpienie i uzdrowienie.",
       "summary": "Dorosłe dzieci alkoholików (ACA) to osoby, które pochodzą z rodzin, w których przynajmniej jedno z rodziców było uzależnione od alkoholu. W związku z tym zostały zmuszone do wykształcenia pewnych cech adaptacyjnych i systemów wartości, które pomagają im...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/a789ef1c7117df99cdcdf668c374e780cec9cb64-600x400.jpg",
@@ -168,7 +168,7 @@
     },
     {
       "id": "4fXbMzLjXUuTZmTRekR825",
-      "url": "https://addict.cf/pl/blog/loveaddiction",
+      "url": "https://pl.addict.cf/blog/loveaddiction",
       "title": "Uzależnienie od miłości. Opcje terapeutyczne",
       "summary": "Pojawiają się naturalne pytania: czym różni się uzależnienie emocjonalne od zdrowego romansu, o którym śpiewali poeci, i co można zrobić z niezdrowymi wersjami związku.Powszechnie wiadomo, że uzależnienie od miłości rozwija się w przypadku szczytowych,...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/a39459400e7d0b041c891373ddf363726ac889f2-1000x666.jpg",
@@ -180,11 +180,11 @@
     },
     {
       "id": "4nnB1s7DbRz673OsLzGD6P",
-      "url": "https://addict.cf/pl/blog/sociophobia",
+      "url": "https://pl.addict.cf/blog/sociofobia",
       "title": "Socjofobia - jej źródła i zagrożenia",
       "summary": "Socjofobia to lęk przed nowymi znajomościami, kontaktami, rozgłosem, pojawieniem się, niezwykłością, nowym otoczeniem. Ta forma lęku z definicji wydaje się całkowicie zależna od warunków zewnętrznych. W rzeczywistości jednak ich podstawa tkwi w samym...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/546079a0edb67ec2fa073fed47d635213737cd71-770x695.jpg",
-      "date_modified": "2022-07-09T11:34:34.000Z",
+      "date_modified": "2022-07-10T22:05:32.000Z",
       "author": {
         "name": "Walerij Grin",
         "url": "https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A"
@@ -192,7 +192,7 @@
     },
     {
       "id": "4rpRfg9EyU3vZk2tfMDmjU",
-      "url": "https://addict.cf/pl/blog/sozavisimyeotnosheniya",
+      "url": "https://pl.addict.cf/blog/sozavisimyeotnosheniya",
       "title": "Związki współuzależnienia jako konstrukt społeczny",
       "summary": "Pracując na oddziale rehabilitacji, muszę codziennie obserwować sceny, w których kobiety obładowane torbami wędrują w stronę pacjentów cierpiących na alkoholizm.Patrząc z zewnątrz na ich interakcje, można dojść do wniosku, że to nie człowiek zdrowy...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/56703092e6c73b11d2532838645b0c99384df5ce-620x250.jpg",
@@ -204,7 +204,7 @@
     },
     {
       "id": "57tkXfwT28U8A7yAgkV48R",
-      "url": "https://addict.cf/pl/blog/confluensy",
+      "url": "https://pl.addict.cf/blog/confluensy",
       "title": "Symbioza - konieczność i destrukcyjność",
       "summary": "\"Najcięższym brzemieniem na barkach dziecka jest nie przeżyte życie jego rodziców\" (C.-H. Jung)Symbioza jest naturalną sytuacją w rozwoju dziecka.Jego podstawowe potrzeby symbiotyczne to:odżywianie;ciepło;kontakt z ciałem;kontakt wzrokowy;potrzeba...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/de7f3b42eb1c13c8aa3c3b5ab67a62d7b0ef2c32-768x768.jpg",
@@ -216,7 +216,7 @@
     },
     {
       "id": "5F1a4iguLievAz73JE7CfW",
-      "url": "https://addict.cf/pl/blog/codependens",
+      "url": "https://pl.addict.cf/blog/codependens",
       "title": "Symbioza i współzależność",
       "summary": "Istotna dla losów jednostki jest faza somatopsychicznej symbiozy - fuzji, która rozpoczyna się w 2. miesiącu życia dziecka.W tej fazie:Przeżywany jest stan niezróżnicowanego połączenia z matką, bez oddzielenia jaźni dziecka od jaźni...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/7f97a094e23929fc9acb650d3b989b93f3aea728-1280x866.jpg",
@@ -228,7 +228,7 @@
     },
     {
       "id": "5eXGXLaJOUMlIsgKu9wFkS",
-      "url": "https://addict.cf/pl/blog/psikhologicheskiezashityotchuvstv",
+      "url": "https://pl.addict.cf/blog/psikhologicheskiezashityotchuvstv",
       "title": "Psychologiczna obrona przed uczuciami",
       "summary": "Uczucia pomagają ludziom zrozumieć, co jest nie tak w ich życiu i związkach. Pomagają one w uświadomieniu sobie pewnych deficytów, często całkowitych. Niektóre uczucia i doświadczenia przerażają człowieka (zazdrość, zawiść, złość, nienawiść), a inne (na...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/284e7ee46ad734eb5e061225060cfa0c624edbb7-650x430.jpg",
@@ -240,7 +240,7 @@
     },
     {
       "id": "6ZY6Avnwkzg7p8PofC1OTP",
-      "url": "https://addict.cf/pl/blog/kto-takie-addikty-chast-1",
+      "url": "https://pl.addict.cf/blog/kto-takie-addikty-chast-1",
       "title": " Uzależnieni. Kim oni są?",
       "summary": "Uzależnieni. Kim oOsoba uzależniona od substancji chemicznych nie jest prymitywnym, niemoralnym hedonistą, którego zachowanie jest widoczne na zewnątrz. Większość z nich jest nieźle przystosowana, w czym pomagają im zastępcze mechanizmy obronne.Na przykład...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/eb357955765d4ea637c42d89e434db13270574aa-640x427.jpg",
@@ -252,11 +252,11 @@
     },
     {
       "id": "6iqc5K8L9g8OWtpmBAacYM",
-      "url": "https://addict.cf/pl/blog/aleksitimiya",
+      "url": "https://pl.addict.cf/blog/aleksitimiya",
       "title": "Aleksytymia",
       "summary": "Zjawisko aleksytymii jest bardzo częste u osób uzależnionych i chorych psychosomatycznie. Odnosi się do specyficznej cechy psychologicznej jednostki, obejmującej następujące cechy:Trudności z rozpoznawaniem i werbalnym opisywaniem własnych emocji, a w...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/5917fab70f5883e61f44d3df8b89c89bf392a010-638x338.jpg",
-      "date_modified": "2022-07-09T11:29:40.000Z",
+      "date_modified": "2022-07-11T11:41:33.000Z",
       "author": {
         "name": "Walerij Grin",
         "url": "https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A"
@@ -264,7 +264,7 @@
     },
     {
       "id": "6jDV1a9MuAeTDC9oCrRBII",
-      "url": "https://addict.cf/pl/blog/shame",
+      "url": "https://pl.addict.cf/blog/shame",
       "title": "O wstydzie i szacunku do samego siebie",
       "summary": "Kiedy jesteśmy ignorowani, odrzucani i nie traktowani poważnie, zaczynamy doświadczać uczucia wstydu. Opiera się ona na przekonaniu o naszej głębokiej i fundamentalnej niższości. Życie ze wstydem to ciągłe poczucie wyobcowania i porażki.Czujemy, że nie...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/475932e93c23b9af8ae356f610e7d0114d1ce87d-2398x3598.jpg",
@@ -276,7 +276,7 @@
     },
     {
       "id": "6vr5zkbw1ZinDe2iLXsa0N",
-      "url": "https://addict.cf/pl/blog/klinicheskoeponimanieaddikci",
+      "url": "https://pl.addict.cf/blog/klinicheskoeponimanieaddikci",
       "title": "Kliniczna wiedza na temat uzależnień",
       "summary": "Samo rozumienie uzależnienia chemicznego może być niejednoznaczne.Z jednej strony jest to samo w sobie zaburzenie neuropsychiatryczne z pogranicza. Osoba uzależniona ma bowiem określony zestaw wyobrażeń, przekonań, wartości, komunikatów, które formalizują...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/8015e7b5b9483fba1b5aa4e14750b4dc1a080920-1500x1000.jpg",
@@ -288,7 +288,7 @@
     },
     {
       "id": "7mOX4OjZnEV7FMkh6l0KLM",
-      "url": "https://addict.cf/pl/blog/addikciyakaklechit",
+      "url": "https://pl.addict.cf/blog/addikciyakaklechit",
       "title": "  Uzależnienie. Jak ją leczyć?",
       "summary": "Z psychodynamicznej charakterystyki osób uzależnionych wynikają zarówno metody leczenia, jak i ocena ich perspektyw. Na przykład możemy krytycznie ocenić popularną obecnie terapię stresu emocjonalnego i leczenie uzależnień za pomocą \"lęku\". Osoba...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/93c6ac2d160f4ccf7ee321c3442a2d34616cb8cf-6000x4000.jpg",
@@ -300,7 +300,7 @@
     },
     {
       "id": "7v084QydLDLITWeydXd1n1",
-      "url": "https://addict.cf/pl/blog/metaforaozhiznennomputi",
+      "url": "https://pl.addict.cf/blog/metaforaozhiznennomputi",
       "title": "Metafora o podróży przez życie",
       "summary": "Historia opowiada o wędrowcu, który wędrował znużony po pozornie niekończącej się drodze.Nosił rzeczy na plecach:ciężki worek z piaskiem zwisał mu z pleców;wokół jego ciała owinięty był gruby worek z wodą.W prawej ręce trzymał kamień o dziwnym kształcie,a...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/ef20da9cddfb30c261293a41d7d84dce3c598a09-1200x675.jpg",
@@ -312,7 +312,7 @@
     },
     {
       "id": "8e483739-86ff-4242-925d-4095ebc1b988",
-      "url": "https://addict.cf/pl/blog/addiktyktooni3",
+      "url": "https://pl.addict.cf/blog/addiktyktooni3",
       "title": "??",
       "summary": "?",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/903ef19f7dff6cea4b2dc636a1a532a23636eeb2-4000x6000.jpg",
@@ -324,7 +324,7 @@
     },
     {
       "id": "bc7ccd9b-a6c6-4390-ae14-5155d4377774",
-      "url": "https://addict.cf/pl/blog/kto-takie-addikty-chast-2",
+      "url": "https://pl.addict.cf/blog/kto-takie-addikty-chast-2",
       "title": "?",
       "summary": "??",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/4255e1e26bc8450abc62da32c369110d99450be1-600x450.jpg",
@@ -336,7 +336,7 @@
     },
     {
       "id": "e0592258-ae24-4bc2-ac45-3906ff6c0d7b",
-      "url": "https://addict.cf/pl/blog/detskaya-travma",
+      "url": "https://pl.addict.cf/blog/detskaya-travma",
       "title": "?",
       "summary": "?",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/d11448074edbaad232671bdfb03ec3502fb856d1-6240x4160.jpg",
@@ -348,7 +348,7 @@
     },
     {
       "id": "f51afefc-6c73-40c7-b952-dcc5c8e7a300",
-      "url": "https://addict.cf/pl/blog/addiction",
+      "url": "https://pl.addict.cf/blog/addiction",
       "title": "??",
       "summary": "??",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/21ec30ecaf27d430ad77af5630650bc87a6e90a7-6000x4000.jpg",
@@ -360,7 +360,7 @@
     },
     {
       "id": "f5FMxbqzNuPBJtvoO5zgY",
-      "url": "https://addict.cf/pl/blog/electroencephalogram",
+      "url": "https://pl.addict.cf/blog/electroencephalogram",
       "title": "Elektroencefalografia w diagnostyce organicznych zmian w OUN",
       "summary": "Niezaprzeczalnym objawem uzależnienia jest upośledzenie funkcji analityczno-syntetycznej OUN. Wiadomo, że obie półkule mózgu decydują o interakcji poznawczej między podmiotem a światem, odzwierciedlając powiązania między obiektami i zjawiskami. To właśnie...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/ebd9d317150607edc200b4b3367e366e792169f0-5964x3976.jpg",
@@ -372,11 +372,11 @@
     },
     {
       "id": "gBth6xDi7iCg8uGqUYdDq",
-      "url": "https://addict.cf/pl/blog/traumastress",
+      "url": "https://pl.addict.cf/blog/traumastress",
       "title": "Stres traumatyczny. Jego objawy i sposoby radzenia sobie z nim",
       "summary": "Stres może być ostry (traumatyczny) lub przewlekły. Prowadzi to z kolei do dystresu jako niezdrowo niekorzystnego przeciążenia, zmniejszającego zdolność organizmu człowieka do adekwatnego reagowania na zagrażające czynniki środowiskowe.Ostry stres...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/21ec30ecaf27d430ad77af5630650bc87a6e90a7-6000x4000.jpg",
-      "date_modified": "2022-07-09T11:28:24.000Z",
+      "date_modified": "2022-07-11T12:14:25.000Z",
       "author": {
         "name": "Walerij Grin",
         "url": "https://www.youtube.com/channel/UCg83jkm7aM3OKTAWMoSpf2A"
@@ -384,7 +384,7 @@
     },
     {
       "id": "mFL0jiGWS1Oz9pTGjWavH",
-      "url": "https://addict.cf/pl/blog/imprintig",
+      "url": "https://pl.addict.cf/blog/imprintig",
       "title": "Imprinting jako podstawa nieakceptowalnych wzorców zachowań",
       "summary": "Poważne zaburzenia zachowania i zachowania antyspołeczne są często konsekwencją życia i rozwoju dziecka w rodzinie niemoralnej i kryminogennej.Jednocześnie jest to doskonały przykład odciśnięcia piętna na jawnych zachowaniach rodziców. W tych rodzinach na...",
       "image": "https://cdn.sanity.io/images/ro6en9ct/development/efdf43d91c0604153e5eb9b97768023bc01a5168-6000x4000.jpg",

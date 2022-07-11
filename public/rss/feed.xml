@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Addict.cf. Блог об аддикциях</title>
+        <title>addict-ru</title>
         <link>https://addict.cf</link>
-        <description>Аддикция — это поведенческий паттерн, включающий в себя злоупотребление психоактивными или опасными веществами, а также определенными практиками, которые вызывают привыкание.</description>
-        <lastBuildDate>Sat, 09 Jul 2022 12:06:44 GMT</lastBuildDate>
+        <description>addict-ru</description>
+        <lastBuildDate>Mon, 11 Jul 2022 15:19:46 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js with some fancy extras</generator>
         <language>ru</language>
         <image>
-            <title>Addict.cf. Блог об аддикциях</title>
+            <title>addict-ru</title>
             <url>https://addict.cf/logo.webp</url>
             <link>https://addict.cf</link>
         </image>
@@ -63,8 +63,8 @@
             <title><![CDATA[Употребление алкоголя и наркотиков. Мотивы и помощь]]></title>
             <link>https://addict.cf/blog/druguserhelp</link>
             <guid>36IBwtmOVx0LZOPSkXHJqd</guid>
-            <pubDate>Sat, 09 Jul 2022 11:29:08 GMT</pubDate>
-            <description><![CDATA[Иногда уходит время, а странник все еще блуждает где-то там… А вернувшись узнает, что, думая,что пробыл у эльфов всего семь дней, потерял здесь семь лет. Жена давно его оплакала, а дети выросли..Опыт показывает, что отношение к спиртному и наркотикам, их...]]></description>
+            <pubDate>Mon, 11 Jul 2022 11:55:41 GMT</pubDate>
+            <description><![CDATA[Иногда уходит время, а странник все еще блуждает где-то там… А вернувшись узнает, что, думая,что пробыл у эльфов всего семь дней, потерял здесь семь лет. Жена давно его оплакала, а дети выросли...Опыт показывает, что отношение к спиртному и наркотикам, их...]]></description>
             <author>vgrean@gmail.com (Валерий Гринь)</author>
             <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/7014c2397642fd637aeb2a355076e4bf2d865415-4966x3020.jpg" length="0" type="image/jpg"/>
         </item>
@@ -79,10 +79,10 @@
         </item>
         <item>
             <title><![CDATA[Зависимости и сфера чувств]]></title>
-            <link>https://addict.cf/blog/addictionandfeelings</link>
+            <link>https://addict.cf/blog/addictemotion</link>
             <guid>3VwLocCwg66Cluey3tD5bY</guid>
-            <pubDate>Sat, 09 Jul 2022 11:30:44 GMT</pubDate>
-            <description><![CDATA[Такие заболевания как зависимости в обязательном порядке связаны с травмированной, «замороженной» сферой чувств человека.Подавленность, блок в отреагировании чувств и переживаний вносят свой вклад в формирование симптоматики аддикций: быстро нарастает...]]></description>
+            <pubDate>Mon, 11 Jul 2022 11:29:45 GMT</pubDate>
+            <description><![CDATA[Такие заболевания как зависимости в обязательном порядке связаны с травмированной, «замороженной» сферой чувств человека.Подавленность, блок в экспрессии чувств и переживаний вносят свой вклад в формирование симптоматики аддикций: -быстро нарастает...]]></description>
             <author>vgrean@gmail.com (Валерий Гринь)</author>
             <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/46fc150e1ce29bae3d1caf0994aac4eec1ad7f25-800x554.webp" length="0" type="image/webp"/>
         </item>
@@ -142,9 +142,9 @@
         </item>
         <item>
             <title><![CDATA[Социофобия - ее источник и опасность]]></title>
-            <link>https://addict.cf/blog/sociophobia</link>
+            <link>https://addict.cf/blog/sociofobia</link>
             <guid>4nnB1s7DbRz673OsLzGD6P</guid>
-            <pubDate>Sat, 09 Jul 2022 11:34:34 GMT</pubDate>
+            <pubDate>Sun, 10 Jul 2022 22:05:32 GMT</pubDate>
             <description><![CDATA[Социофобия - страх новых знакомств, контактов, публичности, выступлений, необычных, новых условий. И, кажется, что эта форма страхов целиком зависит по определению от внешних условий. Но на самом деле их основа находится в самом человеке - в его ранимости,...]]></description>
             <author>vgrean@gmail.com (Валерий Гринь)</author>
             <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/546079a0edb67ec2fa073fed47d635213737cd71-770x695.jpg" length="0" type="image/jpg"/>
@@ -198,7 +198,7 @@
             <title><![CDATA[Алекситимия]]></title>
             <link>https://addict.cf/blog/aleksitimiya</link>
             <guid>6iqc5K8L9g8OWtpmBAacYM</guid>
-            <pubDate>Sat, 09 Jul 2022 11:29:40 GMT</pubDate>
+            <pubDate>Mon, 11 Jul 2022 11:41:33 GMT</pubDate>
             <description><![CDATA[Для зависимых и психосоматических пациентов весьма характерен такой феномен как алекситимия. Под ней понимается специфическая психологическая характеристика личности, включающая следующие особенности:Затруднение и сложности в определении и словесном...]]></description>
             <author>vgrean@gmail.com (Валерий Гринь)</author>
             <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/5917fab70f5883e61f44d3df8b89c89bf392a010-638x338.jpg" length="0" type="image/jpg"/>
@@ -288,8 +288,8 @@
             <title><![CDATA[Травматический стресс. Его признаки и способы разрешения]]></title>
             <link>https://addict.cf/blog/traumastress</link>
             <guid>gBth6xDi7iCg8uGqUYdDq</guid>
-            <pubDate>Sat, 09 Jul 2022 11:28:24 GMT</pubDate>
-            <description><![CDATA[Стресс бывает острым (травматическим) и хроническим. В свою очередь он приводит к дисстрессу, как нездоровому неблагоприятному чрезмерному напряжению, снижает способность человеческого организма к адекватному реагированию на угрожающие факторы среды.Острый...]]></description>
+            <pubDate>Mon, 11 Jul 2022 12:14:25 GMT</pubDate>
+            <description><![CDATA[Стресс бывает острым (травматическим) и хроническим. В свою очередь он приводит к дисстрессу, как нездоровому неблагоприятному чрезмерному напряжению и снижает способность человеческого организма к адекватному реагированию на угрожающие факторы...]]></description>
             <author>vgrean@gmail.com (Валерий Гринь)</author>
             <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/21ec30ecaf27d430ad77af5630650bc87a6e90a7-6000x4000.jpg" length="0" type="image/jpg"/>
         </item>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Addict.cf. Blog o uzależnieniach</title>
-        <link>https://addict.cf/pl</link>
-        <description>Uzależnienie to wzorzec zachowania polegający na nadużywaniu substancji psychoaktywnych lub niebezpiecznych oraz na stosowaniu pewnych praktyk uzależniających.</description>
-        <lastBuildDate>Sat, 09 Jul 2022 12:06:44 GMT</lastBuildDate>
+        <title>addict-pl</title>
+        <link>https://pl.addict.cf</link>
+        <description>addict-pl</description>
+        <lastBuildDate>Mon, 11 Jul 2022 15:19:46 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js with some fancy extras</generator>
         <language>pl</language>
         <image>
-            <title>Addict.cf. Blog o uzależnieniach</title>
-            <url>https://addict.cf/pl/logo.webp</url>
-            <link>https://addict.cf/pl</link>
+            <title>addict-pl</title>
+            <url>https://pl.addict.cf/logo.webp</url>
+            <link>https://pl.addict.cf</link>
         </image>
         <copyright>All rights reserved 2022, Valeriy Grean</copyright>
         <item>
             <title><![CDATA[Poczucie winy. Algorytm pozbywania się go]]></title>
-            <link>https://addict.cf/pl/blog/blame</link>
+            <link>https://pl.addict.cf/blog/blame</link>
             <guid>1DGgzutbhzhLdoLvruSBGm</guid>
             <pubDate>Sat, 09 Jul 2022 05:15:27 GMT</pubDate>
             <description><![CDATA[Poczucie winy jest złożonym kompleksem, na który składają się doświadczenia, obrazy emocji, myśli, wspomnienia i fantazje.Z jednej strony poczucie winy, podobnie jak wstyd, pełni ważną funkcję społeczną. Poczucie winy sygnalizuje człowiekowi, że coś poszło...]]></description>
@@ -25,7 +25,7 @@
         </item>
         <item>
             <title><![CDATA[Trauma psychiczna jako podstawa rozwoju uzależnienia. Mechanizm jej powstawania]]></title>
-            <link>https://addict.cf/pl/blog/psytrauma</link>
+            <link>https://pl.addict.cf/blog/psytrauma</link>
             <guid>1Wfpgw6bTCaBcaRxdVI0oX</guid>
             <pubDate>Sat, 09 Jul 2022 05:16:02 GMT</pubDate>
             <description><![CDATA[Trauma psychiczna jest często opisywana w języku potocznym jako wstrząsające wydarzenie, które miało miejsce w dzieciństwie ("pies cię przestraszył") i które ma wyraźne następstwa w życiu dorosłym. Często warunkuje ona późniejsze powstawanie uzależnień,...]]></description>
@@ -34,7 +34,7 @@
         </item>
         <item>
             <title><![CDATA[Rehabilitacja osób uzależnionych od alkoholu]]></title>
-            <link>https://addict.cf/pl/blog/reabilitaciya</link>
+            <link>https://pl.addict.cf/blog/reabilitaciya</link>
             <guid>2PlQVCshGo8XLDwwxFGCf5</guid>
             <pubDate>Sat, 25 Jun 2022 10:03:41 GMT</pubDate>
             <description><![CDATA[Kompleksowy program rehabilitacji medycznej, psychologicznej i społecznej osób z uzależnieniem chemicznymGrupa docelowa:Dorośli z zaburzeniami psychicznymi i behawioralnymi związanymi z używaniem substancji:Alkoholicy (uzależnienie od alkoholu)nadużywanie...]]></description>
@@ -43,7 +43,7 @@
         </item>
         <item>
             <title><![CDATA[Uzależnienie jest chorobą rodzinną]]></title>
-            <link>https://addict.cf/pl/blog/addikciyaasfamilydisease</link>
+            <link>https://pl.addict.cf/blog/addikciyaasfamilydisease</link>
             <guid>2Z9murnne4wOE5fAI1r5fh</guid>
             <pubDate>Fri, 24 Jun 2022 19:10:11 GMT</pubDate>
             <description><![CDATA[Uzależnienie jest transgeneracyjną, wielopokoleniową chorobą rodzinną i zaburzeniem o dużych korzyściach psychologicznych. Dywidendy" pacjenta są jasne. Ukryte, ale równie duże są "korupcyjne zyski" współzależnego środowiska.Bliscy konfliktują się, ratują,...]]></description>
@@ -52,7 +52,7 @@
         </item>
         <item>
             <title><![CDATA[Autorski program "7 kroków z otchłani"]]></title>
-            <link>https://addict.cf/pl/blog/7stepsprogram</link>
+            <link>https://pl.addict.cf/blog/7stepsprogram</link>
             <guid>2fuMEQxQeEDrRWI4agugR4</guid>
             <pubDate>Sun, 26 Jun 2022 12:29:50 GMT</pubDate>
             <description><![CDATA[Wszyscy wiedzą, jak destrukcyjne i bolesne dla innych mogą być zachowania alkoholików. Zachowanie osób pijących wywołuje u ich bliskich niepokój i obawy o własne życie i zdrowie. Często pojawia się złość i rozpacz z powodu ich niegodnego zachowania w...]]></description>
@@ -61,16 +61,16 @@
         </item>
         <item>
             <title><![CDATA[Używanie alkoholu i narkotyków. Motywy i pomoc]]></title>
-            <link>https://addict.cf/pl/blog/druguserhelp</link>
+            <link>https://pl.addict.cf/blog/druguserhelp</link>
             <guid>36IBwtmOVx0LZOPSkXHJqd</guid>
-            <pubDate>Sat, 09 Jul 2022 11:29:08 GMT</pubDate>
+            <pubDate>Mon, 11 Jul 2022 11:55:41 GMT</pubDate>
             <description><![CDATA[Czasem czas mija, a wędrowiec wciąż gdzieś błądzi... A kiedy wraca, dowiaduje się, że myślał, iż był u elfów tylko siedem dni, a stracił tu siedem lat. Jego żona od dawna go opłakuje, a dzieci dorosły.Doświadczenie pokazuje, że postawy wobec alkoholu i...]]></description>
             <author>vgrean@gmail.com (Walerij Grin)</author>
             <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/7014c2397642fd637aeb2a355076e4bf2d865415-4966x3020.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Terapia i dojrzałość]]></title>
-            <link>https://addict.cf/pl/blog/therapyandmaturity</link>
+            <link>https://pl.addict.cf/blog/therapyandmaturity</link>
             <guid>39mAX63BhYODy6UmbUy2Bx</guid>
             <pubDate>Sat, 09 Jul 2022 05:17:04 GMT</pubDate>
             <description><![CDATA[Czy zgadzamy się zrezygnować z prawa do dorosłości tylko dlatego, że zachowaliśmy archaiczną, dziecięcą wizję siebie i świata, którą musimy chronić najlepiej, jak potrafimy? O to właśnie chodzi - chroń to wewnętrzne dziecko, tak jak powinieneś, ale nie...]]></description>
@@ -79,16 +79,16 @@
         </item>
         <item>
             <title><![CDATA[Zależności i sfera zmysłów]]></title>
-            <link>https://addict.cf/pl/blog/addictionandfeelings</link>
+            <link>https://pl.addict.cf/blog/addictemotion</link>
             <guid>3VwLocCwg66Cluey3tD5bY</guid>
-            <pubDate>Sat, 09 Jul 2022 11:30:44 GMT</pubDate>
+            <pubDate>Mon, 11 Jul 2022 11:29:45 GMT</pubDate>
             <description><![CDATA[Takie choroby, jak uzależnienia, są z konieczności związane z traumatyczną, "zamrożoną" sferą zmysłów danej osoby.Tłumienie, blokowanie reagowania na uczucia i doświadczenia przyczynia się do powstawania objawów uzależnienia: szybko narasta tolerancja na...]]></description>
             <author>vgrean@gmail.com (Walerij Grin)</author>
             <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/46fc150e1ce29bae3d1caf0994aac4eec1ad7f25-800x554.webp" length="0" type="image/webp"/>
         </item>
         <item>
             <title><![CDATA[Terapia stresu, uzależnień i zaburzeń fobicznych z wykorzystaniem NLP]]></title>
-            <link>https://addict.cf/pl/blog/therapyaddiction</link>
+            <link>https://pl.addict.cf/blog/therapyaddiction</link>
             <guid>3qyw6ts398zZ3gS2Xk8fG8</guid>
             <pubDate>Sat, 09 Jul 2022 05:23:25 GMT</pubDate>
             <description><![CDATA[Programowanie neurolingwistyczne (NLP) jest z powodzeniem stosowane w leczeniu różnych rodzajów zaburzeń stresowych. Zastosowanie tej metody pozwala na szybką i skuteczną poprawę stanu psycho-emocjonalnego i psychosomatycznego pacjenta.Techniki NLP to...]]></description>
@@ -97,7 +97,7 @@
         </item>
         <item>
             <title><![CDATA[Obawy osoby uzależnionej przed wytrzeźwieniem]]></title>
-            <link>https://addict.cf/pl/blog/addictsfears</link>
+            <link>https://pl.addict.cf/blog/addictsfears</link>
             <guid>443TBD9ShZEflouD5KKJw</guid>
             <pubDate>Sat, 09 Jul 2022 05:23:14 GMT</pubDate>
             <description><![CDATA[Różnego rodzaju lęki są stałymi towarzyszami życia osoby uzależnionej. Można twierdzić, że jego życie, zarówno w okresie konsumpcji, jak i abstynencji oraz trzeźwienia, jest nasycone lękowymi doświadczeniami i oczekiwaniami. Połączenie lęków dezorganizuje...]]></description>
@@ -106,7 +106,7 @@
         </item>
         <item>
             <title><![CDATA[Co sprawia, że ludzie stają się pijakami i alkoholikami]]></title>
-            <link>https://addict.cf/pl/blog/chtoprevrashaetlyudeivpyanicialkogolikov</link>
+            <link>https://pl.addict.cf/blog/chtoprevrashaetlyudeivpyanicialkogolikov</link>
             <guid>45oFjrO6fgHzY9hVJBMVl</guid>
             <pubDate>Mon, 27 Jun 2022 10:31:29 GMT</pubDate>
             <description><![CDATA[Autorzy jednego z badań stwierdzili, że gen DRD3 działa inaczej w pewnych częściach mózgu u alkoholików i osób bez uzależnienia. Jednak, ku zaskoczeniu badaczy, różnice stwierdzono nie w układzie nagrody, ale w podwzgórzu.Podstawowa hipoteza wyjaśniająca,...]]></description>
@@ -115,7 +115,7 @@
         </item>
         <item>
             <title><![CDATA[Rodzaje uzależnienia od miłości]]></title>
-            <link>https://addict.cf/pl/blog/loveaddict</link>
+            <link>https://pl.addict.cf/blog/loveaddict</link>
             <guid>4JWt30IUO1Z1LVtju0kLfd</guid>
             <pubDate>Sat, 09 Jul 2022 05:22:32 GMT</pubDate>
             <description><![CDATA[W uzależnieniu emocjonalnym mamy do czynienia z dynamicznym połączeniem osoby uzależnionej od miłości i osoby uzależnionej od unikania.Osoba uzależniona od miłości charakteryzuje się następującymi cechami:Nadmiernie wartościujące postawy wobec drugiej...]]></description>
@@ -124,7 +124,7 @@
         </item>
         <item>
             <title><![CDATA[Dorosłe dzieci alkoholików. Cierpienie i uzdrowienie.]]></title>
-            <link>https://addict.cf/pl/blog/alcochild</link>
+            <link>https://pl.addict.cf/blog/alcochild</link>
             <guid>4TEJvM5G4vleCEhWY0HeQU</guid>
             <pubDate>Sat, 09 Jul 2022 11:26:34 GMT</pubDate>
             <description><![CDATA[Dorosłe dzieci alkoholików (ACA) to osoby, które pochodzą z rodzin, w których przynajmniej jedno z rodziców było uzależnione od alkoholu. W związku z tym zostały zmuszone do wykształcenia pewnych cech adaptacyjnych i systemów wartości, które pomagają im...]]></description>
@@ -133,7 +133,7 @@
         </item>
         <item>
             <title><![CDATA[Uzależnienie od miłości. Opcje terapeutyczne]]></title>
-            <link>https://addict.cf/pl/blog/loveaddiction</link>
+            <link>https://pl.addict.cf/blog/loveaddiction</link>
             <guid>4fXbMzLjXUuTZmTRekR825</guid>
             <pubDate>Sat, 09 Jul 2022 05:22:01 GMT</pubDate>
             <description><![CDATA[Pojawiają się naturalne pytania: czym różni się uzależnienie emocjonalne od zdrowego romansu, o którym śpiewali poeci, i co można zrobić z niezdrowymi wersjami związku.Powszechnie wiadomo, że uzależnienie od miłości rozwija się w przypadku szczytowych,...]]></description>
@@ -142,16 +142,16 @@
         </item>
         <item>
             <title><![CDATA[Socjofobia - jej źródła i zagrożenia]]></title>
-            <link>https://addict.cf/pl/blog/sociophobia</link>
+            <link>https://pl.addict.cf/blog/sociofobia</link>
             <guid>4nnB1s7DbRz673OsLzGD6P</guid>
-            <pubDate>Sat, 09 Jul 2022 11:34:34 GMT</pubDate>
+            <pubDate>Sun, 10 Jul 2022 22:05:32 GMT</pubDate>
             <description><![CDATA[Socjofobia to lęk przed nowymi znajomościami, kontaktami, rozgłosem, pojawieniem się, niezwykłością, nowym otoczeniem. Ta forma lęku z definicji wydaje się całkowicie zależna od warunków zewnętrznych. W rzeczywistości jednak ich podstawa tkwi w samym...]]></description>
             <author>vgrean@gmail.com (Walerij Grin)</author>
             <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/546079a0edb67ec2fa073fed47d635213737cd71-770x695.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Związki współuzależnienia jako konstrukt społeczny]]></title>
-            <link>https://addict.cf/pl/blog/sozavisimyeotnosheniya</link>
+            <link>https://pl.addict.cf/blog/sozavisimyeotnosheniya</link>
             <guid>4rpRfg9EyU3vZk2tfMDmjU</guid>
             <pubDate>Fri, 24 Jun 2022 19:19:36 GMT</pubDate>
             <description><![CDATA[Pracując na oddziale rehabilitacji, muszę codziennie obserwować sceny, w których kobiety obładowane torbami wędrują w stronę pacjentów cierpiących na alkoholizm.Patrząc z zewnątrz na ich interakcje, można dojść do wniosku, że to nie człowiek zdrowy...]]></description>
@@ -160,7 +160,7 @@
         </item>
         <item>
             <title><![CDATA[Symbioza - konieczność i destrukcyjność]]></title>
-            <link>https://addict.cf/pl/blog/confluensy</link>
+            <link>https://pl.addict.cf/blog/confluensy</link>
             <guid>57tkXfwT28U8A7yAgkV48R</guid>
             <pubDate>Sat, 09 Jul 2022 05:24:18 GMT</pubDate>
             <description><![CDATA["Najcięższym brzemieniem na barkach dziecka jest nie przeżyte życie jego rodziców" (C.-H. Jung)Symbioza jest naturalną sytuacją w rozwoju dziecka.Jego podstawowe potrzeby symbiotyczne to:odżywianie;ciepło;kontakt z ciałem;kontakt wzrokowy;potrzeba...]]></description>
@@ -169,7 +169,7 @@
         </item>
         <item>
             <title><![CDATA[Symbioza i współzależność]]></title>
-            <link>https://addict.cf/pl/blog/codependens</link>
+            <link>https://pl.addict.cf/blog/codependens</link>
             <guid>5F1a4iguLievAz73JE7CfW</guid>
             <pubDate>Sat, 09 Jul 2022 05:23:55 GMT</pubDate>
             <description><![CDATA[Istotna dla losów jednostki jest faza somatopsychicznej symbiozy - fuzji, która rozpoczyna się w 2. miesiącu życia dziecka.W tej fazie:Przeżywany jest stan niezróżnicowanego połączenia z matką, bez oddzielenia jaźni dziecka od jaźni...]]></description>
@@ -178,7 +178,7 @@
         </item>
         <item>
             <title><![CDATA[Psychologiczna obrona przed uczuciami]]></title>
-            <link>https://addict.cf/pl/blog/psikhologicheskiezashityotchuvstv</link>
+            <link>https://pl.addict.cf/blog/psikhologicheskiezashityotchuvstv</link>
             <guid>5eXGXLaJOUMlIsgKu9wFkS</guid>
             <pubDate>Mon, 27 Jun 2022 11:05:33 GMT</pubDate>
             <description><![CDATA[Uczucia pomagają ludziom zrozumieć, co jest nie tak w ich życiu i związkach. Pomagają one w uświadomieniu sobie pewnych deficytów, często całkowitych. Niektóre uczucia i doświadczenia przerażają człowieka (zazdrość, zawiść, złość, nienawiść), a inne (na...]]></description>
@@ -187,7 +187,7 @@
         </item>
         <item>
             <title><![CDATA[ Uzależnieni. Kim oni są?]]></title>
-            <link>https://addict.cf/pl/blog/kto-takie-addikty-chast-1</link>
+            <link>https://pl.addict.cf/blog/kto-takie-addikty-chast-1</link>
             <guid>6ZY6Avnwkzg7p8PofC1OTP</guid>
             <pubDate>Sat, 09 Jul 2022 05:08:03 GMT</pubDate>
             <description><![CDATA[Uzależnieni. Kim oOsoba uzależniona od substancji chemicznych nie jest prymitywnym, niemoralnym hedonistą, którego zachowanie jest widoczne na zewnątrz. Większość z nich jest nieźle przystosowana, w czym pomagają im zastępcze mechanizmy obronne.Na przykład...]]></description>
@@ -196,16 +196,16 @@
         </item>
         <item>
             <title><![CDATA[Aleksytymia]]></title>
-            <link>https://addict.cf/pl/blog/aleksitimiya</link>
+            <link>https://pl.addict.cf/blog/aleksitimiya</link>
             <guid>6iqc5K8L9g8OWtpmBAacYM</guid>
-            <pubDate>Sat, 09 Jul 2022 11:29:40 GMT</pubDate>
+            <pubDate>Mon, 11 Jul 2022 11:41:33 GMT</pubDate>
             <description><![CDATA[Zjawisko aleksytymii jest bardzo częste u osób uzależnionych i chorych psychosomatycznie. Odnosi się do specyficznej cechy psychologicznej jednostki, obejmującej następujące cechy:Trudności z rozpoznawaniem i werbalnym opisywaniem własnych emocji, a w...]]></description>
             <author>vgrean@gmail.com (Walerij Grin)</author>
             <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/5917fab70f5883e61f44d3df8b89c89bf392a010-638x338.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[O wstydzie i szacunku do samego siebie]]></title>
-            <link>https://addict.cf/pl/blog/shame</link>
+            <link>https://pl.addict.cf/blog/shame</link>
             <guid>6jDV1a9MuAeTDC9oCrRBII</guid>
             <pubDate>Sat, 09 Jul 2022 11:27:36 GMT</pubDate>
             <description><![CDATA[Kiedy jesteśmy ignorowani, odrzucani i nie traktowani poważnie, zaczynamy doświadczać uczucia wstydu. Opiera się ona na przekonaniu o naszej głębokiej i fundamentalnej niższości. Życie ze wstydem to ciągłe poczucie wyobcowania i porażki.Czujemy, że nie...]]></description>
@@ -214,7 +214,7 @@
         </item>
         <item>
             <title><![CDATA[Kliniczna wiedza na temat uzależnień]]></title>
-            <link>https://addict.cf/pl/blog/klinicheskoeponimanieaddikci</link>
+            <link>https://pl.addict.cf/blog/klinicheskoeponimanieaddikci</link>
             <guid>6vr5zkbw1ZinDe2iLXsa0N</guid>
             <pubDate>Fri, 08 Jul 2022 19:25:04 GMT</pubDate>
             <description><![CDATA[Samo rozumienie uzależnienia chemicznego może być niejednoznaczne.Z jednej strony jest to samo w sobie zaburzenie neuropsychiatryczne z pogranicza. Osoba uzależniona ma bowiem określony zestaw wyobrażeń, przekonań, wartości, komunikatów, które formalizują...]]></description>
@@ -223,7 +223,7 @@
         </item>
         <item>
             <title><![CDATA[  Uzależnienie. Jak ją leczyć?]]></title>
-            <link>https://addict.cf/pl/blog/addikciyakaklechit</link>
+            <link>https://pl.addict.cf/blog/addikciyakaklechit</link>
             <guid>7mOX4OjZnEV7FMkh6l0KLM</guid>
             <pubDate>Sun, 26 Jun 2022 12:34:58 GMT</pubDate>
             <description><![CDATA[Z psychodynamicznej charakterystyki osób uzależnionych wynikają zarówno metody leczenia, jak i ocena ich perspektyw. Na przykład możemy krytycznie ocenić popularną obecnie terapię stresu emocjonalnego i leczenie uzależnień za pomocą "lęku". Osoba...]]></description>
@@ -232,7 +232,7 @@
         </item>
         <item>
             <title><![CDATA[Metafora o podróży przez życie]]></title>
-            <link>https://addict.cf/pl/blog/metaforaozhiznennomputi</link>
+            <link>https://pl.addict.cf/blog/metaforaozhiznennomputi</link>
             <guid>7v084QydLDLITWeydXd1n1</guid>
             <pubDate>Mon, 04 Jul 2022 12:13:16 GMT</pubDate>
             <description><![CDATA[Historia opowiada o wędrowcu, który wędrował znużony po pozornie niekończącej się drodze.Nosił rzeczy na plecach:ciężki worek z piaskiem zwisał mu z pleców;wokół jego ciała owinięty był gruby worek z wodą.W prawej ręce trzymał kamień o dziwnym kształcie,a...]]></description>
@@ -241,7 +241,7 @@
         </item>
         <item>
             <title><![CDATA[??]]></title>
-            <link>https://addict.cf/pl/blog/addiktyktooni3</link>
+            <link>https://pl.addict.cf/blog/addiktyktooni3</link>
             <guid>8e483739-86ff-4242-925d-4095ebc1b988</guid>
             <pubDate>Fri, 08 Jul 2022 19:13:43 GMT</pubDate>
             <description><![CDATA[?]]></description>
@@ -250,7 +250,7 @@
         </item>
         <item>
             <title><![CDATA[?]]></title>
-            <link>https://addict.cf/pl/blog/kto-takie-addikty-chast-2</link>
+            <link>https://pl.addict.cf/blog/kto-takie-addikty-chast-2</link>
             <guid>bc7ccd9b-a6c6-4390-ae14-5155d4377774</guid>
             <pubDate>Sat, 09 Jul 2022 05:08:32 GMT</pubDate>
             <description><![CDATA[??]]></description>
@@ -259,7 +259,7 @@
         </item>
         <item>
             <title><![CDATA[?]]></title>
-            <link>https://addict.cf/pl/blog/detskaya-travma</link>
+            <link>https://pl.addict.cf/blog/detskaya-travma</link>
             <guid>e0592258-ae24-4bc2-ac45-3906ff6c0d7b</guid>
             <pubDate>Sat, 09 Jul 2022 05:07:27 GMT</pubDate>
             <description><![CDATA[?]]></description>
@@ -268,7 +268,7 @@
         </item>
         <item>
             <title><![CDATA[??]]></title>
-            <link>https://addict.cf/pl/blog/addiction</link>
+            <link>https://pl.addict.cf/blog/addiction</link>
             <guid>f51afefc-6c73-40c7-b952-dcc5c8e7a300</guid>
             <pubDate>Fri, 08 Jul 2022 19:14:30 GMT</pubDate>
             <description><![CDATA[??]]></description>
@@ -277,7 +277,7 @@
         </item>
         <item>
             <title><![CDATA[Elektroencefalografia w diagnostyce organicznych zmian w OUN]]></title>
-            <link>https://addict.cf/pl/blog/electroencephalogram</link>
+            <link>https://pl.addict.cf/blog/electroencephalogram</link>
             <guid>f5FMxbqzNuPBJtvoO5zgY</guid>
             <pubDate>Sat, 09 Jul 2022 05:24:31 GMT</pubDate>
             <description><![CDATA[Niezaprzeczalnym objawem uzależnienia jest upośledzenie funkcji analityczno-syntetycznej OUN. Wiadomo, że obie półkule mózgu decydują o interakcji poznawczej między podmiotem a światem, odzwierciedlając powiązania między obiektami i zjawiskami. To właśnie...]]></description>
@@ -286,16 +286,16 @@
         </item>
         <item>
             <title><![CDATA[Stres traumatyczny. Jego objawy i sposoby radzenia sobie z nim]]></title>
-            <link>https://addict.cf/pl/blog/traumastress</link>
+            <link>https://pl.addict.cf/blog/traumastress</link>
             <guid>gBth6xDi7iCg8uGqUYdDq</guid>
-            <pubDate>Sat, 09 Jul 2022 11:28:24 GMT</pubDate>
+            <pubDate>Mon, 11 Jul 2022 12:14:25 GMT</pubDate>
             <description><![CDATA[Stres może być ostry (traumatyczny) lub przewlekły. Prowadzi to z kolei do dystresu jako niezdrowo niekorzystnego przeciążenia, zmniejszającego zdolność organizmu człowieka do adekwatnego reagowania na zagrażające czynniki środowiskowe.Ostry stres...]]></description>
             <author>vgrean@gmail.com (Walerij Grin)</author>
             <enclosure url="https://cdn.sanity.io/images/ro6en9ct/development/21ec30ecaf27d430ad77af5630650bc87a6e90a7-6000x4000.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Imprinting jako podstawa nieakceptowalnych wzorców zachowań]]></title>
-            <link>https://addict.cf/pl/blog/imprintig</link>
+            <link>https://pl.addict.cf/blog/imprintig</link>
             <guid>mFL0jiGWS1Oz9pTGjWavH</guid>
             <pubDate>Sat, 09 Jul 2022 05:20:51 GMT</pubDate>
             <description><![CDATA[Poważne zaburzenia zachowania i zachowania antyspołeczne są często konsekwencją życia i rozwoju dziecka w rodzinie niemoralnej i kryminogennej.Jednocześnie jest to doskonały przykład odciśnięcia piętna na jawnych zachowaniach rodziców. W tych rodzinach na...]]></description>
