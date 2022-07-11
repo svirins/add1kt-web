@@ -51,8 +51,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/utils/generateAlgoliaIndex.mjs",
-    "src/utils/global.config.js",
-    "src/utils/getPosts.js"
+    "src/utils/generateAlgoliaIndex.ts",
+    "src/utils/global.config.ts",
+    "src/utils/getPosts.ts"
   ]
 }

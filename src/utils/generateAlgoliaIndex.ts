@@ -5,7 +5,6 @@ import algoliasearch from "algoliasearch";
 import { getPosts } from "./getPosts";
 import { LOCALIZED_ALGOLIA_INDICES } from "./global.config";
 
-
 const algoliaInstance = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
   process.env.ALGOLIA_SEARCH_ADMIN_KEY
