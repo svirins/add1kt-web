@@ -96,7 +96,7 @@ html {
 }
 
 .prose p {
-  @apply py-2 text-stone-800 dark:text-stone-200;
+  @apply py-4 text-stone-800 dark:text-stone-200;
 }
 
 .prose > p:first-of-type:first-letter {
