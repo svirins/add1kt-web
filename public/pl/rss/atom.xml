@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pl.addict.cf</id>
     <title>addict-pl</title>
-    <updated>2022-07-15T06:26:50.447Z</updated>
+    <updated>2022-07-15T06:32:03.944Z</updated>
     <generator>Feed for Node.js with some fancy extras</generator>
     <author>
         <name>Valeriy Grean</name>
