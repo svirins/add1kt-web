@@ -17,6 +17,18 @@ const ptComponents = {
         </div>
       );
     },
+    messageBox: ({ value }: { value: any }) => {
+      return (
+        <div className="dark:[#1e293b] mb-4 w-full rounded-lg bg-[#1e293b] p-4 text-yellow-50">
+          <div className="flex flex-row">
+            <h6 className="font-2xl font-semibold text-yellow-50">{`💡 ${value.title}`}</h6>
+          </div>
+          <div>
+            <div className="md:prose-lg w-full max-w-2xl text-yellow-50">{value.message}</div>
+          </div>
+        </div>
+      );
+    },
   },
 };
 
