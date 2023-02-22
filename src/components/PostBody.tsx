@@ -17,20 +17,20 @@ const ptComponents = {
         </div>
       );
     },
-    messageBox: ({ value }: { value: any }) => {
-      return (
-        <div className="dark:[#1e293b] mb-4 w-full text-black·dark:text-yellow-50 rounded-lg bg-[#cccccc] p-4">
-          <div className="flex flex-row">
-            <h6 className="font-2xl font-semibold text-black·dark:text-yellow-50">{`💡 ${value.title}`}</h6>
-          </div>
-          <div>
-            <div className="md:prose-lg w-full max-w-2xl text-black·dark:text-yellow-50">
-              {value.message}
-            </div>
-          </div>
-        </div>
-      );
-    },
+    // messageBox: ({ value }: { value: any }) => {
+    //   return (
+    //     <div className="dark:[#1e293b] mb-4 w-full text-black·dark:text-yellow-50 rounded-lg bg-[#cccccc] p-4">
+    //       <div className="flex flex-row">
+    //         <h6 className="font-2xl font-semibold text-black·dark:text-yellow-50">{`💡 ${value.title}`}</h6>
+    //       </div>
+    //       <div>
+    //         <div className="md:prose-lg w-full max-w-2xl text-black·dark:text-yellow-50">
+    //           {value.message}
+    //         </div>
+    //       </div>
+    //     </div>
+    //   );
+    // },
   },
 };
 
